@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Unity游戏开发日志</title>
+    <url>/Q./2022/02/03/Unity%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/</url>
+    <content><![CDATA[<h1 id="2022-2-2"><a href="#2022-2-2" class="headerlink" title="2022.2.2"></a>2022.2.2</h1><p>1.完成Unity在VS中的环境配置<br>2.完成C#Script的创建<br>3.实现tilemap障碍物刚体<br>4.实现角色碰撞体和物理配置<br>5.实现角色Idle和run动画机的创建<br>6.实现角色Idle和run时方向的变换<br>7.解决角色方向变换不协调的问题</p>
+]]></content>
+      <tags>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+</search>

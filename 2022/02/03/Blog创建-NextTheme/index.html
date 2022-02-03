@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Q./images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Q./images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Q./images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/Q./images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/Q./css/main.css">
+
+
+<link rel="stylesheet" href="/Q./lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/Q./lib/pace/pace-theme-minimal.min.css">
+  <script src="/Q./lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"thinkgone.github.io","root":"/Q./","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="这篇文章主要介绍个人Blog的创建">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Blog创建">
+<meta property="og:url" content="https://thinkgone.github.io/Q./2022/02/03/Blog%E5%88%9B%E5%BB%BA-NextTheme/index.html">
+<meta property="og:site_name" content="Q.Blog">
+<meta property="og:description" content="这篇文章主要介绍个人Blog的创建">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/02/c612b761898488bd.jpg">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/02/499f527e6edeb513.png">
+<meta property="og:image" content="https://s2.loli.net/2022/02/03/z5rSIUOi8dgkRTC.jpg">
+<meta property="og:image" content="https://s2.loli.net/2022/02/03/b518QOfrnv67EC4.jpg">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/02/02b5fbe9b8cab920.png">
+<meta property="og:image" content="https://s2.loli.net/2022/02/03/uDx2MmvQXnAj6JI.png">
+<meta property="og:image" content="https://s2.loli.net/2022/02/03/XDrivmuhlKJWyt2.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/02/a770c9a53cc78d0e.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/02/6909c946cbbd9e90.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/02/6607a6a9c50007ca.png">
+<meta property="article:published_time" content="2022-02-03T10:59:19.000Z">
+<meta property="article:modified_time" content="2022-02-03T14:50:26.000Z">
+<meta property="article:author" content="Q.">
+<meta property="article:tag" content="Blog创建">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s3.bmp.ovh/imgs/2022/02/c612b761898488bd.jpg">
+
+<link rel="canonical" href="https://thinkgone.github.io/Q./2022/02/03/Blog%E5%88%9B%E5%BB%BA-NextTheme/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Blog创建 | Q.Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/Q./" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Q.Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/Q./" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/Q./about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/Q./tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/Q./categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/Q./archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://thinkgone.github.io/Q./2022/02/03/Blog%E5%88%9B%E5%BB%BA-NextTheme/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://s3.bmp.ovh/imgs/2022/02/3dd2152a9bc96100.jpg">
+      <meta itemprop="name" content="Q.">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Q.Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Blog创建
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-02-03 18:59:19 / 修改时间：22:50:26" itemprop="dateCreated datePublished" datetime="2022-02-03T18:59:19+08:00">2022-02-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Q./categories/Blog%E5%88%9B%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">Blog创建</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>这篇文章主要介绍个人Blog的创建</p>
+<span id="more"></span>
+<h1 id="基本工具"><a href="#基本工具" class="headerlink" title="基本工具"></a>基本工具</h1><p>Node.js<br>Git<br>Sublime Text<br>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1HXpwYLKjNqWcWEGheD6-ug?pwd=d4jm">https://pan.baidu.com/s/1HXpwYLKjNqWcWEGheD6-ug?pwd=d4jm </a><br>提取码：d4jm<br>也可以到软件官网下载</p>
+<h1 id="搭建Hexo"><a href="#搭建Hexo" class="headerlink" title="搭建Hexo"></a>搭建Hexo</h1><p>新建一个文件夹作为Blog的根目录<br>在目录下空白区域右击，打开Git Bash Here<br>输入以下代码</p>
+<h2 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<h2 id="Hexo初始化配置"><a href="#Hexo初始化配置" class="headerlink" title="Hexo初始化配置"></a>Hexo初始化配置</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<h2 id="查看本地运行效果"><a href="#查看本地运行效果" class="headerlink" title="查看本地运行效果"></a>查看本地运行效果</h2><p>更改博客时也可以通过本地查看<br>hexo generate用于生成Hexo页面</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+<p>也可以简写为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<p>接着：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p>hexo server用于本地运行Blog，也可以简写为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>出现以下信息说明本地运行成功</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
+<p>可以打开网址 <a target="_blank" rel="noopener" href="http://0.0.0.0:4000/">http://0.0.0.0:4000/</a> 查看效果<br>Ctrl+C 关闭本地运行</p>
+<h1 id="创建GitHub账号并配置仓库"><a href="#创建GitHub账号并配置仓库" class="headerlink" title="创建GitHub账号并配置仓库"></a>创建GitHub账号并配置仓库</h1><h2 id="创建Github账号"><a href="#创建Github账号" class="headerlink" title="创建Github账号"></a>创建Github账号</h2><p><a target="_blank" rel="noopener" href="https://github.com/">Github官网</a></p>
+<h2 id="创建一个Blog仓库"><a href="#创建一个Blog仓库" class="headerlink" title="创建一个Blog仓库"></a>创建一个Blog仓库</h2><p>点击头像&gt;Your repositories&gt;New创建一个仓库<br><img src="https://s3.bmp.ovh/imgs/2022/02/c612b761898488bd.jpg"></p>
+<h2 id="生成ssh密钥"><a href="#生成ssh密钥" class="headerlink" title="生成ssh密钥"></a>生成ssh密钥</h2><p>1.在Blog根目录下Git Bash，输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh</span><br></pre></td></tr></table></figure>
+<p><img src="https://s3.bmp.ovh/imgs/2022/02/499f527e6edeb513.png"><br>2.继续输入命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;your email@example.com&quot;</span><br></pre></td></tr></table></figure>
+<p>引号里填写你的邮箱地址，写注册Github时的邮箱<br>3.按回车键直到没有输出<br>4.获取公钥<br>输入以下命令将公钥复制到系统剪切板</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clip &lt; ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+<h2 id="在Github添加公钥"><a href="#在Github添加公钥" class="headerlink" title="在Github添加公钥"></a>在Github添加公钥</h2><p>点击头像&gt;Settings&gt;SSH and GPG keys&gt;New SSH key&gt;添加SSH keys<br><img src="https://s2.loli.net/2022/02/03/z5rSIUOi8dgkRTC.jpg"><br>测试ssh是否绑定成功，输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>出现如下信息则成功</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi &quot;Your Name&quot;! You&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+<p>引号内是你的Github昵称</p>
+<h2 id="配置Git个人信息"><a href="#配置Git个人信息" class="headerlink" title="配置Git个人信息"></a>配置Git个人信息</h2><p>在Blog根目录下Git Bash</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;此处填你的用户名&quot;</span><br><span class="line">git config --global user.email &quot;此处填你的邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+<h1 id="部署Hexo"><a href="#部署Hexo" class="headerlink" title="部署Hexo"></a>部署Hexo</h1><h2 id="实现本地和远程仓库的连接"><a href="#实现本地和远程仓库的连接" class="headerlink" title="实现本地和远程仓库的连接"></a>实现本地和远程仓库的连接</h2><p>1.打开仓库复制仓库地址<br><img src="https://s2.loli.net/2022/02/03/b518QOfrnv67EC4.jpg"><br>2.打开Blog根目录下的_config.yml 文件<br>修改最底部的代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type:</span><br></pre></td></tr></table></figure>
+<p>为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/xxx/xxx.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
+<p>3.安装hexo-deployer-git自动部署发布工具<br>在Blog根目录下Git Bash，输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>4.将本地Blog上传至远程仓库<br>接着输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>出现以下情况不慌，GitHub是外国的网，网络连接可能不稳定，重新hexo d直到上传成功<br>有些本地上传需要令牌(会弹出一个羽毛笔图标的输入框)，下面介绍如何用令牌代替密码<br><img src="https://s3.bmp.ovh/imgs/2022/02/02b5fbe9b8cab920.png"></p>
+<h2 id="用令牌代替密码"><a href="#用令牌代替密码" class="headerlink" title="用令牌代替密码"></a>用令牌代替密码</h2><p>1.点击头像&gt;Setting&gt;Developer settings&gt;Personal access tokens&gt;Generate new token<br><img src="https://s2.loli.net/2022/02/03/uDx2MmvQXnAj6JI.png" alt="10.png"><br>2.生成令牌<br><img src="https://s2.loli.net/2022/02/03/XDrivmuhlKJWyt2.png" alt="11.png"><br>令牌生成后复制到文本文档中，因为第二次进入后令牌会被隐藏<br>这样就可以用令牌代替密码将本地文件上传到远程仓库了</p>
+<h1 id="访问Blog"><a href="#访问Blog" class="headerlink" title="访问Blog"></a>访问Blog</h1><p>点击头像&gt;Your repositories&gt;打开仓库&gt;Setting<br>往下翻找到：<br><img src="https://s3.bmp.ovh/imgs/2022/02/a770c9a53cc78d0e.png"><br>新建的Blog需要设置Branch<br><img src="https://s3.bmp.ovh/imgs/2022/02/6909c946cbbd9e90.png"><br>等待一会儿后你的Blog就算成功的完成啦<br><img src="https://s3.bmp.ovh/imgs/2022/02/6607a6a9c50007ca.png"></p>
+<h1 id="Blog的个性化"><a href="#Blog的个性化" class="headerlink" title="Blog的个性化"></a>Blog的个性化</h1><p>Blog可以通过部署Hexo主题以及配置组件达到个性化效果<br>具体请见Blog标签&#x2F;分类中的<em>Blog个性化</em></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/Q./tags/Blog%E5%88%9B%E5%BB%BA/" rel="tag"># Blog创建</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/Q./2022/02/03/Unity%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/" rel="prev" title="Unity游戏开发日志">
+      <i class="fa fa-chevron-left"></i> Unity游戏开发日志
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%B7%A5%E5%85%B7"><span class="nav-number">1.</span> <span class="nav-text">基本工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%90%AD%E5%BB%BAHexo"><span class="nav-number">2.</span> <span class="nav-text">搭建Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo%E5%AE%89%E8%A3%85"><span class="nav-number">2.1.</span> <span class="nav-text">Hexo安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo%E5%88%9D%E5%A7%8B%E5%8C%96%E9%85%8D%E7%BD%AE"><span class="nav-number">2.2.</span> <span class="nav-text">Hexo初始化配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8C%E6%95%88%E6%9E%9C"><span class="nav-number">2.3.</span> <span class="nav-text">查看本地运行效果</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAGitHub%E8%B4%A6%E5%8F%B7%E5%B9%B6%E9%85%8D%E7%BD%AE%E4%BB%93%E5%BA%93"><span class="nav-number">3.</span> <span class="nav-text">创建GitHub账号并配置仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAGithub%E8%B4%A6%E5%8F%B7"><span class="nav-number">3.1.</span> <span class="nav-text">创建Github账号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AABlog%E4%BB%93%E5%BA%93"><span class="nav-number">3.2.</span> <span class="nav-text">创建一个Blog仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E6%88%90ssh%E5%AF%86%E9%92%A5"><span class="nav-number">3.3.</span> <span class="nav-text">生成ssh密钥</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8Github%E6%B7%BB%E5%8A%A0%E5%85%AC%E9%92%A5"><span class="nav-number">3.4.</span> <span class="nav-text">在Github添加公钥</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEGit%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF"><span class="nav-number">3.5.</span> <span class="nav-text">配置Git个人信息</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2Hexo"><span class="nav-number">4.</span> <span class="nav-text">部署Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E8%BF%9E%E6%8E%A5"><span class="nav-number">4.1.</span> <span class="nav-text">实现本地和远程仓库的连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8%E4%BB%A4%E7%89%8C%E4%BB%A3%E6%9B%BF%E5%AF%86%E7%A0%81"><span class="nav-number">4.2.</span> <span class="nav-text">用令牌代替密码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%BF%E9%97%AEBlog"><span class="nav-number">5.</span> <span class="nav-text">访问Blog</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Blog%E7%9A%84%E4%B8%AA%E6%80%A7%E5%8C%96"><span class="nav-number">6.</span> <span class="nav-text">Blog的个性化</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Q."
+      src="https://s3.bmp.ovh/imgs/2022/02/3dd2152a9bc96100.jpg">
+  <p class="site-author-name" itemprop="name">Q.</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/Q./archives/">
+        
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/Q./categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/Q./tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1473895373&auto=1&height=66"></iframe>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Q.</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0" zIndex="-1" src="/Q./lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/Q./lib/anime.min.js"></script>
+  <script src="/Q./lib/velocity/velocity.min.js"></script>
+  <script src="/Q./lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/Q./js/utils.js"></script>
+
+<script src="/Q./js/motion.js"></script>
+
+
+<script src="/Q./js/schemes/pisces.js"></script>
+
+
+<script src="/Q./js/next-boot.js"></script>
+
+
+  <script defer src="/Q./lib/three/three.min.js"></script>
+    <script defer src="/Q./lib/three/three-waves.min.js"></script>
+    <script defer src="/Q./lib/three/canvas_lines.min.js"></script>
+    <script defer src="/Q./lib/three/canvas_sphere.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/Q./js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: 'unset',
+  left: '32px',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+<script src="/Q./live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/Q./live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+</html>

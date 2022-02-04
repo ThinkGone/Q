@@ -71,7 +71,59 @@
   <entry>
     <title>中国剩余定理</title>
     <url>/Q./2022/02/04/%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>这篇文章主要介绍<strong>中国剩余定理及其解法</strong>以及<strong>代码实现</strong></p>
+<span id="more"></span>
+<h1 id="中国剩余定理"><a href="#中国剩余定理" class="headerlink" title="中国剩余定理"></a>中国剩余定理</h1><h2 id="引子：曹冲养猪"><a href="#引子：曹冲养猪" class="headerlink" title="引子：曹冲养猪"></a>引子：曹冲养猪</h2><p>题目链接：<a href="https://www.luogu.com.cn/problem/P1495">https://www.luogu.com.cn/problem/P1495</a><br>自从曹冲搞定了大象以后，曹操就开始捉摸让儿子干些事业，于是派他到中原养猪场养猪，可是曹冲满不高兴，于是在工作中马马虎虎，有一次曹操想知道母猪的数量，于是曹冲想狠狠耍曹操一把。举个例子，假如有 1616 头母猪，如果建了 33 个猪圈，剩下 11 头猪就没有地方安家了。如果建造了 55 个猪圈，但是仍然有 11 头猪没有地方去，然后如果建造了 77 个猪圈，还有 22 头没有地方去。你作为曹总的私人秘书理所当然要将准确的猪数报给曹总，你该怎么办？</p>
+<p>类似此类问题我们可以使用<strong>中国剩余定理</strong>求解<br>限制条件<strong>模两两互质</strong></p>
+<h2 id="推导"><a href="#推导" class="headerlink" title="推导"></a>推导</h2><p>推导过程来源于<a href="https://baike.baidu.com/item/%E5%AD%99%E5%AD%90%E5%AE%9A%E7%90%86/2841597?fromtitle=%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86&fromid=11200132&fr=aladdin"><strong>百度百科</strong></a>(主要是<em>太菜了</em>不会推导)<br><img src="https://s3.bmp.ovh/imgs/2022/02/55836b4e60ab409a.png"><br><img src="https://s3.bmp.ovh/imgs/2022/02/fee95cb9985307ad.png"></p>
+<h2 id="求解模板"><a href="#求解模板" class="headerlink" title="求解模板"></a>求解模板</h2><p>以如下问题为例<br>问：有数模3余2，模5余3，模7余2，问数几何？</p>
+<ul>
+<li><strong>衍数</strong>：lcm&#x2F;除数</li>
+<li><strong>逆元</strong>：为衍数模除数意义下的数论倒数，设衍数为a,除数为b，则逆元为ax ≡ 1(mod b)的最小正整数解</li>
+<li><strong>各总</strong>：余数 * 衍数 * 逆元</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>除数</strong></th>
+<th><strong>余数</strong></th>
+<th><strong>除数最小公倍数(lcm)</strong></th>
+<th><strong>衍数</strong></th>
+<th><strong>逆元</strong></th>
+<th><strong>各总</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>3</td>
+<td>2</td>
+<td>105</td>
+<td>35</td>
+<td>2</td>
+<td>140</td>
+</tr>
+<tr>
+<td>5</td>
+<td>3</td>
+<td>105</td>
+<td>21</td>
+<td>1</td>
+<td>63</td>
+</tr>
+<tr>
+<td>7</td>
+<td>2</td>
+<td>105</td>
+<td>15</td>
+<td>1</td>
+<td>30</td>
+</tr>
+</tbody></table>
+<p>将”各总”相加得到特解233<br>最后将233对lcm取模得到最小正整数解23<br>23即为所求</p>
+<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">void exgcd(ll a,ll b,ll &amp;x,ll &amp;y)&#123;</span><br><span class="line">	if(b==0)&#123;</span><br><span class="line">		x=1,y=0;</span><br><span class="line">		return ;</span><br><span class="line">	&#125;</span><br><span class="line">	exgcd(b,a%b,y,x);</span><br><span class="line">	y-=(a/b)*x;</span><br><span class="line">&#125;</span><br><span class="line">void init()&#123;</span><br><span class="line">	x=0,y=0;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">	n=read();</span><br><span class="line">	for(int i=1;i&lt;=n;i++) m[i]=read(),ai[i]=read();</span><br><span class="line">	ll M=1;</span><br><span class="line">	for(int i=1;i&lt;=n;i++) M*=(ll)m[i];//求lcm </span><br><span class="line">	for(int i=1;i&lt;=n;i++) mi[i]=M/m[i];//求衍数 </span><br><span class="line">	//求逆元</span><br><span class="line">	for(int i=1;i&lt;=n;i++)&#123;exgcd(mi[i],m[i],x,y);ti[i]=(x%m[i]+m[i])%m[i];init();&#125;</span><br><span class="line">	ll minx=0;</span><br><span class="line">	for(int i=1;i&lt;=n;i++) minx+=(mi[i]*ai[i]*ti[i])%M;</span><br><span class="line">	printf(&quot;%lld&quot;,minx%M);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
       <categories>
         <category>OI</category>
       </categories>

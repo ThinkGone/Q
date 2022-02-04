@@ -68,4 +68,42 @@
         <tag>Unity日志</tag>
       </tags>
   </entry>
+  <entry>
+    <title>同余&amp;逆元&amp;不定方程</title>
+    <url>/Q./2022/02/04/%E5%90%8C%E4%BD%99/</url>
+    <content><![CDATA[<p>这篇文章主要介绍<strong>同余</strong>&amp;<strong>逆元</strong>&amp;<strong>不定方程</strong>及<strong>代码实现</strong></p>
+<span id="more"></span>
+<p>由于本人比较<em>菜</em>，所以一些定理不予证明</p>
+<h1 id="同余的概念"><a href="#同余的概念" class="headerlink" title="同余的概念"></a>同余的概念</h1><p>同余定理是数论中的重要概念。给定一个正整数m，如果两个整数a和b满足（a-b）能够被m整除，即（a-b）&#x2F;m得到一个整数，那么就称整数a与b对模m同余，记作a≡b(mod m)<br>【定义】设m是大于1的正整数，a、b是整数，如果m|(a-b)，则称a与b关于模m同余，记作a≡b(mod m)。显然易得如下：</p>
+<p>1.若a≡0(mod m)，则m|a;<br>2.a≡b(mod m)等价于a与b分别用m去除，余数相同。<br><strong>充要性证明</strong><br>充分性：<br>若a和b用m相除留下相同的余数r，则 a&#x3D;q1m+r, b&#x3D;q2m+r,q1和q2为某两个整数，由此的a-b&#x3D;(q1m+r)-(q2m-r)&#x3D;m(q1-q2)，根据整除定义，我们有m|(a-b)，由同余式定义得出结论：a≡b(mod m)<br>必要性：<br>若a和b用m相除留下相同的余数r，则 a&#x3D;q1m+r,b&#x3D;q2m+r,所以a-b&#x3D;m(q1-q2) 故 m|(a-b)。<br><strong>同余性质</strong><br>反身性：a≡a (mod m)</p>
+<p>对称性： 若a≡b(mod m)，则b≡a(mod m)</p>
+<p>传递性： 若a≡b(mod m)，b≡c(mod m)，则a≡c(mod m)</p>
+<p>同余式相加：若a≡b(mod m)，b≡c(mod m)，则a ± c≡b ± d(mod m)</p>
+<p>同余式相乘：若a≡b(mod m)，b≡c(mod m)，则ac≡bd(mod m)</p>
+<p>线性运算：如果a≡b(mod m)，c≡d(mod m)，那么a ± c≡b ± d(mod m)，且a * c≡b * d(mod m)</p>
+<p>除法：若ac ≡ bc (mod m) c≠0 则 a≡ b (mod m&#x2F;gcd(c,m)) 其中gcd(c,m)表示c,m的最大公约数。特殊地 ,gcd(c,m)&#x3D;1 则a ≡ b (mod m)</p>
+<p>幂运算：如果a ≡ b (mod m)，那么a^n ≡ b^n (mod m)</p>
+<p>若a ≡ b (mod m)，n|m,则 a ≡ b (mod n)</p>
+<p>若a ≡ b (mod mi) (i&#x3D;1,2…n) 则 a ≡ b (mod [m1,m2,…mn]) 其中[m1,m2,…mn]表示m1,m2,…mn的最小公倍数</p>
+<h1 id="逆元-amp-不定方程"><a href="#逆元-amp-不定方程" class="headerlink" title="逆元&amp;不定方程"></a>逆元&amp;不定方程</h1><h2 id="逆元"><a href="#逆元" class="headerlink" title="逆元"></a>逆元</h2><p>每个数a均有唯一的与之对应的乘法逆元x，使得ax≡1(mod b) ， 一个数有逆元的<strong>充分必要条件是gcd(a,b)&#x3D;1</strong>，此时逆元唯一存在 。<br>【含义】模b意义下，1个数a如果有逆元x，那么除以a相当于乘以x。<br>【定义】正整数 a, b，如果有 ax ≡ 1(mod b)，则称 x 的最小正整数解为 a 模 b的<strong>逆元</strong></p>
+<h2 id="不定方程"><a href="#不定方程" class="headerlink" title="不定方程"></a>不定方程</h2><p>【定义】形如ax+by&#x3D;c（a，b，c均为常数，且a，b均不为0），一般情况下，每一个x的值都有一个y值和它相对应，有无穷多组解。如果方程（组）中，解的数值不能唯一确定，这样的方程（组）称为不定方程<br><strong>不定方程有整数解的条件</strong><br>整系数二元不定方程ax+by&#x3D;c中的系数a，b的最大公约数能整除c。</p>
+<h2 id="逆元-amp-不定方程解法"><a href="#逆元-amp-不定方程解法" class="headerlink" title="逆元&amp;不定方程解法"></a>逆元&amp;不定方程解法</h2><h3 id="引：裴蜀定理"><a href="#引：裴蜀定理" class="headerlink" title="引：裴蜀定理"></a>引：裴蜀定理</h3><p>~ 设a, b是<strong>不全为零</strong>的整数，则存在整数x, y 使得 ax + by &#x3D; gcd(a, b)</p>
+<p>我们都知道，欧几里得公式可以由这个式子表达<br><strong>gcd(a, b) &#x3D; gcd(b, a % b)</strong><br>通过这个式子，我们可以不断递推到b &#x3D; 0， 此时a即为a和b的<strong>最大公约数</strong><br>将式子展开得到如下<br><strong>1.gcd(a, b) &#x3D; a * x1 + b * x1</strong><br><strong>2.gcd(b, a % b) &#x3D; b * x2 + (a % b) * y2</strong><br>由欧几里得公式可得到<br><strong>a * x1+b * x1&#x3D;b * x2 + (a % b) * y2</strong><br>其中 <strong>a % b &#x3D; a - (a &#x2F; b) * b</strong><br>得 <strong>a * x1 + b * y1 &#x3D; b * x2 + [a - (a &#x2F; b) * b]y2</strong><br>化简得 <strong>a * x1 + b * y1 &#x3D; a * y2 + b * [x2 - (a &#x2F; b) * y2]</strong><br>由<strong>待定系数法</strong>得：<br><strong>1.x1 &#x3D; y2</strong><br><strong>2.y1 &#x3D; x2 - (a &#x2F; b) * y2</strong><br>也就是说有了<strong>gcd(b, a % b)的解x2, y2</strong>就可以推出<strong>gcd(a, b)的解x1, y1</strong><br>我们可以用类似求gcd的方法求解，一直推到x&#x3D;1,y&#x3D;0(递归边界)，然后回溯即可求出特解<br>实际上<strong>特解是最小的一个解</strong></p>
+<p>上面介绍的算法即为<strong>扩展欧几里得算法</strong></p>
+<p>易知<strong>逆元为特殊的不定方程</strong>，ax≡1(mod b) 等价于ax-by&#x3D;1<br>所以同样可以用<strong>扩展欧几里得算法求解</strong></p>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">void exgcd(int a,int b,int &amp;x,int &amp;y)&#123;</span><br><span class="line">	if(b==0)&#123;</span><br><span class="line">		x=1,y=0;</span><br><span class="line">		return ;</span><br><span class="line">	&#125;</span><br><span class="line">	exgcd(b,a%b,y,x);</span><br><span class="line">	y-=(a/b)*x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>OI</category>
+      </categories>
+      <tags>
+        <tag>数论</tag>
+      </tags>
+  </entry>
 </search>

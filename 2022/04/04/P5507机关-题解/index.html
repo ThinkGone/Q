@@ -22,28 +22,33 @@
     var CONFIG = {"hostname":"thinkgone.github.io","root":"/Q./","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Q.Blog">
-<meta property="og:url" content="https://thinkgone.github.io/Q./index.html">
+  <meta name="description" content="这是道很好的搜索练手题可以用广为人知的搜索三巨头求解    双向搜索 IDA* （在这题貌似被禁了） A*  这篇题解主要介绍用 A_star 算法 AC 这道题   1. 思路用 结构体 记录 路径 状态以及实际步数 g(n) 和估价步数 h(n)我们都知道 A* 算法的核心在于其估价函数 h(n)每次取出对应 g(n) + h(n) 最小的 进行下一步搜素   引出一个疑惑 ：每改变一个机关的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="P5507机关-题解">
+<meta property="og:url" content="https://thinkgone.github.io/Q./2022/04/04/P5507%E6%9C%BA%E5%85%B3-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="Q.Blog">
+<meta property="og:description" content="这是道很好的搜索练手题可以用广为人知的搜索三巨头求解    双向搜索 IDA* （在这题貌似被禁了） A*  这篇题解主要介绍用 A_star 算法 AC 这道题   1. 思路用 结构体 记录 路径 状态以及实际步数 g(n) 和估价步数 h(n)我们都知道 A* 算法的核心在于其估价函数 h(n)每次取出对应 g(n) + h(n) 最小的 进行下一步搜素   引出一个疑惑 ：每改变一个机关的">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-04-04T03:11:24.000Z">
+<meta property="article:modified_time" content="2022-04-04T03:19:22.000Z">
 <meta property="article:author" content="Q.">
+<meta property="article:tag" content="搜索">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://thinkgone.github.io/Q./">
+<link rel="canonical" href="https://thinkgone.github.io/Q./2022/04/04/P5507%E6%9C%BA%E5%85%B3-%E9%A2%98%E8%A7%A3/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>Q.Blog</title>
+  <title>P5507机关-题解 | Q.Blog</title>
   
 
 
@@ -184,80 +189,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://thinkgone.github.io/Q./2022/04/04/P8106-Cnoi2021-%E6%95%B0%E5%AD%A6%E7%BB%83%E4%B9%A0-%E9%A2%98%E8%A7%A3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://s3.bmp.ovh/imgs/2022/02/3dd2152a9bc96100.jpg">
-      <meta itemprop="name" content="Q.">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Q.Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/Q./2022/04/04/P8106-Cnoi2021-%E6%95%B0%E5%AD%A6%E7%BB%83%E4%B9%A0-%E9%A2%98%E8%A7%A3/" class="post-title-link" itemprop="url">P8106[Cnoi2021]数学练习-题解</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-04-04 11:20:09 / 修改时间：13:19:16" itemprop="dateCreated datePublished" datetime="2022-04-04T11:20:09+08:00">2022-04-04</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Q./categories/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index"><span itemprop="name">洛谷题解</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="刚刚学完排列组合特来写一篇题解"><a href="#刚刚学完排列组合特来写一篇题解" class="headerlink" title="刚刚学完排列组合特来写一篇题解"></a>刚刚学完排列组合特来写一篇题解</h3><h2 id="1-思路"><a href="#1-思路" class="headerlink" title="1. 思路"></a>1. 思路</h2><p>首先题目要求我们将 $1$~$n$ 的数分为两个子集。<br>$|S| \notin S$ 且 $|T| \notin T$。<br>$|S|$ 表示的是 $S$ 集合中元素的个数。<br>由题目的特殊条件我们可以得到该条件的一个<strong>充要条件</strong> ：<br>$|S| \in T$ 且 $|T| \in S$。 </p>
-<p>这样我们在 “ 安置 ”  好 $|S|$ 和 $|T|$ 后就可以用组合数公式轻松计算出答案了。<br>但是这边仍然有一个性质我们没有用到 ：<br><strong>当 $n$ 为偶数时</strong> $|S| \neq |T|$  这是显然的，也是<strong>必要</strong>的。  </p>
-<h2 id="2-解法"><a href="#2-解法" class="headerlink" title="2. 解法"></a>2. 解法</h2><p>枚举 $1 $~$ n - 1 $ 作为 S 集合的元素个数。<br>已有  $ |T| \in S$。<br>利用组合数公式挑选剩下 $i - 1$ 个数。<br>由于 $n$ 个数全部挑完 ， 所以剩下的数全部纳入 $T$ 集合。<br>我们只需要算 $S$ 集合满足题意的个数即可。<br>附上组合数公式 ：<br><img src="https://s3.bmp.ovh/imgs/2022/03/235d693cdce2562d.webp"><br>注意到除号且在模意义下 ， 所以我们需要求 <strong>逆元</strong>。<br>注意到此题 $mod$ 的特殊性 ， 所以我们可以使用 <strong>费马小定理</strong> 求解逆元。<br>不知道逆元建议先做做 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3811">这道题</a>。<br>最后注意 <strong>特判 $n$ 为偶数</strong> 的情况就可以了。</p>
-<h2 id="3-Code"><a href="#3-Code" class="headerlink" title="3. Code"></a>3. Code</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">100005</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll mod=<span class="number">998244353</span>;</span><br><span class="line">ll n;</span><br><span class="line">ll frac[maxn];</span><br><span class="line">ll x,y;</span><br><span class="line"><span class="function">ll <span class="title">inv</span><span class="params">(ll a,ll s,ll p)</span></span>&#123; <span class="comment">// 费马小定理求逆元</span></span><br><span class="line">	ll ans=<span class="number">1</span>; </span><br><span class="line">	<span class="keyword">while</span>(s)&#123;</span><br><span class="line">		<span class="keyword">if</span>(s&amp;<span class="number">1</span>) ans=ans*a%p;</span><br><span class="line">		a=a*a%p;</span><br><span class="line">		s&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans%p;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">C</span><span class="params">(ll m,ll n)</span></span>&#123;</span><br><span class="line">	ll x=<span class="built_in">inv</span>(frac[m]*frac[n-m]%mod,mod<span class="number">-2</span>,mod);</span><br><span class="line">    <span class="keyword">return</span> frac[n]*x%mod;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;n);</span><br><span class="line">    ll ans=<span class="number">0</span>;</span><br><span class="line">    frac[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(ll i=<span class="number">1</span>;i&lt;=n;i++) frac[i]=frac[i<span class="number">-1</span>]*i%mod; <span class="comment">// 预处理阶乘</span></span><br><span class="line">    ll mid=n/<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">bool</span> judge=<span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">if</span>(n%<span class="number">2</span>==<span class="number">0</span>) judge=<span class="literal">true</span>;</span><br><span class="line">   	<span class="keyword">for</span>(ll i=<span class="number">1</span>;i&lt;=n<span class="number">-1</span>;i++)&#123;</span><br><span class="line">   		<span class="keyword">if</span>(judge==<span class="literal">true</span>&amp;&amp;i==mid) <span class="keyword">continue</span>; <span class="comment">// 特判 n 为偶数</span></span><br><span class="line">   		ans=(ans+<span class="built_in">C</span>(i<span class="number">-1</span>,n<span class="number">-2</span>))%mod;</span><br><span class="line">	&#125; </span><br><span class="line">   	<span class="built_in">printf</span>(<span class="string">&quot;%lld&quot;</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -273,10 +208,9 @@
       <meta itemprop="name" content="Q.Blog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/Q./2022/04/04/P5507%E6%9C%BA%E5%85%B3-%E9%A2%98%E8%A7%A3/" class="post-title-link" itemprop="url">P5507机关-题解</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          P5507机关-题解
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -299,6 +233,13 @@
             </span>
 
           
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
 
         </div>
       </header>
@@ -309,7 +250,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="这是道很好的搜索练手题"><a href="#这是道很好的搜索练手题" class="headerlink" title="这是道很好的搜索练手题"></a>这是道很好的搜索练手题</h3><p>可以用广为人知的搜索<del>三巨头</del>求解  </p>
+        <h3 id="这是道很好的搜索练手题"><a href="#这是道很好的搜索练手题" class="headerlink" title="这是道很好的搜索练手题"></a>这是道很好的搜索练手题</h3><p>可以用广为人知的搜索<del>三巨头</del>求解  </p>
 <ul>
 <li>双向搜索</li>
 <li>IDA* （<del>在这题貌似被禁了</del>）</li>
@@ -321,458 +262,36 @@
 <h2 id="2-解法"><a href="#2-解法" class="headerlink" title="2.解法"></a>2.解法</h2><p>使用优先队列存储结构体<br>所以我们需要 <strong>重载运算符</strong>  ： </p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(<span class="keyword">const</span> node &amp;a,<span class="keyword">const</span> node &amp;b)&#123;</span><br><span class="line">	<span class="keyword">return</span> a.g+a.h&gt;b.g+b.h;</span><br><span class="line">&#125;</span><br><span class="line">```  </span><br><span class="line">经检验 ：  </span><br><span class="line">由于看作两个机关同时向着目标前进 **过于理想**  </span><br><span class="line">此题的估价函数可以稍微调高一些，用于优化时间复杂度  </span><br><span class="line">参数为原估价函数的  **<span class="number">1.3</span>** 倍  </span><br><span class="line">但此时的时间复杂度仍高了些  </span><br><span class="line">所以最后加上 **map 去重** 即可</span><br><span class="line">## <span class="number">3.</span> Code</span><br><span class="line">```cpp</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">	string state;<span class="comment">//状态 </span></span><br><span class="line">	string path;<span class="comment">//路径 </span></span><br><span class="line">	<span class="keyword">int</span> g;<span class="comment">//实际步数 </span></span><br><span class="line">	<span class="keyword">int</span> h;<span class="comment">//估价函数 </span></span><br><span class="line">&#125;;</span><br><span class="line">map&lt;string,<span class="keyword">bool</span>&gt; mark;</span><br><span class="line"><span class="comment">//重载运算符 </span></span><br><span class="line"><span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(<span class="keyword">const</span> node &amp;a,<span class="keyword">const</span> node &amp;b)&#123;</span><br><span class="line">	<span class="keyword">return</span> a.g+a.h&gt;b.g+b.h;</span><br><span class="line">&#125;</span><br><span class="line">priority_queue&lt;node&gt; q;</span><br><span class="line"><span class="comment">//估价函数 </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">eva</span><span class="params">(string s)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> cnt=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">12</span>;i++)</span><br><span class="line">        <span class="keyword">if</span>(s[i]!=<span class="string">&#x27;1&#x27;</span>) cnt+=<span class="number">5</span>-(<span class="keyword">int</span>)(s[i]<span class="number">-48</span>);</span><br><span class="line">    <span class="keyword">return</span> cnt/<span class="number">2</span>*<span class="number">1.3</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(node s)</span></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,s.g);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.path.<span class="built_in">size</span>();i++) cout&lt;&lt;(<span class="keyword">int</span>)(s.path[i]<span class="number">-48</span>)&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123; </span><br><span class="line">	<span class="keyword">int</span> gear[<span class="number">13</span>][<span class="number">5</span>];<span class="comment">//机关触发机制 </span></span><br><span class="line">	node start;</span><br><span class="line">	start.state+=(<span class="keyword">char</span>)(<span class="number">48</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">12</span>;i++)</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=<span class="number">5</span>;j++)&#123;</span><br><span class="line">			<span class="keyword">int</span> x;<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;x);</span><br><span class="line">			<span class="keyword">if</span>(j==<span class="number">1</span>) start.state+=(<span class="keyword">char</span>)(x+<span class="number">48</span>);</span><br><span class="line">			<span class="keyword">else</span> gear[i][j<span class="number">-1</span>]=x;</span><br><span class="line">		&#125;</span><br><span class="line">	start.g=<span class="number">0</span>;</span><br><span class="line">	start.h=<span class="built_in">eva</span>(start.state);</span><br><span class="line">	<span class="keyword">if</span>(!start.h)&#123;<span class="built_in">printf</span>(<span class="string">&quot;0&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">	mark[start.state]=<span class="literal">true</span>;</span><br><span class="line">	q.<span class="built_in">push</span>(start);</span><br><span class="line">	<span class="keyword">while</span>(!q.<span class="built_in">empty</span>())&#123;</span><br><span class="line">		node a=q.<span class="built_in">top</span>();q.<span class="built_in">pop</span>();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">12</span>;i++)&#123;</span><br><span class="line">			<span class="comment">//触发机关 </span></span><br><span class="line">			<span class="keyword">int</span> x=(<span class="keyword">int</span>)(a.state[i]<span class="number">-48</span>);<span class="comment">//x为i机关的状态 </span></span><br><span class="line">			<span class="keyword">int</span> j=gear[i][x];<span class="comment">//j为i机关的连锁机关 </span></span><br><span class="line">			<span class="keyword">int</span> y=(<span class="keyword">int</span>)(a.state[j]<span class="number">-48</span>);<span class="comment">//y为j机关的状态</span></span><br><span class="line">			<span class="comment">//改变状态 </span></span><br><span class="line">			<span class="keyword">if</span>(x==<span class="number">4</span>) x=<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span> x+=<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">if</span>(y==<span class="number">4</span>) y=<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span> y+=<span class="number">1</span>;</span><br><span class="line">			 </span><br><span class="line">			node s;<span class="comment">//转换入队列 </span></span><br><span class="line">			s.state+=(<span class="keyword">char</span>)(<span class="number">48</span>);</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> u=<span class="number">1</span>;u&lt;=<span class="number">12</span>;u++)&#123;</span><br><span class="line">				<span class="keyword">if</span>(u==i)&#123;s.state+=(<span class="keyword">char</span>)(x+<span class="number">48</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">				<span class="keyword">if</span>(u==j)&#123;s.state+=(<span class="keyword">char</span>)(y+<span class="number">48</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">				s.state+=a.state[u];</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">if</span>(!mark[s.state])&#123;<span class="comment">//map去重 </span></span><br><span class="line">				s.g=a.g+<span class="number">1</span>;</span><br><span class="line">				s.h=<span class="built_in">eva</span>(s.state);</span><br><span class="line">				mark[s.state]=<span class="literal">true</span>;</span><br><span class="line">				s.path=a.path+(<span class="keyword">char</span>)(i+<span class="number">48</span>);</span><br><span class="line">				<span class="keyword">if</span>(!s.h)&#123;<span class="built_in">print</span>(s);<span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">				q.<span class="built_in">push</span>(s);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/Q./tags/%E6%90%9C%E7%B4%A2/" rel="tag"># 搜索</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://thinkgone.github.io/Q./2022/03/05/%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://s3.bmp.ovh/imgs/2022/02/3dd2152a9bc96100.jpg">
-      <meta itemprop="name" content="Q.">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Q.Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/Q./2022/03/05/%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB/" class="post-title-link" itemprop="url">模拟退火</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-03-05 17:30:37 / 修改时间：20:37:40" itemprop="dateCreated datePublished" datetime="2022-03-05T17:30:37+08:00">2022-03-05</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>这篇文章主要介绍<strong>模拟退火算法</strong>的原理以及实现</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/Q./2022/03/05/%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://thinkgone.github.io/Q./2022/02/06/Unity%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://s3.bmp.ovh/imgs/2022/02/3dd2152a9bc96100.jpg">
-      <meta itemprop="name" content="Q.">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Q.Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/Q./2022/02/06/Unity%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Unity游戏开发笔记</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-02-06 17:05:31 / 修改时间：17:05:32" itemprop="dateCreated datePublished" datetime="2022-02-06T17:05:31+08:00">2022-02-06</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://thinkgone.github.io/Q./2022/02/04/%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://s3.bmp.ovh/imgs/2022/02/3dd2152a9bc96100.jpg">
-      <meta itemprop="name" content="Q.">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Q.Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/Q./2022/02/04/%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/" class="post-title-link" itemprop="url">中国剩余定理</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-02-04 12:41:21" itemprop="dateCreated datePublished" datetime="2022-02-04T12:41:21+08:00">2022-02-04</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-04 13:14:56" itemprop="dateModified" datetime="2022-04-04T13:14:56+08:00">2022-04-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Q./categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>这篇文章主要介绍<strong>中国剩余定理及其解法</strong>以及<strong>代码实现</strong></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/Q./2022/02/04/%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/Q./2022/03/05/%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB/" rel="prev" title="模拟退火">
+      <i class="fa fa-chevron-left"></i> 模拟退火
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/Q./2022/04/04/P8106-Cnoi2021-%E6%95%B0%E5%AD%A6%E7%BB%83%E4%B9%A0-%E9%A2%98%E8%A7%A3/" rel="next" title="P8106[Cnoi2021]数学练习-题解">
+      P8106[Cnoi2021]数学练习-题解 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://thinkgone.github.io/Q./2022/02/04/%E5%90%8C%E4%BD%99/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://s3.bmp.ovh/imgs/2022/02/3dd2152a9bc96100.jpg">
-      <meta itemprop="name" content="Q.">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Q.Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/Q./2022/02/04/%E5%90%8C%E4%BD%99/" class="post-title-link" itemprop="url">同余&逆元&不定方程</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-02-04 09:35:05" itemprop="dateCreated datePublished" datetime="2022-02-04T09:35:05+08:00">2022-02-04</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-04 13:18:46" itemprop="dateModified" datetime="2022-04-04T13:18:46+08:00">2022-04-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Q./categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>这篇文章主要介绍<strong>同余</strong>&amp;<strong>逆元</strong>&amp;<strong>不定方程</strong>及<strong>代码实现</strong></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/Q./2022/02/04/%E5%90%8C%E4%BD%99/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://thinkgone.github.io/Q./2022/02/03/Blog%E5%88%9B%E5%BB%BA-NextTheme/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://s3.bmp.ovh/imgs/2022/02/3dd2152a9bc96100.jpg">
-      <meta itemprop="name" content="Q.">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Q.Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/Q./2022/02/03/Blog%E5%88%9B%E5%BB%BA-NextTheme/" class="post-title-link" itemprop="url">Blog创建</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-02-03 18:59:19 / 修改时间：22:50:26" itemprop="dateCreated datePublished" datetime="2022-02-03T18:59:19+08:00">2022-02-03</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Q./categories/Blog%E5%88%9B%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">Blog创建</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>这篇文章主要介绍个人Blog的创建</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/Q./2022/02/03/Blog%E5%88%9B%E5%BB%BA-NextTheme/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://thinkgone.github.io/Q./2022/02/03/Unity%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://s3.bmp.ovh/imgs/2022/02/3dd2152a9bc96100.jpg">
-      <meta itemprop="name" content="Q.">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Q.Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/Q./2022/02/03/Unity%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/" class="post-title-link" itemprop="url">Unity游戏开发日志</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-02-03 16:30:46" itemprop="dateCreated datePublished" datetime="2022-02-03T16:30:46+08:00">2022-02-03</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-04 13:19:12" itemprop="dateModified" datetime="2022-04-04T13:19:12+08:00">2022-04-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Q./categories/Unity%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">Unity游戏开发</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="2022-2-2"><a href="#2022-2-2" class="headerlink" title="2022.2.2"></a>2022.2.2</h1><p>1.完成Unity在VS中的环境配置<br>2.完成C#Script的创建<br>3.实现tilemap障碍物刚体<br>4.实现角色碰撞体和物理配置<br>5.实现角色Idle和run动画机的创建<br>6.实现角色Idle和run时方向的变换<br>7.解决角色方向变换不协调的问题  </p>
-<h1 id="2022-2-4"><a href="#2022-2-4" class="headerlink" title="2022.2.4"></a>2022.2.4</h1><p>1.完成Idle的Bool参数设定，Attack的Trigger参数设定<br>2.实现角色单次攻击  </p>
-<h1 id="2022-2-6"><a href="#2022-2-6" class="headerlink" title="2022.2.6"></a>2022.2.6</h1><p>1.完成Attack的Int参数设定，Attack的Bool参数设定<br>2.引入连击计数器HitCount<br>3.实现人物多段攻击<br>4.实现攻击结束函数<br>5.实现攻击结束函数在攻击动画尾帧的插入  </p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
@@ -824,6 +343,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%99%E6%98%AF%E9%81%93%E5%BE%88%E5%A5%BD%E7%9A%84%E6%90%9C%E7%B4%A2%E7%BB%83%E6%89%8B%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">这是道很好的搜索练手题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%80%9D%E8%B7%AF"><span class="nav-number"></span> <span class="nav-text">1. 思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E8%A7%A3%E6%B3%95"><span class="nav-number"></span> <span class="nav-text">2.解法</span></a></div>
       </div>
       <!--/noindex-->
 

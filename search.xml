@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Blog创建</title>
-    <url>/Q./2022/02/03/Blog%E5%88%9B%E5%BB%BA-NextTheme/</url>
+    <url>/2022/02/03/Blog%E5%88%9B%E5%BB%BA-NextTheme/</url>
     <content><![CDATA[<p>这篇文章主要介绍个人Blog的创建</p>
 <span id="more"></span>
 <h1 id="基本工具"><a href="#基本工具" class="headerlink" title="基本工具"></a>基本工具</h1><p>Node.js<br>Git<br>Sublime Text<br>链接：<a href="https://pan.baidu.com/s/1HXpwYLKjNqWcWEGheD6-ug?pwd=d4jm">https://pan.baidu.com/s/1HXpwYLKjNqWcWEGheD6-ug?pwd=d4jm </a><br>提取码：d4jm<br>也可以到软件官网下载</p>
@@ -57,8 +57,28 @@
       </tags>
   </entry>
   <entry>
+    <title>P1763埃及分数-题解</title>
+    <url>/2022/03/05/P1763%E5%9F%83%E5%8F%8A%E5%88%86%E6%95%B0-%E9%A2%98%E8%A7%A3/</url>
+    <content><![CDATA[<p>这篇文章为洛谷P1763埃及分数的题解</p>
+<span id="more"></span>
+<h2 id="本题解主要介绍朴素-IDA-的解法-360ms"><a href="#本题解主要介绍朴素-IDA-的解法-360ms" class="headerlink" title="本题解主要介绍朴素 IDA* 的解法( 360ms )"></a>本题解主要介绍朴素 IDA* 的解法( 360ms )</h2><h3 id="首先我们需要明白啥玩意是-IDA"><a href="#首先我们需要明白啥玩意是-IDA" class="headerlink" title="首先我们需要明白啥玩意是 IDA*"></a>首先我们需要明白啥玩意是 IDA*</h3><p>简单来说  IDA* &#x3D; <strong>迭代加深搜索</strong> + <strong>剪枝</strong><br>由于我们不清楚本题需要多少个分子为1的分数去拼凑这个答案<br>所以我们需要用到<strong>迭代加深搜索</strong><br>从1开始枚举深度，直到找到答案<br><img src="https://s3.bmp.ovh/imgs/2022/02/8fdb046c615aaf45.gif"></p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>由题面我们不难看出分数是<strong>递减</strong>的<br><strong>下一级分数肯定比上一级分数小</strong><br>本蒟蒻采用从 a&#x2F;b 减去枚举的分数，直到达到深度作为边界的方法<br>枚举深度的同时枚举分母，且该分数刚刚好小于上一级所减去的剩下的 a&#x2F;b<br>(下文的 <strong>get_first</strong> 函数)<br>我们需要保证分子为 1<br>所以我们在边界的时候做处理:<br><strong>1 . 当经过上一级处理剩下的 a&#x2F;b 分子不为 1 ，return false</strong><br><strong>2 . 若为 1 ，则将该分母直接作为答案</strong><br>此时我们得到的解肯定是最优的<br>( 类比 bfs )</p>
+<p>需要用到的函数有 ：<br>1 . gcd 函数 ( 便于约分 )<br>2 . better 函数 ( 更新答案 )<br>3 . get_firs t函数( 返回 ( 1 &#x2F; c ) &lt;&#x3D; ( num &#x2F; deo )的最小正整数 c )<br>4 . dfs 函数  </p>
+<p>兼职学习英语 ：<br>Numerator 分子<br>Denominator 分母</p>
+<p>朴素的迭代代码如下 ：<br>( 请原谅本蒟蒻害怕溢出时刻用 long long )</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1000005</span>;</span><br><span class="line">ll a,b;</span><br><span class="line">ll v[maxn],ans[maxn];</span><br><span class="line"><span class="function">ll <span class="title">gcd</span><span class="params">(ll a,ll b)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(b==<span class="number">0</span>) <span class="keyword">return</span> a;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> <span class="built_in">gcd</span>(b,a%b);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">get_first</span><span class="params">(ll a,ll b)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(ll i=<span class="number">1</span>;;i++) <span class="keyword">if</span>(<span class="built_in"><span class="keyword">double</span></span>(<span class="number">1.0</span>*<span class="number">1</span>/i)&lt;<span class="built_in"><span class="keyword">double</span></span>(<span class="number">1.0</span>*a/b)) <span class="keyword">return</span> i;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">better</span><span class="params">(ll dep)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(v[dep]&lt;ans[dep]) <span class="keyword">for</span>(ll i=<span class="number">1</span>;i&lt;=dep;i++) ans[i]=v[i];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">dfs</span><span class="params">(ll dep,ll c,ll num,ll deo,ll maxd)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(dep==maxd)&#123;</span><br><span class="line">		<span class="keyword">if</span>(deo%num) <span class="keyword">return</span> <span class="literal">false</span>;<span class="comment">//若不满足埃及分数要求，退出</span></span><br><span class="line">		v[dep]=deo/num;将该分母直接作为答案</span><br><span class="line">		<span class="built_in">better</span>(dep);</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">bool</span> ok=<span class="literal">false</span>;</span><br><span class="line">	c=<span class="built_in">max</span>(c,<span class="built_in">get_first</span>(num,deo));</span><br><span class="line">	<span class="keyword">for</span>(ll i=c;;i++)&#123;</span><br><span class="line">		ll x=num*i-deo;<span class="comment">//减去枚举到的分数</span></span><br><span class="line">		ll y=deo*i;</span><br><span class="line">		ll d=<span class="built_in">gcd</span>(x,y);<span class="comment">//约分</span></span><br><span class="line">		v[dep]=i;</span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">dfs</span>(dep+<span class="number">1</span>,i+<span class="number">1</span>,x/d,y/d,maxd)) ok=<span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ok;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%lld%lld&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">	ll tot;</span><br><span class="line">	ll c=<span class="built_in">get_first</span>(a,b);</span><br><span class="line">	<span class="built_in">memset</span>(ans,<span class="number">127</span>,<span class="built_in"><span class="keyword">sizeof</span></span>(ans));</span><br><span class="line">	<span class="keyword">for</span>(ll maxd=<span class="number">1</span>;;maxd++) <span class="keyword">if</span>(<span class="built_in">dfs</span>(<span class="number">1</span>,c,a,b,maxd))&#123;tot=maxd;<span class="keyword">break</span>;&#125;</span><br><span class="line">    <span class="comment">//找到的话肯定是深度较浅的优</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=tot;i++) <span class="built_in">printf</span>(<span class="string">&quot;%lld &quot;</span>,ans[i]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<p>但是本题的数据可能不允许你用朴素的迭代写法<br>后果如下 ：<br><img src="https://s3.bmp.ovh/imgs/2022/02/bee67bfe617c21f5.png"></p>
+<h3 id="剪枝"><a href="#剪枝" class="headerlink" title="剪枝"></a>剪枝</h3><p>所以我们需要 <strong>剪枝</strong><br>剪枝语句十分简单<br>当我们枚举分母的时候，分数随着分母增大而减少<br>所以当我们枚举到前面这个分母 ，此时<strong>即使后面所有的数都是该分数</strong> ，减去仍然大于 0 , 那么继续dfs下去也没什么意义<br>所以只需要在枚举分母时添加上剪枝语句即可  </p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(ll i=c;;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(deo*(maxd-dep+<span class="number">1</span>)&lt;=num*i) <span class="keyword">break</span>;</span><br><span class="line">		ll x=num*i-deo;</span><br><span class="line">		ll y=deo*i;</span><br><span class="line">		ll d=<span class="built_in">gcd</span>(x,y);</span><br><span class="line">		v[dep]=i;</span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">dfs</span>(dep+<span class="number">1</span>,i+<span class="number">1</span>,x/d,y/d,maxd)) ok=<span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>这样就可以 AC 啦 ~<br>希望这篇题解对你有所帮助和启发</p>
+]]></content>
+      <tags>
+        <tag>搜索</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>P5507机关-题解</title>
-    <url>/Q./2022/04/04/P5507%E6%9C%BA%E5%85%B3-%E9%A2%98%E8%A7%A3/</url>
+    <url>/2022/04/04/P5507%E6%9C%BA%E5%85%B3-%E9%A2%98%E8%A7%A3/</url>
     <content><![CDATA[<p>这篇文章为洛谷P5507机关的题解</p>
 <span id="more"></span>
 <h3 id="这是道很好的搜索练手题"><a href="#这是道很好的搜索练手题" class="headerlink" title="这是道很好的搜索练手题"></a>这是道很好的搜索练手题</h3><p>可以用广为人知的搜索<del>三巨头</del>求解  </p>
@@ -82,7 +102,7 @@
   </entry>
   <entry>
     <title>P8106[Cnoi2021]数学练习-题解</title>
-    <url>/Q./2022/04/04/P8106-Cnoi2021-%E6%95%B0%E5%AD%A6%E7%BB%83%E4%B9%A0-%E9%A2%98%E8%A7%A3/</url>
+    <url>/2022/04/04/P8106-Cnoi2021-%E6%95%B0%E5%AD%A6%E7%BB%83%E4%B9%A0-%E9%A2%98%E8%A7%A3/</url>
     <content><![CDATA[<p>这篇文章为洛谷P8106-Cnoi2021-数学练习的题解</p>
 <span id="more"></span>
 <h3 id="刚刚学完排列组合特来写一篇题解"><a href="#刚刚学完排列组合特来写一篇题解" class="headerlink" title="刚刚学完排列组合特来写一篇题解"></a>刚刚学完排列组合特来写一篇题解</h3><h2 id="1-思路"><a href="#1-思路" class="headerlink" title="1. 思路"></a>1. 思路</h2><p>首先题目要求我们将 $1$~$n$ 的数分为两个子集。<br>$|S| \notin S$ 且 $|T| \notin T$。<br>$|S|$ 表示的是 $S$ 集合中元素的个数。<br>由题目的特殊条件我们可以得到该条件的一个<strong>充要条件</strong> ：<br>$|S| \in T$ 且 $|T| \in S$。 </p>
@@ -99,7 +119,7 @@
   </entry>
   <entry>
     <title>Unity游戏开发日志</title>
-    <url>/Q./2022/02/03/Unity%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/</url>
+    <url>/2022/02/03/Unity%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/</url>
     <content><![CDATA[<h1 id="2022-2-2"><a href="#2022-2-2" class="headerlink" title="2022.2.2"></a>2022.2.2</h1><p>1.完成Unity在VS中的环境配置<br>2.完成C#Script的创建<br>3.实现tilemap障碍物刚体<br>4.实现角色碰撞体和物理配置<br>5.实现角色Idle和run动画机的创建<br>6.实现角色Idle和run时方向的变换<br>7.解决角色方向变换不协调的问题  </p>
 <h1 id="2022-2-4"><a href="#2022-2-4" class="headerlink" title="2022.2.4"></a>2022.2.4</h1><p>1.完成Idle的Bool参数设定，Attack的Trigger参数设定<br>2.实现角色单次攻击  </p>
 <h1 id="2022-2-6"><a href="#2022-2-6" class="headerlink" title="2022.2.6"></a>2022.2.6</h1><p>1.完成Attack的Int参数设定，Attack的Bool参数设定<br>2.引入连击计数器HitCount<br>3.实现人物多段攻击<br>4.实现攻击结束函数<br>5.实现攻击结束函数在攻击动画尾帧的插入  </p>
@@ -113,7 +133,7 @@
   </entry>
   <entry>
     <title>中国剩余定理</title>
-    <url>/Q./2022/02/04/%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</url>
+    <url>/2022/02/04/%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</url>
     <content><![CDATA[<p>这篇文章主要介绍<strong>中国剩余定理及其解法</strong>以及<strong>代码实现</strong></p>
 <span id="more"></span>
 <h1 id="中国剩余定理"><a href="#中国剩余定理" class="headerlink" title="中国剩余定理"></a>中国剩余定理</h1><h2 id="引子：曹冲养猪"><a href="#引子：曹冲养猪" class="headerlink" title="引子：曹冲养猪"></a>引子：曹冲养猪</h2><p>题目链接：<a href="https://www.luogu.com.cn/problem/P1495">https://www.luogu.com.cn/problem/P1495</a><br>自从曹冲搞定了大象以后，曹操就开始捉摸让儿子干些事业，于是派他到中原养猪场养猪，可是曹冲满不高兴，于是在工作中马马虎虎，有一次曹操想知道母猪的数量，于是曹冲想狠狠耍曹操一把。举个例子，假如有 1616 头母猪，如果建了 33 个猪圈，剩下 11 头猪就没有地方安家了。如果建造了 55 个猪圈，但是仍然有 11 头猪没有地方去，然后如果建造了 77 个猪圈，还有 22 头没有地方去。你作为曹总的私人秘书理所当然要将准确的猪数报给曹总，你该怎么办？</p>
@@ -171,12 +191,12 @@
         <category>OI</category>
       </categories>
       <tags>
-        <tag>数论</tag>
+        <tag>数学</tag>
       </tags>
   </entry>
   <entry>
     <title>同余&amp;逆元&amp;不定方程</title>
-    <url>/Q./2022/02/04/%E5%90%8C%E4%BD%99/</url>
+    <url>/2022/02/04/%E5%90%8C%E4%BD%99/</url>
     <content><![CDATA[<p>这篇文章主要介绍<strong>同余</strong>&amp;<strong>逆元</strong>&amp;<strong>不定方程</strong>及<strong>代码实现</strong></p>
 <span id="more"></span>
 <p>由于本人比较<em>菜</em>，所以一些定理不予证明</p>
@@ -212,12 +232,12 @@
         <category>OI</category>
       </categories>
       <tags>
-        <tag>数论</tag>
+        <tag>数学</tag>
       </tags>
   </entry>
   <entry>
     <title>模拟退火</title>
-    <url>/Q./2022/03/05/%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB/</url>
+    <url>/2022/03/05/%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB/</url>
     <content><![CDATA[<p>这篇文章主要介绍<strong>模拟退火算法</strong>的原理以及实现</p>
 <span id="more"></span>
 <h1 id="模拟退火原理"><a href="#模拟退火原理" class="headerlink" title="模拟退火原理"></a>模拟退火原理</h1><h2 id="算法来源"><a href="#算法来源" class="headerlink" title="算法来源"></a>算法来源</h2><p>在物理学中，当一个物体的温度很高的时候，这个物体会由高温状态转变为低温状态，而其内部的粒子也<strong>逐渐</strong>由无序转变为有序。这就给我们提供了设计算法的思路：模拟粒子的无序状态，即<strong>随机化</strong>，而当”温度“越来越低的时候，粒子越来越有序，而我们随机化的<strong>幅度</strong>越来越小，最后就可以得到我们想要的最优解</p>

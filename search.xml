@@ -1,35 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Butterfly主题美化进阶</title>
-    <url>/2022/04/21/Butterfly%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E8%BF%9B%E9%98%B6/</url>
-    <content><![CDATA[<p>进一步美化Butterfly主题需要 <strong>引入外部文件</strong> ， 真正实现自己想要的效果<br>温馨提示： </p>
-<ul>
-<li>引入css文件需要修改 <strong>主体配置文件</strong> _config.yml ， 找到 <strong>inject： head</strong>  </li>
-<li>引入js文件需要修改 <strong>主体配置文件</strong> _config.yml ， 查找 <strong>inject： bottom</strong></li>
-</ul>
-<p>根据提示引入即可<br>示例：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">inject:</span></span><br><span class="line">  <span class="attr">head:</span></span><br><span class="line">    <span class="comment"># - &lt;link rel=&quot;stylesheet&quot; href=&quot;/xxx.css&quot;&gt;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/background.css&quot;&gt;</span> <span class="comment">#主题css文件夹中的background.css文件</span></span><br><span class="line">  <span class="attr">bottom:</span></span><br><span class="line">    <span class="comment"># - &lt;script src=&quot;xxxx&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;/js/jq.js&quot;&gt;&lt;/script&gt;</span> <span class="comment">#主题css文件夹中的jq.js文件</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;/js/fish.js&quot;&gt;&lt;/script&gt;</span> <span class="comment">#主题css文件夹中的fish.js文件</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="页脚动态渐变"><a href="#页脚动态渐变" class="headerlink" title="页脚动态渐变"></a>页脚动态渐变</h2><p>新建css文件，写入以下代码：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 页脚footer */</span></span><br><span class="line"><span class="comment">/* 渐变色滚动动画 */</span></span><br><span class="line"><span class="keyword">@-webkit-keyframes</span> Gradient &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">50%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@-moz-keyframes</span> Gradient &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">50%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@keyframes</span> Gradient &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">50%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#footer</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(-<span class="number">45deg</span>, <span class="number">#ee7752</span>, <span class="number">#ce3e75</span>, <span class="number">#23a6d5</span>, <span class="number">#23d5ab</span>);</span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">400%</span> <span class="number">400%</span>;</span><br><span class="line">    -webkit-<span class="attribute">animation</span>: Gradient <span class="number">10s</span> ease infinite;</span><br><span class="line">    -moz-<span class="attribute">animation</span>: Gradient <span class="number">10s</span> ease infinite;</span><br><span class="line">    <span class="attribute">animation</span>: Gradient <span class="number">10s</span> ease infinite;</span><br><span class="line">    -o-user-select: none;</span><br><span class="line">    -ms-user-select: none;</span><br><span class="line">    -webkit-user-select: none;</span><br><span class="line">    -moz-user-select: none;</span><br><span class="line">    user-select: none;</span><br><span class="line">    <span class="attribute">border-top-left-radius</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">border-top-right-radius</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#footer</span>:before &#123;</span><br><span class="line">    background-color: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>修改主题配置文件引入即可</p>
-<h2 id="页脚养鱼"><a href="#页脚养鱼" class="headerlink" title="页脚养鱼"></a>页脚养鱼</h2><p>首先到这两个网址引入必要的 js 文件  </p>
-<ul>
-<li><a href="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js">https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/xiabo2/CDN@latest/fishes.js">https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;xiabo2&#x2F;CDN@latest&#x2F;fishes.js</a></li>
-</ul>
-<p>复制下来保存在TXT文件中分别命名为为 <strong>jquery.min</strong> 和 <strong>fishes</strong><br>然后 <strong>修改后缀为 js</strong><br>放在博客根目录的 <strong>themes&#x2F;butterfly&#x2F;source&#x2F;js&#x2F;</strong> 文件夹中</p>
-<p>引入两个js文件即可<br>这样就可以在页脚养鱼啦</p>
-]]></content>
-      <categories>
-        <category>主题美化</category>
-      </categories>
-      <tags>
-        <tag>Butterfly</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>基于Github的Blog搭建</title>
     <url>/2022/02/03/Blog%E5%88%9B%E5%BB%BA-NextTheme/</url>
     <content><![CDATA[<p>这篇文章主要介绍个人Blog的搭建</p>
@@ -83,6 +54,35 @@
       </categories>
       <tags>
         <tag>Blog搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Butterfly主题美化进阶</title>
+    <url>/2022/04/21/Butterfly%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E8%BF%9B%E9%98%B6/</url>
+    <content><![CDATA[<p>进一步美化Butterfly主题需要 <strong>引入外部文件</strong> ， 真正实现自己想要的效果<br>温馨提示： </p>
+<ul>
+<li>引入css文件需要修改 <strong>主体配置文件</strong> _config.yml ， 找到 <strong>inject： head</strong>  </li>
+<li>引入js文件需要修改 <strong>主体配置文件</strong> _config.yml ， 查找 <strong>inject： bottom</strong></li>
+</ul>
+<p>根据提示引入即可<br>示例：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">inject:</span></span><br><span class="line">  <span class="attr">head:</span></span><br><span class="line">    <span class="comment"># - &lt;link rel=&quot;stylesheet&quot; href=&quot;/xxx.css&quot;&gt;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/background.css&quot;&gt;</span> <span class="comment">#主题css文件夹中的background.css文件</span></span><br><span class="line">  <span class="attr">bottom:</span></span><br><span class="line">    <span class="comment"># - &lt;script src=&quot;xxxx&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;/js/jq.js&quot;&gt;&lt;/script&gt;</span> <span class="comment">#主题css文件夹中的jq.js文件</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;/js/fish.js&quot;&gt;&lt;/script&gt;</span> <span class="comment">#主题css文件夹中的fish.js文件</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="页脚动态渐变"><a href="#页脚动态渐变" class="headerlink" title="页脚动态渐变"></a>页脚动态渐变</h2><p>新建css文件，写入以下代码：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 页脚footer */</span></span><br><span class="line"><span class="comment">/* 渐变色滚动动画 */</span></span><br><span class="line"><span class="keyword">@-webkit-keyframes</span> Gradient &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">50%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@-moz-keyframes</span> Gradient &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">50%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@keyframes</span> Gradient &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">50%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#footer</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(-<span class="number">45deg</span>, <span class="number">#ee7752</span>, <span class="number">#ce3e75</span>, <span class="number">#23a6d5</span>, <span class="number">#23d5ab</span>);</span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">400%</span> <span class="number">400%</span>;</span><br><span class="line">    -webkit-<span class="attribute">animation</span>: Gradient <span class="number">10s</span> ease infinite;</span><br><span class="line">    -moz-<span class="attribute">animation</span>: Gradient <span class="number">10s</span> ease infinite;</span><br><span class="line">    <span class="attribute">animation</span>: Gradient <span class="number">10s</span> ease infinite;</span><br><span class="line">    -o-user-select: none;</span><br><span class="line">    -ms-user-select: none;</span><br><span class="line">    -webkit-user-select: none;</span><br><span class="line">    -moz-user-select: none;</span><br><span class="line">    user-select: none;</span><br><span class="line">    <span class="attribute">border-top-left-radius</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">border-top-right-radius</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#footer</span>:before &#123;</span><br><span class="line">    background-color: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>修改主题配置文件引入即可</p>
+<h2 id="页脚养鱼"><a href="#页脚养鱼" class="headerlink" title="页脚养鱼"></a>页脚养鱼</h2><p>首先到这两个网址引入必要的 js 文件  </p>
+<ul>
+<li><a href="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js">https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js</a></li>
+<li><a href="https://cdn.jsdelivr.net/gh/xiabo2/CDN@latest/fishes.js">https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;xiabo2&#x2F;CDN@latest&#x2F;fishes.js</a></li>
+</ul>
+<p>复制下来保存在TXT文件中分别命名为为 <strong>jquery.min</strong> 和 <strong>fishes</strong><br>然后 <strong>修改后缀为 js</strong><br>放在博客根目录的 <strong>themes&#x2F;butterfly&#x2F;source&#x2F;js&#x2F;</strong> 文件夹中</p>
+<p>引入两个js文件即可<br>这样就可以在页脚养鱼啦</p>
+]]></content>
+      <categories>
+        <category>主题美化</category>
+      </categories>
+      <tags>
+        <tag>Butterfly</tag>
       </tags>
   </entry>
   <entry>
@@ -164,6 +164,23 @@
       </tags>
   </entry>
   <entry>
+    <title>P8106[Cnoi2021]数学练习-题解</title>
+    <url>/2022/04/04/P8106-Cnoi2021-%E6%95%B0%E5%AD%A6%E7%BB%83%E4%B9%A0-%E9%A2%98%E8%A7%A3/</url>
+    <content><![CDATA[<p>这篇文章为洛谷P8106-Cnoi2021-数学练习的题解</p>
+<span id="more"></span>
+<h3 id="刚刚学完排列组合特来写一篇题解"><a href="#刚刚学完排列组合特来写一篇题解" class="headerlink" title="刚刚学完排列组合特来写一篇题解"></a>刚刚学完排列组合特来写一篇题解</h3><h2 id="1-思路"><a href="#1-思路" class="headerlink" title="1. 思路"></a>1. 思路</h2><p>首先题目要求我们将 $1$~$n$ 的数分为两个子集。<br>$|S| \notin S$ 且 $|T| \notin T$。<br>$|S|$ 表示的是 $S$ 集合中元素的个数。<br>由题目的特殊条件我们可以得到该条件的一个<strong>充要条件</strong> ：<br>$|S| \in T$ 且 $|T| \in S$。 </p>
+<p>这样我们在 “ 安置 ”  好 $|S|$ 和 $|T|$ 后就可以用组合数公式轻松计算出答案了。<br>但是这边仍然有一个性质我们没有用到 ：<br><strong>当 $n$ 为偶数时</strong> $|S| \neq |T|$  这是显然的，也是<strong>必要</strong>的。  </p>
+<h2 id="2-解法"><a href="#2-解法" class="headerlink" title="2. 解法"></a>2. 解法</h2><p>枚举 $1 $~$ n - 1 $ 作为 S 集合的元素个数。<br>已有  $ |T| \in S$。<br>利用组合数公式挑选剩下 $i - 1$ 个数。<br>由于 $n$ 个数全部挑完 ， 所以剩下的数全部纳入 $T$ 集合。<br>我们只需要算 $S$ 集合满足题意的个数即可。<br>附上组合数公式 ：<br><img src="https://s3.bmp.ovh/imgs/2022/03/235d693cdce2562d.webp"><br>注意到除号且在模意义下 ， 所以我们需要求 <strong>逆元</strong>。<br>注意到此题 $mod$ 的特殊性 ， 所以我们可以使用 <strong>费马小定理</strong> 求解逆元。<br>不知道逆元建议先做做 <a href="https://www.luogu.com.cn/problem/P3811">这道题</a>。<br>最后注意 <strong>特判 $n$ 为偶数</strong> 的情况就可以了。</p>
+<h2 id="3-Code"><a href="#3-Code" class="headerlink" title="3. Code"></a>3. Code</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">100005</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll mod=<span class="number">998244353</span>;</span><br><span class="line">ll n;</span><br><span class="line">ll frac[maxn];</span><br><span class="line">ll x,y;</span><br><span class="line"><span class="function">ll <span class="title">inv</span><span class="params">(ll a,ll s,ll p)</span></span>&#123; <span class="comment">// 费马小定理求逆元</span></span><br><span class="line">	ll ans=<span class="number">1</span>; </span><br><span class="line">	<span class="keyword">while</span>(s)&#123;</span><br><span class="line">		<span class="keyword">if</span>(s&amp;<span class="number">1</span>) ans=ans*a%p;</span><br><span class="line">		a=a*a%p;</span><br><span class="line">		s&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans%p;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">C</span><span class="params">(ll m,ll n)</span></span>&#123;</span><br><span class="line">	ll x=<span class="built_in">inv</span>(frac[m]*frac[n-m]%mod,mod<span class="number">-2</span>,mod);</span><br><span class="line">    <span class="keyword">return</span> frac[n]*x%mod;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;n);</span><br><span class="line">    ll ans=<span class="number">0</span>;</span><br><span class="line">    frac[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(ll i=<span class="number">1</span>;i&lt;=n;i++) frac[i]=frac[i<span class="number">-1</span>]*i%mod; <span class="comment">// 预处理阶乘</span></span><br><span class="line">    ll mid=n/<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">bool</span> judge=<span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">if</span>(n%<span class="number">2</span>==<span class="number">0</span>) judge=<span class="literal">true</span>;</span><br><span class="line">   	<span class="keyword">for</span>(ll i=<span class="number">1</span>;i&lt;=n<span class="number">-1</span>;i++)&#123;</span><br><span class="line">   		<span class="keyword">if</span>(judge==<span class="literal">true</span>&amp;&amp;i==mid) <span class="keyword">continue</span>; <span class="comment">// 特判 n 为偶数</span></span><br><span class="line">   		ans=(ans+<span class="built_in">C</span>(i<span class="number">-1</span>,n<span class="number">-2</span>))%mod;</span><br><span class="line">	&#125; </span><br><span class="line">   	<span class="built_in">printf</span>(<span class="string">&quot;%lld&quot;</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>洛谷题解</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>P5507机关-题解</title>
     <url>/2022/04/04/P5507%E6%9C%BA%E5%85%B3-%E9%A2%98%E8%A7%A3/</url>
     <content><![CDATA[<p>这篇文章为洛谷P5507机关的题解</p>
@@ -190,23 +207,6 @@
       </tags>
   </entry>
   <entry>
-    <title>P8106[Cnoi2021]数学练习-题解</title>
-    <url>/2022/04/04/P8106-Cnoi2021-%E6%95%B0%E5%AD%A6%E7%BB%83%E4%B9%A0-%E9%A2%98%E8%A7%A3/</url>
-    <content><![CDATA[<p>这篇文章为洛谷P8106-Cnoi2021-数学练习的题解</p>
-<span id="more"></span>
-<h3 id="刚刚学完排列组合特来写一篇题解"><a href="#刚刚学完排列组合特来写一篇题解" class="headerlink" title="刚刚学完排列组合特来写一篇题解"></a>刚刚学完排列组合特来写一篇题解</h3><h2 id="1-思路"><a href="#1-思路" class="headerlink" title="1. 思路"></a>1. 思路</h2><p>首先题目要求我们将 $1$~$n$ 的数分为两个子集。<br>$|S| \notin S$ 且 $|T| \notin T$。<br>$|S|$ 表示的是 $S$ 集合中元素的个数。<br>由题目的特殊条件我们可以得到该条件的一个<strong>充要条件</strong> ：<br>$|S| \in T$ 且 $|T| \in S$。 </p>
-<p>这样我们在 “ 安置 ”  好 $|S|$ 和 $|T|$ 后就可以用组合数公式轻松计算出答案了。<br>但是这边仍然有一个性质我们没有用到 ：<br><strong>当 $n$ 为偶数时</strong> $|S| \neq |T|$  这是显然的，也是<strong>必要</strong>的。  </p>
-<h2 id="2-解法"><a href="#2-解法" class="headerlink" title="2. 解法"></a>2. 解法</h2><p>枚举 $1 $~$ n - 1 $ 作为 S 集合的元素个数。<br>已有  $ |T| \in S$。<br>利用组合数公式挑选剩下 $i - 1$ 个数。<br>由于 $n$ 个数全部挑完 ， 所以剩下的数全部纳入 $T$ 集合。<br>我们只需要算 $S$ 集合满足题意的个数即可。<br>附上组合数公式 ：<br><img src="https://s3.bmp.ovh/imgs/2022/03/235d693cdce2562d.webp"><br>注意到除号且在模意义下 ， 所以我们需要求 <strong>逆元</strong>。<br>注意到此题 $mod$ 的特殊性 ， 所以我们可以使用 <strong>费马小定理</strong> 求解逆元。<br>不知道逆元建议先做做 <a href="https://www.luogu.com.cn/problem/P3811">这道题</a>。<br>最后注意 <strong>特判 $n$ 为偶数</strong> 的情况就可以了。</p>
-<h2 id="3-Code"><a href="#3-Code" class="headerlink" title="3. Code"></a>3. Code</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">100005</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll mod=<span class="number">998244353</span>;</span><br><span class="line">ll n;</span><br><span class="line">ll frac[maxn];</span><br><span class="line">ll x,y;</span><br><span class="line"><span class="function">ll <span class="title">inv</span><span class="params">(ll a,ll s,ll p)</span></span>&#123; <span class="comment">// 费马小定理求逆元</span></span><br><span class="line">	ll ans=<span class="number">1</span>; </span><br><span class="line">	<span class="keyword">while</span>(s)&#123;</span><br><span class="line">		<span class="keyword">if</span>(s&amp;<span class="number">1</span>) ans=ans*a%p;</span><br><span class="line">		a=a*a%p;</span><br><span class="line">		s&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans%p;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">C</span><span class="params">(ll m,ll n)</span></span>&#123;</span><br><span class="line">	ll x=<span class="built_in">inv</span>(frac[m]*frac[n-m]%mod,mod<span class="number">-2</span>,mod);</span><br><span class="line">    <span class="keyword">return</span> frac[n]*x%mod;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;n);</span><br><span class="line">    ll ans=<span class="number">0</span>;</span><br><span class="line">    frac[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(ll i=<span class="number">1</span>;i&lt;=n;i++) frac[i]=frac[i<span class="number">-1</span>]*i%mod; <span class="comment">// 预处理阶乘</span></span><br><span class="line">    ll mid=n/<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">bool</span> judge=<span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">if</span>(n%<span class="number">2</span>==<span class="number">0</span>) judge=<span class="literal">true</span>;</span><br><span class="line">   	<span class="keyword">for</span>(ll i=<span class="number">1</span>;i&lt;=n<span class="number">-1</span>;i++)&#123;</span><br><span class="line">   		<span class="keyword">if</span>(judge==<span class="literal">true</span>&amp;&amp;i==mid) <span class="keyword">continue</span>; <span class="comment">// 特判 n 为偶数</span></span><br><span class="line">   		ans=(ans+<span class="built_in">C</span>(i<span class="number">-1</span>,n<span class="number">-2</span>))%mod;</span><br><span class="line">	&#125; </span><br><span class="line">   	<span class="built_in">printf</span>(<span class="string">&quot;%lld&quot;</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>洛谷题解</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Unity游戏开发日志</title>
     <url>/2022/02/03/Unity%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/</url>
     <content><![CDATA[<h1 id="2022-2-2"><a href="#2022-2-2" class="headerlink" title="2022.2.2"></a>2022.2.2</h1><p>1.完成Unity在VS中的环境配置<br>2.完成C#Script的创建<br>3.实现tilemap障碍物刚体<br>4.实现角色碰撞体和物理配置<br>5.实现角色Idle和run动画机的创建<br>6.实现角色Idle和run时方向的变换<br>7.解决角色方向变换不协调的问题  </p>
@@ -218,69 +218,6 @@
       </categories>
       <tags>
         <tag>Unity日志</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>中国剩余定理</title>
-    <url>/2022/02/04/%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</url>
-    <content><![CDATA[<p>这篇文章主要介绍<strong>中国剩余定理及其解法</strong>以及<strong>代码实现</strong></p>
-<span id="more"></span>
-<h1 id="中国剩余定理"><a href="#中国剩余定理" class="headerlink" title="中国剩余定理"></a>中国剩余定理</h1><h2 id="引子：曹冲养猪"><a href="#引子：曹冲养猪" class="headerlink" title="引子：曹冲养猪"></a>引子：曹冲养猪</h2><p>题目链接：<a href="https://www.luogu.com.cn/problem/P1495">https://www.luogu.com.cn/problem/P1495</a><br>自从曹冲搞定了大象以后，曹操就开始捉摸让儿子干些事业，于是派他到中原养猪场养猪，可是曹冲满不高兴，于是在工作中马马虎虎，有一次曹操想知道母猪的数量，于是曹冲想狠狠耍曹操一把。举个例子，假如有 1616 头母猪，如果建了 33 个猪圈，剩下 11 头猪就没有地方安家了。如果建造了 55 个猪圈，但是仍然有 11 头猪没有地方去，然后如果建造了 77 个猪圈，还有 22 头没有地方去。你作为曹总的私人秘书理所当然要将准确的猪数报给曹总，你该怎么办？</p>
-<p>类似此类问题我们可以使用<strong>中国剩余定理</strong>求解<br>限制条件<strong>模两两互质</strong></p>
-<h2 id="推导"><a href="#推导" class="headerlink" title="推导"></a>推导</h2><p>推导过程来源于<a href="https://baike.baidu.com/item/%E5%AD%99%E5%AD%90%E5%AE%9A%E7%90%86/2841597?fromtitle=%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86&fromid=11200132&fr=aladdin"><strong>百度百科</strong></a>(主要是<em>太菜了</em>不会推导)<br><img src="https://s3.bmp.ovh/imgs/2022/02/55836b4e60ab409a.png"><br><img src="https://s3.bmp.ovh/imgs/2022/02/fee95cb9985307ad.png"></p>
-<h2 id="求解模板"><a href="#求解模板" class="headerlink" title="求解模板"></a>求解模板</h2><p>以如下问题为例<br>问：有数模3余2，模5余3，模7余2，问数几何？</p>
-<ul>
-<li><strong>衍数</strong>：lcm&#x2F;除数</li>
-<li><strong>逆元</strong>：为衍数模除数意义下的数论倒数，设衍数为a,除数为b，则逆元为ax ≡ 1(mod b)的最小正整数解</li>
-<li><strong>各总</strong>：余数 * 衍数 * 逆元</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th><strong>除数</strong></th>
-<th><strong>余数</strong></th>
-<th><strong>除数最小公倍数(lcm)</strong></th>
-<th><strong>衍数</strong></th>
-<th><strong>逆元</strong></th>
-<th><strong>各总</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>3</td>
-<td>2</td>
-<td>105</td>
-<td>35</td>
-<td>2</td>
-<td>140</td>
-</tr>
-<tr>
-<td>5</td>
-<td>3</td>
-<td>105</td>
-<td>21</td>
-<td>1</td>
-<td>63</td>
-</tr>
-<tr>
-<td>7</td>
-<td>2</td>
-<td>105</td>
-<td>15</td>
-<td>1</td>
-<td>30</td>
-</tr>
-</tbody></table>
-<p>将”各总”相加得到特解233<br>最后将233对lcm取模得到最小正整数解23<br>23即为所求</p>
-<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">exgcd</span><span class="params">(ll a,ll b,ll &amp;x,ll &amp;y)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(b==<span class="number">0</span>)&#123;</span><br><span class="line">		x=<span class="number">1</span>,y=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">return</span> ;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">exgcd</span>(b,a%b,y,x);</span><br><span class="line">	y-=(a/b)*x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">	x=<span class="number">0</span>,y=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	n=<span class="built_in">read</span>();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) m[i]=<span class="built_in">read</span>(),ai[i]=<span class="built_in">read</span>();</span><br><span class="line">	ll M=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) M*=(ll)m[i];<span class="comment">//求lcm </span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) mi[i]=M/m[i];<span class="comment">//求衍数 </span></span><br><span class="line">	<span class="comment">//求逆元</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;<span class="built_in">exgcd</span>(mi[i],m[i],x,y);ti[i]=(x%m[i]+m[i])%m[i];<span class="built_in">init</span>();&#125;</span><br><span class="line">	ll minx=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) minx+=(mi[i]*ai[i]*ti[i])%M;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%lld&quot;</span>,minx%M);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>OI</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
       </tags>
   </entry>
   <entry>
@@ -345,6 +282,69 @@
       </categories>
       <tags>
         <tag>模拟退火</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>中国剩余定理</title>
+    <url>/2022/02/04/%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</url>
+    <content><![CDATA[<p>这篇文章主要介绍<strong>中国剩余定理及其解法</strong>以及<strong>代码实现</strong></p>
+<span id="more"></span>
+<h1 id="中国剩余定理"><a href="#中国剩余定理" class="headerlink" title="中国剩余定理"></a>中国剩余定理</h1><h2 id="引子：曹冲养猪"><a href="#引子：曹冲养猪" class="headerlink" title="引子：曹冲养猪"></a>引子：曹冲养猪</h2><p>题目链接：<a href="https://www.luogu.com.cn/problem/P1495">https://www.luogu.com.cn/problem/P1495</a><br>自从曹冲搞定了大象以后，曹操就开始捉摸让儿子干些事业，于是派他到中原养猪场养猪，可是曹冲满不高兴，于是在工作中马马虎虎，有一次曹操想知道母猪的数量，于是曹冲想狠狠耍曹操一把。举个例子，假如有 1616 头母猪，如果建了 33 个猪圈，剩下 11 头猪就没有地方安家了。如果建造了 55 个猪圈，但是仍然有 11 头猪没有地方去，然后如果建造了 77 个猪圈，还有 22 头没有地方去。你作为曹总的私人秘书理所当然要将准确的猪数报给曹总，你该怎么办？</p>
+<p>类似此类问题我们可以使用<strong>中国剩余定理</strong>求解<br>限制条件<strong>模两两互质</strong></p>
+<h2 id="推导"><a href="#推导" class="headerlink" title="推导"></a>推导</h2><p>推导过程来源于<a href="https://baike.baidu.com/item/%E5%AD%99%E5%AD%90%E5%AE%9A%E7%90%86/2841597?fromtitle=%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86&fromid=11200132&fr=aladdin"><strong>百度百科</strong></a>(主要是<em>太菜了</em>不会推导)<br><img src="https://s3.bmp.ovh/imgs/2022/02/55836b4e60ab409a.png"><br><img src="https://s3.bmp.ovh/imgs/2022/02/fee95cb9985307ad.png"></p>
+<h2 id="求解模板"><a href="#求解模板" class="headerlink" title="求解模板"></a>求解模板</h2><p>以如下问题为例<br>问：有数模3余2，模5余3，模7余2，问数几何？</p>
+<ul>
+<li><strong>衍数</strong>：lcm&#x2F;除数</li>
+<li><strong>逆元</strong>：为衍数模除数意义下的数论倒数，设衍数为a,除数为b，则逆元为ax ≡ 1(mod b)的最小正整数解</li>
+<li><strong>各总</strong>：余数 * 衍数 * 逆元</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>除数</strong></th>
+<th><strong>余数</strong></th>
+<th><strong>除数最小公倍数(lcm)</strong></th>
+<th><strong>衍数</strong></th>
+<th><strong>逆元</strong></th>
+<th><strong>各总</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>3</td>
+<td>2</td>
+<td>105</td>
+<td>35</td>
+<td>2</td>
+<td>140</td>
+</tr>
+<tr>
+<td>5</td>
+<td>3</td>
+<td>105</td>
+<td>21</td>
+<td>1</td>
+<td>63</td>
+</tr>
+<tr>
+<td>7</td>
+<td>2</td>
+<td>105</td>
+<td>15</td>
+<td>1</td>
+<td>30</td>
+</tr>
+</tbody></table>
+<p>将”各总”相加得到特解233<br>最后将233对lcm取模得到最小正整数解23<br>23即为所求</p>
+<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">exgcd</span><span class="params">(ll a,ll b,ll &amp;x,ll &amp;y)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(b==<span class="number">0</span>)&#123;</span><br><span class="line">		x=<span class="number">1</span>,y=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">return</span> ;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">exgcd</span>(b,a%b,y,x);</span><br><span class="line">	y-=(a/b)*x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">	x=<span class="number">0</span>,y=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	n=<span class="built_in">read</span>();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) m[i]=<span class="built_in">read</span>(),ai[i]=<span class="built_in">read</span>();</span><br><span class="line">	ll M=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) M*=(ll)m[i];<span class="comment">//求lcm </span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) mi[i]=M/m[i];<span class="comment">//求衍数 </span></span><br><span class="line">	<span class="comment">//求逆元</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;<span class="built_in">exgcd</span>(mi[i],m[i],x,y);ti[i]=(x%m[i]+m[i])%m[i];<span class="built_in">init</span>();&#125;</span><br><span class="line">	ll minx=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) minx+=(mi[i]*ai[i]*ti[i])%M;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%lld&quot;</span>,minx%M);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>OI</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
       </tags>
   </entry>
 </search>

@@ -3108,7 +3108,6 @@ h1.page-title + .tag-cloud-list {
 #page-header {
   position: relative;
   width: 100%;
-  background-color: #49b1f5;
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -3220,7 +3219,7 @@ h1.page-title + .tag-cloud-list {
   }
 }
 #page-header.post-bg:before {
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0);
 }
 #page-header #post-info {
   position: absolute;
@@ -4076,7 +4075,7 @@ h1.page-title + .tag-cloud-list {
   width: 35px;
   height: 35px;
   border-radius: 5px;
-  background-color: var(--btn-bg);
+  background-color: #2b3f4c;
   color: var(--btn-color);
   text-align: center;
   font-size: 16px;
@@ -4272,9 +4271,6 @@ h1.page-title + .tag-cloud-list {
 }
 .katex-wrap {
   overflow: auto;
-}
-.katex-wrap::-webkit-scrollbar {
-  display: none;
 }
 mjx-container[display],
 .has-jax {

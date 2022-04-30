@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'FZZH-YMYYTJW';
+  font-display: swap;
+  src: url('../font/FZZH-YMYYTJW.TTF') format("truetype");
+}
+body {
+    font-family: 'FZZH-YMYYTJW';
+}

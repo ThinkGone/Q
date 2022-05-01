@@ -57,13 +57,48 @@
       </tags>
   </entry>
   <entry>
+    <title>Butterfly主题修改颜色</title>
+    <url>/2022/05/01/Butterfly%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9%E9%A2%9C%E8%89%B2/</url>
+    <content><![CDATA[<p><a href="https://www.toolsou.com/app/color">在线调色板</a></p>
+<h2 id="修改链接颜色"><a href="#修改链接颜色" class="headerlink" title="修改链接颜色"></a>修改链接颜色</h2><p>在 <strong>&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;post&#x2F;_layout</strong> 目录下的 <strong>post.styl</strong> 中找到并修改如下代码：  </p>
+<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#article-container</span></span><br><span class="line">  <span class="attribute">word-wrap</span>: break-word</span><br><span class="line">  <span class="attribute">overflow-wrap</span>: break-word</span><br><span class="line"></span><br><span class="line">  <span class="selector-tag">a</span></span><br><span class="line">    <span class="attribute">color</span>: <span class="variable">$theme</span>-link-color</span><br><span class="line"></span><br><span class="line">    <span class="selector-pseudo">&amp;:hover</span></span><br><span class="line">      <span class="attribute">text-decoration</span>: underline</span><br></pre></td></tr></table></figure>
+<p>将其中的color修改为自己喜欢的颜色即可</p>
+<h2 id="修改文章末尾声明颜色"><a href="#修改文章末尾声明颜色" class="headerlink" title="修改文章末尾声明颜色"></a>修改文章末尾声明颜色</h2><p>同样在 <strong>post.styl</strong> 文件中找到并修改如下代码：  </p>
+<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.post-copyright</span></span><br><span class="line">      &amp;-meta</span><br><span class="line">        <span class="attribute">color</span>: <span class="variable">$light</span>-blue</span><br><span class="line">        <span class="attribute">font-weight</span>: bold</span><br><span class="line"></span><br><span class="line">      &amp;-info</span><br><span class="line">        <span class="attribute">padding-left</span>: <span class="number">6px</span></span><br></pre></td></tr></table></figure>
+<p>替换其中的 $light-blue 即可</p>
+<h2 id="修改目录栏颜色"><a href="#修改目录栏颜色" class="headerlink" title="修改目录栏颜色"></a>修改目录栏颜色</h2><p>在 <strong>&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;post&#x2F;_layout</strong> 目录下的 <strong>aside.styl</strong> 中找到并修改如下代码：  </p>
+<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.toc-link</span></span><br><span class="line">        <span class="attribute">display</span>: block</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">4px</span> <span class="number">0</span></span><br><span class="line">        <span class="attribute">padding</span>: <span class="number">1px</span> <span class="number">6px</span></span><br><span class="line">        <span class="attribute">color</span>: var(--toc-link-color)</span><br><span class="line">        <span class="attribute">transition</span>: all .<span class="number">2s</span> ease-in-out</span><br><span class="line"></span><br><span class="line">        <span class="selector-pseudo">&amp;:hover</span></span><br><span class="line">          <span class="attribute">color</span>: <span class="variable">$theme</span>-color // 鼠标放置时显示的颜色</span><br><span class="line"></span><br><span class="line">        &amp;<span class="selector-class">.active</span></span><br><span class="line">          <span class="attribute">background</span>: <span class="variable">$theme</span>-toc-color // 到当前文章区域时显示的背景色</span><br><span class="line">          <span class="attribute">color</span>: <span class="variable">$toc</span>-active-color // 目录栏文字颜色</span><br></pre></td></tr></table></figure>
+<h2 id="修改主页文章标题显示的颜色"><a href="#修改主页文章标题显示的颜色" class="headerlink" title="修改主页文章标题显示的颜色"></a>修改主页文章标题显示的颜色</h2><p>在 <strong>&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;post&#x2F;page</strong> 目录下的 <strong>homepage.styl</strong> 中找到并修改如下代码：  </p>
+<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line">&amp; &gt; <span class="selector-class">.article-title</span></span><br><span class="line">        <span class="keyword">@extend</span> <span class="selector-class">.limit-more-line</span></span><br><span class="line">        <span class="attribute">color</span>: var(--text-highlight-color) //标题显示的颜色</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">1.72em</span></span><br><span class="line">        <span class="attribute">line-height</span>: <span class="number">1.4</span></span><br><span class="line">        <span class="attribute">transition</span>: all .<span class="number">2s</span> ease-in-out</span><br><span class="line">        -webkit-line-clamp: <span class="number">2</span></span><br><span class="line"></span><br><span class="line">        +maxWidth768()</span><br><span class="line">          <span class="attribute">font-size</span>: <span class="number">1.43em</span></span><br><span class="line"></span><br><span class="line">        <span class="selector-pseudo">&amp;:hover</span></span><br><span class="line">          <span class="attribute">color</span>:  <span class="variable">$text</span>-hover //鼠标放置在标题时显示的颜色</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>主题美化</category>
+      </categories>
+      <tags>
+        <tag>Butterfly</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Butterfly主题关闭头像转动360°</title>
+    <url>/2022/05/01/Butterfly%E4%B8%BB%E9%A2%98%E5%85%B3%E9%97%AD%E5%A4%B4%E5%83%8F%E8%BD%AC%E5%8A%A8360%C2%B0/</url>
+    <content><![CDATA[<p>有时候我们可能不太喜欢鼠标放在头像时头像自动旋转360°<br>怎么取消呢？<br>找到 <strong>&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;_layout&#x2F;</strong> 目录下的 <strong>aside.styl</strong> 文件<br>查找以下代码： </p>
+<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.avatar-img</span></span><br><span class="line">  <span class="attribute">overflow</span>: hidden</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">110px</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">110px</span></span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">70px</span></span><br><span class="line"></span><br><span class="line">  <span class="selector-tag">img</span></span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span></span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span></span><br><span class="line">    <span class="attribute">transition</span>: filter <span class="number">375ms</span> ease-in .<span class="number">2s</span>, transform .<span class="number">3s</span></span><br><span class="line">    <span class="attribute">object-fit</span>: cover</span><br><span class="line"></span><br><span class="line">    <span class="selector-pseudo">&amp;:hover</span></span><br><span class="line">      <span class="attribute">transform</span>: rotate(<span class="number">360deg</span>) </span><br></pre></td></tr></table></figure>
+<p>注释掉最后两行代码即可</p>
+]]></content>
+      <categories>
+        <category>解决方案</category>
+      </categories>
+      <tags>
+        <tag>Butterfly</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Butterfly主题美化进阶</title>
     <url>/2022/04/21/Butterfly%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E8%BF%9B%E9%98%B6/</url>
     <content><![CDATA[<p>进一步美化Butterfly主题需要 <strong>引入外部文件</strong> ， 真正实现自己想要的效果<br>温馨提示： </p>
 <ul>
 <li>引入css文件需要修改 <strong>主体配置文件</strong> _config.yml ， 找到 <strong>inject： head</strong>  </li>
 <li>引入js文件需要修改 <strong>主体配置文件</strong> _config.yml ， 查找 <strong>inject： bottom</strong></li>
-<li>新建的 css 和 js 文件需要放在 &#x2F;butterfly&#x2F;source&#x2F;.. 的 <strong>相应文件夹</strong> 中</li>
+<li>新建的 css 和 js 文件需要放在 <strong>&#x2F;butterfly&#x2F;source&#x2F;..</strong> 的 <strong>相应文件夹</strong> 中</li>
 </ul>
 <p>根据主题配置文件 _config.yml 中的提示引入即可<br>示例：</p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">inject:</span></span><br><span class="line">  <span class="attr">head:</span></span><br><span class="line">    <span class="comment"># - &lt;link rel=&quot;stylesheet&quot; href=&quot;/xxx.css&quot;&gt;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/background.css&quot;&gt;</span> <span class="comment">#主题/source/css文件夹中的background.css文件</span></span><br><span class="line">  <span class="attr">bottom:</span></span><br><span class="line">    <span class="comment"># - &lt;script src=&quot;xxxx&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;/js/jq.js&quot;&gt;&lt;/script&gt;</span> <span class="comment">#主题/source/js文件夹中的jq.js文件</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;/js/fish.js&quot;&gt;&lt;/script&gt;</span> <span class="comment">#主题source/js文件夹中的fish.js文件</span></span><br></pre></td></tr></table></figure>
@@ -91,7 +126,7 @@
   <entry>
     <title>Butterfly主题解决顶部图颜色较深的情况</title>
     <url>/2022/04/28/Butterfly%E4%B8%BB%E9%A2%98%E8%A7%A3%E5%86%B3%E4%B8%BB%E9%A1%B5%E9%A1%B6%E9%83%A8%E5%9B%BE%E9%A2%9C%E8%89%B2%E8%BE%83%E6%B7%B1%E7%9A%84%E6%83%85%E5%86%B5/</url>
-    <content><![CDATA[<h2 id="主页顶部图颜色较深"><a href="#主页顶部图颜色较深" class="headerlink" title="主页顶部图颜色较深"></a>主页顶部图颜色较深</h2><p>经检测，顶部图颜色较深的代码在：<br>butterfly\source\css_layout\head.styl  </p>
+    <content><![CDATA[<h2 id="主页顶部图颜色较深"><a href="#主页顶部图颜色较深" class="headerlink" title="主页顶部图颜色较深"></a>主页顶部图颜色较深</h2><p>经检测，顶部图颜色较深的代码在：<br><strong>&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;_layout&#x2F;</strong> 目录下的 <strong>head.styl</strong> 文件中  </p>
 <figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">&amp;:not</span>(.not-<span class="attribute">top</span>-img):before</span><br><span class="line">  <span class="attribute">position</span>: absolute</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span></span><br><span class="line">  <span class="attribute">background-color</span>: alpha(<span class="variable">$dark</span>-black, .<span class="number">3</span>) // 即rgba(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.3</span>)，使得顶部图颜色较深</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
 <p>将其中的颜色属性设为 0 即可</p>
 <h2 id="文章顶部图颜色较深"><a href="#文章顶部图颜色较深" class="headerlink" title="文章顶部图颜色较深"></a>文章顶部图颜色较深</h2><p>同样在 head.styl 文件中找到如下代码并修改： </p>
@@ -106,7 +141,7 @@
   <entry>
     <title>Butterfly主题解决在主题配置文件修改滑动条颜色不成功的问题</title>
     <url>/2022/04/30/Butterfly%E4%B8%BB%E9%A2%98%E8%A7%A3%E5%86%B3%E5%9C%A8%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9%E6%BB%91%E5%8A%A8%E6%9D%A1%E9%A2%9C%E8%89%B2%E4%B8%8D%E6%88%90%E5%8A%9F%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>当我们修改主题配置文件，想要修改滑动条颜色时，可能会出现颜色没有变化的情况<br>怎么办呢？<br>我们可以 <strong>直接修改源码</strong><br>找到 &#x2F;butterfly&#x2F;source&#x2F;scc&#x2F;_global&#x2F; 下的 <strong>index.styl</strong> 文件<br>查询 –scrollbar-color: $scrollbar-color<br>修改为自己喜欢的颜色即可  </p>
+    <content><![CDATA[<p>当我们修改主题配置文件，想要修改滑动条颜色时，可能会出现颜色没有变化的情况<br>怎么办呢？<br>我们可以 <strong>直接修改源码</strong><br>找到 <strong>&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;_global&#x2F;</strong> 下的 <strong>index.styl</strong> 文件<br>查询 –scrollbar-color: $scrollbar-color<br>修改为自己喜欢的颜色即可  </p>
 ]]></content>
       <categories>
         <category>解决方案</category>
@@ -118,7 +153,7 @@
   <entry>
     <title>Butterfly主题解决文章顶部图和背景不切合的问题</title>
     <url>/2022/04/30/Butterfly%E4%B8%BB%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%87%E7%AB%A0%E9%A1%B6%E9%83%A8%E5%9B%BE%E5%92%8C%E8%83%8C%E6%99%AF%E4%B8%8D%E5%88%87%E5%90%88%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>如果使用主题配置文件中的 default_top_img 将背景图和顶部图改为一致的话<br>可能会出现顶部图和背景图不切合的如下情况：<br><img src="https://s2.loli.net/2022/04/30/XNifFjKGJ1eLdPh.png"><br>注意到这边背景图是有部分在上方的，只是被顶部图覆盖住了<br>所以我们可以取消顶部图显示<br>即 <strong>取消 default_top_img</strong><br>但是顶部图重新填充了蓝色<br><img src="https://s2.loli.net/2022/04/30/ds2ky8wOF7e6Mht.png"><br>修改 butterfly\source\css_layout\ 下的 head.styl 文件<br><strong>注释掉在前几行的 background-color: $light-blue</strong> 即可<br>效果如下：<br><img src="https://s2.loli.net/2022/04/30/X9vH83qYyCzoFQP.png"></p>
+    <content><![CDATA[<p>如果使用主题配置文件中的 default_top_img 将背景图和顶部图改为一致的话<br>可能会出现顶部图和背景图不切合的如下情况：<br><img src="https://s2.loli.net/2022/04/30/XNifFjKGJ1eLdPh.png"><br>注意到这边背景图是有部分在上方的，只是被顶部图覆盖住了<br>所以我们可以 <strong>取消顶部图显示</strong><br>即 <strong>取消 default_top_img</strong><br>但是顶部图重新填充了蓝色<br><strong>注释掉在前几行的 background-color: $light-blue</strong> 即可<br>效果如下：<br><img src="https://s2.loli.net/2022/04/30/X9vH83qYyCzoFQP.png"></p>
 ]]></content>
       <categories>
         <category>解决方案</category>

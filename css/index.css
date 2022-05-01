@@ -2295,7 +2295,7 @@ figure.highlight pre .javascript .function {
   }
 }
 #recent-posts > .recent-post-item >.recent-post-info > .article-title:hover {
-  color: #49b1f5;
+  color: #5904f3;
 }
 #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap {
   margin: 6px 0;
@@ -2734,10 +2734,10 @@ h1.page-title + .tag-cloud-list {
   transition: all 0.2s ease-in-out;
 }
 #aside-content #card-toc .toc-content .toc-link:hover {
-  color: #49b1f5;
+  color: #5904f3;
 }
 #aside-content #card-toc .toc-content .toc-link.active {
-  background: #00c4b6;
+  background: #2b3f4c;
   color: #fff;
 }
 #aside-content :only-child > .card-widget {
@@ -2755,7 +2755,7 @@ h1.page-title + .tag-cloud-list {
   animation: more-btn-move 1s infinite;
 }
 #aside-content .card-announcement .item-headline i {
-  color: #f00;
+  color: #2b3f4c;
 }
 .avatar-img {
   overflow: hidden;
@@ -2774,15 +2774,8 @@ h1.page-title + .tag-cloud-list {
   transition: filter 375ms ease-in 0.2s, transform 0.3s;
   object-fit: cover;
 }
-.avatar-img img:hover {
-  -webkit-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
-  -o-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  transform: rotate(360deg);
-}
 @media screen and (min-width: 900px) {
-  html.hide-aside .layout {
+  .avatar-img img html.hide-aside .layout {
     -webkit-box-pack: center;
     -moz-box-pack: center;
     -o-box-pack: center;
@@ -2790,14 +2783,14 @@ h1.page-title + .tag-cloud-list {
     -webkit-justify-content: center;
     justify-content: center;
   }
-  html.hide-aside .layout > .aside-content {
+  .avatar-img img html.hide-aside .layout > .aside-content {
     display: none;
   }
-  html.hide-aside .layout > div:first-child {
+  .avatar-img img html.hide-aside .layout > div:first-child {
     width: 80%;
   }
 }
-.page .sticky_layout {
+.avatar-img img .page .sticky_layout {
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -3633,7 +3626,7 @@ h1.page-title + .tag-cloud-list {
   overflow-wrap: break-word;
 }
 #article-container a {
-  color: #49b1f5;
+  color: #5904f3;
 }
 #article-container a:hover {
   text-decoration: underline;
@@ -3860,7 +3853,7 @@ h1.page-title + .tag-cloud-list {
   box-shadow: 0 0 8px 0 rgba(232,237,250,0.6), 0 2px 4px 0 rgba(232,237,250,0.5);
 }
 #post .post-copyright .post-copyright-meta {
-  color: #49b1f5;
+  color: #5904f3;
   font-weight: bold;
 }
 #post .post-copyright .post-copyright-info {

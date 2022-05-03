@@ -2768,7 +2768,7 @@ h1.page-title + .tag-cloud-list {
   object-fit: cover;
 }
 @media screen and (min-width: 900px) {
-  .avatar-img img html.hide-aside .layout {
+  html.hide-aside .layout {
     -webkit-box-pack: center;
     -moz-box-pack: center;
     -o-box-pack: center;
@@ -2776,14 +2776,14 @@ h1.page-title + .tag-cloud-list {
     -webkit-justify-content: center;
     justify-content: center;
   }
-  .avatar-img img html.hide-aside .layout > .aside-content {
+  html.hide-aside .layout > .aside-content {
     display: none;
   }
-  .avatar-img img html.hide-aside .layout > div:first-child {
+  html.hide-aside .layout > div:first-child {
     width: 80%;
   }
 }
-.avatar-img img .page .sticky_layout {
+.page .sticky_layout {
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;

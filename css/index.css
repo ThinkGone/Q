@@ -1251,11 +1251,11 @@ hr:before,
   }
 }
 :root {
-  --global-font-size: 14px;
+  --global-font-size: 1.1em;
   --global-bg: #fff;
   --font-color: #4c4948;
-  --hr-border: #a4d8fa;
-  --hr-before-color: #80c8f8;
+  --hr-border: #395386;
+  --hr-before-color: #395386;
   --search-bg: #f6f8fa;
   --search-input-color: #4c4948;
   --search-result-title: #4c4948;
@@ -1270,7 +1270,7 @@ hr:before,
   --sidebar-bg: #f6f8fa;
   --btn-hover-color: transparent;
   --btn-color: #fff;
-  --btn-bg: #49b1f5;
+  --btn-bg: #395386;
   --text-bg-hover: #395386;
   --light-grey: #eee;
   --dark-grey: #cacaca;
@@ -1282,7 +1282,6 @@ hr:before,
   --toc-link-color: #666261;
   --card-box-shadow: 0 3px 8px 6px rgba(7,17,27,0.05);
   --card-hover-box-shadow: 0 3px 8px 6px rgba(7,17,27,0.09);
-  --pseudo-hover: #ff7242;
   --headline-presudo: #a0a0a0;
   --scrollbar-color: #2b3f4c;
 }
@@ -3524,7 +3523,7 @@ h1.page-title + .tag-cloud-list {
   z-index: -1;
   width: 0;
   height: 3px;
-  background-color: #2b3f4c;
+  background-color: #395386;
   content: '';
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -4037,6 +4036,7 @@ h1.page-title + .tag-cloud-list {
 }
 #sidebar #sidebar-menus .menus_items .site-page:hover {
   background: var(--text-bg-hover);
+  color: #fff;
 }
 #sidebar #sidebar-menus .menus_items .site-page i:first-child {
   width: 15%;
@@ -5324,7 +5324,7 @@ blockquote.pullquote.right {
   transition: color 0.2s ease-in-out;
 }
 .search-dialog .search-nav .search-close-button:hover {
-  color: #49b1f5;
+  color: #395386;
 }
 #search-mask {
   position: fixed;
@@ -5360,7 +5360,7 @@ blockquote.pullquote.right {
   line-height: 1.7;
 }
 #local-search .search-dialog .local-search__hit-item:hover:before {
-  border-color: var(--pseudo-hover);
+  border-color: #395386;
 }
 #local-search .search-dialog .local-search__hit-item:before {
   position: absolute;
@@ -5368,7 +5368,7 @@ blockquote.pullquote.right {
   left: 0;
   width: 0.5em;
   height: 0.5em;
-  border: 3px solid #49b1f5;
+  border: 3px solid #395386;
   border-radius: 0.5em;
   background: transparent;
   content: '';
@@ -5386,14 +5386,14 @@ blockquote.pullquote.right {
   cursor: pointer;
 }
 #local-search .search-dialog .local-search__hit-item a:hover {
-  color: #49b1f5;
+  color: #395386;
 }
 #local-search .search-dialog .local-search__hit-item .search-result {
   margin: 0 0 8px;
   word-break: break-all;
 }
 #local-search .search-dialog .local-search__hit-item .search-keyword {
-  color: #f47466;
+  color: #c68f0d;
   font-weight: bold;
 }
 #local-search .search-dialog .search-result-list {

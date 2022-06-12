@@ -99,6 +99,37 @@
       </tags>
   </entry>
   <entry>
+    <title>Butterfly主题关闭头像转动360°</title>
+    <url>/2022/05/01/Butterfly%E4%B8%BB%E9%A2%98%E5%85%B3%E9%97%AD%E5%A4%B4%E5%83%8F%E8%BD%AC%E5%8A%A8360%C2%B0/</url>
+    <content><![CDATA[<p>有时候我们可能不太喜欢鼠标放在头像时头像自动旋转360°<br>怎么取消呢？<br>找到 <strong>&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;_layout&#x2F;</strong> 目录下的 <strong>aside.styl</strong> 文件<br>查找以下代码： </p>
+<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.avatar-img</span></span><br><span class="line">  <span class="attribute">overflow</span>: hidden</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">110px</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">110px</span></span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">70px</span></span><br><span class="line"></span><br><span class="line">  <span class="selector-tag">img</span></span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span></span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span></span><br><span class="line">    <span class="attribute">transition</span>: filter <span class="number">375ms</span> ease-in .<span class="number">2s</span>, transform .<span class="number">3s</span></span><br><span class="line">    <span class="attribute">object-fit</span>: cover</span><br><span class="line"></span><br><span class="line">    <span class="selector-pseudo">&amp;:hover</span></span><br><span class="line">      <span class="attribute">transform</span>: rotate(<span class="number">360deg</span>) </span><br></pre></td></tr></table></figure>
+<p>注释掉最后一行代码即可<br>注意： <strong>不可以注释掉 &amp;:hover</strong> 否则会导致单栏和双栏转换的时候出错！</p>
+]]></content>
+      <categories>
+        <category>解决方案</category>
+      </categories>
+      <tags>
+        <tag>Butterfly</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Butterfly主题解决方案</title>
+    <url>/2022/04/30/Butterfly%E4%B8%BB%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<h2 id="解决文章顶部图和背景不切合的问题"><a href="#解决文章顶部图和背景不切合的问题" class="headerlink" title="解决文章顶部图和背景不切合的问题"></a>解决文章顶部图和背景不切合的问题</h2><p>如果使用主题配置文件中的 default_top_img 将背景图和顶部图改为一致的话<br>可能会出现顶部图和背景图不切合的如下情况：<br><img src="https://s2.loli.net/2022/04/30/XNifFjKGJ1eLdPh.png"><br>注意到这边背景图是有部分在上方的，只是被顶部图覆盖住了<br>所以我们可以 <strong>取消顶部图显示</strong><br>即 <strong>取消 default_top_img</strong><br>但是顶部图重新填充了蓝色<br><strong>注释掉在前几行的 background-color: $light-blue</strong> 即可<br>效果如下：<br><img src="https://s2.loli.net/2022/04/30/X9vH83qYyCzoFQP.png"></p>
+<h2 id="解决在主题配置文件修改滑动条颜色不成功的问题"><a href="#解决在主题配置文件修改滑动条颜色不成功的问题" class="headerlink" title="解决在主题配置文件修改滑动条颜色不成功的问题"></a>解决在主题配置文件修改滑动条颜色不成功的问题</h2><p>当我们修改主题配置文件，想要修改滑动条颜色时，可能会出现颜色没有变化的情况<br>怎么办呢？<br>我们可以 <strong>直接修改源码</strong><br>找到 <strong>&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;_global&#x2F;</strong> 下的 <strong>index.styl</strong> 文件<br>查询 –scrollbar-color: $scrollbar-color<br>修改为自己喜欢的颜色即可  </p>
+<h2 id="主页顶部图颜色较深"><a href="#主页顶部图颜色较深" class="headerlink" title="主页顶部图颜色较深"></a>主页顶部图颜色较深</h2><p>经检测，顶部图颜色较深的代码在：<br><strong>&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;_layout&#x2F;</strong> 目录下的 <strong>head.styl</strong> 文件中  </p>
+<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">&amp;:not</span>(.not-<span class="attribute">top</span>-img):before</span><br><span class="line">  <span class="attribute">position</span>: absolute</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span></span><br><span class="line">  <span class="attribute">background-color</span>: alpha(<span class="variable">$dark</span>-black, .<span class="number">3</span>) // 即rgba(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.3</span>)，使得顶部图颜色较深</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>将其中的颜色属性设为 0 即可</p>
+<h2 id="文章顶部图颜色较深"><a href="#文章顶部图颜色较深" class="headerlink" title="文章顶部图颜色较深"></a>文章顶部图颜色较深</h2><p>同样在 head.styl 文件中找到如下代码并修改： </p>
+<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="comment">// post</span></span><br><span class="line">  &amp;<span class="selector-class">.post-bg</span></span><br><span class="line">    <span class="attribute">height</span>: <span class="number">400px</span></span><br><span class="line"></span><br><span class="line">    +maxWidth768()</span><br><span class="line">      <span class="attribute">height</span>: <span class="number">360px</span></span><br><span class="line"></span><br><span class="line">    &amp;:before</span><br><span class="line">      <span class="attribute">background-color</span>: alpha(<span class="variable">$dark</span>-black, .<span class="number">5</span>)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>解决方案</category>
+      </categories>
+      <tags>
+        <tag>Butterfly</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Butterfly主题美化进阶</title>
     <url>/2022/04/21/Butterfly%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E8%BF%9B%E9%98%B6/</url>
     <content><![CDATA[<p>进一步美化Butterfly主题需要 <strong>引入外部文件</strong> ， 真正实现自己想要的效果<br>温馨提示： </p>
@@ -125,37 +156,6 @@
 ]]></content>
       <categories>
         <category>主题美化</category>
-      </categories>
-      <tags>
-        <tag>Butterfly</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Butterfly主题关闭头像转动360°</title>
-    <url>/2022/05/01/Butterfly%E4%B8%BB%E9%A2%98%E5%85%B3%E9%97%AD%E5%A4%B4%E5%83%8F%E8%BD%AC%E5%8A%A8360%C2%B0/</url>
-    <content><![CDATA[<p>有时候我们可能不太喜欢鼠标放在头像时头像自动旋转360°<br>怎么取消呢？<br>找到 <strong>&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;_layout&#x2F;</strong> 目录下的 <strong>aside.styl</strong> 文件<br>查找以下代码： </p>
-<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.avatar-img</span></span><br><span class="line">  <span class="attribute">overflow</span>: hidden</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">110px</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">110px</span></span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">70px</span></span><br><span class="line"></span><br><span class="line">  <span class="selector-tag">img</span></span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span></span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span></span><br><span class="line">    <span class="attribute">transition</span>: filter <span class="number">375ms</span> ease-in .<span class="number">2s</span>, transform .<span class="number">3s</span></span><br><span class="line">    <span class="attribute">object-fit</span>: cover</span><br><span class="line"></span><br><span class="line">    <span class="selector-pseudo">&amp;:hover</span></span><br><span class="line">      <span class="attribute">transform</span>: rotate(<span class="number">360deg</span>) </span><br></pre></td></tr></table></figure>
-<p>注释掉最后一行代码即可<br>注意： <strong>不可以注释掉 &amp;:hover</strong> 否则会导致单栏和双栏转换的时候出错！</p>
-]]></content>
-      <categories>
-        <category>解决方案</category>
-      </categories>
-      <tags>
-        <tag>Butterfly</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Butterfly主题解决方案</title>
-    <url>/2022/04/30/Butterfly%E4%B8%BB%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<h2 id="解决文章顶部图和背景不切合的问题"><a href="#解决文章顶部图和背景不切合的问题" class="headerlink" title="解决文章顶部图和背景不切合的问题"></a>解决文章顶部图和背景不切合的问题</h2><p>如果使用主题配置文件中的 default_top_img 将背景图和顶部图改为一致的话<br>可能会出现顶部图和背景图不切合的如下情况：<br><img src="https://s2.loli.net/2022/04/30/XNifFjKGJ1eLdPh.png"><br>注意到这边背景图是有部分在上方的，只是被顶部图覆盖住了<br>所以我们可以 <strong>取消顶部图显示</strong><br>即 <strong>取消 default_top_img</strong><br>但是顶部图重新填充了蓝色<br><strong>注释掉在前几行的 background-color: $light-blue</strong> 即可<br>效果如下：<br><img src="https://s2.loli.net/2022/04/30/X9vH83qYyCzoFQP.png"></p>
-<h2 id="解决在主题配置文件修改滑动条颜色不成功的问题"><a href="#解决在主题配置文件修改滑动条颜色不成功的问题" class="headerlink" title="解决在主题配置文件修改滑动条颜色不成功的问题"></a>解决在主题配置文件修改滑动条颜色不成功的问题</h2><p>当我们修改主题配置文件，想要修改滑动条颜色时，可能会出现颜色没有变化的情况<br>怎么办呢？<br>我们可以 <strong>直接修改源码</strong><br>找到 <strong>&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;_global&#x2F;</strong> 下的 <strong>index.styl</strong> 文件<br>查询 –scrollbar-color: $scrollbar-color<br>修改为自己喜欢的颜色即可  </p>
-<h2 id="主页顶部图颜色较深"><a href="#主页顶部图颜色较深" class="headerlink" title="主页顶部图颜色较深"></a>主页顶部图颜色较深</h2><p>经检测，顶部图颜色较深的代码在：<br><strong>&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;_layout&#x2F;</strong> 目录下的 <strong>head.styl</strong> 文件中  </p>
-<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">&amp;:not</span>(.not-<span class="attribute">top</span>-img):before</span><br><span class="line">  <span class="attribute">position</span>: absolute</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span></span><br><span class="line">  <span class="attribute">background-color</span>: alpha(<span class="variable">$dark</span>-black, .<span class="number">3</span>) // 即rgba(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.3</span>)，使得顶部图颜色较深</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-<p>将其中的颜色属性设为 0 即可</p>
-<h2 id="文章顶部图颜色较深"><a href="#文章顶部图颜色较深" class="headerlink" title="文章顶部图颜色较深"></a>文章顶部图颜色较深</h2><p>同样在 head.styl 文件中找到如下代码并修改： </p>
-<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="comment">// post</span></span><br><span class="line">  &amp;<span class="selector-class">.post-bg</span></span><br><span class="line">    <span class="attribute">height</span>: <span class="number">400px</span></span><br><span class="line"></span><br><span class="line">    +maxWidth768()</span><br><span class="line">      <span class="attribute">height</span>: <span class="number">360px</span></span><br><span class="line"></span><br><span class="line">    &amp;:before</span><br><span class="line">      <span class="attribute">background-color</span>: alpha(<span class="variable">$dark</span>-black, .<span class="number">5</span>)</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>解决方案</category>
       </categories>
       <tags>
         <tag>Butterfly</tag>
@@ -207,6 +207,32 @@
       </tags>
   </entry>
   <entry>
+    <title>P5507机关-题解</title>
+    <url>/2022/04/04/P5507%E6%9C%BA%E5%85%B3-%E9%A2%98%E8%A7%A3/</url>
+    <content><![CDATA[<p>这篇文章为洛谷P5507机关的题解</p>
+<span id="more"></span>
+<h3 id="这是道很好的搜索练手题"><a href="#这是道很好的搜索练手题" class="headerlink" title="这是道很好的搜索练手题"></a>这是道很好的搜索练手题</h3><p>可以用广为人知的搜索<del>三巨头</del>求解  </p>
+<ul>
+<li>双向搜索</li>
+<li>IDA* （<del>在这题貌似被禁了</del>）</li>
+<li>A*</li>
+</ul>
+<p>这篇题解主要介绍用 <strong>A_star</strong> 算法 AC 这道题  </p>
+<h2 id="1-思路"><a href="#1-思路" class="headerlink" title="1. 思路"></a>1. 思路</h2><p>用 <strong>结构体</strong> 记录 <strong>路径</strong> <strong>状态</strong><br>以及实际步数 <strong>g(n)</strong> 和估价步数 <strong>h(n)</strong><br>我们都知道 A* 算法的核心在于其估价函数 <strong>h(n)</strong><br>每次取出对应 <strong>g(n) + h(n)</strong> <strong>最小的</strong> 进行下一步搜素  </p>
+<p>引出一个疑惑 ：<br>每改变一个机关的状态都会有另一个机关跟着改变<br>那么估价函数如何求解 ？<br>看作是两个一起变换<br>可以 <strong>用当前状态距离目标状态的理想差值除去 2 得到</strong></p>
+<h2 id="2-解法"><a href="#2-解法" class="headerlink" title="2.解法"></a>2.解法</h2><p>使用优先队列存储结构体<br>所以我们需要 <strong>重载运算符</strong>  ： </p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(<span class="keyword">const</span> node &amp;a,<span class="keyword">const</span> node &amp;b)&#123;</span><br><span class="line">	<span class="keyword">return</span> a.g+a.h&gt;b.g+b.h;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>经检验 ：<br>由于看作两个机关同时向着目标前进 <strong>过于理想</strong><br>此题的估价函数可以稍微调高一些，用于优化时间复杂度<br>参数为原估价函数的  <strong>1.3</strong> 倍<br>但此时的时间复杂度仍高了些<br>所以最后加上 <strong>map 去重</strong> 即可</p>
+<h2 id="3-Code"><a href="#3-Code" class="headerlink" title="3. Code"></a>3. Code</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">	string state;<span class="comment">//状态 </span></span><br><span class="line">	string path;<span class="comment">//路径 </span></span><br><span class="line">	<span class="keyword">int</span> g;<span class="comment">//实际步数 </span></span><br><span class="line">	<span class="keyword">int</span> h;<span class="comment">//估价函数 </span></span><br><span class="line">&#125;;</span><br><span class="line">map&lt;string,<span class="keyword">bool</span>&gt; mark;</span><br><span class="line"><span class="comment">//重载运算符 </span></span><br><span class="line"><span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(<span class="keyword">const</span> node &amp;a,<span class="keyword">const</span> node &amp;b)&#123;</span><br><span class="line">	<span class="keyword">return</span> a.g+a.h&gt;b.g+b.h;</span><br><span class="line">&#125;</span><br><span class="line">priority_queue&lt;node&gt; q;</span><br><span class="line"><span class="comment">//估价函数 </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">eva</span><span class="params">(string s)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> cnt=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">12</span>;i++)</span><br><span class="line">        <span class="keyword">if</span>(s[i]!=<span class="string">&#x27;1&#x27;</span>) cnt+=<span class="number">5</span>-(<span class="keyword">int</span>)(s[i]<span class="number">-48</span>);</span><br><span class="line">    <span class="keyword">return</span> cnt/<span class="number">2</span>*<span class="number">1.3</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(node s)</span></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,s.g);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.path.<span class="built_in">size</span>();i++) cout&lt;&lt;(<span class="keyword">int</span>)(s.path[i]<span class="number">-48</span>)&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123; </span><br><span class="line">	<span class="keyword">int</span> gear[<span class="number">13</span>][<span class="number">5</span>];<span class="comment">//机关触发机制 </span></span><br><span class="line">	node start;</span><br><span class="line">	start.state+=(<span class="keyword">char</span>)(<span class="number">48</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">12</span>;i++)</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=<span class="number">5</span>;j++)&#123;</span><br><span class="line">			<span class="keyword">int</span> x;<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;x);</span><br><span class="line">			<span class="keyword">if</span>(j==<span class="number">1</span>) start.state+=(<span class="keyword">char</span>)(x+<span class="number">48</span>);</span><br><span class="line">			<span class="keyword">else</span> gear[i][j<span class="number">-1</span>]=x;</span><br><span class="line">		&#125;</span><br><span class="line">	start.g=<span class="number">0</span>;</span><br><span class="line">	start.h=<span class="built_in">eva</span>(start.state);</span><br><span class="line">	<span class="keyword">if</span>(!start.h)&#123;<span class="built_in">printf</span>(<span class="string">&quot;0&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">	mark[start.state]=<span class="literal">true</span>;</span><br><span class="line">	q.<span class="built_in">push</span>(start);</span><br><span class="line">	<span class="keyword">while</span>(!q.<span class="built_in">empty</span>())&#123;</span><br><span class="line">		node a=q.<span class="built_in">top</span>();q.<span class="built_in">pop</span>();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">12</span>;i++)&#123;</span><br><span class="line">			<span class="comment">//触发机关 </span></span><br><span class="line">			<span class="keyword">int</span> x=(<span class="keyword">int</span>)(a.state[i]<span class="number">-48</span>);<span class="comment">//x为i机关的状态 </span></span><br><span class="line">			<span class="keyword">int</span> j=gear[i][x];<span class="comment">//j为i机关的连锁机关 </span></span><br><span class="line">			<span class="keyword">int</span> y=(<span class="keyword">int</span>)(a.state[j]<span class="number">-48</span>);<span class="comment">//y为j机关的状态</span></span><br><span class="line">			<span class="comment">//改变状态 </span></span><br><span class="line">			<span class="keyword">if</span>(x==<span class="number">4</span>) x=<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span> x+=<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">if</span>(y==<span class="number">4</span>) y=<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span> y+=<span class="number">1</span>;</span><br><span class="line">			 </span><br><span class="line">			node s;<span class="comment">//转换入队列 </span></span><br><span class="line">			s.state+=(<span class="keyword">char</span>)(<span class="number">48</span>);</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> u=<span class="number">1</span>;u&lt;=<span class="number">12</span>;u++)&#123;</span><br><span class="line">				<span class="keyword">if</span>(u==i)&#123;s.state+=(<span class="keyword">char</span>)(x+<span class="number">48</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">				<span class="keyword">if</span>(u==j)&#123;s.state+=(<span class="keyword">char</span>)(y+<span class="number">48</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">				s.state+=a.state[u];</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">if</span>(!mark[s.state])&#123;<span class="comment">//map去重 </span></span><br><span class="line">				s.g=a.g+<span class="number">1</span>;</span><br><span class="line">				s.h=<span class="built_in">eva</span>(s.state);</span><br><span class="line">				mark[s.state]=<span class="literal">true</span>;</span><br><span class="line">				s.path=a.path+(<span class="keyword">char</span>)(i+<span class="number">48</span>);</span><br><span class="line">				<span class="keyword">if</span>(!s.h)&#123;<span class="built_in">print</span>(s);<span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">				q.<span class="built_in">push</span>(s);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>洛谷题解</category>
+      </categories>
+      <tags>
+        <tag>搜索</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>P2140小Z的电力管制-题解</title>
     <url>/2022/04/21/P2140%E5%B0%8FZ%E7%9A%84%E7%94%B5%E5%8A%9B%E7%AE%A1%E5%88%B6-%E9%A2%98%E8%A7%A3/</url>
     <content><![CDATA[<p>似乎这道题和 <a href="https://www.luogu.com.cn/problem/P1436">P1436</a> 以及 <a href="https://www.luogu.com.cn/problem/P5752">P5752</a> 的棋盘分割有很多相似之处 。  <del>（三倍经验）</del><br>题目对于电力的要求似乎有些复杂 。<br>简化来说就是 <strong>取各方案各个区域分值之和最小值最大</strong> 。<br>特来此写一篇较为详细的题解 。  </p>
@@ -244,32 +270,6 @@
       </categories>
       <tags>
         <tag>数学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>P5507机关-题解</title>
-    <url>/2022/04/04/P5507%E6%9C%BA%E5%85%B3-%E9%A2%98%E8%A7%A3/</url>
-    <content><![CDATA[<p>这篇文章为洛谷P5507机关的题解</p>
-<span id="more"></span>
-<h3 id="这是道很好的搜索练手题"><a href="#这是道很好的搜索练手题" class="headerlink" title="这是道很好的搜索练手题"></a>这是道很好的搜索练手题</h3><p>可以用广为人知的搜索<del>三巨头</del>求解  </p>
-<ul>
-<li>双向搜索</li>
-<li>IDA* （<del>在这题貌似被禁了</del>）</li>
-<li>A*</li>
-</ul>
-<p>这篇题解主要介绍用 <strong>A_star</strong> 算法 AC 这道题  </p>
-<h2 id="1-思路"><a href="#1-思路" class="headerlink" title="1. 思路"></a>1. 思路</h2><p>用 <strong>结构体</strong> 记录 <strong>路径</strong> <strong>状态</strong><br>以及实际步数 <strong>g(n)</strong> 和估价步数 <strong>h(n)</strong><br>我们都知道 A* 算法的核心在于其估价函数 <strong>h(n)</strong><br>每次取出对应 <strong>g(n) + h(n)</strong> <strong>最小的</strong> 进行下一步搜素  </p>
-<p>引出一个疑惑 ：<br>每改变一个机关的状态都会有另一个机关跟着改变<br>那么估价函数如何求解 ？<br>看作是两个一起变换<br>可以 <strong>用当前状态距离目标状态的理想差值除去 2 得到</strong></p>
-<h2 id="2-解法"><a href="#2-解法" class="headerlink" title="2.解法"></a>2.解法</h2><p>使用优先队列存储结构体<br>所以我们需要 <strong>重载运算符</strong>  ： </p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(<span class="keyword">const</span> node &amp;a,<span class="keyword">const</span> node &amp;b)&#123;</span><br><span class="line">	<span class="keyword">return</span> a.g+a.h&gt;b.g+b.h;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>经检验 ：<br>由于看作两个机关同时向着目标前进 <strong>过于理想</strong><br>此题的估价函数可以稍微调高一些，用于优化时间复杂度<br>参数为原估价函数的  <strong>1.3</strong> 倍<br>但此时的时间复杂度仍高了些<br>所以最后加上 <strong>map 去重</strong> 即可</p>
-<h2 id="3-Code"><a href="#3-Code" class="headerlink" title="3. Code"></a>3. Code</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">	string state;<span class="comment">//状态 </span></span><br><span class="line">	string path;<span class="comment">//路径 </span></span><br><span class="line">	<span class="keyword">int</span> g;<span class="comment">//实际步数 </span></span><br><span class="line">	<span class="keyword">int</span> h;<span class="comment">//估价函数 </span></span><br><span class="line">&#125;;</span><br><span class="line">map&lt;string,<span class="keyword">bool</span>&gt; mark;</span><br><span class="line"><span class="comment">//重载运算符 </span></span><br><span class="line"><span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(<span class="keyword">const</span> node &amp;a,<span class="keyword">const</span> node &amp;b)&#123;</span><br><span class="line">	<span class="keyword">return</span> a.g+a.h&gt;b.g+b.h;</span><br><span class="line">&#125;</span><br><span class="line">priority_queue&lt;node&gt; q;</span><br><span class="line"><span class="comment">//估价函数 </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">eva</span><span class="params">(string s)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> cnt=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">12</span>;i++)</span><br><span class="line">        <span class="keyword">if</span>(s[i]!=<span class="string">&#x27;1&#x27;</span>) cnt+=<span class="number">5</span>-(<span class="keyword">int</span>)(s[i]<span class="number">-48</span>);</span><br><span class="line">    <span class="keyword">return</span> cnt/<span class="number">2</span>*<span class="number">1.3</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(node s)</span></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,s.g);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.path.<span class="built_in">size</span>();i++) cout&lt;&lt;(<span class="keyword">int</span>)(s.path[i]<span class="number">-48</span>)&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123; </span><br><span class="line">	<span class="keyword">int</span> gear[<span class="number">13</span>][<span class="number">5</span>];<span class="comment">//机关触发机制 </span></span><br><span class="line">	node start;</span><br><span class="line">	start.state+=(<span class="keyword">char</span>)(<span class="number">48</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">12</span>;i++)</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=<span class="number">5</span>;j++)&#123;</span><br><span class="line">			<span class="keyword">int</span> x;<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;x);</span><br><span class="line">			<span class="keyword">if</span>(j==<span class="number">1</span>) start.state+=(<span class="keyword">char</span>)(x+<span class="number">48</span>);</span><br><span class="line">			<span class="keyword">else</span> gear[i][j<span class="number">-1</span>]=x;</span><br><span class="line">		&#125;</span><br><span class="line">	start.g=<span class="number">0</span>;</span><br><span class="line">	start.h=<span class="built_in">eva</span>(start.state);</span><br><span class="line">	<span class="keyword">if</span>(!start.h)&#123;<span class="built_in">printf</span>(<span class="string">&quot;0&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">	mark[start.state]=<span class="literal">true</span>;</span><br><span class="line">	q.<span class="built_in">push</span>(start);</span><br><span class="line">	<span class="keyword">while</span>(!q.<span class="built_in">empty</span>())&#123;</span><br><span class="line">		node a=q.<span class="built_in">top</span>();q.<span class="built_in">pop</span>();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">12</span>;i++)&#123;</span><br><span class="line">			<span class="comment">//触发机关 </span></span><br><span class="line">			<span class="keyword">int</span> x=(<span class="keyword">int</span>)(a.state[i]<span class="number">-48</span>);<span class="comment">//x为i机关的状态 </span></span><br><span class="line">			<span class="keyword">int</span> j=gear[i][x];<span class="comment">//j为i机关的连锁机关 </span></span><br><span class="line">			<span class="keyword">int</span> y=(<span class="keyword">int</span>)(a.state[j]<span class="number">-48</span>);<span class="comment">//y为j机关的状态</span></span><br><span class="line">			<span class="comment">//改变状态 </span></span><br><span class="line">			<span class="keyword">if</span>(x==<span class="number">4</span>) x=<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span> x+=<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">if</span>(y==<span class="number">4</span>) y=<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span> y+=<span class="number">1</span>;</span><br><span class="line">			 </span><br><span class="line">			node s;<span class="comment">//转换入队列 </span></span><br><span class="line">			s.state+=(<span class="keyword">char</span>)(<span class="number">48</span>);</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> u=<span class="number">1</span>;u&lt;=<span class="number">12</span>;u++)&#123;</span><br><span class="line">				<span class="keyword">if</span>(u==i)&#123;s.state+=(<span class="keyword">char</span>)(x+<span class="number">48</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">				<span class="keyword">if</span>(u==j)&#123;s.state+=(<span class="keyword">char</span>)(y+<span class="number">48</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">				s.state+=a.state[u];</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">if</span>(!mark[s.state])&#123;<span class="comment">//map去重 </span></span><br><span class="line">				s.g=a.g+<span class="number">1</span>;</span><br><span class="line">				s.h=<span class="built_in">eva</span>(s.state);</span><br><span class="line">				mark[s.state]=<span class="literal">true</span>;</span><br><span class="line">				s.path=a.path+(<span class="keyword">char</span>)(i+<span class="number">48</span>);</span><br><span class="line">				<span class="keyword">if</span>(!s.h)&#123;<span class="built_in">print</span>(s);<span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">				q.<span class="built_in">push</span>(s);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>洛谷题解</category>
-      </categories>
-      <tags>
-        <tag>搜索</tag>
       </tags>
   </entry>
   <entry>
@@ -311,6 +311,66 @@
       </categories>
       <tags>
         <tag>VsCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>「Wdoi-6」走在夜晚的莲台野-题解</title>
+    <url>/2022/05/14/%E3%80%8CWdoi-6%E3%80%8D%E8%B5%B0%E5%9C%A8%E5%A4%9C%E6%99%9A%E7%9A%84%E8%8E%B2%E5%8F%B0%E9%87%8E-%E9%A2%98%E8%A7%A3/</url>
+    <content><![CDATA[<p>看难度就明白这是道签到题</p>
+<h2 id="1-思路"><a href="#1-思路" class="headerlink" title="1.思路"></a>1.思路</h2><p>题目要求我们将所有板子 <strong>放过</strong> 就行，但放入金就会清空银。<br>所以我们要在放金之前 <strong>尽可能多放银</strong>。<br>这就是标签所说的贪心。</p>
+<h2 id="2-解法"><a href="#2-解法" class="headerlink" title="2.解法"></a>2.解法</h2><p>由以上思路可得：<br>放银的数目依次为 $z-1$、$z-2$ $…$ $z-x$。<br>由等差数列公式：<br>最多可以放 $\frac{x*(z-x+z-1)}{2}$ 个银，令该式子为 $\sigma$。<br>我们得到如下几种情况：  </p>
+<ul>
+<li>$x$ 恰好满足放入所有 $y$ 后 $x$ 被清空。</li>
+<li>$x$ 恰好满足放入所有 $y$ 后 $x$ 被清空不足。</li>
+<li>$x$ 恰好满足放入所有 $y$ 后 $x$ 被清空有余。</li>
+</ul>
+<p>而这三种情况依次对应 $&#x3D;\sigma$、$&lt;\sigma$、$&gt;\sigma$ 的情况。<br>分别为 $case1\ $ $case2\ $ $case3\ $。<br>$case1$： 显然满足要求。<br>$case2$： 翻译过来就是金放完了银有剩，则只需要剩下的银数量 <strong>小于等于</strong> 可放位置的数量就行了。<br>$case3$： 银放完了金有剩，具体剩多少呢？<br>我们令此时消耗的金数量为 $x_0$ 则将 $x_0$ 带入 $\sigma$ 式。<br>整理一下得到关于 $x_0$ 的式子：<br>$x_0^2-(2z-1)x_0+2y&#x3D;0$。<br>得到：$x_0&#x3D;\lfloor\frac{2z-1+\sqrt[]{(2z-1)^2-8y}}{2}\rfloor$。<br>同 $case2$ 理即可求解。</p>
+<h2 id="3-Code"><a href="#3-Code" class="headerlink" title="3.Code"></a>3.Code</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll T,x,y,z;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;T);</span><br><span class="line">	<span class="keyword">while</span>(T--)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%lld%lld%lld&quot;</span>,&amp;x,&amp;y,&amp;z);</span><br><span class="line">		<span class="keyword">if</span>(x&gt;z)&#123;<span class="built_in">printf</span>(<span class="string">&quot;Merry\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		ll judge=x*(<span class="number">2</span>*z-x<span class="number">-1</span>)/<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span>(judge==y)&#123;<span class="built_in">printf</span>(<span class="string">&quot;Renko\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		<span class="keyword">if</span>(judge&lt;y&amp;&amp;(y-judge&lt;=z-x))&#123;<span class="built_in">printf</span>(<span class="string">&quot;Renko\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		<span class="keyword">int</span> x0=(<span class="number">2</span>*z<span class="number">-1</span>+<span class="built_in">sqrt</span>((<span class="number">2</span>*z<span class="number">-1</span>)*(<span class="number">2</span>*z<span class="number">-1</span>)<span class="number">-8</span>*y))/<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span>(judge&gt;y&amp;&amp;(x-x0)&lt;=z)&#123;<span class="built_in">printf</span>(<span class="string">&quot;Renko\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;Merry\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>洛谷题解</category>
+      </categories>
+      <tags>
+        <tag>贪心</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>古代文学常识碎记</title>
+    <url>/2022/05/24/%E5%8F%A4%E4%BB%A3%E6%96%87%E5%AD%A6%E5%B8%B8%E8%AF%86%E7%A2%8E%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="与政事有关"><a href="#与政事有关" class="headerlink" title="与政事有关"></a>与政事有关</h2><p>（1）诣：到，去。</p>
+<p>（2）劝：①鼓励，奖励；②受到鼓励、奖励。</p>
+<p>（3）课：考核、督促、征收。</p>
+<p>（4）风、化：教育感化。</p>
+<p>（5）按、案：巡视，巡行；考察，核实，查明。</p>
+<p>（6）游：①游玩，游览；②旅行，外出求学或求官；③交际，交往。</p>
+<p>（7）趣、趋：①小步走，跑；又引申为赶快，迅速。②通“促”，催促。</p>
+<p>（8）劾：检举，揭发。</p>
+<p>（9）白：告诉，报告。常用于官吏之间。</p>
+<p>（10）短：进谗言，说坏话。</p>
+<p>（11）害：嫉妒。</p>
+<p>（12）闻：</p>
+<p>   ①听说，听见；</p>
+<p>   ②使知道，报告给……知道。对于义；</p>
+<p>   ③要特别注意。其中省略的人往往是最高统治者——国君，强化了这一点，阅读时就不至于认为下文中国    君和主人公发生的事件显得突兀。怎么国君知道了并参加进来了呢？其实就是“闻”字在起作用。如“没死以    闻”，“齐桓晋文之事可得闻乎”。</p>
+<p>（13）折：指斥，指责，驳斥。</p>
+<p>（14）让：①责备，责怪；②谦让，辞让。</p>
+<p>（15）党：偏袒，伙同，包庇。</p>
+<p>（16）矫：假托，假传。</p>
+<p>（17）质：作人质；抵押。</p>
+<p>（18）次：①临时驻扎(用于军队)；②住宿，停留（用于个人）。</p>
+<p>（19）输：缴纳（贡品或赋税）——由“输送、运输”引申。</p>
+<p>（20）当：判刑，判罪。后多带表示惩罚意义的词语。</p>
+<p>（21）坐：①因……犯罪或错误，触犯；②牵连，定罪。</p>
+<p>（22）多：赞扬,欣赏。“高、贵”等字，若带宾语，就是意动，也意译为此。</p>
+<p>（23）少：批评，轻视，看不起。</p>
+<h2 id="碎记"><a href="#碎记" class="headerlink" title="碎记"></a>碎记</h2><p>（1）移疾：意同移病。释义为旧时官员上书称病，多为居官者求退的婉辞。<br>（2）名、字：名为出生不久后由父亲取。在《礼记·曲礼上》记有：男子二十冠而字。<br>（3）汤武：周武王和商汤（非商汤和孙武）<br>（4）建储：建立储君，立皇太子<br>（5）三晋：赵、魏、韩三国，在春秋时是晋国<br>（6）有司：只是“官吏的通称”，各有专司（不能用来指称朝廷中的“各级官员”）</p>
+]]></content>
+      <categories>
+        <category>高中理科</category>
+      </categories>
+      <tags>
+        <tag>语文</tag>
       </tags>
   </entry>
   <entry>
@@ -374,44 +434,6 @@
       </categories>
       <tags>
         <tag>数学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>古代文学常识碎记</title>
-    <url>/2022/05/24/%E5%8F%A4%E4%BB%A3%E6%96%87%E5%AD%A6%E5%B8%B8%E8%AF%86%E7%A2%8E%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="与政事有关"><a href="#与政事有关" class="headerlink" title="与政事有关"></a>与政事有关</h2><p>（1）诣：到，去。</p>
-<p>（2）劝：①鼓励，奖励；②受到鼓励、奖励。</p>
-<p>（3）课：考核、督促、征收。</p>
-<p>（4）风、化：教育感化。</p>
-<p>（5）按、案：巡视，巡行；考察，核实，查明。</p>
-<p>（6）游：①游玩，游览；②旅行，外出求学或求官；③交际，交往。</p>
-<p>（7）趣、趋：①小步走，跑；又引申为赶快，迅速。②通“促”，催促。</p>
-<p>（8）劾：检举，揭发。</p>
-<p>（9）白：告诉，报告。常用于官吏之间。</p>
-<p>（10）短：进谗言，说坏话。</p>
-<p>（11）害：嫉妒。</p>
-<p>（12）闻：</p>
-<p>   ①听说，听见；</p>
-<p>   ②使知道，报告给……知道。对于义；</p>
-<p>   ③要特别注意。其中省略的人往往是最高统治者——国君，强化了这一点，阅读时就不至于认为下文中国    君和主人公发生的事件显得突兀。怎么国君知道了并参加进来了呢？其实就是“闻”字在起作用。如“没死以    闻”，“齐桓晋文之事可得闻乎”。</p>
-<p>（13）折：指斥，指责，驳斥。</p>
-<p>（14）让：①责备，责怪；②谦让，辞让。</p>
-<p>（15）党：偏袒，伙同，包庇。</p>
-<p>（16）矫：假托，假传。</p>
-<p>（17）质：作人质；抵押。</p>
-<p>（18）次：①临时驻扎(用于军队)；②住宿，停留（用于个人）。</p>
-<p>（19）输：缴纳（贡品或赋税）——由“输送、运输”引申。</p>
-<p>（20）当：判刑，判罪。后多带表示惩罚意义的词语。</p>
-<p>（21）坐：①因……犯罪或错误，触犯；②牵连，定罪。</p>
-<p>（22）多：赞扬,欣赏。“高、贵”等字，若带宾语，就是意动，也意译为此。</p>
-<p>（23）少：批评，轻视，看不起。</p>
-<h2 id="碎记"><a href="#碎记" class="headerlink" title="碎记"></a>碎记</h2><p>（1）移疾：意同移病。释义为旧时官员上书称病，多为居官者求退的婉辞。<br>（2）名、字：名为出生不久后由父亲取。在《礼记·曲礼上》记有：男子二十冠而字。<br>（3）汤武：周武王和商汤（非商汤和孙武）<br>（4）建储：建立储君，立皇太子<br>（5）三晋：赵、魏、韩三国，在春秋时是晋国<br>（6）有司：只是“官吏的通称”，各有专司（不能用来指称朝廷中的“各级官员”）</p>
-]]></content>
-      <categories>
-        <category>高中理科</category>
-      </categories>
-      <tags>
-        <tag>语文</tag>
       </tags>
   </entry>
   <entry>
@@ -631,28 +653,6 @@
       </categories>
       <tags>
         <tag>物理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>「Wdoi-6」走在夜晚的莲台野-题解</title>
-    <url>/2022/05/14/%E3%80%8CWdoi-6%E3%80%8D%E8%B5%B0%E5%9C%A8%E5%A4%9C%E6%99%9A%E7%9A%84%E8%8E%B2%E5%8F%B0%E9%87%8E-%E9%A2%98%E8%A7%A3/</url>
-    <content><![CDATA[<p>看难度就明白这是道签到题</p>
-<h2 id="1-思路"><a href="#1-思路" class="headerlink" title="1.思路"></a>1.思路</h2><p>题目要求我们将所有板子 <strong>放过</strong> 就行，但放入金就会清空银。<br>所以我们要在放金之前 <strong>尽可能多放银</strong>。<br>这就是标签所说的贪心。</p>
-<h2 id="2-解法"><a href="#2-解法" class="headerlink" title="2.解法"></a>2.解法</h2><p>由以上思路可得：<br>放银的数目依次为 $z-1$、$z-2$ $…$ $z-x$。<br>由等差数列公式：<br>最多可以放 $\frac{x*(z-x+z-1)}{2}$ 个银，令该式子为 $\sigma$。<br>我们得到如下几种情况：  </p>
-<ul>
-<li>$x$ 恰好满足放入所有 $y$ 后 $x$ 被清空。</li>
-<li>$x$ 恰好满足放入所有 $y$ 后 $x$ 被清空不足。</li>
-<li>$x$ 恰好满足放入所有 $y$ 后 $x$ 被清空有余。</li>
-</ul>
-<p>而这三种情况依次对应 $&#x3D;\sigma$、$&lt;\sigma$、$&gt;\sigma$ 的情况。<br>分别为 $case1\ $ $case2\ $ $case3\ $。<br>$case1$： 显然满足要求。<br>$case2$： 翻译过来就是金放完了银有剩，则只需要剩下的银数量 <strong>小于等于</strong> 可放位置的数量就行了。<br>$case3$： 银放完了金有剩，具体剩多少呢？<br>我们令此时消耗的金数量为 $x_0$ 则将 $x_0$ 带入 $\sigma$ 式。<br>整理一下得到关于 $x_0$ 的式子：<br>$x_0^2-(2z-1)x_0+2y&#x3D;0$。<br>得到：$x_0&#x3D;\lfloor\frac{2z-1+\sqrt[]{(2z-1)^2-8y}}{2}\rfloor$。<br>同 $case2$ 理即可求解。</p>
-<h2 id="3-Code"><a href="#3-Code" class="headerlink" title="3.Code"></a>3.Code</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll T,x,y,z;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;T);</span><br><span class="line">	<span class="keyword">while</span>(T--)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%lld%lld%lld&quot;</span>,&amp;x,&amp;y,&amp;z);</span><br><span class="line">		<span class="keyword">if</span>(x&gt;z)&#123;<span class="built_in">printf</span>(<span class="string">&quot;Merry\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		ll judge=x*(<span class="number">2</span>*z-x<span class="number">-1</span>)/<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span>(judge==y)&#123;<span class="built_in">printf</span>(<span class="string">&quot;Renko\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		<span class="keyword">if</span>(judge&lt;y&amp;&amp;(y-judge&lt;=z-x))&#123;<span class="built_in">printf</span>(<span class="string">&quot;Renko\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		<span class="keyword">int</span> x0=(<span class="number">2</span>*z<span class="number">-1</span>+<span class="built_in">sqrt</span>((<span class="number">2</span>*z<span class="number">-1</span>)*(<span class="number">2</span>*z<span class="number">-1</span>)<span class="number">-8</span>*y))/<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span>(judge&gt;y&amp;&amp;(x-x0)&lt;=z)&#123;<span class="built_in">printf</span>(<span class="string">&quot;Renko\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;Merry\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>洛谷题解</category>
-      </categories>
-      <tags>
-        <tag>贪心</tag>
       </tags>
   </entry>
   <entry>

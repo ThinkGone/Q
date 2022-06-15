@@ -5,11 +5,24 @@
     <url>/2022/02/03/Blog%E5%88%9B%E5%BB%BA-NextTheme/</url>
     <content><![CDATA[<p>这篇文章主要介绍个人Blog的搭建</p>
 <span id="more"></span>
-<h1 id="基本工具"><a href="#基本工具" class="headerlink" title="基本工具"></a>基本工具</h1><p>Node.js<br>Git<br>Sublime Text<br>链接：<a href="https://pan.baidu.com/s/1HXpwYLKjNqWcWEGheD6-ug?pwd=d4jm">https://pan.baidu.com/s/1HXpwYLKjNqWcWEGheD6-ug?pwd=d4jm </a><br>提取码：d4jm<br>也可以到软件官网下载</p>
-<h1 id="搭建Hexo"><a href="#搭建Hexo" class="headerlink" title="搭建Hexo"></a>搭建Hexo</h1><p>新建一个文件夹作为Blog的根目录<br>在目录下空白区域右击，打开Git Bash Here<br>输入以下代码</p>
-<h2 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-<h2 id="Hexo初始化配置"><a href="#Hexo初始化配置" class="headerlink" title="Hexo初始化配置"></a>Hexo初始化配置</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-<h2 id="查看本地运行效果"><a href="#查看本地运行效果" class="headerlink" title="查看本地运行效果"></a>查看本地运行效果</h2><p>更改博客时也可以通过本地查看<br>hexo generate用于生成Hexo页面</p>
+<h1>基本工具</h1>
+<p>Node.js<br>
+Git<br>
+Sublime Text<br>
+链接：<a href="https://pan.baidu.com/s/1HXpwYLKjNqWcWEGheD6-ug?pwd=d4jm">https://pan.baidu.com/s/1HXpwYLKjNqWcWEGheD6-ug?pwd=d4jm </a><br>
+提取码：d4jm<br>
+也可以到软件官网下载</p>
+<h1>搭建Hexo</h1>
+<p>新建一个文件夹作为Blog的根目录<br>
+在目录下空白区域右击，打开Git Bash Here<br>
+输入以下代码</p>
+<h2 id="Hexo安装">Hexo安装</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<h2 id="Hexo初始化配置">Hexo初始化配置</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<h2 id="查看本地运行效果">查看本地运行效果</h2>
+<p>更改博客时也可以通过本地查看<br>
+hexo generate用于生成Hexo页面</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
 <p>也可以简写为</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
@@ -19,35 +32,72 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 <p>出现以下信息说明本地运行成功</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">INFO Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
-<p>可以打开网址 <a href="http://0.0.0.0:4000/">http://0.0.0.0:4000/</a> 查看效果<br>Ctrl+C 关闭本地运行</p>
-<h1 id="创建GitHub账号并配置仓库"><a href="#创建GitHub账号并配置仓库" class="headerlink" title="创建GitHub账号并配置仓库"></a>创建GitHub账号并配置仓库</h1><h2 id="创建Github账号"><a href="#创建Github账号" class="headerlink" title="创建Github账号"></a>创建Github账号</h2><p><a href="https://github.com/">Github官网</a></p>
-<h2 id="创建一个Blog仓库"><a href="#创建一个Blog仓库" class="headerlink" title="创建一个Blog仓库"></a>创建一个Blog仓库</h2><p>点击头像&gt;Your repositories&gt;New创建一个仓库<br><img src="https://s3.bmp.ovh/imgs/2022/02/c612b761898488bd.jpg"></p>
-<h2 id="生成ssh密钥"><a href="#生成ssh密钥" class="headerlink" title="生成ssh密钥"></a>生成ssh密钥</h2><p>1.在Blog根目录下Git Bash，输入：</p>
+<p>可以打开网址 <a href="http://0.0.0.0:4000/">http://0.0.0.0:4000/</a> 查看效果<br>
+Ctrl+C 关闭本地运行</p>
+<h1>创建GitHub账号并配置仓库</h1>
+<h2 id="创建Github账号">创建Github账号</h2>
+<p><a href="https://github.com">Github官网</a></p>
+<h2 id="创建一个Blog仓库">创建一个Blog仓库</h2>
+<p>点击头像&gt;Your repositories&gt;New创建一个仓库<br>
+<img src="https://s3.bmp.ovh/imgs/2022/02/c612b761898488bd.jpg" alt=""></p>
+<h2 id="生成ssh密钥">生成ssh密钥</h2>
+<p>1.在Blog根目录下Git Bash，输入：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh</span><br></pre></td></tr></table></figure>
-<p><img src="https://s3.bmp.ovh/imgs/2022/02/499f527e6edeb513.png"><br>2.继续输入命令：</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/02/499f527e6edeb513.png" alt=""><br>
+2.继续输入命令：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;your email@example.com&quot;</span><br></pre></td></tr></table></figure>
-<p>引号里填写你的邮箱地址，写注册Github时的邮箱<br>3.按回车键直到没有输出<br>4.获取公钥<br>输入以下命令将公钥复制到系统剪切板</p>
+<p>引号里填写你的邮箱地址，写注册Github时的邮箱<br>
+3.按回车键直到没有输出<br>
+4.获取公钥<br>
+输入以下命令将公钥复制到系统剪切板</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">clip &lt; ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-<h2 id="在Github添加公钥"><a href="#在Github添加公钥" class="headerlink" title="在Github添加公钥"></a>在Github添加公钥</h2><p>点击头像&gt;Settings&gt;SSH and GPG keys&gt;New SSH key&gt;添加SSH keys<br><img src="https://s2.loli.net/2022/02/03/z5rSIUOi8dgkRTC.jpg"><br>测试ssh是否绑定成功，输入：</p>
+<h2 id="在Github添加公钥">在Github添加公钥</h2>
+<p>点击头像&gt;Settings&gt;SSH and GPG keys&gt;New SSH key&gt;添加SSH keys<br>
+<img src="https://s2.loli.net/2022/02/03/z5rSIUOi8dgkRTC.jpg" alt=""><br>
+测试ssh是否绑定成功，输入：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 <p>出现如下信息则成功</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Hi &quot;Your Name&quot;! You&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
 <p>引号内是你的Github昵称</p>
-<h2 id="配置Git个人信息"><a href="#配置Git个人信息" class="headerlink" title="配置Git个人信息"></a>配置Git个人信息</h2><p>在Blog根目录下Git Bash</p>
+<h2 id="配置Git个人信息">配置Git个人信息</h2>
+<p>在Blog根目录下Git Bash</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;此处填你的用户名&quot;</span><br><span class="line">git config --global user.email &quot;此处填你的邮箱&quot;</span><br></pre></td></tr></table></figure>
-
-<h1 id="部署Hexo"><a href="#部署Hexo" class="headerlink" title="部署Hexo"></a>部署Hexo</h1><h2 id="实现本地和远程仓库的连接"><a href="#实现本地和远程仓库的连接" class="headerlink" title="实现本地和远程仓库的连接"></a>实现本地和远程仓库的连接</h2><p>1.打开仓库复制仓库地址<br><img src="https://s2.loli.net/2022/02/03/b518QOfrnv67EC4.jpg"><br>2.打开Blog根目录下的_config.yml 文件<br>修改最底部的代码</p>
+<h1>部署Hexo</h1>
+<h2 id="实现本地和远程仓库的连接">实现本地和远程仓库的连接</h2>
+<p>1.打开仓库复制仓库地址<br>
+<img src="https://s2.loli.net/2022/02/03/b518QOfrnv67EC4.jpg" alt=""><br>
+2.打开Blog根目录下的_config.yml 文件<br>
+修改最底部的代码</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type:</span><br></pre></td></tr></table></figure>
 <p>为：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/xxx/xxx.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
-<p>3.安装hexo-deployer-git自动部署发布工具<br>在Blog根目录下Git Bash，输入：</p>
+<p>3.安装hexo-deployer-git自动部署发布工具<br>
+在Blog根目录下Git Bash，输入：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>4.将本地Blog上传至远程仓库<br>接着输入：</p>
+<p>4.将本地Blog上传至远程仓库<br>
+接着输入：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>出现以下情况不慌，GitHub是外国的网，网络连接可能不稳定，重新hexo d直到上传成功<br>有些本地上传需要令牌(会弹出一个羽毛笔图标的输入框)，下面介绍如何用令牌代替密码<br><img src="https://s3.bmp.ovh/imgs/2022/02/02b5fbe9b8cab920.png"></p>
-<h2 id="用令牌代替密码"><a href="#用令牌代替密码" class="headerlink" title="用令牌代替密码"></a>用令牌代替密码</h2><p>1.点击头像&gt;Setting&gt;Developer settings&gt;Personal access tokens&gt;Generate new token<br><img src="https://s2.loli.net/2022/02/03/uDx2MmvQXnAj6JI.png" alt="10.png"><br>2.生成令牌<br><img src="https://s2.loli.net/2022/02/03/XDrivmuhlKJWyt2.png" alt="11.png"><br>令牌生成后复制到文本文档中，因为第二次进入后令牌会被隐藏<br>这样就可以用令牌代替密码将本地文件上传到远程仓库了</p>
-<h1 id="访问Blog"><a href="#访问Blog" class="headerlink" title="访问Blog"></a>访问Blog</h1><p>点击头像&gt;Your repositories&gt;打开仓库&gt;Setting<br>往下翻找到：<br><img src="https://s3.bmp.ovh/imgs/2022/02/a770c9a53cc78d0e.png"><br>新建的Blog需要设置Branch<br><img src="https://s3.bmp.ovh/imgs/2022/02/6909c946cbbd9e90.png"><br>等待一会儿后你的Blog就算成功的完成啦<br><img src="https://s3.bmp.ovh/imgs/2022/02/6607a6a9c50007ca.png"></p>
-<h1 id="Blog的个性化"><a href="#Blog的个性化" class="headerlink" title="Blog的个性化"></a>Blog的个性化</h1><p>Blog可以通过部署Hexo主题以及配置组件达到个性化效果<br>具体请见Blog标签&#x2F;分类中的<em>Blog个性化</em></p>
+<p>出现以下情况不慌，GitHub是外国的网，网络连接可能不稳定，重新hexo d直到上传成功<br>
+有些本地上传需要令牌(会弹出一个羽毛笔图标的输入框)，下面介绍如何用令牌代替密码<br>
+<img src="https://s3.bmp.ovh/imgs/2022/02/02b5fbe9b8cab920.png" alt=""></p>
+<h2 id="用令牌代替密码">用令牌代替密码</h2>
+<p>1.点击头像&gt;Setting&gt;Developer settings&gt;Personal access tokens&gt;Generate new token<br>
+<img src="https://s2.loli.net/2022/02/03/uDx2MmvQXnAj6JI.png" alt="10.png"><br>
+2.生成令牌<br>
+<img src="https://s2.loli.net/2022/02/03/XDrivmuhlKJWyt2.png" alt="11.png"><br>
+令牌生成后复制到文本文档中，因为第二次进入后令牌会被隐藏<br>
+这样就可以用令牌代替密码将本地文件上传到远程仓库了</p>
+<h1>访问Blog</h1>
+<p>点击头像&gt;Your repositories&gt;打开仓库&gt;Setting<br>
+往下翻找到：<br>
+<img src="https://s3.bmp.ovh/imgs/2022/02/a770c9a53cc78d0e.png" alt=""><br>
+新建的Blog需要设置Branch<br>
+<img src="https://s3.bmp.ovh/imgs/2022/02/6909c946cbbd9e90.png" alt=""><br>
+等待一会儿后你的Blog就算成功的完成啦<br>
+<img src="https://s3.bmp.ovh/imgs/2022/02/6607a6a9c50007ca.png" alt=""></p>
+<h1>Blog的个性化</h1>
+<p>Blog可以通过部署Hexo主题以及配置组件达到个性化效果<br>
+具体请见Blog标签/分类中的<em>Blog个性化</em></p>
 ]]></content>
       <categories>
         <category>Blog搭建</category>
@@ -59,12 +109,44 @@
   <entry>
     <title>Blog搭建历程</title>
     <url>/2022/06/10/Blog%E6%90%AD%E5%BB%BA%E5%8E%86%E7%A8%8B/</url>
-    <content><![CDATA[<h2 id="历程"><a href="#历程" class="headerlink" title="历程"></a>历程</h2><h3 id="起初"><a href="#起初" class="headerlink" title="起初"></a>起初</h3><p>最开始搭建Blog是用 Hexo + GitHub 进行静态界面构建<br>使用 Butterfly 主题完成页面美化工作<br>并借此学习了 html 和 css 的小部分知识 </p>
-<h3 id="后来"><a href="#后来" class="headerlink" title="后来"></a>后来</h3><p>后来开始觉得 GitHub 搭建的静态界面在国内的访问速度不稳定<br>开始寻找加速的方案<br>接连花了许多时间在 CDN 加速站点上<br>但是仍然一无所获<br>国外的 CDN 在国内加速效果不甚理想<br>而国内的免费 CDN 不可靠（之前使用过的一种国内 CDN 在创建不久就被封禁了）<br>大厂的 CDN （如：阿里，腾讯云等）需要实名和域名备案，而域名备案需要花钱，对于一个学生党来说实在不堪重负<br>有些大厂的 CDN 购买需要成年。。。（ $17$ 岁的遗憾）</p>
-<h3 id="接着"><a href="#接着" class="headerlink" title="接着"></a>接着</h3><p>想到 GitHub 之所以慢是因为服务器在国外<br>如果服务器在国内那访问速度不久快了？<br>又花了点时间在找各种服务器上<br>最后还是一无所获（还是因为未成年。。。）</p>
-<h3 id="再后来"><a href="#再后来" class="headerlink" title="再后来"></a>再后来</h3><p>GitHub 平台的 Blog 加载异常了一段时间，图标啥的都加载不出<br>想到查资料时候博客园的访问速度不错，就想着将静态页面的博客搬到博客园<br>但是简陋的界面让我望而却步了一段时间<br>然后看到了 BNDong 博主的 SimpleMemory 主题不错<br>花了半个高考假的时间美化了博客园的 Blog 并将文章迁移<br>期间借此还学习了一部分的 html  </p>
-<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>觉得 SimpleMemory 主题有些缺陷，而且自己的前端技术水平达不到修改成自己喜欢的样子<br>索性就放着了<br>高考假结束后看到高三班级的一体机壁纸刚刚好是自己 Blog 的背景图<br>带着试试的心理再次打开了自己在 GitHub 平台的 Blog，发现图标正常加载。。。<br>最后还是觉得 GitHub 的平台比较好</p>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>兜兜转转还是选择了 GitHub 平台搭建 Blog<br>没有强硬的前端水平，只会找轮子的话不是长久之计<br>未成年暂时就不要想着搭建云服务器上的静态页面了，也不要想 CDN 加速。。。<br>总之目前 GitHub 平台能用就行<br>提高访问速度，通过自己写代码构建多功能页面之类的等大学再整吧  </p>
+    <content><![CDATA[<h2 id="历程">历程</h2>
+<h3 id="起初">起初</h3>
+<p>最开始搭建Blog是用 Hexo + GitHub 进行静态界面构建<br>
+使用 Butterfly 主题完成页面美化工作<br>
+并借此学习了 html 和 css 的小部分知识</p>
+<h3 id="后来">后来</h3>
+<p>后来开始觉得 GitHub 搭建的静态界面在国内的访问速度不稳定<br>
+开始寻找加速的方案<br>
+接连花了许多时间在 CDN 加速站点上<br>
+但是仍然一无所获<br>
+国外的 CDN 在国内加速效果不甚理想<br>
+而国内的免费 CDN 不可靠（之前使用过的一种国内 CDN 在创建不久就被封禁了）<br>
+大厂的 CDN （如：阿里，腾讯云等）需要实名和域名备案，而域名备案需要花钱，对于一个学生党来说实在不堪重负<br>
+有些大厂的 CDN 购买需要成年。。。（ $17$ 岁的遗憾）</p>
+<h3 id="接着">接着</h3>
+<p>想到 GitHub 之所以慢是因为服务器在国外<br>
+如果服务器在国内那访问速度不久快了？<br>
+又花了点时间在找各种服务器上<br>
+最后还是一无所获（还是因为未成年。。。）</p>
+<h3 id="再后来">再后来</h3>
+<p>GitHub 平台的 Blog 加载异常了一段时间，图标啥的都加载不出<br>
+想到查资料时候博客园的访问速度不错，就想着将静态页面的博客搬到博客园<br>
+但是简陋的界面让我望而却步了一段时间<br>
+然后看到了 BNDong 博主的 SimpleMemory 主题不错<br>
+花了半个高考假的时间美化了博客园的 Blog 并将文章迁移<br>
+期间借此还学习了一部分的 html</p>
+<h3 id="最后">最后</h3>
+<p>觉得 SimpleMemory 主题有些缺陷，而且自己的前端技术水平达不到修改成自己喜欢的样子<br>
+索性就放着了<br>
+高考假结束后看到高三班级的一体机壁纸刚刚好是自己 Blog 的背景图<br>
+带着试试的心理再次打开了自己在 GitHub 平台的 Blog，发现图标正常加载。。。<br>
+最后还是觉得 GitHub 的平台比较好</p>
+<h2 id="心得">心得</h2>
+<p>兜兜转转还是选择了 GitHub 平台搭建 Blog<br>
+没有强硬的前端水平，只会找轮子的话不是长久之计<br>
+未成年暂时就不要想着搭建云服务器上的静态页面了，也不要想 CDN 加速。。。<br>
+总之目前 GitHub 平台能用就行<br>
+提高访问速度，通过自己写代码构建多功能页面之类的等大学再整吧</p>
 ]]></content>
       <categories>
         <category>历程</category>
@@ -79,17 +161,25 @@
     <title>Butterfly主题修改颜色</title>
     <url>/2022/05/01/Butterfly%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9%E9%A2%9C%E8%89%B2/</url>
     <content><![CDATA[<p><a href="https://www.toolsou.com/app/color">在线调色板</a></p>
-<h2 id="修改链接颜色"><a href="#修改链接颜色" class="headerlink" title="修改链接颜色"></a>修改链接颜色</h2><p>在 <strong>&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;post&#x2F;_layout</strong> 目录下的 <strong>post.styl</strong> 中找到并修改如下代码：  </p>
+<h2 id="修改链接颜色">修改链接颜色</h2>
+<p>在 <strong>/butterfly/source/css/post/_layout</strong> 目录下的 <strong>post.styl</strong> 中找到并修改如下代码：</p>
 <figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#article-container</span></span><br><span class="line">  <span class="attribute">word-wrap</span>: break-word</span><br><span class="line">  <span class="attribute">overflow-wrap</span>: break-word</span><br><span class="line"></span><br><span class="line">  <span class="selector-tag">a</span></span><br><span class="line">    <span class="attribute">color</span>: <span class="variable">$theme</span>-link-color</span><br><span class="line"></span><br><span class="line">    <span class="selector-pseudo">&amp;:hover</span></span><br><span class="line">      <span class="attribute">text-decoration</span>: underline</span><br></pre></td></tr></table></figure>
 <p>将其中的color修改为自己喜欢的颜色即可</p>
-<h2 id="修改文章末尾声明颜色"><a href="#修改文章末尾声明颜色" class="headerlink" title="修改文章末尾声明颜色"></a>修改文章末尾声明颜色</h2><p>同样在 <strong>post.styl</strong> 文件中找到并修改如下代码：  </p>
+<h2 id="修改文章末尾声明颜色">修改文章末尾声明颜色</h2>
+<p>同样在 <strong>post.styl</strong> 文件中找到并修改如下代码：</p>
 <figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.post-copyright</span></span><br><span class="line">      &amp;-meta</span><br><span class="line">        <span class="attribute">color</span>: <span class="variable">$light</span>-blue</span><br><span class="line">        <span class="attribute">font-weight</span>: bold</span><br><span class="line"></span><br><span class="line">      &amp;-info</span><br><span class="line">        <span class="attribute">padding-left</span>: <span class="number">6px</span></span><br></pre></td></tr></table></figure>
 <p>替换其中的 $light-blue 即可</p>
-<h2 id="修改目录栏颜色"><a href="#修改目录栏颜色" class="headerlink" title="修改目录栏颜色"></a>修改目录栏颜色</h2><p>在 <strong>&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;post&#x2F;_layout</strong> 目录下的 <strong>aside.styl</strong> 中找到并修改如下代码：  </p>
+<h2 id="修改目录栏颜色">修改目录栏颜色</h2>
+<p>在 <strong>/butterfly/source/css/post/_layout</strong> 目录下的 <strong>aside.styl</strong> 中找到并修改如下代码：</p>
 <figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.toc-link</span></span><br><span class="line">        <span class="attribute">display</span>: block</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">4px</span> <span class="number">0</span></span><br><span class="line">        <span class="attribute">padding</span>: <span class="number">1px</span> <span class="number">6px</span></span><br><span class="line">        <span class="attribute">color</span>: var(--toc-link-color)</span><br><span class="line">        <span class="attribute">transition</span>: all .<span class="number">2s</span> ease-in-out</span><br><span class="line"></span><br><span class="line">        <span class="selector-pseudo">&amp;:hover</span></span><br><span class="line">          <span class="attribute">color</span>: <span class="variable">$theme</span>-color // 鼠标放置时显示的颜色</span><br><span class="line"></span><br><span class="line">        &amp;<span class="selector-class">.active</span></span><br><span class="line">          <span class="attribute">background</span>: <span class="variable">$theme</span>-toc-color // 到当前文章区域时显示的背景色</span><br><span class="line">          <span class="attribute">color</span>: <span class="variable">$toc</span>-active-color // 目录栏文字颜色</span><br></pre></td></tr></table></figure>
-<h2 id="修改主页文章标题显示的颜色"><a href="#修改主页文章标题显示的颜色" class="headerlink" title="修改主页文章标题显示的颜色"></a>修改主页文章标题显示的颜色</h2><p>在 <strong>&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;post&#x2F;page</strong> 目录下的 <strong>homepage.styl</strong> 中找到并修改如下代码：  </p>
+<h2 id="修改主页文章标题显示的颜色">修改主页文章标题显示的颜色</h2>
+<p>在 <strong>/butterfly/source/css/post/page</strong> 目录下的 <strong>homepage.styl</strong> 中找到并修改如下代码：</p>
 <figure class="highlight styl"><table><tr><td class="code"><pre><span class="line">&amp; &gt; <span class="selector-class">.article-title</span></span><br><span class="line">        <span class="keyword">@extend</span> <span class="selector-class">.limit-more-line</span></span><br><span class="line">        <span class="attribute">color</span>: var(--text-highlight-color) //标题显示的颜色</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">1.72em</span></span><br><span class="line">        <span class="attribute">line-height</span>: <span class="number">1.4</span></span><br><span class="line">        <span class="attribute">transition</span>: all .<span class="number">2s</span> ease-in-out</span><br><span class="line">        -webkit-line-clamp: <span class="number">2</span></span><br><span class="line"></span><br><span class="line">        +maxWidth768()</span><br><span class="line">          <span class="attribute">font-size</span>: <span class="number">1.43em</span></span><br><span class="line"></span><br><span class="line">        <span class="selector-pseudo">&amp;:hover</span></span><br><span class="line">          <span class="attribute">color</span>:  <span class="variable">$text</span>-hover //鼠标放置在标题时显示的颜色</span><br></pre></td></tr></table></figure>
-<h2 id="修改分类页左侧圈圈颜色"><a href="#修改分类页左侧圈圈颜色" class="headerlink" title="修改分类页左侧圈圈颜色"></a>修改分类页左侧圈圈颜色</h2><p>在分类页中，分类前面都有一个蓝色圈圈，鼠标放置上会变成橙黄色<br>如果想要改变其颜色，或者取消鼠标放置时的鼠标变成手<br>找到 &#x2F;butterfly&#x2F;source&#x2F;css&#x2F;_global&#x2F; 目录下的 function.styl 文件<br>查找并修改以下代码：    </p>
+<h2 id="修改分类页左侧圈圈颜色">修改分类页左侧圈圈颜色</h2>
+<p>在分类页中，分类前面都有一个蓝色圈圈，鼠标放置上会变成橙黄色<br>
+如果想要改变其颜色，或者取消鼠标放置时的鼠标变成手<br>
+找到 /butterfly/source/css/_global/ 目录下的 function.styl 文件<br>
+查找并修改以下代码：</p>
 <figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.list-beauty</span></span><br><span class="line">  <span class="attribute">list-style</span>: none</span><br><span class="line"></span><br><span class="line">  <span class="selector-tag">li</span></span><br><span class="line">    <span class="attribute">position</span>: relative</span><br><span class="line">    <span class="attribute">padding</span>: .<span class="number">12em</span> .<span class="number">4em</span> .<span class="number">12em</span> <span class="number">1.4em</span></span><br><span class="line"></span><br><span class="line">    <span class="selector-pseudo">&amp;:hover</span></span><br><span class="line">      &amp;:before</span><br><span class="line">        <span class="attribute">border-color</span>: var(--pseudo-hover) //鼠标放置时圈圈的颜色</span><br><span class="line"></span><br><span class="line">    &amp;:before</span><br><span class="line">      <span class="attribute">position</span>: absolute</span><br><span class="line">      <span class="attribute">top</span>: .<span class="number">67em</span></span><br><span class="line">      <span class="attribute">left</span>: <span class="number">0</span></span><br><span class="line">      <span class="attribute">width</span>: w = .<span class="number">43em</span></span><br><span class="line">      <span class="attribute">height</span>: h = w</span><br><span class="line">      <span class="attribute">border</span>: .<span class="number">5</span> * w solid .list-beauty //圈圈的颜色</span><br><span class="line">      <span class="attribute">border-radius</span>: w</span><br><span class="line">      <span class="attribute">background</span>: transparent</span><br><span class="line">      <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">      <span class="attribute">cursor</span>: pointer //鼠标放置在圈圈上时变成手，如果想取消，注释掉即可</span><br><span class="line">      <span class="attribute">transition</span>: all .<span class="number">3s</span> ease-out</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>主题美化</category>
@@ -101,9 +191,13 @@
   <entry>
     <title>Butterfly主题关闭头像转动360°</title>
     <url>/2022/05/01/Butterfly%E4%B8%BB%E9%A2%98%E5%85%B3%E9%97%AD%E5%A4%B4%E5%83%8F%E8%BD%AC%E5%8A%A8360%C2%B0/</url>
-    <content><![CDATA[<p>有时候我们可能不太喜欢鼠标放在头像时头像自动旋转360°<br>怎么取消呢？<br>找到 <strong>&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;_layout&#x2F;</strong> 目录下的 <strong>aside.styl</strong> 文件<br>查找以下代码： </p>
+    <content><![CDATA[<p>有时候我们可能不太喜欢鼠标放在头像时头像自动旋转360°<br>
+怎么取消呢？<br>
+找到 <strong>/butterfly/source/css/_layout/</strong> 目录下的 <strong>aside.styl</strong> 文件<br>
+查找以下代码：</p>
 <figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.avatar-img</span></span><br><span class="line">  <span class="attribute">overflow</span>: hidden</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">110px</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">110px</span></span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">70px</span></span><br><span class="line"></span><br><span class="line">  <span class="selector-tag">img</span></span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span></span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span></span><br><span class="line">    <span class="attribute">transition</span>: filter <span class="number">375ms</span> ease-in .<span class="number">2s</span>, transform .<span class="number">3s</span></span><br><span class="line">    <span class="attribute">object-fit</span>: cover</span><br><span class="line"></span><br><span class="line">    <span class="selector-pseudo">&amp;:hover</span></span><br><span class="line">      <span class="attribute">transform</span>: rotate(<span class="number">360deg</span>) </span><br></pre></td></tr></table></figure>
-<p>注释掉最后一行代码即可<br>注意： <strong>不可以注释掉 &amp;:hover</strong> 否则会导致单栏和双栏转换的时候出错！</p>
+<p>注释掉最后一行代码即可<br>
+注意： <strong>不可以注释掉 &amp;:hover</strong> 否则会导致单栏和双栏转换的时候出错！</p>
 ]]></content>
       <categories>
         <category>解决方案</category>
@@ -115,30 +209,82 @@
   <entry>
     <title>Butterfly主题美化进阶</title>
     <url>/2022/04/21/Butterfly%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E8%BF%9B%E9%98%B6/</url>
-    <content><![CDATA[<p>进一步美化Butterfly主题需要 <strong>引入外部文件</strong> ， 真正实现自己想要的效果<br>温馨提示： </p>
+    <content><![CDATA[<p>进一步美化Butterfly主题需要 <strong>引入外部文件</strong> ， 真正实现自己想要的效果<br>
+温馨提示：</p>
 <ul>
-<li>引入css文件需要修改 <strong>主体配置文件</strong> _config.yml ， 找到 <strong>inject： head</strong>  </li>
+<li>引入css文件需要修改 <strong>主体配置文件</strong> _config.yml ， 找到 <strong>inject： head</strong></li>
 <li>引入js文件需要修改 <strong>主体配置文件</strong> _config.yml ， 查找 <strong>inject： bottom</strong></li>
-<li>新建的 css 和 js 文件需要放在 <strong>&#x2F;butterfly&#x2F;source&#x2F;..</strong> 的 <strong>相应文件夹</strong> 中</li>
+<li>新建的 css 和 js 文件需要放在 <strong>/butterfly/source/…</strong> 的 <strong>相应文件夹</strong> 中</li>
 </ul>
-<p>根据主题配置文件 _config.yml 中的提示引入即可<br>示例：</p>
+<p>根据主题配置文件 _config.yml 中的提示引入即可<br>
+示例：</p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">inject:</span></span><br><span class="line">  <span class="attr">head:</span></span><br><span class="line">    <span class="comment"># - &lt;link rel=&quot;stylesheet&quot; href=&quot;/xxx.css&quot;&gt;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/background.css&quot;&gt;</span> <span class="comment">#主题/source/css文件夹中的background.css文件</span></span><br><span class="line">  <span class="attr">bottom:</span></span><br><span class="line">    <span class="comment"># - &lt;script src=&quot;xxxx&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;/js/jq.js&quot;&gt;&lt;/script&gt;</span> <span class="comment">#主题/source/js文件夹中的jq.js文件</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;/js/fish.js&quot;&gt;&lt;/script&gt;</span> <span class="comment">#主题source/js文件夹中的fish.js文件</span></span><br></pre></td></tr></table></figure>
-<h2 id="修改透明度"><a href="#修改透明度" class="headerlink" title="修改透明度"></a>修改透明度</h2><p>新建transparent.css文件，写入以下代码并引入：  </p>
+<h2 id="修改透明度">修改透明度</h2>
+<p>新建transparent.css文件，写入以下代码并引入：</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 主页所有文章页面背景 */</span></span><br><span class="line"><span class="selector-id">#aside_content</span> <span class="selector-class">.card-widget</span>, <span class="selector-id">#recent-posts</span>&gt;<span class="selector-class">.recent-post-item</span>, <span class="selector-class">.layout_page</span>&gt;<span class="selector-tag">div</span><span class="selector-pseudo">:first</span>-child<span class="selector-pseudo">:not</span>(<span class="selector-class">.recent-posts</span>), <span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#page</span>, <span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span>, <span class="selector-class">.read-mode</span> <span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span>&#123;</span><br><span class="line">    <span class="comment">/* 以下代表透明度为0.8 */</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,.<span class="number">8</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*侧边栏页面*/</span></span><br><span class="line"><span class="selector-id">#aside-content</span>&gt;<span class="selector-class">.card-widget</span>  &#123;</span><br><span class="line">	<span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,.<span class="number">8</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#aside-content</span>&gt;<span class="selector-class">.sticky_layout</span>&gt;<span class="selector-class">.card-widget</span>&#123;</span><br><span class="line">	<span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,.<span class="number">8</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*文章页面*/</span></span><br><span class="line"><span class="selector-class">.layout</span>&gt;<span class="selector-id">#post</span>&#123;</span><br><span class="line">	<span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,.<span class="number">8</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*分类页面*/</span></span><br><span class="line"><span class="selector-class">.layout</span>&gt;<span class="selector-id">#page</span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,.<span class="number">8</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*时间轴页面*/</span></span><br><span class="line"><span class="selector-class">.layout</span>&gt;<span class="selector-id">#archive</span>&#123;</span><br><span class="line">	<span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,.<span class="number">8</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="设置网站字体"><a href="#设置网站字体" class="headerlink" title="设置网站字体"></a>设置网站字体</h2><p>推荐字体网站：<br><a href="https://www.foundertype.com/">方正字体</a><br>我使用的是 方正-雨木圆圆字体<br>即 FZZH-YMYYTJW<br>可根据自己的喜好选择字体<br>在 &#x2F;butterfly&#x2F;source&#x2F; 目录下新建文件夹命名为 font<br>将下载好的字体放在里面<br>新建font.css文件，写入以下代码并引入：  </p>
+<h2 id="设置网站字体">设置网站字体</h2>
+<p>推荐字体网站：<br>
+<a href="https://www.foundertype.com/">方正字体</a><br>
+我使用的是 方正-雨木圆圆字体<br>
+即 FZZH-YMYYTJW<br>
+可根据自己的喜好选择字体<br>
+在 /butterfly/source/ 目录下新建文件夹命名为 font<br>
+将下载好的字体放在里面<br>
+新建font.css文件，写入以下代码并引入：</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&#x27;FZZH-YMYYTJW&#x27;</span>;//字体名称</span><br><span class="line">  <span class="attribute">font-display</span>: swap;</span><br><span class="line">  <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">&#x27;../font/FZZH-YMYYTJW.TTF&#x27;</span>) <span class="built_in">format</span>(<span class="string">&quot;truetype&quot;</span>); //字体的所在位置</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">&#x27;FZZH-YMYYTJW&#x27;</span>;//应用字体</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="页脚动态渐变"><a href="#页脚动态渐变" class="headerlink" title="页脚动态渐变"></a>页脚动态渐变</h2><p>新建footer.css文件，写入以下代码并引入：</p>
+<h2 id="页脚动态渐变">页脚动态渐变</h2>
+<p>新建footer.css文件，写入以下代码并引入：</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 页脚footer */</span></span><br><span class="line"><span class="comment">/* 渐变色滚动动画 */</span></span><br><span class="line"><span class="keyword">@-webkit-keyframes</span> Gradient &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">50%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@-moz-keyframes</span> Gradient &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">50%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@keyframes</span> Gradient &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">50%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#footer</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(-<span class="number">45deg</span>, <span class="number">#ee7752</span>, <span class="number">#ce3e75</span>, <span class="number">#23a6d5</span>, <span class="number">#23d5ab</span>);</span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">400%</span> <span class="number">400%</span>;</span><br><span class="line">    -webkit-<span class="attribute">animation</span>: Gradient <span class="number">10s</span> ease infinite;</span><br><span class="line">    -moz-<span class="attribute">animation</span>: Gradient <span class="number">10s</span> ease infinite;</span><br><span class="line">    <span class="attribute">animation</span>: Gradient <span class="number">10s</span> ease infinite;</span><br><span class="line">    -o-user-select: none;</span><br><span class="line">    -ms-user-select: none;</span><br><span class="line">    -webkit-user-select: none;</span><br><span class="line">    -moz-user-select: none;</span><br><span class="line">    user-select: none;</span><br><span class="line">    <span class="attribute">border-top-left-radius</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">border-top-right-radius</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#footer</span>:before &#123;</span><br><span class="line">    background-color: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="页脚养鱼"><a href="#页脚养鱼" class="headerlink" title="页脚养鱼"></a>页脚养鱼</h2><p>首先到这两个网址引入必要的 js 文件  </p>
+<h2 id="页脚养鱼">页脚养鱼</h2>
+<p>首先到这两个网址引入必要的 js 文件</p>
 <ul>
 <li><a href="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js">https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/xiabo2/CDN@latest/fishes.js">https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;xiabo2&#x2F;CDN@latest&#x2F;fishes.js</a></li>
+<li><a href="https://cdn.jsdelivr.net/gh/xiabo2/CDN@latest/fishes.js">https://cdn.jsdelivr.net/gh/xiabo2/CDN@latest/fishes.js</a></li>
 </ul>
-<p>复制下来保存在TXT文件中分别命名为为 <strong>jquery.min</strong> 和 <strong>fishes</strong><br>然后 <strong>修改后缀为 js</strong><br>放在博客根目录的 <strong>themes&#x2F;butterfly&#x2F;source&#x2F;js&#x2F;</strong> 文件夹中</p>
-<p>引入两个js文件即可<br>这样就可以在页脚养鱼啦</p>
+<p>复制下来保存在TXT文件中分别命名为为 <strong>jquery.min</strong> 和 <strong>fishes</strong><br>
+然后 <strong>修改后缀为 js</strong><br>
+放在博客根目录的 <strong>themes/butterfly/source/js/</strong> 文件夹中</p>
+<p>引入两个js文件即可<br>
+这样就可以在页脚养鱼啦</p>
 ]]></content>
       <categories>
         <category>主题美化</category>
+      </categories>
+      <tags>
+        <tag>Butterfly</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Butterfly主题解决方案</title>
+    <url>/2022/04/30/Butterfly%E4%B8%BB%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<h2 id="解决文章顶部图和背景不切合的问题">解决文章顶部图和背景不切合的问题</h2>
+<p>如果使用主题配置文件中的 default_top_img 将背景图和顶部图改为一致的话<br>
+可能会出现顶部图和背景图不切合的如下情况：<br>
+<img src="https://s2.loli.net/2022/04/30/XNifFjKGJ1eLdPh.png" alt=""><br>
+注意到这边背景图是有部分在上方的，只是被顶部图覆盖住了<br>
+所以我们可以 <strong>取消顶部图显示</strong><br>
+即 <strong>取消 default_top_img</strong><br>
+但是顶部图重新填充了蓝色<br>
+<strong>注释掉在前几行的 background-color: $light-blue</strong> 即可<br>
+效果如下：<br>
+<img src="https://s2.loli.net/2022/04/30/X9vH83qYyCzoFQP.png" alt=""></p>
+<h2 id="解决在主题配置文件修改滑动条颜色不成功的问题">解决在主题配置文件修改滑动条颜色不成功的问题</h2>
+<p>当我们修改主题配置文件，想要修改滑动条颜色时，可能会出现颜色没有变化的情况<br>
+怎么办呢？<br>
+我们可以 <strong>直接修改源码</strong><br>
+找到 <strong>/butterfly/source/css/_global/</strong> 下的 <strong>index.styl</strong> 文件<br>
+查询 --scrollbar-color: $scrollbar-color<br>
+修改为自己喜欢的颜色即可</p>
+<h2 id="主页顶部图颜色较深">主页顶部图颜色较深</h2>
+<p>经检测，顶部图颜色较深的代码在：<br>
+<strong>/butterfly/source/css/_layout/</strong> 目录下的 <strong>head.styl</strong> 文件中</p>
+<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">&amp;:not</span>(.not-<span class="attribute">top</span>-img):before</span><br><span class="line">  <span class="attribute">position</span>: absolute</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span></span><br><span class="line">  <span class="attribute">background-color</span>: alpha(<span class="variable">$dark</span>-black, .<span class="number">3</span>) // 即rgba(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.3</span>)，使得顶部图颜色较深</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>将其中的颜色属性设为 0 即可</p>
+<h2 id="文章顶部图颜色较深">文章顶部图颜色较深</h2>
+<p>同样在 head.styl 文件中找到如下代码并修改：</p>
+<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="comment">// post</span></span><br><span class="line">  &amp;<span class="selector-class">.post-bg</span></span><br><span class="line">    <span class="attribute">height</span>: <span class="number">400px</span></span><br><span class="line"></span><br><span class="line">    +maxWidth768()</span><br><span class="line">      <span class="attribute">height</span>: <span class="number">360px</span></span><br><span class="line"></span><br><span class="line">    &amp;:before</span><br><span class="line">      <span class="attribute">background-color</span>: alpha(<span class="variable">$dark</span>-black, .<span class="number">5</span>)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>解决方案</category>
       </categories>
       <tags>
         <tag>Butterfly</tag>
@@ -149,14 +295,36 @@
     <url>/2022/02/04/GitHub%E7%BB%91%E5%AE%9A%E9%98%BF%E9%87%8C%E4%BA%91%E5%9F%9F%E5%90%8D/</url>
     <content><![CDATA[<p>这篇文章主要介绍基于Github的Blog绑定阿里云域名</p>
 <span id="more"></span>
-<h3 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h3><p>进入阿里云查找自己所需的域名并购买<br><a href="https://www.aliyun.com/">https://www.aliyun.com/</a></p>
-<h3 id="获取Blog的记录值"><a href="#获取Blog的记录值" class="headerlink" title="获取Blog的记录值"></a>获取Blog的记录值</h3><p><strong>win+R输入cmd</strong> 打开管理员命令行界面<br>使用 <strong>ping</strong> 命令获取Blog的 <strong>记录值</strong>  </p>
+<h3 id="购买域名">购买域名</h3>
+<p>进入阿里云查找自己所需的域名并购买<br>
+<a href="https://www.aliyun.com/">https://www.aliyun.com/</a></p>
+<h3 id="获取Blog的记录值">获取Blog的记录值</h3>
+<p><strong>win+R输入cmd</strong> 打开管理员命令行界面<br>
+使用 <strong>ping</strong> 命令获取Blog的 <strong>记录值</strong></p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">ping yourgithubname.github.io</span><br><span class="line"><span class="comment">//yourgithubname为你GitHub的用户名</span></span><br></pre></td></tr></table></figure>
-<p>获得如下图所示结果：<br><img src="https://s3.bmp.ovh/imgs/2022/04/04/35ded9b7985ad130.png"><br>获取的红框内容即为 <strong>记录值</strong></p>
-<h3 id="解析域名"><a href="#解析域名" class="headerlink" title="解析域名"></a>解析域名</h3><p>将获得的记录值解析到购买的域名<br>直接使用 <strong>“新手指导”</strong> 填入记录值保存即可<br><img src="https://s3.bmp.ovh/imgs/2022/04/04/b61a86bb2f91edcb.png"></p>
-<h3 id="GitHub配置CNAME"><a href="#GitHub配置CNAME" class="headerlink" title="GitHub配置CNAME"></a>GitHub配置CNAME</h3><p>在GitHub对应Blog仓库的&lt;&gt;Code中<br>创建CNAME文件<br>仅需要添加一行你的域名地址即可<br>比如我的就是 <a href="q-thinkgone.cn">q-thinkgone.cn</a><br><img src="https://s3.bmp.ovh/imgs/2022/04/04/959015c1d3ca675f.png">  </p>
-<h3 id="修改Blog根目录下的-config-yml文件"><a href="#修改Blog根目录下的-config-yml文件" class="headerlink" title="修改Blog根目录下的_config.yml文件"></a>修改Blog根目录下的_config.yml文件</h3><p>将对应的 <strong>URL</strong> 地址修改为绑定的域名<br><img src="https://s3.bmp.ovh/imgs/2022/04/04/6bc951497af6b29f.png"></p>
-<h3 id="在GitHub添加所绑定域名"><a href="#在GitHub添加所绑定域名" class="headerlink" title="在GitHub添加所绑定域名"></a>在GitHub添加所绑定域名</h3><p>点击头像&gt;Settings<br>往下翻找到 <strong>GitHub Pages</strong><br>点击 <strong>Check it out here！</strong><br><img src="https://s3.bmp.ovh/imgs/2022/04/04/5390b68dbe2b242f.png"><br>在Custom domain中添加绑定的域名，save即可<br><img src="https://s3.bmp.ovh/imgs/2022/04/04/02f89999f81285ff.png">  </p>
+<p>获得如下图所示结果：<br>
+<img src="https://s3.bmp.ovh/imgs/2022/04/04/35ded9b7985ad130.png" alt=""><br>
+获取的红框内容即为 <strong>记录值</strong></p>
+<h3 id="解析域名">解析域名</h3>
+<p>将获得的记录值解析到购买的域名<br>
+直接使用 <strong>“新手指导”</strong> 填入记录值保存即可<br>
+<img src="https://s3.bmp.ovh/imgs/2022/04/04/b61a86bb2f91edcb.png" alt=""></p>
+<h3 id="GitHub配置CNAME">GitHub配置CNAME</h3>
+<p>在GitHub对应Blog仓库的&lt;&gt;Code中<br>
+创建CNAME文件<br>
+仅需要添加一行你的域名地址即可<br>
+比如我的就是 <a href="q-thinkgone.cn">q-thinkgone.cn</a><br>
+<img src="https://s3.bmp.ovh/imgs/2022/04/04/959015c1d3ca675f.png" alt=""></p>
+<h3 id="修改Blog根目录下的-config-yml文件">修改Blog根目录下的_config.yml文件</h3>
+<p>将对应的 <strong>URL</strong> 地址修改为绑定的域名<br>
+<img src="https://s3.bmp.ovh/imgs/2022/04/04/6bc951497af6b29f.png" alt=""></p>
+<h3 id="在GitHub添加所绑定域名">在GitHub添加所绑定域名</h3>
+<p>点击头像&gt;Settings<br>
+往下翻找到 <strong>GitHub Pages</strong><br>
+点击 <strong>Check it out here！</strong><br>
+<img src="https://s3.bmp.ovh/imgs/2022/04/04/5390b68dbe2b242f.png" alt=""><br>
+在Custom domain中添加绑定的域名，save即可<br>
+<img src="https://s3.bmp.ovh/imgs/2022/04/04/02f89999f81285ff.png" alt=""></p>
 <p>最后就可以在绑定的域名上访问你的Blog啦</p>
 ]]></content>
       <categories>
@@ -167,39 +335,52 @@
       </tags>
   </entry>
   <entry>
-    <title>P2140小Z的电力管制-题解</title>
-    <url>/2022/04/21/P2140%E5%B0%8FZ%E7%9A%84%E7%94%B5%E5%8A%9B%E7%AE%A1%E5%88%B6-%E9%A2%98%E8%A7%A3/</url>
-    <content><![CDATA[<p>似乎这道题和 <a href="https://www.luogu.com.cn/problem/P1436">P1436</a> 以及 <a href="https://www.luogu.com.cn/problem/P5752">P5752</a> 的棋盘分割有很多相似之处 。  <del>（三倍经验）</del><br>题目对于电力的要求似乎有些复杂 。<br>简化来说就是 <strong>取各方案各个区域分值之和最小值最大</strong> 。<br>特来此写一篇较为详细的题解 。  </p>
-<h2 id="1-思路"><a href="#1-思路" class="headerlink" title="1.思路"></a>1.思路</h2><p>类似于分割棋盘，我们可以使用进行 <strong>递归</strong> 分割 。<br>二维取区块和可以使用 <strong>二维前缀和</strong><br>但是答案有两个，可以使用结构体存储并维护 。<br>用 $f$ 数组进行 <strong>记忆化处理</strong> 优化时间复杂度 。</p>
-<h2 id="2-解法"><a href="#2-解法" class="headerlink" title="2.解法"></a>2.解法</h2><p>易知递归边界是不可再分，即已经缩小到一个点 。<br>电力消耗值为所有需要的电 $tot$ 减去当前断电区域断掉的电 $broke$ 。<br>所有电力剩余值为 <strong>供电总值 - 电力消耗值</strong> 。<br>定义：</p>
-<ul>
-<li>$ans$ 为方案总数 。</li>
-<li>$least$ 为电力剩余值 。</li>
-</ul>
-<p>如果当前方案较多，则替换已有方案，更新电力剩余值 。<br>如果方案数相同，则比较电力剩余值，选出较大的 。</p>
-<h2 id="3-Code"><a href="#3-Code" class="headerlink" title="3.Code"></a>3.Code</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">35</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> ans;</span><br><span class="line">	<span class="keyword">int</span> least;</span><br><span class="line">&#125;f[maxn][maxn][maxn][maxn];</span><br><span class="line"><span class="keyword">int</span> a[maxn][maxn];</span><br><span class="line"><span class="keyword">int</span> sum[maxn][maxn];</span><br><span class="line"><span class="keyword">int</span> tot=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> n,m,u;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">get_sum</span><span class="params">(<span class="keyword">int</span> x1,<span class="keyword">int</span> y1,<span class="keyword">int</span> x2,<span class="keyword">int</span> y2)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> k=sum[x2][y2]+sum[x1<span class="number">-1</span>][y1<span class="number">-1</span>]-sum[x1<span class="number">-1</span>][y2]-sum[x2][y1<span class="number">-1</span>];<span class="comment">//求区块分值和 </span></span><br><span class="line">	<span class="keyword">return</span> k;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">Node <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x1,<span class="keyword">int</span> y1,<span class="keyword">int</span> x2,<span class="keyword">int</span> y2,<span class="keyword">int</span> broke)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(f[x1][y1][x2][y2].ans) <span class="keyword">return</span> f[x1][y1][x2][y2];</span><br><span class="line">	Node tmp;tmp.ans=<span class="number">1</span>;tmp.least=u-tot+broke;</span><br><span class="line">	<span class="keyword">if</span>(x1==x2&amp;&amp;y1==y2) <span class="keyword">return</span> tmp;<span class="comment">//递归边界 </span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=x1;i&lt;x2;i++)&#123;<span class="comment">//纵向分割 </span></span><br><span class="line">		<span class="keyword">int</span> area1=<span class="built_in">get_sum</span>(x1,y1,i,y2),area2=<span class="built_in">get_sum</span>(i+<span class="number">1</span>,y1,x2,y2);</span><br><span class="line">		<span class="keyword">if</span>(area1&lt;=u&amp;&amp;tot-area1&lt;=u&amp;&amp;area2&lt;=u&amp;&amp;tot-area2&lt;=u)&#123;</span><br><span class="line">			Node ans1=<span class="built_in">dfs</span>(x1,y1,i,y2,area1),ans2=<span class="built_in">dfs</span>(i+<span class="number">1</span>,y1,x2,y2,area2);</span><br><span class="line">			<span class="keyword">if</span>(ans1.ans+ans2.ans&gt;tmp.ans)&#123;<span class="comment">//替换已有方案，更新电力剩余值 </span></span><br><span class="line">				tmp.ans=ans1.ans+ans2.ans;</span><br><span class="line">				tmp.least=<span class="built_in">min</span>(ans1.least,ans2.least);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">//比较电力剩余值，选出较大的</span></span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(ans1.ans+ans2.ans==tmp.ans) tmp.least=<span class="built_in">max</span>(tmp.least,<span class="built_in">min</span>(ans1.least,ans2.least));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=y1;i&lt;y2;i++)&#123;<span class="comment">//横向分割 </span></span><br><span class="line">		<span class="keyword">int</span> area1=<span class="built_in">get_sum</span>(x1,y1,x2,i),area2=<span class="built_in">get_sum</span>(x1,i+<span class="number">1</span>,x2,y2);</span><br><span class="line">		<span class="keyword">if</span>(area1&lt;=u&amp;&amp;tot-area1&lt;=u&amp;&amp;area2&lt;=u&amp;&amp;tot-area2&lt;=u)&#123;</span><br><span class="line">			Node ans1=<span class="built_in">dfs</span>(x1,y1,x2,i,area1),ans2=<span class="built_in">dfs</span>(x1,i+<span class="number">1</span>,x2,y2,area2);</span><br><span class="line">			<span class="keyword">if</span>(ans1.ans+ans2.ans&gt;tmp.ans)&#123;</span><br><span class="line">				tmp.ans=ans1.ans+ans2.ans;</span><br><span class="line">				tmp.least=<span class="built_in">min</span>(ans1.least,ans2.least);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(ans1.ans+ans2.ans==tmp.ans) tmp.least=<span class="built_in">max</span>(tmp.least,<span class="built_in">min</span>(ans1.least,ans2.least));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> f[x1][y1][x2][y2]=tmp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>,&amp;n,&amp;m,&amp;u);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;j++) <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i][j]),tot+=a[i][j];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;j++) sum[i][j]=a[i][j]+sum[i<span class="number">-1</span>][j]+sum[i][j<span class="number">-1</span>]-sum[i<span class="number">-1</span>][j<span class="number">-1</span>];<span class="comment">//二维前缀和 </span></span><br><span class="line">	Node res=<span class="built_in">dfs</span>(<span class="number">1</span>,<span class="number">1</span>,n,m,tot);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d %d&quot;</span>,res.ans,res.least);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>洛谷题解</category>
-      </categories>
-      <tags>
-        <tag>记忆化搜索</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>P1763埃及分数-题解</title>
     <url>/2022/03/05/P1763%E5%9F%83%E5%8F%8A%E5%88%86%E6%95%B0-%E9%A2%98%E8%A7%A3/</url>
     <content><![CDATA[<p>这篇文章为洛谷P1763埃及分数的题解</p>
 <span id="more"></span>
-<h2 id="本题解主要介绍朴素-IDA-的解法-360ms"><a href="#本题解主要介绍朴素-IDA-的解法-360ms" class="headerlink" title="本题解主要介绍朴素 IDA* 的解法( 360ms )"></a>本题解主要介绍朴素 IDA* 的解法( 360ms )</h2><h3 id="首先我们需要明白啥玩意是-IDA"><a href="#首先我们需要明白啥玩意是-IDA" class="headerlink" title="首先我们需要明白啥玩意是 IDA*"></a>首先我们需要明白啥玩意是 IDA*</h3><p>简单来说  IDA* &#x3D; <strong>迭代加深搜索</strong> + <strong>剪枝</strong><br>由于我们不清楚本题需要多少个分子为1的分数去拼凑这个答案<br>所以我们需要用到<strong>迭代加深搜索</strong><br>从1开始枚举深度，直到找到答案<br><img src="https://s3.bmp.ovh/imgs/2022/02/8fdb046c615aaf45.gif"></p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>由题面我们不难看出分数是<strong>递减</strong>的<br><strong>下一级分数肯定比上一级分数小</strong><br>本蒟蒻采用从 a&#x2F;b 减去枚举的分数，直到达到深度作为边界的方法<br>枚举深度的同时枚举分母，且该分数刚刚好小于上一级所减去的剩下的 a&#x2F;b<br>(下文的 <strong>get_first</strong> 函数)<br>我们需要保证分子为 1<br>所以我们在边界的时候做处理:<br><strong>1 . 当经过上一级处理剩下的 a&#x2F;b 分子不为 1 ，return false</strong><br><strong>2 . 若为 1 ，则将该分母直接作为答案</strong><br>此时我们得到的解肯定是最优的<br>( 类比 bfs )</p>
-<p>需要用到的函数有 ：<br>1 . gcd 函数 ( 便于约分 )<br>2 . better 函数 ( 更新答案 )<br>3 . get_firs t函数( 返回 ( 1 &#x2F; c ) &lt;&#x3D; ( num &#x2F; deo )的最小正整数 c )<br>4 . dfs 函数  </p>
-<p>兼职学习英语 ：<br>Numerator 分子<br>Denominator 分母</p>
-<p>朴素的迭代代码如下 ：<br>( 请原谅本蒟蒻害怕溢出时刻用 long long )</p>
+<h2 id="本题解主要介绍朴素-IDA-的解法-360ms">本题解主要介绍朴素 IDA* 的解法( 360ms )</h2>
+<h3 id="首先我们需要明白啥玩意是-IDA">首先我们需要明白啥玩意是 IDA*</h3>
+<p>简单来说  IDA* = <strong>迭代加深搜索</strong> + <strong>剪枝</strong><br>
+由于我们不清楚本题需要多少个分子为1的分数去拼凑这个答案<br>
+所以我们需要用到<strong>迭代加深搜索</strong><br>
+从1开始枚举深度，直到找到答案<br>
+<img src="https://s3.bmp.ovh/imgs/2022/02/8fdb046c615aaf45.gif" alt=""></p>
+<h3 id="思路">思路</h3>
+<p>由题面我们不难看出分数是<strong>递减</strong>的<br>
+<strong>下一级分数肯定比上一级分数小</strong><br>
+本蒟蒻采用从 a/b 减去枚举的分数，直到达到深度作为边界的方法<br>
+枚举深度的同时枚举分母，且该分数刚刚好小于上一级所减去的剩下的 a/b<br>
+(下文的 <strong>get_first</strong> 函数)<br>
+我们需要保证分子为 1<br>
+所以我们在边界的时候做处理:<br>
+<strong>1 . 当经过上一级处理剩下的 a/b 分子不为 1 ，return false</strong><br>
+<strong>2 . 若为 1 ，则将该分母直接作为答案</strong><br>
+此时我们得到的解肯定是最优的<br>
+( 类比 bfs )</p>
+<p>需要用到的函数有 ：<br>
+1 . gcd 函数 ( 便于约分 )<br>
+2 . better 函数 ( 更新答案 )<br>
+3 . get_firs t函数( 返回 ( 1 / c ) &lt;= ( num / deo )的最小正整数 c )<br>
+4 . dfs 函数</p>
+<p>兼职学习英语 ：<br>
+Numerator 分子<br>
+Denominator 分母</p>
+<p>朴素的迭代代码如下 ：<br>
+( 请原谅本蒟蒻害怕溢出时刻用 long long )</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1000005</span>;</span><br><span class="line">ll a,b;</span><br><span class="line">ll v[maxn],ans[maxn];</span><br><span class="line"><span class="function">ll <span class="title">gcd</span><span class="params">(ll a,ll b)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(b==<span class="number">0</span>) <span class="keyword">return</span> a;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> <span class="built_in">gcd</span>(b,a%b);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">get_first</span><span class="params">(ll a,ll b)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(ll i=<span class="number">1</span>;;i++) <span class="keyword">if</span>(<span class="built_in"><span class="keyword">double</span></span>(<span class="number">1.0</span>*<span class="number">1</span>/i)&lt;<span class="built_in"><span class="keyword">double</span></span>(<span class="number">1.0</span>*a/b)) <span class="keyword">return</span> i;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">better</span><span class="params">(ll dep)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(v[dep]&lt;ans[dep]) <span class="keyword">for</span>(ll i=<span class="number">1</span>;i&lt;=dep;i++) ans[i]=v[i];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">dfs</span><span class="params">(ll dep,ll c,ll num,ll deo,ll maxd)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(dep==maxd)&#123;</span><br><span class="line">		<span class="keyword">if</span>(deo%num) <span class="keyword">return</span> <span class="literal">false</span>;<span class="comment">//若不满足埃及分数要求，退出</span></span><br><span class="line">		v[dep]=deo/num;将该分母直接作为答案</span><br><span class="line">		<span class="built_in">better</span>(dep);</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">bool</span> ok=<span class="literal">false</span>;</span><br><span class="line">	c=<span class="built_in">max</span>(c,<span class="built_in">get_first</span>(num,deo));</span><br><span class="line">	<span class="keyword">for</span>(ll i=c;;i++)&#123;</span><br><span class="line">		ll x=num*i-deo;<span class="comment">//减去枚举到的分数</span></span><br><span class="line">		ll y=deo*i;</span><br><span class="line">		ll d=<span class="built_in">gcd</span>(x,y);<span class="comment">//约分</span></span><br><span class="line">		v[dep]=i;</span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">dfs</span>(dep+<span class="number">1</span>,i+<span class="number">1</span>,x/d,y/d,maxd)) ok=<span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ok;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%lld%lld&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">	ll tot;</span><br><span class="line">	ll c=<span class="built_in">get_first</span>(a,b);</span><br><span class="line">	<span class="built_in">memset</span>(ans,<span class="number">127</span>,<span class="built_in"><span class="keyword">sizeof</span></span>(ans));</span><br><span class="line">	<span class="keyword">for</span>(ll maxd=<span class="number">1</span>;;maxd++) <span class="keyword">if</span>(<span class="built_in">dfs</span>(<span class="number">1</span>,c,a,b,maxd))&#123;tot=maxd;<span class="keyword">break</span>;&#125;</span><br><span class="line">    <span class="comment">//找到的话肯定是深度较浅的优</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=tot;i++) <span class="built_in">printf</span>(<span class="string">&quot;%lld &quot;</span>,ans[i]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-<p>但是本题的数据可能不允许你用朴素的迭代写法<br>后果如下 ：<br><img src="https://s3.bmp.ovh/imgs/2022/02/bee67bfe617c21f5.png"></p>
-<h3 id="剪枝"><a href="#剪枝" class="headerlink" title="剪枝"></a>剪枝</h3><p>所以我们需要 <strong>剪枝</strong><br>剪枝语句十分简单<br>当我们枚举分母的时候，分数随着分母增大而减少<br>所以当我们枚举到前面这个分母 ，此时<strong>即使后面所有的数都是该分数</strong> ，减去仍然大于 0 , 那么继续dfs下去也没什么意义<br>所以只需要在枚举分母时添加上剪枝语句即可  </p>
+<p>但是本题的数据可能不允许你用朴素的迭代写法<br>
+后果如下 ：<br>
+<img src="https://s3.bmp.ovh/imgs/2022/02/bee67bfe617c21f5.png" alt=""></p>
+<h3 id="剪枝">剪枝</h3>
+<p>所以我们需要 <strong>剪枝</strong><br>
+剪枝语句十分简单<br>
+当我们枚举分母的时候，分数随着分母增大而减少<br>
+所以当我们枚举到前面这个分母 ，此时<strong>即使后面所有的数都是该分数</strong> ，减去仍然大于 0 , 那么继续dfs下去也没什么意义<br>
+所以只需要在枚举分母时添加上剪枝语句即可</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(ll i=c;;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(deo*(maxd-dep+<span class="number">1</span>)&lt;=num*i) <span class="keyword">break</span>;</span><br><span class="line">		ll x=num*i-deo;</span><br><span class="line">		ll y=deo*i;</span><br><span class="line">		ll d=<span class="built_in">gcd</span>(x,y);</span><br><span class="line">		v[dep]=i;</span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">dfs</span>(dep+<span class="number">1</span>,i+<span class="number">1</span>,x/d,y/d,maxd)) ok=<span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-<p>这样就可以 AC 啦 ~<br>希望这篇题解对你有所帮助和启发</p>
+<p>这样就可以 AC 啦 ~<br>
+希望这篇题解对你有所帮助和启发</p>
 ]]></content>
       <categories>
         <category>洛谷题解</category>
@@ -209,23 +390,72 @@
       </tags>
   </entry>
   <entry>
+    <title>P2140小Z的电力管制-题解</title>
+    <url>/2022/04/21/P2140%E5%B0%8FZ%E7%9A%84%E7%94%B5%E5%8A%9B%E7%AE%A1%E5%88%B6-%E9%A2%98%E8%A7%A3/</url>
+    <content><![CDATA[<p>似乎这道题和 <a href="https://www.luogu.com.cn/problem/P1436">P1436</a> 以及 <a href="https://www.luogu.com.cn/problem/P5752">P5752</a> 的棋盘分割有很多相似之处 。  <s>（三倍经验）</s><br>
+题目对于电力的要求似乎有些复杂 。<br>
+简化来说就是 <strong>取各方案各个区域分值之和最小值最大</strong> 。<br>
+特来此写一篇较为详细的题解 。</p>
+<h2 id="1-思路">1.思路</h2>
+<p>类似于分割棋盘，我们可以使用进行 <strong>递归</strong> 分割 。<br>
+二维取区块和可以使用 <strong>二维前缀和</strong><br>
+但是答案有两个，可以使用结构体存储并维护 。<br>
+用 $f$ 数组进行 <strong>记忆化处理</strong> 优化时间复杂度 。</p>
+<h2 id="2-解法">2.解法</h2>
+<p>易知递归边界是不可再分，即已经缩小到一个点 。<br>
+电力消耗值为所有需要的电 $tot$ 减去当前断电区域断掉的电 $broke$ 。<br>
+所有电力剩余值为 <strong>供电总值 - 电力消耗值</strong> 。<br>
+定义：</p>
+<ul>
+<li>$ans$ 为方案总数 。</li>
+<li>$least$ 为电力剩余值 。</li>
+</ul>
+<p>如果当前方案较多，则替换已有方案，更新电力剩余值 。<br>
+如果方案数相同，则比较电力剩余值，选出较大的 。</p>
+<h2 id="3-Code">3.Code</h2>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">35</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> ans;</span><br><span class="line">	<span class="keyword">int</span> least;</span><br><span class="line">&#125;f[maxn][maxn][maxn][maxn];</span><br><span class="line"><span class="keyword">int</span> a[maxn][maxn];</span><br><span class="line"><span class="keyword">int</span> sum[maxn][maxn];</span><br><span class="line"><span class="keyword">int</span> tot=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> n,m,u;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">get_sum</span><span class="params">(<span class="keyword">int</span> x1,<span class="keyword">int</span> y1,<span class="keyword">int</span> x2,<span class="keyword">int</span> y2)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> k=sum[x2][y2]+sum[x1<span class="number">-1</span>][y1<span class="number">-1</span>]-sum[x1<span class="number">-1</span>][y2]-sum[x2][y1<span class="number">-1</span>];<span class="comment">//求区块分值和 </span></span><br><span class="line">	<span class="keyword">return</span> k;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">Node <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x1,<span class="keyword">int</span> y1,<span class="keyword">int</span> x2,<span class="keyword">int</span> y2,<span class="keyword">int</span> broke)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(f[x1][y1][x2][y2].ans) <span class="keyword">return</span> f[x1][y1][x2][y2];</span><br><span class="line">	Node tmp;tmp.ans=<span class="number">1</span>;tmp.least=u-tot+broke;</span><br><span class="line">	<span class="keyword">if</span>(x1==x2&amp;&amp;y1==y2) <span class="keyword">return</span> tmp;<span class="comment">//递归边界 </span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=x1;i&lt;x2;i++)&#123;<span class="comment">//纵向分割 </span></span><br><span class="line">		<span class="keyword">int</span> area1=<span class="built_in">get_sum</span>(x1,y1,i,y2),area2=<span class="built_in">get_sum</span>(i+<span class="number">1</span>,y1,x2,y2);</span><br><span class="line">		<span class="keyword">if</span>(area1&lt;=u&amp;&amp;tot-area1&lt;=u&amp;&amp;area2&lt;=u&amp;&amp;tot-area2&lt;=u)&#123;</span><br><span class="line">			Node ans1=<span class="built_in">dfs</span>(x1,y1,i,y2,area1),ans2=<span class="built_in">dfs</span>(i+<span class="number">1</span>,y1,x2,y2,area2);</span><br><span class="line">			<span class="keyword">if</span>(ans1.ans+ans2.ans&gt;tmp.ans)&#123;<span class="comment">//替换已有方案，更新电力剩余值 </span></span><br><span class="line">				tmp.ans=ans1.ans+ans2.ans;</span><br><span class="line">				tmp.least=<span class="built_in">min</span>(ans1.least,ans2.least);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">//比较电力剩余值，选出较大的</span></span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(ans1.ans+ans2.ans==tmp.ans) tmp.least=<span class="built_in">max</span>(tmp.least,<span class="built_in">min</span>(ans1.least,ans2.least));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=y1;i&lt;y2;i++)&#123;<span class="comment">//横向分割 </span></span><br><span class="line">		<span class="keyword">int</span> area1=<span class="built_in">get_sum</span>(x1,y1,x2,i),area2=<span class="built_in">get_sum</span>(x1,i+<span class="number">1</span>,x2,y2);</span><br><span class="line">		<span class="keyword">if</span>(area1&lt;=u&amp;&amp;tot-area1&lt;=u&amp;&amp;area2&lt;=u&amp;&amp;tot-area2&lt;=u)&#123;</span><br><span class="line">			Node ans1=<span class="built_in">dfs</span>(x1,y1,x2,i,area1),ans2=<span class="built_in">dfs</span>(x1,i+<span class="number">1</span>,x2,y2,area2);</span><br><span class="line">			<span class="keyword">if</span>(ans1.ans+ans2.ans&gt;tmp.ans)&#123;</span><br><span class="line">				tmp.ans=ans1.ans+ans2.ans;</span><br><span class="line">				tmp.least=<span class="built_in">min</span>(ans1.least,ans2.least);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(ans1.ans+ans2.ans==tmp.ans) tmp.least=<span class="built_in">max</span>(tmp.least,<span class="built_in">min</span>(ans1.least,ans2.least));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> f[x1][y1][x2][y2]=tmp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>,&amp;n,&amp;m,&amp;u);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;j++) <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i][j]),tot+=a[i][j];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;j++) sum[i][j]=a[i][j]+sum[i<span class="number">-1</span>][j]+sum[i][j<span class="number">-1</span>]-sum[i<span class="number">-1</span>][j<span class="number">-1</span>];<span class="comment">//二维前缀和 </span></span><br><span class="line">	Node res=<span class="built_in">dfs</span>(<span class="number">1</span>,<span class="number">1</span>,n,m,tot);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d %d&quot;</span>,res.ans,res.least);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>洛谷题解</category>
+      </categories>
+      <tags>
+        <tag>记忆化搜索</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>P5507机关-题解</title>
     <url>/2022/04/04/P5507%E6%9C%BA%E5%85%B3-%E9%A2%98%E8%A7%A3/</url>
     <content><![CDATA[<p>这篇文章为洛谷P5507机关的题解</p>
 <span id="more"></span>
-<h3 id="这是道很好的搜索练手题"><a href="#这是道很好的搜索练手题" class="headerlink" title="这是道很好的搜索练手题"></a>这是道很好的搜索练手题</h3><p>可以用广为人知的搜索<del>三巨头</del>求解  </p>
+<h3 id="这是道很好的搜索练手题">这是道很好的搜索练手题</h3>
+<p>可以用广为人知的搜索<s>三巨头</s>求解</p>
 <ul>
 <li>双向搜索</li>
-<li>IDA* （<del>在这题貌似被禁了</del>）</li>
+<li>IDA* （<s>在这题貌似被禁了</s>）</li>
 <li>A*</li>
 </ul>
-<p>这篇题解主要介绍用 <strong>A_star</strong> 算法 AC 这道题  </p>
-<h2 id="1-思路"><a href="#1-思路" class="headerlink" title="1. 思路"></a>1. 思路</h2><p>用 <strong>结构体</strong> 记录 <strong>路径</strong> <strong>状态</strong><br>以及实际步数 <strong>g(n)</strong> 和估价步数 <strong>h(n)</strong><br>我们都知道 A* 算法的核心在于其估价函数 <strong>h(n)</strong><br>每次取出对应 <strong>g(n) + h(n)</strong> <strong>最小的</strong> 进行下一步搜素  </p>
-<p>引出一个疑惑 ：<br>每改变一个机关的状态都会有另一个机关跟着改变<br>那么估价函数如何求解 ？<br>看作是两个一起变换<br>可以 <strong>用当前状态距离目标状态的理想差值除去 2 得到</strong></p>
-<h2 id="2-解法"><a href="#2-解法" class="headerlink" title="2.解法"></a>2.解法</h2><p>使用优先队列存储结构体<br>所以我们需要 <strong>重载运算符</strong>  ： </p>
+<p>这篇题解主要介绍用 <strong>A_star</strong> 算法 AC 这道题</p>
+<h2 id="1-思路-2">1. 思路</h2>
+<p>用 <strong>结构体</strong> 记录 <strong>路径</strong> <strong>状态</strong><br>
+以及实际步数 <strong>g(n)</strong> 和估价步数 <strong>h(n)</strong><br>
+我们都知道 A* 算法的核心在于其估价函数 <strong>h(n)</strong><br>
+每次取出对应 <strong>g(n) + h(n)</strong> <strong>最小的</strong> 进行下一步搜素</p>
+<p>引出一个疑惑 ：<br>
+每改变一个机关的状态都会有另一个机关跟着改变<br>
+那么估价函数如何求解 ？<br>
+看作是两个一起变换<br>
+可以 <strong>用当前状态距离目标状态的理想差值除去 2 得到</strong></p>
+<h2 id="2-解法-2">2.解法</h2>
+<p>使用优先队列存储结构体<br>
+所以我们需要 <strong>重载运算符</strong>  ：</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(<span class="keyword">const</span> node &amp;a,<span class="keyword">const</span> node &amp;b)&#123;</span><br><span class="line">	<span class="keyword">return</span> a.g+a.h&gt;b.g+b.h;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>经检验 ：<br>由于看作两个机关同时向着目标前进 <strong>过于理想</strong><br>此题的估价函数可以稍微调高一些，用于优化时间复杂度<br>参数为原估价函数的  <strong>1.3</strong> 倍<br>但此时的时间复杂度仍高了些<br>所以最后加上 <strong>map 去重</strong> 即可</p>
-<h2 id="3-Code"><a href="#3-Code" class="headerlink" title="3. Code"></a>3. Code</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">	string state;<span class="comment">//状态 </span></span><br><span class="line">	string path;<span class="comment">//路径 </span></span><br><span class="line">	<span class="keyword">int</span> g;<span class="comment">//实际步数 </span></span><br><span class="line">	<span class="keyword">int</span> h;<span class="comment">//估价函数 </span></span><br><span class="line">&#125;;</span><br><span class="line">map&lt;string,<span class="keyword">bool</span>&gt; mark;</span><br><span class="line"><span class="comment">//重载运算符 </span></span><br><span class="line"><span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(<span class="keyword">const</span> node &amp;a,<span class="keyword">const</span> node &amp;b)&#123;</span><br><span class="line">	<span class="keyword">return</span> a.g+a.h&gt;b.g+b.h;</span><br><span class="line">&#125;</span><br><span class="line">priority_queue&lt;node&gt; q;</span><br><span class="line"><span class="comment">//估价函数 </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">eva</span><span class="params">(string s)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> cnt=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">12</span>;i++)</span><br><span class="line">        <span class="keyword">if</span>(s[i]!=<span class="string">&#x27;1&#x27;</span>) cnt+=<span class="number">5</span>-(<span class="keyword">int</span>)(s[i]<span class="number">-48</span>);</span><br><span class="line">    <span class="keyword">return</span> cnt/<span class="number">2</span>*<span class="number">1.3</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(node s)</span></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,s.g);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.path.<span class="built_in">size</span>();i++) cout&lt;&lt;(<span class="keyword">int</span>)(s.path[i]<span class="number">-48</span>)&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123; </span><br><span class="line">	<span class="keyword">int</span> gear[<span class="number">13</span>][<span class="number">5</span>];<span class="comment">//机关触发机制 </span></span><br><span class="line">	node start;</span><br><span class="line">	start.state+=(<span class="keyword">char</span>)(<span class="number">48</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">12</span>;i++)</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=<span class="number">5</span>;j++)&#123;</span><br><span class="line">			<span class="keyword">int</span> x;<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;x);</span><br><span class="line">			<span class="keyword">if</span>(j==<span class="number">1</span>) start.state+=(<span class="keyword">char</span>)(x+<span class="number">48</span>);</span><br><span class="line">			<span class="keyword">else</span> gear[i][j<span class="number">-1</span>]=x;</span><br><span class="line">		&#125;</span><br><span class="line">	start.g=<span class="number">0</span>;</span><br><span class="line">	start.h=<span class="built_in">eva</span>(start.state);</span><br><span class="line">	<span class="keyword">if</span>(!start.h)&#123;<span class="built_in">printf</span>(<span class="string">&quot;0&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">	mark[start.state]=<span class="literal">true</span>;</span><br><span class="line">	q.<span class="built_in">push</span>(start);</span><br><span class="line">	<span class="keyword">while</span>(!q.<span class="built_in">empty</span>())&#123;</span><br><span class="line">		node a=q.<span class="built_in">top</span>();q.<span class="built_in">pop</span>();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">12</span>;i++)&#123;</span><br><span class="line">			<span class="comment">//触发机关 </span></span><br><span class="line">			<span class="keyword">int</span> x=(<span class="keyword">int</span>)(a.state[i]<span class="number">-48</span>);<span class="comment">//x为i机关的状态 </span></span><br><span class="line">			<span class="keyword">int</span> j=gear[i][x];<span class="comment">//j为i机关的连锁机关 </span></span><br><span class="line">			<span class="keyword">int</span> y=(<span class="keyword">int</span>)(a.state[j]<span class="number">-48</span>);<span class="comment">//y为j机关的状态</span></span><br><span class="line">			<span class="comment">//改变状态 </span></span><br><span class="line">			<span class="keyword">if</span>(x==<span class="number">4</span>) x=<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span> x+=<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">if</span>(y==<span class="number">4</span>) y=<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span> y+=<span class="number">1</span>;</span><br><span class="line">			 </span><br><span class="line">			node s;<span class="comment">//转换入队列 </span></span><br><span class="line">			s.state+=(<span class="keyword">char</span>)(<span class="number">48</span>);</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> u=<span class="number">1</span>;u&lt;=<span class="number">12</span>;u++)&#123;</span><br><span class="line">				<span class="keyword">if</span>(u==i)&#123;s.state+=(<span class="keyword">char</span>)(x+<span class="number">48</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">				<span class="keyword">if</span>(u==j)&#123;s.state+=(<span class="keyword">char</span>)(y+<span class="number">48</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">				s.state+=a.state[u];</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">if</span>(!mark[s.state])&#123;<span class="comment">//map去重 </span></span><br><span class="line">				s.g=a.g+<span class="number">1</span>;</span><br><span class="line">				s.h=<span class="built_in">eva</span>(s.state);</span><br><span class="line">				mark[s.state]=<span class="literal">true</span>;</span><br><span class="line">				s.path=a.path+(<span class="keyword">char</span>)(i+<span class="number">48</span>);</span><br><span class="line">				<span class="keyword">if</span>(!s.h)&#123;<span class="built_in">print</span>(s);<span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">				q.<span class="built_in">push</span>(s);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<p>经检验 ：<br>
+由于看作两个机关同时向着目标前进 <strong>过于理想</strong><br>
+此题的估价函数可以稍微调高一些，用于优化时间复杂度<br>
+参数为原估价函数的  <strong>1.3</strong> 倍<br>
+但此时的时间复杂度仍高了些<br>
+所以最后加上 <strong>map 去重</strong> 即可</p>
+<h2 id="3-Code-2">3. Code</h2>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">	string state;<span class="comment">//状态 </span></span><br><span class="line">	string path;<span class="comment">//路径 </span></span><br><span class="line">	<span class="keyword">int</span> g;<span class="comment">//实际步数 </span></span><br><span class="line">	<span class="keyword">int</span> h;<span class="comment">//估价函数 </span></span><br><span class="line">&#125;;</span><br><span class="line">map&lt;string,<span class="keyword">bool</span>&gt; mark;</span><br><span class="line"><span class="comment">//重载运算符 </span></span><br><span class="line"><span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(<span class="keyword">const</span> node &amp;a,<span class="keyword">const</span> node &amp;b)&#123;</span><br><span class="line">	<span class="keyword">return</span> a.g+a.h&gt;b.g+b.h;</span><br><span class="line">&#125;</span><br><span class="line">priority_queue&lt;node&gt; q;</span><br><span class="line"><span class="comment">//估价函数 </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">eva</span><span class="params">(string s)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> cnt=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">12</span>;i++)</span><br><span class="line">        <span class="keyword">if</span>(s[i]!=<span class="string">&#x27;1&#x27;</span>) cnt+=<span class="number">5</span>-(<span class="keyword">int</span>)(s[i]<span class="number">-48</span>);</span><br><span class="line">    <span class="keyword">return</span> cnt/<span class="number">2</span>*<span class="number">1.3</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(node s)</span></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,s.g);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.path.<span class="built_in">size</span>();i++) cout&lt;&lt;(<span class="keyword">int</span>)(s.path[i]<span class="number">-48</span>)&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123; </span><br><span class="line">	<span class="keyword">int</span> gear[<span class="number">13</span>][<span class="number">5</span>];<span class="comment">//机关触发机制 </span></span><br><span class="line">	node start;</span><br><span class="line">	start.state+=(<span class="keyword">char</span>)(<span class="number">48</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">12</span>;i++)</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=<span class="number">5</span>;j++)&#123;</span><br><span class="line">			<span class="keyword">int</span> x;<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;x);</span><br><span class="line">			<span class="keyword">if</span>(j==<span class="number">1</span>) start.state+=(<span class="keyword">char</span>)(x+<span class="number">48</span>);</span><br><span class="line">			<span class="keyword">else</span> gear[i][j<span class="number">-1</span>]=x;</span><br><span class="line">		&#125;</span><br><span class="line">	start.g=<span class="number">0</span>;</span><br><span class="line">	start.h=<span class="built_in">eva</span>(start.state);</span><br><span class="line">	<span class="keyword">if</span>(!start.h)&#123;<span class="built_in">printf</span>(<span class="string">&quot;0&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">	mark[start.state]=<span class="literal">true</span>;</span><br><span class="line">	q.<span class="built_in">push</span>(start);</span><br><span class="line">	<span class="keyword">while</span>(!q.<span class="built_in">empty</span>())&#123;</span><br><span class="line">		node a=q.<span class="built_in">top</span>();q.<span class="built_in">pop</span>();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">12</span>;i++)&#123;</span><br><span class="line">			<span class="comment">//触发机关 </span></span><br><span class="line">			<span class="keyword">int</span> x=(<span class="keyword">int</span>)(a.state[i]<span class="number">-48</span>);<span class="comment">//x为i机关的状态 </span></span><br><span class="line">			<span class="keyword">int</span> j=gear[i][x];<span class="comment">//j为i机关的连锁机关 </span></span><br><span class="line">			<span class="keyword">int</span> y=(<span class="keyword">int</span>)(a.state[j]<span class="number">-48</span>);<span class="comment">//y为j机关的状态</span></span><br><span class="line">			<span class="comment">//改变状态 </span></span><br><span class="line">			<span class="keyword">if</span>(x==<span class="number">4</span>) x=<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span> x+=<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">if</span>(y==<span class="number">4</span>) y=<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span> y+=<span class="number">1</span>;</span><br><span class="line">			 </span><br><span class="line">			node s;<span class="comment">//转换入队列 </span></span><br><span class="line">			s.state+=(<span class="keyword">char</span>)(<span class="number">48</span>);</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> u=<span class="number">1</span>;u&lt;=<span class="number">12</span>;u++)&#123;</span><br><span class="line">				<span class="keyword">if</span>(u==i)&#123;s.state+=(<span class="keyword">char</span>)(x+<span class="number">48</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">				<span class="keyword">if</span>(u==j)&#123;s.state+=(<span class="keyword">char</span>)(y+<span class="number">48</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">				s.state+=a.state[u];</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">if</span>(!mark[s.state])&#123;<span class="comment">//map去重 </span></span><br><span class="line">				s.g=a.g+<span class="number">1</span>;</span><br><span class="line">				s.h=<span class="built_in">eva</span>(s.state);</span><br><span class="line">				mark[s.state]=<span class="literal">true</span>;</span><br><span class="line">				s.path=a.path+(<span class="keyword">char</span>)(i+<span class="number">48</span>);</span><br><span class="line">				<span class="keyword">if</span>(!s.h)&#123;<span class="built_in">print</span>(s);<span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">				q.<span class="built_in">push</span>(s);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>洛谷题解</category>
@@ -235,35 +465,36 @@
       </tags>
   </entry>
   <entry>
-    <title>Butterfly主题解决方案</title>
-    <url>/2022/04/30/Butterfly%E4%B8%BB%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<h2 id="解决文章顶部图和背景不切合的问题"><a href="#解决文章顶部图和背景不切合的问题" class="headerlink" title="解决文章顶部图和背景不切合的问题"></a>解决文章顶部图和背景不切合的问题</h2><p>如果使用主题配置文件中的 default_top_img 将背景图和顶部图改为一致的话<br>可能会出现顶部图和背景图不切合的如下情况：<br><img src="https://s2.loli.net/2022/04/30/XNifFjKGJ1eLdPh.png"><br>注意到这边背景图是有部分在上方的，只是被顶部图覆盖住了<br>所以我们可以 <strong>取消顶部图显示</strong><br>即 <strong>取消 default_top_img</strong><br>但是顶部图重新填充了蓝色<br><strong>注释掉在前几行的 background-color: $light-blue</strong> 即可<br>效果如下：<br><img src="https://s2.loli.net/2022/04/30/X9vH83qYyCzoFQP.png"></p>
-<h2 id="解决在主题配置文件修改滑动条颜色不成功的问题"><a href="#解决在主题配置文件修改滑动条颜色不成功的问题" class="headerlink" title="解决在主题配置文件修改滑动条颜色不成功的问题"></a>解决在主题配置文件修改滑动条颜色不成功的问题</h2><p>当我们修改主题配置文件，想要修改滑动条颜色时，可能会出现颜色没有变化的情况<br>怎么办呢？<br>我们可以 <strong>直接修改源码</strong><br>找到 <strong>&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;_global&#x2F;</strong> 下的 <strong>index.styl</strong> 文件<br>查询 –scrollbar-color: $scrollbar-color<br>修改为自己喜欢的颜色即可  </p>
-<h2 id="主页顶部图颜色较深"><a href="#主页顶部图颜色较深" class="headerlink" title="主页顶部图颜色较深"></a>主页顶部图颜色较深</h2><p>经检测，顶部图颜色较深的代码在：<br><strong>&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;_layout&#x2F;</strong> 目录下的 <strong>head.styl</strong> 文件中  </p>
-<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">&amp;:not</span>(.not-<span class="attribute">top</span>-img):before</span><br><span class="line">  <span class="attribute">position</span>: absolute</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span></span><br><span class="line">  <span class="attribute">background-color</span>: alpha(<span class="variable">$dark</span>-black, .<span class="number">3</span>) // 即rgba(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.3</span>)，使得顶部图颜色较深</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-<p>将其中的颜色属性设为 0 即可</p>
-<h2 id="文章顶部图颜色较深"><a href="#文章顶部图颜色较深" class="headerlink" title="文章顶部图颜色较深"></a>文章顶部图颜色较深</h2><p>同样在 head.styl 文件中找到如下代码并修改： </p>
-<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="comment">// post</span></span><br><span class="line">  &amp;<span class="selector-class">.post-bg</span></span><br><span class="line">    <span class="attribute">height</span>: <span class="number">400px</span></span><br><span class="line"></span><br><span class="line">    +maxWidth768()</span><br><span class="line">      <span class="attribute">height</span>: <span class="number">360px</span></span><br><span class="line"></span><br><span class="line">    &amp;:before</span><br><span class="line">      <span class="attribute">background-color</span>: alpha(<span class="variable">$dark</span>-black, .<span class="number">5</span>)</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>解决方案</category>
-      </categories>
-      <tags>
-        <tag>Butterfly</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>P8106[Cnoi2021]数学练习-题解</title>
     <url>/2022/04/04/P8106-Cnoi2021-%E6%95%B0%E5%AD%A6%E7%BB%83%E4%B9%A0-%E9%A2%98%E8%A7%A3/</url>
     <content><![CDATA[<p>这篇文章为洛谷P8106-Cnoi2021-数学练习的题解</p>
 <span id="more"></span>
-<h3 id="刚刚学完排列组合特来写一篇题解"><a href="#刚刚学完排列组合特来写一篇题解" class="headerlink" title="刚刚学完排列组合特来写一篇题解"></a>刚刚学完排列组合特来写一篇题解</h3><h2 id="1-思路"><a href="#1-思路" class="headerlink" title="1. 思路"></a>1. 思路</h2><p>首先题目要求我们将 $1$~$n$ 的数分为两个子集。<br>$|S| \notin S$ 且 $|T| \notin T$。<br>$|S|$ 表示的是 $S$ 集合中元素的个数。<br>由题目的特殊条件我们可以得到该条件的一个<strong>充要条件</strong> ：<br>$|S| \in T$ 且 $|T| \in S$。 </p>
-<p>这样我们在 “ 安置 ”  好 $|S|$ 和 $|T|$ 后就可以用组合数公式轻松计算出答案了。<br>但是这边仍然有一个性质我们没有用到 ：<br><strong>当 $n$ 为偶数时</strong> $|S| \neq |T|$  这是显然的，也是<strong>必要</strong>的。  </p>
-<h2 id="2-解法"><a href="#2-解法" class="headerlink" title="2. 解法"></a>2. 解法</h2><p>枚举 $1 $~$ n - 1 $ 作为 S 集合的元素个数。<br>已有  $ |T| \in S$。<br>利用组合数公式挑选剩下 $i - 1$ 个数。<br>由于 $n$ 个数全部挑完 ， 所以剩下的数全部纳入 $T$ 集合。<br>我们只需要算 $S$ 集合满足题意的个数即可。<br>附上组合数公式 ：  </p>
+<h3 id="刚刚学完排列组合特来写一篇题解">刚刚学完排列组合特来写一篇题解</h3>
+<h2 id="1-思路-3">1. 思路</h2>
+<p>首先题目要求我们将 $1$~$n$ 的数分为两个子集。<br>
+$|S| \notin S$ 且 $|T| \notin T$。<br>
+$|S|$ 表示的是 $S$ 集合中元素的个数。<br>
+由题目的特殊条件我们可以得到该条件的一个<strong>充要条件</strong> ：<br>
+$|S| \in T$ 且 $|T| \in S$。</p>
+<p>这样我们在 “ 安置 ”  好 $|S|$ 和 $|T|$ 后就可以用组合数公式轻松计算出答案了。<br>
+但是这边仍然有一个性质我们没有用到 ：<br>
+<strong>当 $n$ 为偶数时</strong> $|S| \neq |T|$  这是显然的，也是<strong>必要</strong>的。</p>
+<h2 id="2-解法-3">2. 解法</h2>
+<p>枚举 $1 $~$ n - 1 $ 作为 S 集合的元素个数。<br>
+已有  $ |T| \in S$。<br>
+利用组合数公式挑选剩下 $i - 1$ 个数。<br>
+由于 $n$ 个数全部挑完 ， 所以剩下的数全部纳入 $T$ 集合。<br>
+我们只需要算 $S$ 集合满足题意的个数即可。<br>
+附上组合数公式 ：</p>
 <ul>
-<li>$C_m^n&#x3D;\frac{(n!)}{(n-m)!m!}$</li>
+<li>$C_m^n=\frac{(n!)}{(n-m)!m!}$</li>
 </ul>
-<p>注意到除号且在模意义下 ， 所以我们需要求 <strong>逆元</strong>。<br>注意到此题 $mod$ 的特殊性 ， 所以我们可以使用 <strong>费马小定理</strong> 求解逆元。<br>不知道逆元建议先做做 <a href="https://www.luogu.com.cn/problem/P3811">这道题</a>。<br>最后注意 <strong>特判 $n$ 为偶数</strong> 的情况就可以了。</p>
-<h2 id="3-Code"><a href="#3-Code" class="headerlink" title="3. Code"></a>3. Code</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">100005</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll mod=<span class="number">998244353</span>;</span><br><span class="line">ll n;</span><br><span class="line">ll frac[maxn];</span><br><span class="line">ll x,y;</span><br><span class="line"><span class="function">ll <span class="title">inv</span><span class="params">(ll a,ll s,ll p)</span></span>&#123; <span class="comment">// 费马小定理求逆元</span></span><br><span class="line">	ll ans=<span class="number">1</span>; </span><br><span class="line">	<span class="keyword">while</span>(s)&#123;</span><br><span class="line">		<span class="keyword">if</span>(s&amp;<span class="number">1</span>) ans=ans*a%p;</span><br><span class="line">		a=a*a%p;</span><br><span class="line">		s&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans%p;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">C</span><span class="params">(ll m,ll n)</span></span>&#123;</span><br><span class="line">	ll x=<span class="built_in">inv</span>(frac[m]*frac[n-m]%mod,mod<span class="number">-2</span>,mod);</span><br><span class="line">    <span class="keyword">return</span> frac[n]*x%mod;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;n);</span><br><span class="line">    ll ans=<span class="number">0</span>;</span><br><span class="line">    frac[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(ll i=<span class="number">1</span>;i&lt;=n;i++) frac[i]=frac[i<span class="number">-1</span>]*i%mod; <span class="comment">// 预处理阶乘</span></span><br><span class="line">    ll mid=n/<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">bool</span> judge=<span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">if</span>(n%<span class="number">2</span>==<span class="number">0</span>) judge=<span class="literal">true</span>;</span><br><span class="line">   	<span class="keyword">for</span>(ll i=<span class="number">1</span>;i&lt;=n<span class="number">-1</span>;i++)&#123;</span><br><span class="line">   		<span class="keyword">if</span>(judge==<span class="literal">true</span>&amp;&amp;i==mid) <span class="keyword">continue</span>; <span class="comment">// 特判 n 为偶数</span></span><br><span class="line">   		ans=(ans+<span class="built_in">C</span>(i<span class="number">-1</span>,n<span class="number">-2</span>))%mod;</span><br><span class="line">	&#125; </span><br><span class="line">   	<span class="built_in">printf</span>(<span class="string">&quot;%lld&quot;</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意到除号且在模意义下 ， 所以我们需要求 <strong>逆元</strong>。<br>
+注意到此题 $mod$ 的特殊性 ， 所以我们可以使用 <strong>费马小定理</strong> 求解逆元。<br>
+不知道逆元建议先做做 <a href="https://www.luogu.com.cn/problem/P3811">这道题</a>。<br>
+最后注意 <strong>特判 $n$ 为偶数</strong> 的情况就可以了。</p>
+<h2 id="3-Code-3">3. Code</h2>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">100005</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll mod=<span class="number">998244353</span>;</span><br><span class="line">ll n;</span><br><span class="line">ll frac[maxn];</span><br><span class="line">ll x,y;</span><br><span class="line"><span class="function">ll <span class="title">inv</span><span class="params">(ll a,ll s,ll p)</span></span>&#123; <span class="comment">// 费马小定理求逆元</span></span><br><span class="line">	ll ans=<span class="number">1</span>; </span><br><span class="line">	<span class="keyword">while</span>(s)&#123;</span><br><span class="line">		<span class="keyword">if</span>(s&amp;<span class="number">1</span>) ans=ans*a%p;</span><br><span class="line">		a=a*a%p;</span><br><span class="line">		s&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans%p;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">C</span><span class="params">(ll m,ll n)</span></span>&#123;</span><br><span class="line">	ll x=<span class="built_in">inv</span>(frac[m]*frac[n-m]%mod,mod<span class="number">-2</span>,mod);</span><br><span class="line">    <span class="keyword">return</span> frac[n]*x%mod;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;n);</span><br><span class="line">    ll ans=<span class="number">0</span>;</span><br><span class="line">    frac[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(ll i=<span class="number">1</span>;i&lt;=n;i++) frac[i]=frac[i<span class="number">-1</span>]*i%mod; <span class="comment">// 预处理阶乘</span></span><br><span class="line">    ll mid=n/<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">bool</span> judge=<span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">if</span>(n%<span class="number">2</span>==<span class="number">0</span>) judge=<span class="literal">true</span>;</span><br><span class="line">   	<span class="keyword">for</span>(ll i=<span class="number">1</span>;i&lt;=n<span class="number">-1</span>;i++)&#123;</span><br><span class="line">   		<span class="keyword">if</span>(judge==<span class="literal">true</span>&amp;&amp;i==mid) <span class="keyword">continue</span>; <span class="comment">// 特判 n 为偶数</span></span><br><span class="line">   		ans=(ans+<span class="built_in">C</span>(i<span class="number">-1</span>,n<span class="number">-2</span>))%mod;</span><br><span class="line">	&#125; </span><br><span class="line">   	<span class="built_in">printf</span>(<span class="string">&quot;%lld&quot;</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>洛谷题解</category>
@@ -275,9 +506,23 @@
   <entry>
     <title>Unity游戏开发日志</title>
     <url>/2022/02/03/Unity%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/</url>
-    <content><![CDATA[<h1 id="2022-2-2"><a href="#2022-2-2" class="headerlink" title="2022.2.2"></a>2022.2.2</h1><p>1.完成Unity在VS中的环境配置<br>2.完成C#Script的创建<br>3.实现tilemap障碍物刚体<br>4.实现角色碰撞体和物理配置<br>5.实现角色Idle和run动画机的创建<br>6.实现角色Idle和run时方向的变换<br>7.解决角色方向变换不协调的问题  </p>
-<h1 id="2022-2-4"><a href="#2022-2-4" class="headerlink" title="2022.2.4"></a>2022.2.4</h1><p>1.完成Idle的Bool参数设定，Attack的Trigger参数设定<br>2.实现角色单次攻击  </p>
-<h1 id="2022-2-6"><a href="#2022-2-6" class="headerlink" title="2022.2.6"></a>2022.2.6</h1><p>1.完成Attack的Int参数设定，Attack的Bool参数设定<br>2.引入连击计数器HitCount<br>3.实现人物多段攻击<br>4.实现攻击结束函数<br>5.实现攻击结束函数在攻击动画尾帧的插入  </p>
+    <content><![CDATA[<h1>2022.2.2</h1>
+<p>1.完成Unity在VS中的环境配置<br>
+2.完成C#Script的创建<br>
+3.实现tilemap障碍物刚体<br>
+4.实现角色碰撞体和物理配置<br>
+5.实现角色Idle和run动画机的创建<br>
+6.实现角色Idle和run时方向的变换<br>
+7.解决角色方向变换不协调的问题</p>
+<h1>2022.2.4</h1>
+<p>1.完成Idle的Bool参数设定，Attack的Trigger参数设定<br>
+2.实现角色单次攻击</p>
+<h1>2022.2.6</h1>
+<p>1.完成Attack的Int参数设定，Attack的Bool参数设定<br>
+2.引入连击计数器HitCount<br>
+3.实现人物多段攻击<br>
+4.实现攻击结束函数<br>
+5.实现攻击结束函数在攻击动画尾帧的插入</p>
 ]]></content>
       <categories>
         <category>Unity游戏开发</category>
@@ -287,16 +532,127 @@
       </tags>
   </entry>
   <entry>
+    <title>VsCode-C/C++编译环境配置</title>
+    <url>/2022/05/01/VsCode-C-C-%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h2 id="前期准备">前期准备</h2>
+<h3 id="下载-VsCode">下载 VsCode</h3>
+<p>官网地址：<a href="https://code.visualstudio.com/">Code Editing</a></p>
+<h3 id="下载-MinGW64编译器">下载 MinGW64编译器</h3>
+<p>官网地址：<a href="https://www.mingw-w64.org/">MinGW64</a></p>
+<h2 id="配置系统环境变量">配置系统环境变量</h2>
+<p>Win+I 打开系统设置<br>
+找到 <strong>编辑系统环境变量</strong><br>
+点击 <strong>高级</strong> &gt; <strong>环境变量</strong> &gt; <strong>选定 Path 进行编辑</strong><br>
+添加进你安装的 MinGW64 编译器的 <strong>路径</strong><br>
+例如我的就是：D:\Program\mingw-w64\mingw64\bin<br>
+<img src="https://s2.loli.net/2022/05/01/SZj5xDITXehoyW9.png" alt=""></p>
+<h2 id="配置相关文件">配置相关文件</h2>
+<h3 id="安装-C-C-扩展">安装 C/C++ 扩展</h3>
+<p>进入 VsCode 找到左侧栏的 Extensions<br>
+一般安装如下扩展：</p>
+<ul>
+<li>C/C++</li>
+<li>Chinese (Simplified)(简体中文)</li>
+<li>Code Runner</li>
+</ul>
+<h3 id="设置编译器路径">设置编译器路径</h3>
+<p>新建 Code 文件夹用来保存项目文件<br>
+在 Code 文件夹中右键点击 <strong>用Code打开</strong> 进入 VsCode<br>
+接下来配置编译器路径<br>
+按快捷键Ctrl+Shift+P调出命令面板，输入C/C++，选 <strong>Edit Configurations(UI)</strong> 进入配置<br>
+<img src="https://s2.loli.net/2022/05/01/RWZGvOlSV8dxzLK.png" alt=""><br>
+在里面找到 <strong>编译器路径</strong> 修改成 MinGW64路径，再将下方的 InteliSense模式 改为 <strong>gcc-x64</strong> 即可<br>
+这时我们可以发现文件夹中多了一个 <strong>.vscode</strong> 的文件夹，证明配置成功<br>
+接下来配置三个主要的文件</p>
+<h3 id="c-cpp-properties-json">c_cpp_properties.json</h3>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Win32&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;includePath&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;$&#123;workspaceFolder&#125;/**&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;defines&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;_DEBUG&quot;</span>,</span><br><span class="line">                <span class="string">&quot;UNICODE&quot;</span>,</span><br><span class="line">                <span class="string">&quot;_UNICODE&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;compilerPath&quot;</span>: <span class="string">&quot;D:/Program/mingw-w64/mingw64/bin/g++.exe&quot;</span>,<span class="comment">//编译器的路径</span></span><br><span class="line">            <span class="attr">&quot;cStandard&quot;</span>: <span class="string">&quot;c17&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;cppStandard&quot;</span>: <span class="string">&quot;c++17&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;intelliSenseMode&quot;</span>: <span class="string">&quot;gcc-x64&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="number">4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="tasks-json">tasks.json</h3>
+<p>接下来，创建一个tasks.json文件来告诉VS Code如何构建（编译）程序<br>
+该任务将调用g++编译器基于源代码创建可执行文件<br>
+按快捷键 Ctrl+Shift+P 调出命令面板，输入 tasks，选择 <strong>Tasks:Configure Default Build Task</strong><br>
+<img src="https://s2.loli.net/2022/05/01/OHUebX3C1SPmzKG.png" alt=""><br>
+再选择 <strong>C/C++: g++.exe build active file</strong><br>
+<img src="https://s2.loli.net/2022/05/01/Hv5Jqiwl6Yhu1QI.png" alt=""><br>
+接下来在 .vscode 文件夹中就会出现 <strong>tasks.json</strong> 的配置文件<br>
+可以参考我的配置：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">&quot;version&quot;</span>: <span class="string">&quot;2.0.0&quot;</span>,</span><br><span class="line">	<span class="attr">&quot;tasks&quot;</span>: [</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="attr">&quot;type&quot;</span>: <span class="string">&quot;cppbuild&quot;</span>,</span><br><span class="line">			<span class="attr">&quot;label&quot;</span>: <span class="string">&quot;g++.exe build active file&quot;</span>,</span><br><span class="line">			<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;D:/Program/mingw-w64/mingw64/bin/g++.exe&quot;</span>,<span class="comment">//编译器路径</span></span><br><span class="line">			<span class="attr">&quot;args&quot;</span>: [</span><br><span class="line">				<span class="string">&quot;-fdiagnostics-color=always&quot;</span>,</span><br><span class="line">				<span class="string">&quot;-g&quot;</span>,</span><br><span class="line">				<span class="string">&quot;$&#123;file&#125;&quot;</span>,</span><br><span class="line">				<span class="string">&quot;-o&quot;</span>,</span><br><span class="line">				<span class="string">&quot;$&#123;fileDirname&#125;\\$&#123;fileBasenameNoExtension&#125;.exe&quot;</span></span><br><span class="line">			],</span><br><span class="line">			<span class="attr">&quot;options&quot;</span>: &#123;</span><br><span class="line">				<span class="attr">&quot;cwd&quot;</span>: <span class="string">&quot;D:/Program/mingw-w64/mingw64/bin&quot;</span></span><br><span class="line">			&#125;,<span class="comment">//bin为存放编译器和调试器的文件夹</span></span><br><span class="line">			<span class="attr">&quot;problemMatcher&quot;</span>: [</span><br><span class="line">				<span class="string">&quot;$gcc&quot;</span></span><br><span class="line">			],</span><br><span class="line">			<span class="attr">&quot;group&quot;</span>: &#123;</span><br><span class="line">				<span class="attr">&quot;kind&quot;</span>: <span class="string">&quot;build&quot;</span>,</span><br><span class="line">				<span class="attr">&quot;isDefault&quot;</span>: <span class="literal">true</span></span><br><span class="line">			&#125;,</span><br><span class="line">			<span class="attr">&quot;detail&quot;</span>: <span class="string">&quot;编译器: D:/Program/mingw-w64/mingw64/bin/g++.exe&quot;</span></span><br><span class="line">		&#125;</span><br><span class="line">	]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="launch-json">launch.json</h3>
+<p>点击菜单栏的 <strong>Debug–&gt;Start Debugging</strong> 或者直接按键盘 <strong>F5</strong><br>
+会在 .vscode 文件夹中生成一个 <strong>launch.json</strong> 的配置文件<br>
+我的配置如下：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">// Use IntelliSense to learn about possible attributes.</span></span><br><span class="line">    <span class="comment">// Hover to view descriptions of existing attributes.</span></span><br><span class="line">    <span class="comment">// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;0.2.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span>: [</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;(gdb) Launch&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;preLaunchTask&quot;</span>: <span class="string">&quot;g++.exe build active file&quot;</span>,<span class="comment">//调试前执行的任务，就是之前配置的tasks.json中的label字段</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span>: <span class="string">&quot;cppdbg&quot;</span>,<span class="comment">//配置类型，只能为cppdbg</span></span><br><span class="line">            <span class="attr">&quot;request&quot;</span>: <span class="string">&quot;launch&quot;</span>,<span class="comment">//请求配置类型，可以为launch（启动）或attach（附加）</span></span><br><span class="line">            <span class="attr">&quot;program&quot;</span>: <span class="string">&quot;$&#123;fileDirname&#125;\\$&#123;fileBasenameNoExtension&#125;.exe&quot;</span>,<span class="comment">//调试程序的路径名称</span></span><br><span class="line">            <span class="attr">&quot;args&quot;</span>: [],<span class="comment">//调试传递参数</span></span><br><span class="line">            <span class="attr">&quot;stopAtEntry&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">&quot;cwd&quot;</span>: <span class="string">&quot;$&#123;workspaceFolder&#125;&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;environment&quot;</span>: [],</span><br><span class="line">            <span class="attr">&quot;externalConsole&quot;</span>: <span class="literal">true</span>,<span class="comment">//true显示外置的控制台窗口，false显示内置终端</span></span><br><span class="line">            <span class="attr">&quot;MIMode&quot;</span>: <span class="string">&quot;gdb&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;miDebuggerPath&quot;</span>: <span class="string">&quot;D:\\Program\\mingw-w64\\mingw64\\bin\\gdb.exe&quot;</span>,<span class="comment">//调试器路径</span></span><br><span class="line">            <span class="attr">&quot;setupCommands&quot;</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;Enable pretty-printing for gdb&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;text&quot;</span>: <span class="string">&quot;-enable-pretty-printing&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;ignoreFailures&quot;</span>: <span class="literal">true</span></span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="运行测试">运行测试</h2>
+<p>写一个 hello world! 的程序测试下环境配置是否成功<br>
+记得要在末尾插入 <strong>system(“pause”)</strong> 的代码，不然程序会闪一下就消失了<br>
+出现如图所示结果则成功：<br>
+<img src="https://s2.loli.net/2022/05/01/rcnTyzsLo21SNRY.png" alt=""></p>
+]]></content>
+      <categories>
+        <category>开发环境配置</category>
+      </categories>
+      <tags>
+        <tag>VsCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>「Wdoi-6」走在夜晚的莲台野-题解</title>
+    <url>/2022/05/14/%E3%80%8CWdoi-6%E3%80%8D%E8%B5%B0%E5%9C%A8%E5%A4%9C%E6%99%9A%E7%9A%84%E8%8E%B2%E5%8F%B0%E9%87%8E-%E9%A2%98%E8%A7%A3/</url>
+    <content><![CDATA[<p>看难度就明白这是道签到题</p>
+<h2 id="1-思路-4">1.思路</h2>
+<p>题目要求我们将所有板子 <strong>放过</strong> 就行，但放入金就会清空银。<br>
+所以我们要在放金之前 <strong>尽可能多放银</strong>。<br>
+这就是标签所说的贪心。</p>
+<h2 id="2-解法-4">2.解法</h2>
+<p>由以上思路可得：<br>
+放银的数目依次为 $z-1$、$z-2$ $…$ $z-x$。<br>
+由等差数列公式：<br>
+最多可以放 $\frac{x*(z-x+z-1)}{2}$ 个银，令该式子为 $\sigma$。<br>
+我们得到如下几种情况：</p>
+<ul>
+<li>$x$ 恰好满足放入所有 $y$ 后 $x$ 被清空。</li>
+<li>$x$ 恰好满足放入所有 $y$ 后 $x$ 被清空不足。</li>
+<li>$x$ 恰好满足放入所有 $y$ 后 $x$ 被清空有余。</li>
+</ul>
+<p>而这三种情况依次对应 $=\sigma$、$&lt;\sigma$、$&gt;\sigma$ 的情况。<br>
+分别为 $case1\ $ $case2\ $ $case3\ $。<br>
+$case1$： 显然满足要求。<br>
+$case2$： 翻译过来就是金放完了银有剩，则只需要剩下的银数量 <strong>小于等于</strong> 可放位置的数量就行了。<br>
+$case3$： 银放完了金有剩，具体剩多少呢？<br>
+我们令此时消耗的金数量为 $x_0$ 则将 $x_0$ 带入 $\sigma$ 式。<br>
+整理一下得到关于 $x_0$ 的式子：<br>
+$x_0^2-(2z-1)x_0+2y=0$。<br>
+得到：$x_0=\lfloor\frac{2z-1+\sqrt[]{(2z-1)^2-8y}}{2}\rfloor$。<br>
+同 $case2$ 理即可求解。</p>
+<h2 id="3-Code-4">3.Code</h2>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll T,x,y,z;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;T);</span><br><span class="line">	<span class="keyword">while</span>(T--)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%lld%lld%lld&quot;</span>,&amp;x,&amp;y,&amp;z);</span><br><span class="line">		<span class="keyword">if</span>(x&gt;z)&#123;<span class="built_in">printf</span>(<span class="string">&quot;Merry\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		ll judge=x*(<span class="number">2</span>*z-x<span class="number">-1</span>)/<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span>(judge==y)&#123;<span class="built_in">printf</span>(<span class="string">&quot;Renko\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		<span class="keyword">if</span>(judge&lt;y&amp;&amp;(y-judge&lt;=z-x))&#123;<span class="built_in">printf</span>(<span class="string">&quot;Renko\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		<span class="keyword">int</span> x0=(<span class="number">2</span>*z<span class="number">-1</span>+<span class="built_in">sqrt</span>((<span class="number">2</span>*z<span class="number">-1</span>)*(<span class="number">2</span>*z<span class="number">-1</span>)<span class="number">-8</span>*y))/<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span>(judge&gt;y&amp;&amp;(x-x0)&lt;=z)&#123;<span class="built_in">printf</span>(<span class="string">&quot;Renko\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;Merry\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>洛谷题解</category>
+      </categories>
+      <tags>
+        <tag>贪心</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>中国剩余定理</title>
     <url>/2022/02/04/%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</url>
     <content><![CDATA[<p>这篇文章主要介绍<strong>中国剩余定理及其解法</strong>以及<strong>代码实现</strong></p>
 <span id="more"></span>
-<h1 id="中国剩余定理"><a href="#中国剩余定理" class="headerlink" title="中国剩余定理"></a>中国剩余定理</h1><h2 id="引子：曹冲养猪"><a href="#引子：曹冲养猪" class="headerlink" title="引子：曹冲养猪"></a>引子：曹冲养猪</h2><p>题目链接：<a href="https://www.luogu.com.cn/problem/P1495">https://www.luogu.com.cn/problem/P1495</a><br>自从曹冲搞定了大象以后，曹操就开始捉摸让儿子干些事业，于是派他到中原养猪场养猪，可是曹冲满不高兴，于是在工作中马马虎虎，有一次曹操想知道母猪的数量，于是曹冲想狠狠耍曹操一把。举个例子，假如有 1616 头母猪，如果建了 33 个猪圈，剩下 11 头猪就没有地方安家了。如果建造了 55 个猪圈，但是仍然有 11 头猪没有地方去，然后如果建造了 77 个猪圈，还有 22 头没有地方去。你作为曹总的私人秘书理所当然要将准确的猪数报给曹总，你该怎么办？</p>
-<p>类似此类问题我们可以使用<strong>中国剩余定理</strong>求解<br>限制条件<strong>模两两互质</strong></p>
-<h2 id="推导"><a href="#推导" class="headerlink" title="推导"></a>推导</h2><p>推导过程来源于<a href="https://baike.baidu.com/item/%E5%AD%99%E5%AD%90%E5%AE%9A%E7%90%86/2841597?fromtitle=%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86&fromid=11200132&fr=aladdin"><strong>百度百科</strong></a>(主要是<em>太菜了</em>不会推导)<br><img src="https://s3.bmp.ovh/imgs/2022/02/55836b4e60ab409a.png"><br><img src="https://s3.bmp.ovh/imgs/2022/02/fee95cb9985307ad.png"></p>
-<h2 id="求解模板"><a href="#求解模板" class="headerlink" title="求解模板"></a>求解模板</h2><p>以如下问题为例<br>问：有数模3余2，模5余3，模7余2，问数几何？</p>
+<h1>中国剩余定理</h1>
+<h2 id="引子：曹冲养猪">引子：曹冲养猪</h2>
+<p>题目链接：<a href="https://www.luogu.com.cn/problem/P1495">https://www.luogu.com.cn/problem/P1495</a><br>
+自从曹冲搞定了大象以后，曹操就开始捉摸让儿子干些事业，于是派他到中原养猪场养猪，可是曹冲满不高兴，于是在工作中马马虎虎，有一次曹操想知道母猪的数量，于是曹冲想狠狠耍曹操一把。举个例子，假如有 1616 头母猪，如果建了 33 个猪圈，剩下 11 头猪就没有地方安家了。如果建造了 55 个猪圈，但是仍然有 11 头猪没有地方去，然后如果建造了 77 个猪圈，还有 22 头没有地方去。你作为曹总的私人秘书理所当然要将准确的猪数报给曹总，你该怎么办？</p>
+<p>类似此类问题我们可以使用<strong>中国剩余定理</strong>求解<br>
+限制条件<strong>模两两互质</strong></p>
+<h2 id="推导">推导</h2>
+<p>推导过程来源于<a href="https://baike.baidu.com/item/%E5%AD%99%E5%AD%90%E5%AE%9A%E7%90%86/2841597?fromtitle=%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86&amp;fromid=11200132&amp;fr=aladdin"><strong>百度百科</strong></a>(主要是<em>太菜了</em>不会推导)<br>
+<img src="https://s3.bmp.ovh/imgs/2022/02/55836b4e60ab409a.png" alt=""><br>
+<img src="https://s3.bmp.ovh/imgs/2022/02/fee95cb9985307ad.png" alt=""></p>
+<h2 id="求解模板">求解模板</h2>
+<p>以如下问题为例<br>
+问：有数模3余2，模5余3，模7余2，问数几何？</p>
 <ul>
-<li><strong>衍数</strong>：lcm&#x2F;除数</li>
+<li><strong>衍数</strong>：lcm/除数</li>
 <li><strong>逆元</strong>：为衍数模除数意义下的数论倒数，设衍数为a,除数为b，则逆元为ax ≡ 1(mod b)的最小正整数解</li>
 <li><strong>各总</strong>：余数 * 衍数 * 逆元</li>
 </ul>
@@ -311,7 +667,8 @@
 <th><strong>各总</strong></th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>3</td>
 <td>2</td>
 <td>105</td>
@@ -335,18 +692,64 @@
 <td>1</td>
 <td>30</td>
 </tr>
-</tbody></table>
-<p>将”各总”相加得到特解233<br>最后将233对lcm取模得到最小正整数解23<br>23即为所求</p>
-<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">exgcd</span><span class="params">(ll a,ll b,ll &amp;x,ll &amp;y)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(b==<span class="number">0</span>)&#123;</span><br><span class="line">		x=<span class="number">1</span>,y=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">return</span> ;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">exgcd</span>(b,a%b,y,x);</span><br><span class="line">	y-=(a/b)*x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">	x=<span class="number">0</span>,y=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	n=<span class="built_in">read</span>();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) m[i]=<span class="built_in">read</span>(),ai[i]=<span class="built_in">read</span>();</span><br><span class="line">	ll M=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) M*=(ll)m[i];<span class="comment">//求lcm </span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) mi[i]=M/m[i];<span class="comment">//求衍数 </span></span><br><span class="line">	<span class="comment">//求逆元</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;<span class="built_in">exgcd</span>(mi[i],m[i],x,y);ti[i]=(x%m[i]+m[i])%m[i];<span class="built_in">init</span>();&#125;</span><br><span class="line">	ll minx=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) minx+=(mi[i]*ai[i]*ti[i])%M;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%lld&quot;</span>,minx%M);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
+</tbody>
+</table>
+<p>将&quot;各总&quot;相加得到特解233<br>
+最后将233对lcm取模得到最小正整数解23<br>
+23即为所求</p>
+<h1>代码实现</h1>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">exgcd</span><span class="params">(ll a,ll b,ll &amp;x,ll &amp;y)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(b==<span class="number">0</span>)&#123;</span><br><span class="line">		x=<span class="number">1</span>,y=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">return</span> ;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">exgcd</span>(b,a%b,y,x);</span><br><span class="line">	y-=(a/b)*x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">	x=<span class="number">0</span>,y=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	n=<span class="built_in">read</span>();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) m[i]=<span class="built_in">read</span>(),ai[i]=<span class="built_in">read</span>();</span><br><span class="line">	ll M=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) M*=(ll)m[i];<span class="comment">//求lcm </span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) mi[i]=M/m[i];<span class="comment">//求衍数 </span></span><br><span class="line">	<span class="comment">//求逆元</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;<span class="built_in">exgcd</span>(mi[i],m[i],x,y);ti[i]=(x%m[i]+m[i])%m[i];<span class="built_in">init</span>();&#125;</span><br><span class="line">	ll minx=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) minx+=(mi[i]*ai[i]*ti[i])%M;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%lld&quot;</span>,minx%M);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>OI</category>
       </categories>
       <tags>
         <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>古代文学常识碎记</title>
+    <url>/2022/05/24/%E5%8F%A4%E4%BB%A3%E6%96%87%E5%AD%A6%E5%B8%B8%E8%AF%86%E7%A2%8E%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="与政事有关">与政事有关</h2>
+<p>（1）诣：到，去。</p>
+<p>（2）劝：①鼓励，奖励；②受到鼓励、奖励。</p>
+<p>（3）课：考核、督促、征收。</p>
+<p>（4）风、化：教育感化。</p>
+<p>（5）按、案：巡视，巡行；考察，核实，查明。</p>
+<p>（6）游：①游玩，游览；②旅行，外出求学或求官；③交际，交往。</p>
+<p>（7）趣、趋：①小步走，跑；又引申为赶快，迅速。②通“促”，催促。</p>
+<p>（8）劾：检举，揭发。</p>
+<p>（9）白：告诉，报告。常用于官吏之间。</p>
+<p>（10）短：进谗言，说坏话。</p>
+<p>（11）害：嫉妒。</p>
+<p>（12）闻：</p>
+<p>①听说，听见；</p>
+<p>②使知道，报告给……知道。对于义；</p>
+<p>③要特别注意。其中省略的人往往是最高统治者——国君，强化了这一点，阅读时就不至于认为下文中国    君和主人公发生的事件显得突兀。怎么国君知道了并参加进来了呢？其实就是“闻”字在起作用。如“没死以    闻”，“齐桓晋文之事可得闻乎”。</p>
+<p>（13）折：指斥，指责，驳斥。</p>
+<p>（14）让：①责备，责怪；②谦让，辞让。</p>
+<p>（15）党：偏袒，伙同，包庇。</p>
+<p>（16）矫：假托，假传。</p>
+<p>（17）质：作人质；抵押。</p>
+<p>（18）次：①临时驻扎(用于军队)；②住宿，停留（用于个人）。</p>
+<p>（19）输：缴纳（贡品或赋税）——由“输送、运输”引申。</p>
+<p>（20）当：判刑，判罪。后多带表示惩罚意义的词语。</p>
+<p>（21）坐：①因……犯罪或错误，触犯；②牵连，定罪。</p>
+<p>（22）多：赞扬,欣赏。“高、贵”等字，若带宾语，就是意动，也意译为此。</p>
+<p>（23）少：批评，轻视，看不起。</p>
+<h2 id="碎记">碎记</h2>
+<p>（1）移疾：意同移病。释义为旧时官员上书称病，多为居官者求退的婉辞。<br>
+（2）名、字：名为出生不久后由父亲取。在《礼记·曲礼上》记有：男子二十冠而字。<br>
+（3）汤武：周武王和商汤（非商汤和孙武）<br>
+（4）建储：建立储君，立皇太子<br>
+（5）三晋：赵、魏、韩三国，在春秋时是晋国<br>
+（6）有司：只是“官吏的通称”，各有专司（不能用来指称朝廷中的“各级官员”）</p>
+]]></content>
+      <categories>
+        <category>高中理科</category>
+      </categories>
+      <tags>
+        <tag>语文</tag>
       </tags>
   </entry>
   <entry>
@@ -355,33 +758,87 @@
     <content><![CDATA[<p>这篇文章主要介绍<strong>同余</strong>&amp;<strong>逆元</strong>&amp;<strong>不定方程</strong>及<strong>代码实现</strong></p>
 <span id="more"></span>
 <p>由于本人比较<em>菜</em>，所以一些定理不予证明</p>
-<h1 id="同余的概念"><a href="#同余的概念" class="headerlink" title="同余的概念"></a>同余的概念</h1><p>同余定理是数论中的重要概念。给定一个正整数m，如果两个整数a和b满足（a-b）能够被m整除，即（a-b）&#x2F;m得到一个整数，那么就称整数a与b对模m同余，记作a≡b(mod m)<br>【定义】设m是大于1的正整数，a、b是整数，如果m|(a-b)，则称a与b关于模m同余，记作a≡b(mod m)。显然易得如下：</p>
-<p>1.若a≡0(mod m)，则m|a;<br>2.a≡b(mod m)等价于a与b分别用m去除，余数相同。<br><strong>充要性证明</strong><br>充分性：<br>若a和b用m相除留下相同的余数r，则 a&#x3D;q1m+r, b&#x3D;q2m+r,q1和q2为某两个整数，由此的a-b&#x3D;(q1m+r)-(q2m-r)&#x3D;m(q1-q2)，根据整除定义，我们有m|(a-b)，由同余式定义得出结论：a≡b(mod m)<br>必要性：<br>若a和b用m相除留下相同的余数r，则 a&#x3D;q1m+r,b&#x3D;q2m+r,所以a-b&#x3D;m(q1-q2) 故 m|(a-b)。<br><strong>同余性质</strong><br>反身性：a≡a (mod m)</p>
+<h1>同余的概念</h1>
+<p>同余定理是数论中的重要概念。给定一个正整数m，如果两个整数a和b满足（a-b）能够被m整除，即（a-b）/m得到一个整数，那么就称整数a与b对模m同余，记作a≡b(mod m)<br>
+【定义】设m是大于1的正整数，a、b是整数，如果m|(a-b)，则称a与b关于模m同余，记作a≡b(mod m)。显然易得如下：</p>
+<p>1.若a≡0(mod m)，则m|a;<br>
+2.a≡b(mod m)等价于a与b分别用m去除，余数相同。<br>
+<strong>充要性证明</strong><br>
+充分性：<br>
+若a和b用m相除留下相同的余数r，则 a=q1m+r, b=q2m+r,q1和q2为某两个整数，由此的a-b=(q1m+r)-(q2m-r)=m(q1-q2)，根据整除定义，我们有m|(a-b)，由同余式定义得出结论：a≡b(mod m)<br>
+必要性：<br>
+若a和b用m相除留下相同的余数r，则 a=q1m+r,b=q2m+r,所以a-b=m(q1-q2) 故 m|(a-b)。<br>
+<strong>同余性质</strong><br>
+反身性：a≡a (mod m)</p>
 <p>对称性： 若a≡b(mod m)，则b≡a(mod m)</p>
 <p>传递性： 若a≡b(mod m)，b≡c(mod m)，则a≡c(mod m)</p>
 <p>同余式相加：若a≡b(mod m)，b≡c(mod m)，则a ± c≡b ± d(mod m)</p>
 <p>同余式相乘：若a≡b(mod m)，b≡c(mod m)，则ac≡bd(mod m)</p>
 <p>线性运算：如果a≡b(mod m)，c≡d(mod m)，那么a ± c≡b ± d(mod m)，且a * c≡b * d(mod m)</p>
-<p>除法：若ac ≡ bc (mod m) c≠0 则 a≡ b (mod m&#x2F;gcd(c,m)) 其中gcd(c,m)表示c,m的最大公约数。特殊地 ,gcd(c,m)&#x3D;1 则a ≡ b (mod m)</p>
+<p>除法：若ac ≡ bc (mod m) c≠0 则 a≡ b (mod m/gcd(c,m)) 其中gcd(c,m)表示c,m的最大公约数。特殊地 ,gcd(c,m)=1 则a ≡ b (mod m)</p>
 <p>幂运算：如果a ≡ b (mod m)，那么a^n ≡ b^n (mod m)</p>
 <p>若a ≡ b (mod m)，n|m,则 a ≡ b (mod n)</p>
-<p>若a ≡ b (mod mi) (i&#x3D;1,2…n) 则 a ≡ b (mod [m1,m2,…mn]) 其中[m1,m2,…mn]表示m1,m2,…mn的最小公倍数</p>
-<h1 id="逆元-amp-不定方程"><a href="#逆元-amp-不定方程" class="headerlink" title="逆元&amp;不定方程"></a>逆元&amp;不定方程</h1><h2 id="逆元"><a href="#逆元" class="headerlink" title="逆元"></a>逆元</h2><p>每个数a均有唯一的与之对应的乘法逆元x，使得ax≡1(mod b) ， 一个数有逆元的<strong>充分必要条件是gcd(a,b)&#x3D;1</strong>，此时逆元唯一存在 。<br>【含义】模b意义下，1个数a如果有逆元x，那么除以a相当于乘以x。<br>【定义】正整数 a, b，如果有 ax ≡ 1(mod b)，则称 x 的最小正整数解为 a 模 b的<strong>逆元</strong>  </p>
-<h2 id="不定方程"><a href="#不定方程" class="headerlink" title="不定方程"></a>不定方程</h2><p>【定义】形如ax+by&#x3D;c（a，b，c均为常数，且a，b均不为0），一般情况下，每一个x的值都有一个y值和它相对应，有无穷多组解。如果方程（组）中，解的数值不能唯一确定，这样的方程（组）称为不定方程<br><strong>不定方程有整数解的条件</strong><br>整系数二元不定方程ax+by&#x3D;c中的系数a，b的最大公约数能整除c。<br>反之，如果<strong>if(c%gcd(a,b))</strong> 则 <strong>无解</strong></p>
-<h2 id="逆元-amp-不定方程解法"><a href="#逆元-amp-不定方程解法" class="headerlink" title="逆元&amp;不定方程解法"></a>逆元&amp;不定方程解法</h2><h3 id="扩展欧几里得算法求不定方程"><a href="#扩展欧几里得算法求不定方程" class="headerlink" title="扩展欧几里得算法求不定方程"></a>扩展欧几里得算法求不定方程</h3><p>引：裴蜀定理<br>~ 设a, b是<strong>不全为零</strong>的整数，则存在整数x, y 使得 ax + by &#x3D; gcd(a, b)</p>
-<p>我们都知道，欧几里得公式可以由这个式子表达<br><strong>gcd(a, b) &#x3D; gcd(b, a % b)</strong><br>通过这个式子，我们可以不断递推到b &#x3D; 0， 此时a即为a和b的<strong>最大公约数</strong><br>将式子展开得到如下<br><strong>1.gcd(a, b) &#x3D; a * x1 + b * x1</strong><br><strong>2.gcd(b, a % b) &#x3D; b * x2 + (a % b) * y2</strong><br>由欧几里得公式可得到<br><strong>a * x1+b * x1&#x3D;b * x2 + (a % b) * y2</strong><br>其中 <strong>a % b &#x3D; a - (a &#x2F; b) * b</strong><br>得 <strong>a * x1 + b * y1 &#x3D; b * x2 + [a - (a &#x2F; b) * b]y2</strong><br>化简得 <strong>a * x1 + b * y1 &#x3D; a * y2 + b * [x2 - (a &#x2F; b) * y2]</strong><br>由<strong>待定系数法</strong>得：<br><strong>1.x1 &#x3D; y2</strong><br><strong>2.y1 &#x3D; x2 - (a &#x2F; b) * y2</strong><br><em>以上即扩展欧几里得算法</em><br>也就是说有了<strong>gcd(b, a % b)的解x2, y2</strong>就可以推出<strong>gcd(a, b)的解x1, y1</strong><br>我们可以用类似求gcd的方法求解，一直推到x&#x3D;1,y&#x3D;0(递归边界)，然后回溯即可求出特解</p>
-<h3 id="通过特解求出最小整数解-amp-通解"><a href="#通过特解求出最小整数解-amp-通解" class="headerlink" title="通过特解求出最小整数解&amp;通解"></a>通过特解求出最小整数解&amp;通解</h3><p>设特解分别为x0,y0<br>则最小解为：<br><strong>x0&#x3D;x0%(b&#x2F;gcd(a,b))</strong><br>则通解为：<br><strong>x&#x3D;x0+k*b&#x2F;gcd(a,b)</strong><br><strong>y&#x3D;y0-k*a&#x2F;gcd(a,b)</strong><br>又因为方程建立在gcd基础上，方程左边为gcd而非c，所以答案需在上面的基础上乘上<br><strong>c&#x2F;gcd(a,b)</strong><br>所以最小解为<br><strong>x0&#x3D;(x0*c&#x2F;gcd(a,b))%(b&#x2F;gcd)</strong>  </p>
-<p>易知<strong>逆元为特殊的不定方程</strong>，ax≡1(mod b) 等价于ax-by&#x3D;1<br>所以同样可以用<strong>扩展欧几里得算法求解</strong>  </p>
-<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><p>扩展欧几里得算法的三大应用  </p>
-<h2 id="求不定方程ax-by-x3D-c的最小正整数解"><a href="#求不定方程ax-by-x3D-c的最小正整数解" class="headerlink" title="求不定方程ax+by&#x3D;c的最小正整数解"></a>求不定方程ax+by&#x3D;c的最小正整数解</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">exgcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> &amp;x,<span class="keyword">int</span> &amp;y)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(b==<span class="number">0</span>)&#123;</span><br><span class="line">		x=<span class="number">1</span>,y=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">return</span> ;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">exgcd</span>(b,a%b,y,x);</span><br><span class="line">	y-=(a/b)*x;</span><br><span class="line">&#125;<span class="comment">//x即为特解;</span></span><br><span class="line"><span class="keyword">int</span> mod=b/(<span class="built_in">gcd</span>(a,b));</span><br><span class="line">ans=(x*(c/<span class="built_in">gcd</span>(a,b))%mod+mod)%mod;</span><br><span class="line"><span class="comment">//小技巧，+mod后%mod可以防止出现负解;</span></span><br></pre></td></tr></table></figure>
-<h2 id="求方程ax≡1-mod-b-的最小正整数解-a的逆元"><a href="#求方程ax≡1-mod-b-的最小正整数解-a的逆元" class="headerlink" title="求方程ax≡1(mod b) 的最小正整数解(a的逆元)"></a>求方程ax≡1(mod b) 的最小正整数解(a的逆元)</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">exgcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> &amp;x,<span class="keyword">int</span> &amp;y)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(b==<span class="number">0</span>)&#123;</span><br><span class="line">		x=<span class="number">1</span>,y=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">return</span> ;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">exgcd</span>(b,a%b,y,x);</span><br><span class="line">	y-=(a/b)*x;</span><br><span class="line">&#125;<span class="comment">//x即为特解;</span></span><br><span class="line"><span class="comment">//已知gcd(a,b)=1,则mod=b/gcd(a,b)=b;</span></span><br><span class="line"><span class="comment">//同理，c/gcd(a,b)=1/1=1;</span></span><br><span class="line">ans=(x%b+b)%b<span class="comment">//求出最小整数解&amp;防止出现负解;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="求模线性方程ax≡b-mod-n"><a href="#求模线性方程ax≡b-mod-n" class="headerlink" title="求模线性方程ax≡b (mod n)"></a>求模线性方程ax≡b (mod n)</h2><p>对于模线性方程ax≡b (mod n)可以化简为ax+ny&#x3D;b设d&#x3D;gcd(a,n)<br>则当且仅当b%d&#x3D;&#x3D;0时方程有解，且有d个解<br>等式两边同时乘以b&#x2F;d，则方程变为axb&#x2F;d+nyb&#x2F;d&#x3D;b<br>设ax+ny&#x3D;d特解为x‘,y’<br>则原方程解为x&#x3D;x‘ * b&#x2F;d，y&#x3D;y’ * b&#x2F;d<br>故ax≡b (mod n)特解为<strong>x0&#x3D;x’ * (b&#x2F;d)%n</strong><br>d个解为xi&#x3D;x0+i*(n&#x2F;d)%n (i&#x3D;0,1,…,n-1)<br>解的间隔为<strong>n&#x2F;d</strong>  </p>
+<p>若a ≡ b (mod mi) (i=1,2…n) 则 a ≡ b (mod [m1,m2,…mn]) 其中[m1,m2,…mn]表示m1,m2,…mn的最小公倍数</p>
+<h1>逆元&amp;不定方程</h1>
+<h2 id="逆元">逆元</h2>
+<p>每个数a均有唯一的与之对应的乘法逆元x，使得ax≡1(mod b) ， 一个数有逆元的<strong>充分必要条件是gcd(a,b)=1</strong>，此时逆元唯一存在 。<br>
+【含义】模b意义下，1个数a如果有逆元x，那么除以a相当于乘以x。<br>
+【定义】正整数 a, b，如果有 ax ≡ 1(mod b)，则称 x 的最小正整数解为 a 模 b的<strong>逆元</strong></p>
+<h2 id="不定方程">不定方程</h2>
+<p>【定义】形如ax+by=c（a，b，c均为常数，且a，b均不为0），一般情况下，每一个x的值都有一个y值和它相对应，有无穷多组解。如果方程（组）中，解的数值不能唯一确定，这样的方程（组）称为不定方程<br>
+<strong>不定方程有整数解的条件</strong><br>
+整系数二元不定方程ax+by=c中的系数a，b的最大公约数能整除c。<br>
+反之，如果<strong>if(c%gcd(a,b))</strong> 则 <strong>无解</strong></p>
+<h2 id="逆元-不定方程解法">逆元&amp;不定方程解法</h2>
+<h3 id="扩展欧几里得算法求不定方程">扩展欧几里得算法求不定方程</h3>
+<p>引：裴蜀定理<br>
+~ 设a, b是<strong>不全为零</strong>的整数，则存在整数x, y 使得 ax + by = gcd(a, b)</p>
+<p>我们都知道，欧几里得公式可以由这个式子表达<br>
+<strong>gcd(a, b) = gcd(b, a % b)</strong><br>
+通过这个式子，我们可以不断递推到b = 0， 此时a即为a和b的<strong>最大公约数</strong><br>
+将式子展开得到如下<br>
+<strong>1.gcd(a, b) = a * x1 + b * x1</strong><br>
+<strong>2.gcd(b, a % b) = b * x2 + (a % b) * y2</strong><br>
+由欧几里得公式可得到<br>
+<strong>a * x1+b * x1=b * x2 + (a % b) * y2</strong><br>
+其中 <strong>a % b = a - (a / b) * b</strong><br>
+得 <strong>a * x1 + b * y1 = b * x2 + [a - (a / b) * b]y2</strong><br>
+化简得 <strong>a * x1 + b * y1 = a * y2 + b * [x2 - (a / b) * y2]</strong><br>
+由<strong>待定系数法</strong>得：<br>
+<strong>1.x1 = y2</strong><br>
+<strong>2.y1 = x2 - (a / b) * y2</strong><br>
+<em>以上即扩展欧几里得算法</em><br>
+也就是说有了<strong>gcd(b, a % b)的解x2, y2</strong>就可以推出<strong>gcd(a, b)的解x1, y1</strong><br>
+我们可以用类似求gcd的方法求解，一直推到x=1,y=0(递归边界)，然后回溯即可求出特解</p>
+<h3 id="通过特解求出最小整数解-通解">通过特解求出最小整数解&amp;通解</h3>
+<p>设特解分别为x0,y0<br>
+则最小解为：<br>
+<strong>x0=x0%(b/gcd(a,b))</strong><br>
+则通解为：<br>
+<strong>x=x0+k*b/gcd(a,b)</strong><br>
+<strong>y=y0-k*a/gcd(a,b)</strong><br>
+又因为方程建立在gcd基础上，方程左边为gcd而非c，所以答案需在上面的基础上乘上<br>
+<strong>c/gcd(a,b)</strong><br>
+所以最小解为<br>
+<strong>x0=(x0*c/gcd(a,b))%(b/gcd)</strong></p>
+<p>易知<strong>逆元为特殊的不定方程</strong>，ax≡1(mod b) 等价于ax-by=1<br>
+所以同样可以用<strong>扩展欧几里得算法求解</strong></p>
+<h1>代码实现</h1>
+<p>扩展欧几里得算法的三大应用</p>
+<h2 id="求不定方程ax-by-c的最小正整数解">求不定方程ax+by=c的最小正整数解</h2>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">exgcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> &amp;x,<span class="keyword">int</span> &amp;y)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(b==<span class="number">0</span>)&#123;</span><br><span class="line">		x=<span class="number">1</span>,y=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">return</span> ;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">exgcd</span>(b,a%b,y,x);</span><br><span class="line">	y-=(a/b)*x;</span><br><span class="line">&#125;<span class="comment">//x即为特解;</span></span><br><span class="line"><span class="keyword">int</span> mod=b/(<span class="built_in">gcd</span>(a,b));</span><br><span class="line">ans=(x*(c/<span class="built_in">gcd</span>(a,b))%mod+mod)%mod;</span><br><span class="line"><span class="comment">//小技巧，+mod后%mod可以防止出现负解;</span></span><br></pre></td></tr></table></figure>
+<h2 id="求方程ax≡1-mod-b-的最小正整数解-a的逆元">求方程ax≡1(mod b) 的最小正整数解(a的逆元)</h2>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">exgcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> &amp;x,<span class="keyword">int</span> &amp;y)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(b==<span class="number">0</span>)&#123;</span><br><span class="line">		x=<span class="number">1</span>,y=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">return</span> ;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">exgcd</span>(b,a%b,y,x);</span><br><span class="line">	y-=(a/b)*x;</span><br><span class="line">&#125;<span class="comment">//x即为特解;</span></span><br><span class="line"><span class="comment">//已知gcd(a,b)=1,则mod=b/gcd(a,b)=b;</span></span><br><span class="line"><span class="comment">//同理，c/gcd(a,b)=1/1=1;</span></span><br><span class="line">ans=(x%b+b)%b<span class="comment">//求出最小整数解&amp;防止出现负解;</span></span><br></pre></td></tr></table></figure>
+<h2 id="求模线性方程ax≡b-mod-n">求模线性方程ax≡b (mod n)</h2>
+<p>对于模线性方程ax≡b (mod n)可以化简为ax+ny=b设d=gcd(a,n)<br>
+则当且仅当b%d==0时方程有解，且有d个解<br>
+等式两边同时乘以b/d，则方程变为axb/d+nyb/d=b<br>
+设ax+ny=d特解为x‘,y’<br>
+则原方程解为x=x‘ * b/d，y=y’ * b/d<br>
+故ax≡b (mod n)特解为<strong>x0=x’ * (b/d)%n</strong><br>
+d个解为xi=x0+i*(n/d)%n (i=0,1,…,n-1)<br>
+解的间隔为<strong>n/d</strong></p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">exgcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> &amp;gcd,<span class="keyword">int</span> &amp;x,<span class="keyword">int</span> &amp;y)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(b==<span class="number">0</span>)&#123;</span><br><span class="line">		x=<span class="number">1</span>,y=<span class="number">0</span>;</span><br><span class="line">		gcd=a;</span><br><span class="line">		<span class="keyword">return</span> ;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">exgcd</span>(b,a%b,y,x);</span><br><span class="line">	y-=(a/b)*x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check_find</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x,y,x0,gcd;</span><br><span class="line">	<span class="built_in">exgcd</span>(a,b,gcd,x,y);</span><br><span class="line">	<span class="keyword">int</span> d=gcd;</span><br><span class="line">	<span class="keyword">if</span>(b%d) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	x0=x*(b/d)%n;<span class="comment">//特解</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>,i&lt;d;i++) <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,x0+i*(n/d));</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
 ]]></content>
       <categories>
         <category>OI</category>
@@ -391,58 +848,71 @@
       </tags>
   </entry>
   <entry>
-    <title>VsCode-C/C++编译环境配置</title>
-    <url>/2022/05/01/VsCode-C-C-%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><h3 id="下载-VsCode"><a href="#下载-VsCode" class="headerlink" title="下载 VsCode"></a>下载 VsCode</h3><p>官网地址：<a href="https://code.visualstudio.com/">Code Editing</a></p>
-<h3 id="下载-MinGW64编译器"><a href="#下载-MinGW64编译器" class="headerlink" title="下载 MinGW64编译器"></a>下载 MinGW64编译器</h3><p>官网地址：<a href="https://www.mingw-w64.org/">MinGW64</a></p>
-<h2 id="配置系统环境变量"><a href="#配置系统环境变量" class="headerlink" title="配置系统环境变量"></a>配置系统环境变量</h2><p>Win+I 打开系统设置<br>找到 <strong>编辑系统环境变量</strong><br>点击 <strong>高级</strong> &gt; <strong>环境变量</strong> &gt; <strong>选定 Path 进行编辑</strong><br>添加进你安装的 MinGW64 编译器的 <strong>路径</strong><br>例如我的就是：D:\Program\mingw-w64\mingw64\bin<br><img src="https://s2.loli.net/2022/05/01/SZj5xDITXehoyW9.png"></p>
-<h2 id="配置相关文件"><a href="#配置相关文件" class="headerlink" title="配置相关文件"></a>配置相关文件</h2><h3 id="安装-C-x2F-C-扩展"><a href="#安装-C-x2F-C-扩展" class="headerlink" title="安装 C&#x2F;C++ 扩展"></a>安装 C&#x2F;C++ 扩展</h3><p>进入 VsCode 找到左侧栏的 Extensions<br>一般安装如下扩展：</p>
-<ul>
-<li>C&#x2F;C++</li>
-<li>Chinese (Simplified)(简体中文)</li>
-<li>Code Runner</li>
-</ul>
-<h3 id="设置编译器路径"><a href="#设置编译器路径" class="headerlink" title="设置编译器路径"></a>设置编译器路径</h3><p>新建 Code 文件夹用来保存项目文件<br>在 Code 文件夹中右键点击 <strong>用Code打开</strong> 进入 VsCode<br>接下来配置编译器路径<br>按快捷键Ctrl+Shift+P调出命令面板，输入C&#x2F;C++，选 <strong>Edit Configurations(UI)</strong> 进入配置<br><img src="https://s2.loli.net/2022/05/01/RWZGvOlSV8dxzLK.png"><br>在里面找到 <strong>编译器路径</strong> 修改成 MinGW64路径，再将下方的 InteliSense模式 改为 <strong>gcc-x64</strong> 即可<br>这时我们可以发现文件夹中多了一个 <strong>.vscode</strong> 的文件夹，证明配置成功<br>接下来配置三个主要的文件</p>
-<h3 id="c-cpp-properties-json"><a href="#c-cpp-properties-json" class="headerlink" title="c_cpp_properties.json"></a>c_cpp_properties.json</h3><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Win32&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;includePath&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;$&#123;workspaceFolder&#125;/**&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;defines&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;_DEBUG&quot;</span>,</span><br><span class="line">                <span class="string">&quot;UNICODE&quot;</span>,</span><br><span class="line">                <span class="string">&quot;_UNICODE&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;compilerPath&quot;</span>: <span class="string">&quot;D:/Program/mingw-w64/mingw64/bin/g++.exe&quot;</span>,<span class="comment">//编译器的路径</span></span><br><span class="line">            <span class="attr">&quot;cStandard&quot;</span>: <span class="string">&quot;c17&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;cppStandard&quot;</span>: <span class="string">&quot;c++17&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;intelliSenseMode&quot;</span>: <span class="string">&quot;gcc-x64&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="number">4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="tasks-json"><a href="#tasks-json" class="headerlink" title="tasks.json"></a>tasks.json</h3><p>接下来，创建一个tasks.json文件来告诉VS Code如何构建（编译）程序<br>该任务将调用g++编译器基于源代码创建可执行文件<br>按快捷键 Ctrl+Shift+P 调出命令面板，输入 tasks，选择 <strong>Tasks:Configure Default Build Task</strong><br><img src="https://s2.loli.net/2022/05/01/OHUebX3C1SPmzKG.png"><br>再选择 <strong>C&#x2F;C++: g++.exe build active file</strong><br><img src="https://s2.loli.net/2022/05/01/Hv5Jqiwl6Yhu1QI.png"><br>接下来在 .vscode 文件夹中就会出现 <strong>tasks.json</strong> 的配置文件<br>可以参考我的配置：  </p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">&quot;version&quot;</span>: <span class="string">&quot;2.0.0&quot;</span>,</span><br><span class="line">	<span class="attr">&quot;tasks&quot;</span>: [</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="attr">&quot;type&quot;</span>: <span class="string">&quot;cppbuild&quot;</span>,</span><br><span class="line">			<span class="attr">&quot;label&quot;</span>: <span class="string">&quot;g++.exe build active file&quot;</span>,</span><br><span class="line">			<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;D:/Program/mingw-w64/mingw64/bin/g++.exe&quot;</span>,<span class="comment">//编译器路径</span></span><br><span class="line">			<span class="attr">&quot;args&quot;</span>: [</span><br><span class="line">				<span class="string">&quot;-fdiagnostics-color=always&quot;</span>,</span><br><span class="line">				<span class="string">&quot;-g&quot;</span>,</span><br><span class="line">				<span class="string">&quot;$&#123;file&#125;&quot;</span>,</span><br><span class="line">				<span class="string">&quot;-o&quot;</span>,</span><br><span class="line">				<span class="string">&quot;$&#123;fileDirname&#125;\\$&#123;fileBasenameNoExtension&#125;.exe&quot;</span></span><br><span class="line">			],</span><br><span class="line">			<span class="attr">&quot;options&quot;</span>: &#123;</span><br><span class="line">				<span class="attr">&quot;cwd&quot;</span>: <span class="string">&quot;D:/Program/mingw-w64/mingw64/bin&quot;</span></span><br><span class="line">			&#125;,<span class="comment">//bin为存放编译器和调试器的文件夹</span></span><br><span class="line">			<span class="attr">&quot;problemMatcher&quot;</span>: [</span><br><span class="line">				<span class="string">&quot;$gcc&quot;</span></span><br><span class="line">			],</span><br><span class="line">			<span class="attr">&quot;group&quot;</span>: &#123;</span><br><span class="line">				<span class="attr">&quot;kind&quot;</span>: <span class="string">&quot;build&quot;</span>,</span><br><span class="line">				<span class="attr">&quot;isDefault&quot;</span>: <span class="literal">true</span></span><br><span class="line">			&#125;,</span><br><span class="line">			<span class="attr">&quot;detail&quot;</span>: <span class="string">&quot;编译器: D:/Program/mingw-w64/mingw64/bin/g++.exe&quot;</span></span><br><span class="line">		&#125;</span><br><span class="line">	]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="launch-json"><a href="#launch-json" class="headerlink" title="launch.json"></a>launch.json</h3><p>点击菜单栏的 <strong>Debug–&gt;Start Debugging</strong> 或者直接按键盘 <strong>F5</strong><br>会在 .vscode 文件夹中生成一个 <strong>launch.json</strong> 的配置文件<br>我的配置如下：  </p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">// Use IntelliSense to learn about possible attributes.</span></span><br><span class="line">    <span class="comment">// Hover to view descriptions of existing attributes.</span></span><br><span class="line">    <span class="comment">// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;0.2.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span>: [</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;(gdb) Launch&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;preLaunchTask&quot;</span>: <span class="string">&quot;g++.exe build active file&quot;</span>,<span class="comment">//调试前执行的任务，就是之前配置的tasks.json中的label字段</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span>: <span class="string">&quot;cppdbg&quot;</span>,<span class="comment">//配置类型，只能为cppdbg</span></span><br><span class="line">            <span class="attr">&quot;request&quot;</span>: <span class="string">&quot;launch&quot;</span>,<span class="comment">//请求配置类型，可以为launch（启动）或attach（附加）</span></span><br><span class="line">            <span class="attr">&quot;program&quot;</span>: <span class="string">&quot;$&#123;fileDirname&#125;\\$&#123;fileBasenameNoExtension&#125;.exe&quot;</span>,<span class="comment">//调试程序的路径名称</span></span><br><span class="line">            <span class="attr">&quot;args&quot;</span>: [],<span class="comment">//调试传递参数</span></span><br><span class="line">            <span class="attr">&quot;stopAtEntry&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">&quot;cwd&quot;</span>: <span class="string">&quot;$&#123;workspaceFolder&#125;&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;environment&quot;</span>: [],</span><br><span class="line">            <span class="attr">&quot;externalConsole&quot;</span>: <span class="literal">true</span>,<span class="comment">//true显示外置的控制台窗口，false显示内置终端</span></span><br><span class="line">            <span class="attr">&quot;MIMode&quot;</span>: <span class="string">&quot;gdb&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;miDebuggerPath&quot;</span>: <span class="string">&quot;D:\\Program\\mingw-w64\\mingw64\\bin\\gdb.exe&quot;</span>,<span class="comment">//调试器路径</span></span><br><span class="line">            <span class="attr">&quot;setupCommands&quot;</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;Enable pretty-printing for gdb&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;text&quot;</span>: <span class="string">&quot;-enable-pretty-printing&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;ignoreFailures&quot;</span>: <span class="literal">true</span></span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="运行测试"><a href="#运行测试" class="headerlink" title="运行测试"></a>运行测试</h2><p>写一个 hello world! 的程序测试下环境配置是否成功<br>记得要在末尾插入 <strong>system(“pause”)</strong> 的代码，不然程序会闪一下就消失了<br>出现如图所示结果则成功：<br><img src="https://s2.loli.net/2022/05/01/rcnTyzsLo21SNRY.png"></p>
+    <title>图论题型专解</title>
+    <url>/2022/05/22/%E5%9B%BE%E8%AE%BA%E9%A2%98%E5%9E%8B%E4%B8%93%E8%A7%A3/</url>
+    <content><![CDATA[<h1>Tarjan</h1>
+<h2 id="模板">模板</h2>
+<h3 id="缩点">缩点</h3>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">tarjan</span><span class="params">(<span class="keyword">int</span> u)</span></span>&#123;</span><br><span class="line">	dfn[u]=low[u]=++num;</span><br><span class="line">	stak[++top]=u;vis[u]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=head[u];i;i=edge[i].next)&#123;</span><br><span class="line">		<span class="keyword">int</span> v=edge[i].to;</span><br><span class="line">		<span class="keyword">if</span>(!dfn[v])&#123;</span><br><span class="line">			<span class="built_in">tarjan</span>(v);</span><br><span class="line">			low[u]=<span class="built_in">min</span>(low[u],low[v]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(vis[v]) low[u]=<span class="built_in">min</span>(low[u],low[v]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(dfn[u]==low[u])&#123;</span><br><span class="line">		tot++;</span><br><span class="line">		<span class="keyword">while</span>(stak[top]!=u)&#123;</span><br><span class="line">			vis[stak[top]]=<span class="number">0</span>;</span><br><span class="line">			color[stak[top]]=tot;</span><br><span class="line">			top--;</span><br><span class="line">		&#125;</span><br><span class="line">		top--;</span><br><span class="line">		vis[u]=<span class="number">0</span>;</span><br><span class="line">		color[u]=tot;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Tarjan技巧">Tarjan技巧</h2>
+<p>1.dfn可以作为mark一样的作用记录节点是否被访问<br>
+2.缩点更新low[u]的时候也可也写成low[u]=min(low[u],dfn[v])</p>
+<h2 id="题型">题型</h2>
+<h3 id=""></h3>
 ]]></content>
       <categories>
-        <category>开发环境配置</category>
+        <category>OI</category>
       </categories>
       <tags>
-        <tag>VsCode</tag>
+        <tag>图论</tag>
       </tags>
   </entry>
   <entry>
     <title>数学公式结论</title>
     <url>/2022/05/14/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E7%BB%93%E8%AE%BA/</url>
     <content><![CDATA[<p>这篇文章主要记录竞赛中的数学公式和结论</p>
-<h1 id="数列"><a href="#数列" class="headerlink" title="数列"></a>数列</h1><h2 id="Fibonacci"><a href="#Fibonacci" class="headerlink" title="Fibonacci"></a>Fibonacci</h2><h3 id="通项公式"><a href="#通项公式" class="headerlink" title="通项公式"></a>通项公式</h3><ul>
-<li>$f(n)&#x3D;\frac{1}{\sqrt[]{5}}[\frac{(1+\sqrt[]{5})^2}{2^n}-\frac{(1-\sqrt[]{5})^2}{2^n}]$</li>
-</ul>
-<h3 id="递推式"><a href="#递推式" class="headerlink" title="递推式"></a>递推式</h3><ul>
-<li>$f(n)&#x3D;f(n-1)+f(n-2)$</li>
-</ul>
-<h3 id="数论性质"><a href="#数论性质" class="headerlink" title="数论性质"></a>数论性质</h3><ul>
-<li>$gcd(f(n),f(m))&#x3D;f(gcd(n,m))$</li>
-</ul>
-<h1 id="排列组合"><a href="#排列组合" class="headerlink" title="排列组合"></a>排列组合</h1><h2 id="排列数"><a href="#排列数" class="headerlink" title="排列数"></a>排列数</h2><h3 id="错位排列"><a href="#错位排列" class="headerlink" title="错位排列"></a>错位排列</h3><p>若序列 $a$ 使得 $a_i\neq i$ 恒成立<br>则令组成该序列的不同方案数为 $D(n)$<br>则有： </p>
+<h1>数列</h1>
+<h2 id="Fibonacci">Fibonacci</h2>
+<h3 id="通项公式">通项公式</h3>
 <ul>
-<li>$D(n)&#x3D;(n-1)[D(n-1)+D(n-2)]$ 其中 $D(1)&#x3D;0\ $  $D(2)&#x3D;1$</li>
+<li>$f(n)=\frac{1}{\sqrt[]{5}}[\frac{(1+\sqrt[]{5})^2}{2^n}-\frac{(1-\sqrt[]{5})^2}{2^n}]$</li>
 </ul>
-<h2 id="组合数"><a href="#组合数" class="headerlink" title="组合数"></a>组合数</h2><h3 id="卢卡斯定理"><a href="#卢卡斯定理" class="headerlink" title="卢卡斯定理"></a>卢卡斯定理</h3><ul>
+<h3 id="递推式">递推式</h3>
+<ul>
+<li>$f(n)=f(n-1)+f(n-2)$</li>
+</ul>
+<h3 id="数论性质">数论性质</h3>
+<ul>
+<li>$gcd(f(n),f(m))=f(gcd(n,m))$</li>
+</ul>
+<h1>排列组合</h1>
+<h2 id="排列数">排列数</h2>
+<h3 id="错位排列">错位排列</h3>
+<p>若序列 $a$ 使得 $a_i\neq i$ 恒成立<br>
+则令组成该序列的不同方案数为 $D(n)$<br>
+则有：</p>
+<ul>
+<li>$D(n)=(n-1)[D(n-1)+D(n-2)]$ 其中 $D(1)=0\ $  $D(2)=1$</li>
+</ul>
+<h2 id="组合数">组合数</h2>
+<h3 id="卢卡斯定理">卢卡斯定理</h3>
+<ul>
 <li>$C_m^n\equiv C_{m\ mod\ p}^{n\ mod\ p}\cdot C_{\lfloor{\frac{m}{p}}\rfloor}^{\lfloor{\frac{n}{p}}\rfloor}(mod\ p)$</li>
 </ul>
-<h1 id="概率论"><a href="#概率论" class="headerlink" title="概率论"></a>概率论</h1><h2 id="期望"><a href="#期望" class="headerlink" title="期望"></a>期望</h2><h3 id="多个独立事件发生-件数-的期望"><a href="#多个独立事件发生-件数-的期望" class="headerlink" title="多个独立事件发生 件数 的期望"></a>多个独立事件发生 <strong>件数</strong> 的期望</h3><ul>
+<h1>概率论</h1>
+<h2 id="期望">期望</h2>
+<h3 id="多个独立事件发生-件数-的期望">多个独立事件发生 <strong>件数</strong> 的期望</h3>
+<ul>
 <li>$p_1+p_2+p_3+…+p_n$</li>
 </ul>
-<h1 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h1><h2 id="约数"><a href="#约数" class="headerlink" title="约数"></a>约数</h2><h3 id="正约数个数"><a href="#正约数个数" class="headerlink" title="正约数个数"></a>正约数个数</h3><p>令正整数 $x$ 的正约数个数为 $D(x)$<br>$x$ 的唯一分解形式为 $x&#x3D;p_1^{x_1}\cdot p_2^{x_2}\cdot…\    \cdot p_n^{x_n}$<br>则有：  </p>
+<h1>杂项</h1>
+<h2 id="约数">约数</h2>
+<h3 id="正约数个数">正约数个数</h3>
+<p>令正整数 $x$ 的正约数个数为 $D(x)$<br>
+$x$ 的唯一分解形式为 $x=p_1^{x_1}\cdot p_2^{x_2}\cdot…\    \cdot p_n^{x_n}$<br>
+则有：</p>
 <ul>
-<li>$D(x)&#x3D;(x_1+1)(x_2+2)…(x_n+1)$</li>
+<li>$D(x)=(x_1+1)(x_2+2)…(x_n+1)$</li>
 </ul>
 ]]></content>
       <categories>
@@ -453,32 +923,112 @@
       </tags>
   </entry>
   <entry>
-    <title>「Wdoi-6」走在夜晚的莲台野-题解</title>
-    <url>/2022/05/14/%E3%80%8CWdoi-6%E3%80%8D%E8%B5%B0%E5%9C%A8%E5%A4%9C%E6%99%9A%E7%9A%84%E8%8E%B2%E5%8F%B0%E9%87%8E-%E9%A2%98%E8%A7%A3/</url>
-    <content><![CDATA[<p>看难度就明白这是道签到题</p>
-<h2 id="1-思路"><a href="#1-思路" class="headerlink" title="1.思路"></a>1.思路</h2><p>题目要求我们将所有板子 <strong>放过</strong> 就行，但放入金就会清空银。<br>所以我们要在放金之前 <strong>尽可能多放银</strong>。<br>这就是标签所说的贪心。</p>
-<h2 id="2-解法"><a href="#2-解法" class="headerlink" title="2.解法"></a>2.解法</h2><p>由以上思路可得：<br>放银的数目依次为 $z-1$、$z-2$ $…$ $z-x$。<br>由等差数列公式：<br>最多可以放 $\frac{x*(z-x+z-1)}{2}$ 个银，令该式子为 $\sigma$。<br>我们得到如下几种情况：  </p>
+    <title>模拟退火</title>
+    <url>/2022/03/05/%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB/</url>
+    <content><![CDATA[<p>这篇文章主要介绍<strong>模拟退火算法</strong>的原理以及实现</p>
+<span id="more"></span>
+<h1>算法来源</h1>
+<p>在物理学中，当一个物体的温度很高的时候，这个物体会由高温状态转变为低温状态，而其内部的粒子也 <strong>逐渐</strong> 由无序转变为有序。这就给我们提供了设计算法的思路：模拟粒子的无序状态，即 <strong>随机化</strong> ，而当”温度“越来越低的时候，粒子越来越有序，而我们随机化的 <strong>幅度</strong> 越来越小，最后就可以得到我们想要的最优解</p>
+<h2 id="典例">典例</h2>
+<p>这里选取来自<a href="https://oi-wiki.org/misc/simulated-annealing/">oi-wiki</a>的一张图片来具象说明<br>
+<img src="https://s3.bmp.ovh/imgs/2022/03/95370912b602b0d5.gif" alt=""></p>
+<h1>算法实现</h1>
+<h2 id="基本思路">基本思路</h2>
+<p>由算法原理我们可以提取几个关键词：<strong>逐渐</strong>、<strong>随机化</strong>、<strong>幅度</strong><br>
+由此我们可以得到算法实现的基本思路：<br>
+定义出一个 <strong>足够高的温度T</strong>  （T一定要<strong>足够高！！！</strong>）<br>
+随机化答案，找到更优解替换当前解<br>
+那么我们会不会因为如此而陷入&quot;目光短浅&quot;的僵局呢？<br>
+答案是肯定会的！<br>
+例如拥有多个峰值的函数，如果单单朝着较优解进发，就很有可能会 <strong>错失最优解</strong><br>
+所以当我们需要以 <strong>一定概率接受较差解</strong> ，用于跳出这种“僵局”<br>
+那么这个概率是多少呢？<br>
+科学家们以及帮我们计算好了:<br>
+$e^{-\Delta/T}$</p>
 <ul>
-<li>$x$ 恰好满足放入所有 $y$ 后 $x$ 被清空。</li>
-<li>$x$ 恰好满足放入所有 $y$ 后 $x$ 被清空不足。</li>
-<li>$x$ 恰好满足放入所有 $y$ 后 $x$ 被清空有余。</li>
+<li>$\Delta$ 为当前解和已知解的 <strong>差值的绝对值</strong></li>
+<li>$T$ 为当前温度</li>
 </ul>
-<p>而这三种情况依次对应 $&#x3D;\sigma$、$&lt;\sigma$、$&gt;\sigma$ 的情况。<br>分别为 $case1\ $ $case2\ $ $case3\ $。<br>$case1$： 显然满足要求。<br>$case2$： 翻译过来就是金放完了银有剩，则只需要剩下的银数量 <strong>小于等于</strong> 可放位置的数量就行了。<br>$case3$： 银放完了金有剩，具体剩多少呢？<br>我们令此时消耗的金数量为 $x_0$ 则将 $x_0$ 带入 $\sigma$ 式。<br>整理一下得到关于 $x_0$ 的式子：<br>$x_0^2-(2z-1)x_0+2y&#x3D;0$。<br>得到：$x_0&#x3D;\lfloor\frac{2z-1+\sqrt[]{(2z-1)^2-8y}}{2}\rfloor$。<br>同 $case2$ 理即可求解。</p>
-<h2 id="3-Code"><a href="#3-Code" class="headerlink" title="3.Code"></a>3.Code</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll T,x,y,z;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;T);</span><br><span class="line">	<span class="keyword">while</span>(T--)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%lld%lld%lld&quot;</span>,&amp;x,&amp;y,&amp;z);</span><br><span class="line">		<span class="keyword">if</span>(x&gt;z)&#123;<span class="built_in">printf</span>(<span class="string">&quot;Merry\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		ll judge=x*(<span class="number">2</span>*z-x<span class="number">-1</span>)/<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span>(judge==y)&#123;<span class="built_in">printf</span>(<span class="string">&quot;Renko\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		<span class="keyword">if</span>(judge&lt;y&amp;&amp;(y-judge&lt;=z-x))&#123;<span class="built_in">printf</span>(<span class="string">&quot;Renko\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		<span class="keyword">int</span> x0=(<span class="number">2</span>*z<span class="number">-1</span>+<span class="built_in">sqrt</span>((<span class="number">2</span>*z<span class="number">-1</span>)*(<span class="number">2</span>*z<span class="number">-1</span>)<span class="number">-8</span>*y))/<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span>(judge&gt;y&amp;&amp;(x-x0)&lt;=z)&#123;<span class="built_in">printf</span>(<span class="string">&quot;Renko\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;Merry\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
+<p>易知 $e^{-\Delta/T} \in [0 , 1] $ 且随着 $ T $ 的增大而减小<br>
+即随机化的程度越来越小</p>
+<h2 id="Code">Code</h2>
+<p>选自洛谷<a href="https://www.luogu.com.cn/problem/P1337">P1337 [JSOI2004]平衡点 / 吊打XXX</a></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">10006</span>;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">double</span> ansx=<span class="number">0</span>,ansy=<span class="number">0</span>,dis=<span class="number">1000005</span>;</span><br><span class="line"><span class="keyword">double</span> x[maxn],y[maxn],m[maxn];</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">dist</span><span class="params">(<span class="keyword">double</span> x1,<span class="keyword">double</span> y1,<span class="keyword">double</span> x2,<span class="keyword">double</span> y2)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (<span class="keyword">double</span>)<span class="built_in">sqrt</span>((<span class="keyword">double</span>)<span class="number">1.0</span>*(x1-x2)*(x1-x2)+(<span class="keyword">double</span>)<span class="number">1.0</span>*(y1-y2)*(y1-y2));</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//计算带权费马点</span></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">census</span><span class="params">(<span class="keyword">double</span> x1,<span class="keyword">double</span> y1)</span></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> res=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) res+=(<span class="keyword">double</span>)<span class="built_in">dist</span>(x[i],y[i],x1,y1)*m[i];</span><br><span class="line">	<span class="keyword">if</span>(res&lt;dis) dis=res,ansx=x1,ansy=y1;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">Rand</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (<span class="keyword">double</span>)<span class="built_in">rand</span>()/RAND_MAX;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sian</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> t=<span class="number">10000000</span>;<span class="comment">//足够高的温度</span></span><br><span class="line">	<span class="keyword">while</span>(t&gt;<span class="number">1e-15</span>)&#123;</span><br><span class="line">		<span class="keyword">double</span> x1=ansx+t*(<span class="number">2</span>*<span class="built_in">rand</span>()-RAND_MAX);</span><br><span class="line">		<span class="keyword">double</span> y1=ansy+t*(<span class="number">2</span>*<span class="built_in">rand</span>()-RAND_MAX);</span><br><span class="line">		<span class="keyword">double</span> delt=<span class="built_in">census</span>(ansx,ansy)-<span class="built_in">census</span>(x1,y1);</span><br><span class="line">        <span class="comment">//如果得到较优解就替换或概率接受较差解</span></span><br><span class="line">		<span class="keyword">if</span>(delt&gt;<span class="number">0</span>||<span class="built_in">exp</span>(delt/t)*RAND_MAX&gt;<span class="built_in">rand</span>()) ansx=x1,ansy=y1;</span><br><span class="line">		t*=<span class="number">0.997</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">1000</span>;i++)&#123;</span><br><span class="line">		<span class="keyword">double</span> x1=ansx+t*(<span class="number">2</span>*<span class="built_in">Rand</span>()<span class="number">-1</span>);</span><br><span class="line">		<span class="keyword">double</span> y1=ansy+t*(<span class="number">2</span>*<span class="built_in">Rand</span>()<span class="number">-1</span>);</span><br><span class="line">		<span class="built_in">census</span>(x1,y1);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//由于是随机化，比较看脸，多刷几次</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">runn</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">sian</span>();</span><br><span class="line">	<span class="built_in">sian</span>();</span><br><span class="line">	<span class="built_in">sian</span>();</span><br><span class="line">	<span class="built_in">sian</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x=<span class="number">0</span>,cf=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">char</span> ch=<span class="built_in">getchar</span>();</span><br><span class="line">	<span class="keyword">while</span>(ch&lt;<span class="string">&#x27;0&#x27;</span>||ch&gt;<span class="string">&#x27;9&#x27;</span>)&#123;<span class="keyword">if</span>(ch==<span class="string">&#x27;-&#x27;</span>)cf=<span class="number">-1</span>;ch=<span class="built_in">getchar</span>();&#125;</span><br><span class="line">	<span class="keyword">while</span>(ch&gt;=<span class="string">&#x27;0&#x27;</span>&amp;&amp;ch&lt;=<span class="string">&#x27;9&#x27;</span>)&#123;x=(x&lt;&lt;<span class="number">1</span>)+(x&lt;&lt;<span class="number">3</span>)+(ch^<span class="number">48</span>);ch=<span class="built_in">getchar</span>();&#125;</span><br><span class="line">	<span class="keyword">return</span> x*cf;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">srand</span>(<span class="built_in">time</span>(<span class="literal">NULL</span>));</span><br><span class="line">	n=<span class="built_in">read</span>();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%lf%lf%lf&quot;</span>,&amp;x[i],&amp;y[i],&amp;m[i]);</span><br><span class="line">		ansx+=x[i],ansy+=y[i];</span><br><span class="line">	&#125;</span><br><span class="line">	ansx=<span class="number">1.0</span>*ansx/n,ansy=<span class="number">1.0</span>*ansy/n;</span><br><span class="line">	<span class="built_in">runn</span>();</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%.3lf %.3lf&quot;</span>,ansx,ansy);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>洛谷题解</category>
+        <category>OI</category>
       </categories>
       <tags>
-        <tag>贪心</tag>
+        <tag>模拟退火</tag>
       </tags>
   </entry>
   <entry>
-    <title>有机化学碎记</title>
-    <url>/2022/05/18/%E6%9C%89%E6%9C%BA%E5%8C%96%E5%AD%A6%E7%A2%8E%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="性质-amp-现象-amp-实验"><a href="#性质-amp-现象-amp-实验" class="headerlink" title="性质&amp;现象&amp;实验"></a>性质&amp;现象&amp;实验</h2><p>（1）苯酚是与甲醛反应才生成酚醛树脂<br>（2）苯环上甲基的氢原子只有卤族元素蒸汽并且光照才被取代<br>（3）苯环上的氢原子可以被液态卤族元素取代，要有催化剂<br>$\ \ \ \ \ \ \ \ $如：苯 + 液溴在 $Fe$ 的催化下苯环上的氢被取代<br>（4）苯酚可以和 $NaOH$ 反应而乙醇不行<br>（5）一个苯环最多被 $ 3 mol$ 的 $ H_2 $ 取代<br>（6）苯环上的 $H$ 被卤族元素取代时，一个 $H$ 原子消耗 $1mol$ 卤族元素<br>（7）一个碳碳双键可以消耗 $1mol$ $H_2$ 卤族元素同理<br>（8）苯的密度为 $0.87$ 小于水<br>（9）乙醛和银镜反应得到黑色沉淀的原因：<br>$\ \ \ \ \ \ \ \ $① 试管不干净 ② 加热温度过高（最适$60-70℃$）③ 加热过程中搅拌或振荡<br>$\ \ \ \ \ \ \ \ $得到的为粉末状的单质银，呈黑色<br>（10）羧酸的α-H指的是与羧基相连的碳原子上的氢，羧基原本的碳不计入<br>（11）酸性由大到小：高氯酸,氢碘酸,硫酸,氢溴酸,盐酸,硝酸,碘酸（以上为强酸）,草酸（乙二酸）,亚硫酸,磷酸,丙酮酸,亚硝酸（以上五种为中强酸）,柠檬酸,氢氟酸,苹果酸,葡萄糖酸,甲酸,乳酸,苯甲酸,丙烯酸,乙酸,丙酸,硬脂酸,碳酸,氢硫酸,次氯酸,硼酸,硅酸,苯酚（其余为弱酸或极弱酸）<br>（12）乙二酸的两个羧基直接相连,其酸性比其他二元羧酸都强<br>（13）类正四面体结构的二元羧酸，如：戊二酸的类正四面体二元酸，只有一种同分异构体<br>（14）戊二酸有四种结构，其中以四个碳作为碳链的同分异构体（支链上一甲基）仅有两种（可能误以为三种）<br>（15）苯酚可以和碳酸钠反应但不可以的碳酸氢钠反应<br>（16）需要可逆的有机反应为酯化和酯在酸性条件下水解<br>（17）酯在碱性条件下水解先加水生成羧酸和羟基，羧酸再和碱反应生成盐<br>（18）丙酮与水互溶<br>（19）相同分子质量的酮溶解度小于醇大于醚<br>（20）写方程式注意加成反应需要需要电性相反，而取代为电性相同取代电性相同<br>（21）葡萄糖溶液加 $Na$ 不能得到葡萄糖中含有羟基，因为溶液中有水<br>（22）葡萄糖结构简式： $CH_2OH(CHOH)_4CHO$<br>（23）果糖结构简式：$CH_2OH(CHOH)_3COCH_2OH$<br>（24）一醛 $\rightarrow$ 二银<br>（25）纤维素可以发生酯化<br>（26）含氮碱基速记：① 嘌呤有 $5$ 个氮，鸟嘌呤含氧 ② 胸腺嘧啶和尿嘧啶都有 $2$ 个氧，胸腺嘧啶多 $1$ 甲基<br>（27）羧酸可能含碳碳双键，所以有可能使溴水褪色<br>（28）因为羧基中的两个氧有共轭作用,羧基比酮和醛的羰基稳定的多,很多醛酮能够发生的反应,羧基都不能发生，即羧基不可以表现出酮和醛的性质<br>（29）不可用石蕊溶液证明脂类物质的酸性，会分层<br>（30）芳香酸中的羧基不一定直接连在苯环上<br>（31）酚不可以用石蕊<br>（32）制备乙酸乙酯：① 加热提高反应速率，使乙酸乙酯挥发便于收集，使平衡正向移动 ② 浓硫酸的作用是催化剂和吸水剂，分别提高反应速率和乙酸、乙醇的转化率 ③ 可以增加乙醇的量，增加冷凝回流装置，提高乙酸乙酯产率 ④ 加入顺序为：无水乙醇，浓硫酸，冰醋酸 ⑤ 饱和 $Na_2CO_3$ 的作用是收集乙酸乙酯，降低乙酸乙酯溶解度，吸收乙酸，溶解乙醇 ⑥ 导气管起到导气和冷凝的作用<br>（33）$[-CH&#x3D;CH-]_n$ 为聚乙炔，非聚乙烯 $ [-CH-CH-]_n$<br>（34）$1-3$丁二烯中的所有原子不一定共面<br>（35）烃只可以碳氧，烃衍生物不限<br>（36）一定要留意甲醛有两个醛基<br>（37）苯环上同分异构：<br>$\ \ \ \ \ \ \ \ $① 一取代只有 $1$ 种 ② 二取代不同的有 $3$ 种，相同也是 $3$ 种 ③ 三取代都不同的有 $10$ 种，两个相同的有 $6$ 种，三个相同的有 $3$ 种</p>
-<h2 id="同分异构"><a href="#同分异构" class="headerlink" title="同分异构"></a>同分异构</h2><h3 id="烷烃-amp-烷基"><a href="#烷烃-amp-烷基" class="headerlink" title="烷烃&amp;烷基"></a>烷烃&amp;烷基</h3><table>
+    <title>高中化学碎记</title>
+    <url>/2022/05/18/%E9%AB%98%E4%B8%AD%E5%8C%96%E5%AD%A6%E7%A2%8E%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="碎记-2">碎记</h2>
+<p>（1）苯酚是与甲醛反应才生成酚醛树脂<br>
+（2）苯环上甲基的氢原子只有卤族元素蒸汽并且光照才被取代<br>
+（3）苯环上的氢原子可以被液态卤族元素取代，要有催化剂<br>
+$\ \ \ \ \ \ \ \ $如：苯 + 液溴在 $Fe$ 的催化下苯环上的氢被取代<br>
+（4）苯酚可以和 $NaOH$ 反应而乙醇不行<br>
+（5）一个苯环最多被 $ 3 mol$ 的 $ H_2 $ 取代<br>
+（6）苯环上的 $H$ 被卤族元素取代时，一个 $H$ 原子消耗 $1mol$ 卤族元素<br>
+（7）一个碳碳双键可以消耗 $1mol$ $H_2$ 卤族元素同理<br>
+（8）苯的密度为 $0.87$ 小于水<br>
+（9）乙醛和银镜反应得到黑色沉淀的原因：<br>
+$\ \ \ \ \ \ \ \ $① 试管不干净 ② 加热温度过高（最适$60-70℃$）③ 加热过程中搅拌或振荡<br>
+$\ \ \ \ \ \ \ \ $得到的为粉末状的单质银，呈黑色<br>
+（10）羧酸的α-H指的是与羧基相连的碳原子上的氢，羧基原本的碳不计入<br>
+（11）酸性由大到小：高氯酸,氢碘酸,硫酸,氢溴酸,盐酸,硝酸,碘酸（以上为强酸）,草酸（乙二酸）,亚硫酸,磷酸,丙酮酸,亚硝酸（以上五种为中强酸）,柠檬酸,氢氟酸,苹果酸,葡萄糖酸,甲酸,乳酸,苯甲酸,丙烯酸,乙酸,丙酸,硬脂酸,碳酸,氢硫酸,次氯酸,硼酸,硅酸,苯酚（其余为弱酸或极弱酸）<br>
+（12）乙二酸的两个羧基直接相连,其酸性比其他二元羧酸都强<br>
+（13）类正四面体结构的二元羧酸，如：戊二酸的类正四面体二元酸，只有一种同分异构体<br>
+（14）戊二酸有四种结构，其中以四个碳作为碳链的同分异构体（支链上一甲基）仅有两种（可能误以为三种）<br>
+（15）苯酚可以和碳酸钠反应但不可以的碳酸氢钠反应<br>
+（16）需要可逆的有机反应为酯化和酯在酸性条件下水解<br>
+（17）酯在碱性条件下水解先加水生成羧酸和羟基，羧酸再和碱反应生成盐<br>
+（18）丙酮与水互溶<br>
+（19）相同分子质量的酮溶解度小于醇大于醚<br>
+（20）写方程式注意加成反应需要需要电性相反，而取代为电性相同取代电性相同<br>
+（21）葡萄糖溶液加 $Na$ 不能得到葡萄糖中含有羟基，因为溶液中有水<br>
+（22）葡萄糖结构简式： $CH_2OH(CHOH)_4CHO$<br>
+（23）果糖结构简式：$CH_2OH(CHOH)_3COCH_2OH$<br>
+（24）一醛 $\rightarrow$ 二银<br>
+（25）纤维素可以发生酯化<br>
+（26）含氮碱基速记：① 嘌呤有 $5$ 个氮，鸟嘌呤含氧 ② 胸腺嘧啶和尿嘧啶都有 $2$ 个氧，胸腺嘧啶多 $1$ 甲基<br>
+（27）羧酸可能含碳碳双键，所以有可能使溴水褪色<br>
+（28）因为羧基中的两个氧有共轭作用,羧基比酮和醛的羰基稳定的多,很多醛酮能够发生的反应,羧基都不能发生，即羧基不可以表现出酮和醛的性质<br>
+（29）不可用石蕊溶液证明脂类物质的酸性，会分层<br>
+（30）芳香酸中的羧基不一定直接连在苯环上<br>
+（31）酚不可以用石蕊<br>
+（32）制备乙酸乙酯：① 加热提高反应速率，使乙酸乙酯挥发便于收集，使平衡正向移动 ② 浓硫酸的作用是催化剂和吸水剂，分别提高反应速率和乙酸、乙醇的转化率 ③ 可以增加乙醇的量，增加冷凝回流装置，提高乙酸乙酯产率 ④ 加入顺序为：无水乙醇，浓硫酸，冰醋酸 ⑤ 饱和 $Na_2CO_3$ 的作用是收集乙酸乙酯，降低乙酸乙酯溶解度，吸收乙酸，溶解乙醇 ⑥ 导气管起到导气和冷凝的作用<br>
+（33）$[-CH=CH-]_n$ 为聚乙炔，非聚乙烯 $ [-CH-CH-]_n$<br>
+（34）$1-3$丁二烯中的所有原子不一定共面<br>
+（35）烃只可以碳氧，烃衍生物不限<br>
+（36）一定要留意甲醛有两个醛基<br>
+（37）苯环上同分异构：<br>
+$\ \ \ \ \ \ \ \ $① 一取代只有 $1$ 种 ② 二取代不同的有 $3$ 种，相同也是 $3$ 种 ③ 三取代都不同的有 $10$ 种，两个相同的有 $6$ 种，三个相同的有 $3$ 种<br>
+（38）说明非金属性-&gt;<strong>最高价</strong>含氧酸<br>
+（39）非金属性 $\uparrow$，简单离子还原性 $\downarrow$<br>
+（40）非金属元素气态氧化物遇水反应生成气体有 $NO_2$<br>
+（41）同素异形体： $C、O、P、S$<br>
+（42）洪特规则：电子分布到能量简并的原子轨道时，优先以自旋相同的方式分别占据不同的轨道，因为这种排布方式原子的总能量最低<br>
+（43）泡利不相容原理：没有两个相同的费米子（具有半整数自旋的粒子，比如电子）能占据相同的量子态<br>
+（44）俯视-&gt;刻度线在液面下方-&gt;加的溶剂增多-&gt;浓度减小<br>
+（45）$CCl_4$ 不燃，是种灭火剂<br>
+（46）两种物质分离，溶解度随着温度变化呈现不同趋势可以用重结晶<br>
+（47）${NO_3}^-(H^+)$ 也有 <strong>氧化性</strong> ，所以证明金属离子氧化性强弱不可以用该金属 <strong>酸化后</strong> 的硝酸盐溶液<br>
+（48）由于体积不具有加和性，所以配置一定浓度的溶液时候一定要先知道配置后溶液的密度，再根据溶液质量计算<br>
+（49）制备纯净的 $Fe(OH)_2$ 时，胶头滴管尖嘴应插入溶液中，防止被氧化<br>
+（50）实验后废液倒入指定容器（不是水槽。。。）<br>
+（51）液态有机物密度比水小的有烃（烷、烯、炔、芳香烃）、低级酯、一氯代烃、乙醇、乙醛等；密度比水大的有硝基苯、溴苯、四氯化碳、氯仿、溴代烃、乙二醇、丙三醇等。烷、烯、炔等烃类同系物相对密度随着分子内碳原子数的增加的而增大；一氯代烷的相对密度随着碳原子数的增加而减小。（注意一氯甲烷为气体）<br>
+（52）苯可以发生氧化反应，如：点燃<br>
+（53）$-C=N-$ 也可以加成<br>
+（54）加入氨基：硝化-&gt;还原<br>
+（55）蛋白质的一级结构有肽键<br>
+（56）$CuSO_4$ 会使蛋白质变性</p>
+<h2 id="同分异构">同分异构</h2>
+<h3 id="烷烃-烷基">烷烃&amp;烷基</h3>
+<table>
 <thead>
 <tr>
 <th>名称</th>
@@ -486,7 +1036,8 @@
 <th>烷基</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>甲烷</td>
 <td>1</td>
 <td>1</td>
@@ -536,9 +1087,21 @@
 <td>75</td>
 <td>507</td>
 </tr>
-</tbody></table>
-<h3 id="碎记"><a href="#碎记" class="headerlink" title="碎记"></a>碎记</h3><p>（1） $C_5H_{10}O$ 的同分异构体可以为：<br>醇：邻位间位对位苯甲醇共 $3$ 种，$1$，$2$ 位苯乙醇各一种，共 $5$ 种<br>酚：两个甲基在邻位有 $2$ 种，在间位有 $3$ 种，在对位有 $1$ 种，两个碳如果是乙基，则有 $3$ 种，共 $9$ 种<br>醚：苯乙醚 $1$ 种，甲基分别在邻位间位对位上的苯甲醚 $3$ 种，还有一种是氧的两边一边接甲基一边接苯甲基，共 $5$ 种<br>总共$5+9+5&#x3D;19$种<br>（2） $C_7H_8O$ 的同分异构体可以为：<br>醇：苯甲醇，共 $1$ 种<br>酚：$1$ 位的甲基还有邻，对，间的羟基，共 $3$ 种<br>醚：苯甲醚，共 $1$ 种<br>总共$1+3+1&#x3D;5$种</p>
-<h2 id="方程式"><a href="#方程式" class="headerlink" title="方程式"></a>方程式</h2><p>（1）饱和一元醛和 $RNH_2$ 反应通式</p>
+</tbody>
+</table>
+<h3 id="典例-2">典例</h3>
+<p>（1） $C_5H_{10}O$ 的同分异构体可以为：<br>
+醇：邻位间位对位苯甲醇共 $3$ 种，$1$，$2$ 位苯乙醇各一种，共 $5$ 种<br>
+酚：两个甲基在邻位有 $2$ 种，在间位有 $3$ 种，在对位有 $1$ 种，两个碳如果是乙基，则有 $3$ 种，共 $9$ 种<br>
+醚：苯乙醚 $1$ 种，甲基分别在邻位间位对位上的苯甲醚 $3$ 种，还有一种是氧的两边一边接甲基一边接苯甲基，共 $5$ 种<br>
+总共$5+9+5=19$种<br>
+（2） $C_7H_8O$ 的同分异构体可以为：<br>
+醇：苯甲醇，共 $1$ 种<br>
+酚：$1$ 位的甲基还有邻，对，间的羟基，共 $3$ 种<br>
+醚：苯甲醚，共 $1$ 种<br>
+总共$1+3+1=5$种</p>
+<h2 id="方程式">方程式</h2>
+<p>（1）饱和一元醛和 $RNH_2$ 反应通式</p>
 <ul>
 <li>$CH_3CHO+RNH_2\rightarrow CH_3CH(NHR)OH$</li>
 </ul>
@@ -552,14 +1115,12 @@
 </ul>
 <p>（4）蔗糖水解：</p>
 <ul>
-<li><p>$C_{12}H_{22}O_{11}(蔗糖)\xrightarrow[\Delta]{稀硫酸}C_6H_{12}O_6(葡萄糖)+C_6H_{12}O_6(果糖)$</p>
+<li>
+<p>$C_{12}H_{22}O_{11}(蔗糖)\xrightarrow[\Delta]{稀硫酸}C_6H_{12}O_6(葡萄糖)+C_6H_{12}O_6(果糖)$</p>
 </li>
-<li><p>$C_{12}H_{22}O_{11}(蔗糖)\xrightarrow[]{浓硫酸}12C+11H_2O$</p>
+<li>
+<p>$C_{12}H_{22}O_{11}(蔗糖)\xrightarrow[]{浓硫酸}12C+11H_2O$</p>
 </li>
-</ul>
-<p>（5）淀粉和纤维素水解：</p>
-<ul>
-<li>$(C_6H_{15}O_5)<em>n+nH_2O\xrightarrow[\Delta]{H^+}nC_6H</em>{12}O_6$</li>
 </ul>
 ]]></content>
       <categories>
@@ -572,7 +1133,52 @@
   <entry>
     <title>高中物理碎记</title>
     <url>/2022/05/18/%E9%AB%98%E4%B8%AD%E7%89%A9%E7%90%86%E7%A2%8E%E8%AE%B0/</url>
-    <content><![CDATA[<p>（1）油膜法理想化假设中没有“不考虑油酸分子间的作用力”<br>（2）完全失重的情况下，气体对容器壁的压强不同于水，压强不为零<br>（3）计算U形管液面升高降低时要考虑左上&#x3D;右下，即左边高于右边a时左边升高a&#x2F;2<br>（4）个别分子的动能与温度无关<br>（5）分子势能不一定取正值<br>（6）布朗运动不是热运动<br>（7）平衡位置分子势能最小（标准图像中为负值，但分子势能最小值不一定为负值）<br>（8）统计规律永远伴随涨落现象<br>（9）气体压强&#x3D;平均动能+密集程度<br>（10）一定质量的气体<br>（11）一定质量的气体在体积不变的情况下，压强与开尔文温度呈正比（不是摄氏度也不是华氏度！）<br>（12）理想气体忽略分子间作用力，其中C与气体不仅和质量有关还有气体的种类<br>（13）拔火罐是等容变化。。。<br>（14）分析压强变化时要留意是否与外界相通<br>（15）$△p&#x3D;\frac{\Delta T}{T}p$<br>（16）单晶体不一定所有性质都是各向同性，也有可能各个方向的导电导热性相同<br>（17）用热力学第一定律解决问题时要留意气体的中心，这个关系到其重力势能<br>（18）某个物理的能量减少，必然有其他物体的能量增加<br>（19）内能可以全部用来做功以转化为机械能，只是不能不引起其他形式能的变化<br>（20）“自发”一词不可少<br>（21）一切与热现象有关的宏观自然过程是不可逆的<br>（22）在任何自然过程中，一个孤立系统的熵不会减小（一定是孤立系统）<br>（23）一定质量气体的变化图像一定要关注其斜率<br>（24）汤姆孙发现电子并精确计算出电子的电荷量<br>（25）汤姆孙认为原子是实心的，并且证明了不可再分<br>（26）阴极射线实验金箔越薄越好，必须在真空中进行<br>（27）原子直径数量级10的-10次方，原子核直径数量级10的-15次方（单位m）<br>（28）α粒子散射总能量不变<br>（29）α粒子散射要注意其轨迹，离核近的偏转较大，而且偏转大的占比极小（大约1&#x2F;1000）<br>（30）分子间斥力比引力变化大<br>（31）太阳光谱是吸收光谱，不是原子光谱<br>（32）只能通过光谱确定月球表面物质成分，所以不能用光谱测定月球物质组成。。。<br>（33）发射光谱&#x3D;连续+不连续<br>（34）巴耳末公式只确定了氢原子巴耳末系的波长，其他线系不可确定<br>（35）玻尔理论可以解释氢原子光谱，不能解释其他原子的光谱<br>（36）玻尔与卢瑟福不同在于：电子只能在一些不连续的轨道上运动<br>（37）同位素具有相同化学性质（想想探究酸脱羟基醇脱氢，若化学性质不同就不可用同位素标记了）<br>（38）α射线（高速氦原子核）穿不过薄纸，β射线（高速运动电子流）能穿透几mm的铝板，γ射线（电磁波），可以穿透即cm厚的铝板<br>（39）卢瑟福发现质子，查德威克用云室证实了中子，但中子是由卢瑟福猜想的<br>（40）半衰期对少数原子核没有意义<br>（41）外切电性相同，内切则不同<br>（42）$1u&#x3D;931.5Mev$<br>（43）质量亏损并非质量直接转化为能量，而是亏损的静质量转化为动质量以能量的形式释放出去<br>（44）可以先假设V或其他量不变<br>（45）电流的方向与电子运动方向相反！<br>（46）加速后最大动能：r为D形盒的半径  </p>
+    <content><![CDATA[<p>（1）油膜法理想化假设中没有“不考虑油酸分子间的作用力”<br>
+（2）完全失重的情况下，气体对容器壁的压强不同于水，压强不为零<br>
+（3）计算U形管液面升高降低时要考虑左上=右下，即左边高于右边a时左边升高a/2<br>
+（4）个别分子的动能与温度无关<br>
+（5）分子势能不一定取正值<br>
+（6）布朗运动不是热运动<br>
+（7）平衡位置分子势能最小（标准图像中为负值，但分子势能最小值不一定为负值）<br>
+（8）统计规律永远伴随涨落现象<br>
+（9）气体压强=平均动能+密集程度<br>
+（10）一定质量的气体<br>
+（11）一定质量的气体在体积不变的情况下，压强与开尔文温度呈正比（不是摄氏度也不是华氏度！）<br>
+（12）理想气体忽略分子间作用力，其中C与气体不仅和质量有关还有气体的种类<br>
+（13）拔火罐是等容变化。。。<br>
+（14）分析压强变化时要留意是否与外界相通<br>
+（15）$△p=\frac{\Delta T}{T}p$<br>
+（16）单晶体不一定所有性质都是各向同性，也有可能各个方向的导电导热性相同<br>
+（17）用热力学第一定律解决问题时要留意气体的中心，这个关系到其重力势能<br>
+（18）某个物理的能量减少，必然有其他物体的能量增加<br>
+（19）内能可以全部用来做功以转化为机械能，只是不能不引起其他形式能的变化<br>
+（20）“自发”一词不可少<br>
+（21）一切与热现象有关的宏观自然过程是不可逆的<br>
+（22）在任何自然过程中，一个孤立系统的熵不会减小（一定是孤立系统）<br>
+（23）一定质量气体的变化图像一定要关注其斜率<br>
+（24）汤姆孙发现电子并精确计算出电子的电荷量<br>
+（25）汤姆孙认为原子是实心的，并且证明了不可再分<br>
+（26）阴极射线实验金箔越薄越好，必须在真空中进行<br>
+（27）原子直径数量级10的-10次方，原子核直径数量级10的-15次方（单位m）<br>
+（28）α粒子散射总能量不变<br>
+（29）α粒子散射要注意其轨迹，离核近的偏转较大，而且偏转大的占比极小（大约1/1000）<br>
+（30）分子间斥力比引力变化大<br>
+（31）太阳光谱是吸收光谱，不是原子光谱<br>
+（32）只能通过光谱确定月球表面物质成分，所以不能用光谱测定月球物质组成。。。<br>
+（33）发射光谱=连续+不连续<br>
+（34）巴耳末公式只确定了氢原子巴耳末系的波长，其他线系不可确定<br>
+（35）玻尔理论可以解释氢原子光谱，不能解释其他原子的光谱<br>
+（36）玻尔与卢瑟福不同在于：电子只能在一些不连续的轨道上运动<br>
+（37）同位素具有相同化学性质（想想探究酸脱羟基醇脱氢，若化学性质不同就不可用同位素标记了）<br>
+（38）α射线（高速氦原子核）穿不过薄纸，β射线（高速运动电子流）能穿透几mm的铝板，γ射线（电磁波），可以穿透即cm厚的铝板<br>
+（39）卢瑟福发现质子，查德威克用云室证实了中子，但中子是由卢瑟福猜想的<br>
+（40）半衰期对少数原子核没有意义<br>
+（41）外切电性相同，内切则不同<br>
+（42）$1u=931.5Mev$<br>
+（43）质量亏损并非质量直接转化为能量，而是亏损的静质量转化为动质量以能量的形式释放出去<br>
+（44）可以先假设V或其他量不变<br>
+（45）电流的方向与电子运动方向相反！<br>
+（46）加速后最大动能：r为D形盒的半径</p>
 ]]></content>
       <categories>
         <category>高中理科</category>
@@ -582,89 +1188,42 @@
       </tags>
   </entry>
   <entry>
-    <title>模拟退火</title>
-    <url>/2022/03/05/%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB/</url>
-    <content><![CDATA[<p>这篇文章主要介绍<strong>模拟退火算法</strong>的原理以及实现</p>
-<span id="more"></span>
-<h1 id="算法来源"><a href="#算法来源" class="headerlink" title="算法来源"></a>算法来源</h1><p>在物理学中，当一个物体的温度很高的时候，这个物体会由高温状态转变为低温状态，而其内部的粒子也 <strong>逐渐</strong> 由无序转变为有序。这就给我们提供了设计算法的思路：模拟粒子的无序状态，即 <strong>随机化</strong> ，而当”温度“越来越低的时候，粒子越来越有序，而我们随机化的 <strong>幅度</strong> 越来越小，最后就可以得到我们想要的最优解</p>
-<h2 id="典例"><a href="#典例" class="headerlink" title="典例"></a>典例</h2><p>这里选取来自<a href="https://oi-wiki.org/misc/simulated-annealing/">oi-wiki</a>的一张图片来具象说明<br><img src="https://s3.bmp.ovh/imgs/2022/03/95370912b602b0d5.gif"></p>
-<h1 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h1><h2 id="基本思路"><a href="#基本思路" class="headerlink" title="基本思路"></a>基本思路</h2><p>由算法原理我们可以提取几个关键词：<strong>逐渐</strong>、<strong>随机化</strong>、<strong>幅度</strong><br>由此我们可以得到算法实现的基本思路：<br>定义出一个 <strong>足够高的温度T</strong>  （T一定要<strong>足够高！！！</strong>）<br>随机化答案，找到更优解替换当前解<br>那么我们会不会因为如此而陷入”目光短浅”的僵局呢？<br>答案是肯定会的！<br>例如拥有多个峰值的函数，如果单单朝着较优解进发，就很有可能会 <strong>错失最优解</strong><br>所以当我们需要以 <strong>一定概率接受较差解</strong> ，用于跳出这种“僵局”<br>那么这个概率是多少呢？<br>科学家们以及帮我们计算好了:<br>$e^{-\Delta&#x2F;T}$  </p>
-<ul>
-<li>$\Delta$ 为当前解和已知解的 <strong>差值的绝对值</strong> </li>
-<li>$T$ 为当前温度</li>
-</ul>
-<p>易知 $e^{-\Delta&#x2F;T} \in [0 , 1] $ 且随着 $ T $ 的增大而减小<br>即随机化的程度越来越小</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><p>选自洛谷<a href="https://www.luogu.com.cn/problem/P1337">P1337 [JSOI2004]平衡点 &#x2F; 吊打XXX</a></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">10006</span>;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">double</span> ansx=<span class="number">0</span>,ansy=<span class="number">0</span>,dis=<span class="number">1000005</span>;</span><br><span class="line"><span class="keyword">double</span> x[maxn],y[maxn],m[maxn];</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">dist</span><span class="params">(<span class="keyword">double</span> x1,<span class="keyword">double</span> y1,<span class="keyword">double</span> x2,<span class="keyword">double</span> y2)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (<span class="keyword">double</span>)<span class="built_in">sqrt</span>((<span class="keyword">double</span>)<span class="number">1.0</span>*(x1-x2)*(x1-x2)+(<span class="keyword">double</span>)<span class="number">1.0</span>*(y1-y2)*(y1-y2));</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//计算带权费马点</span></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">census</span><span class="params">(<span class="keyword">double</span> x1,<span class="keyword">double</span> y1)</span></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> res=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) res+=(<span class="keyword">double</span>)<span class="built_in">dist</span>(x[i],y[i],x1,y1)*m[i];</span><br><span class="line">	<span class="keyword">if</span>(res&lt;dis) dis=res,ansx=x1,ansy=y1;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">Rand</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (<span class="keyword">double</span>)<span class="built_in">rand</span>()/RAND_MAX;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sian</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> t=<span class="number">10000000</span>;<span class="comment">//足够高的温度</span></span><br><span class="line">	<span class="keyword">while</span>(t&gt;<span class="number">1e-15</span>)&#123;</span><br><span class="line">		<span class="keyword">double</span> x1=ansx+t*(<span class="number">2</span>*<span class="built_in">rand</span>()-RAND_MAX);</span><br><span class="line">		<span class="keyword">double</span> y1=ansy+t*(<span class="number">2</span>*<span class="built_in">rand</span>()-RAND_MAX);</span><br><span class="line">		<span class="keyword">double</span> delt=<span class="built_in">census</span>(ansx,ansy)-<span class="built_in">census</span>(x1,y1);</span><br><span class="line">        <span class="comment">//如果得到较优解就替换或概率接受较差解</span></span><br><span class="line">		<span class="keyword">if</span>(delt&gt;<span class="number">0</span>||<span class="built_in">exp</span>(delt/t)*RAND_MAX&gt;<span class="built_in">rand</span>()) ansx=x1,ansy=y1;</span><br><span class="line">		t*=<span class="number">0.997</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">1000</span>;i++)&#123;</span><br><span class="line">		<span class="keyword">double</span> x1=ansx+t*(<span class="number">2</span>*<span class="built_in">Rand</span>()<span class="number">-1</span>);</span><br><span class="line">		<span class="keyword">double</span> y1=ansy+t*(<span class="number">2</span>*<span class="built_in">Rand</span>()<span class="number">-1</span>);</span><br><span class="line">		<span class="built_in">census</span>(x1,y1);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//由于是随机化，比较看脸，多刷几次</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">runn</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">sian</span>();</span><br><span class="line">	<span class="built_in">sian</span>();</span><br><span class="line">	<span class="built_in">sian</span>();</span><br><span class="line">	<span class="built_in">sian</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x=<span class="number">0</span>,cf=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">char</span> ch=<span class="built_in">getchar</span>();</span><br><span class="line">	<span class="keyword">while</span>(ch&lt;<span class="string">&#x27;0&#x27;</span>||ch&gt;<span class="string">&#x27;9&#x27;</span>)&#123;<span class="keyword">if</span>(ch==<span class="string">&#x27;-&#x27;</span>)cf=<span class="number">-1</span>;ch=<span class="built_in">getchar</span>();&#125;</span><br><span class="line">	<span class="keyword">while</span>(ch&gt;=<span class="string">&#x27;0&#x27;</span>&amp;&amp;ch&lt;=<span class="string">&#x27;9&#x27;</span>)&#123;x=(x&lt;&lt;<span class="number">1</span>)+(x&lt;&lt;<span class="number">3</span>)+(ch^<span class="number">48</span>);ch=<span class="built_in">getchar</span>();&#125;</span><br><span class="line">	<span class="keyword">return</span> x*cf;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">srand</span>(<span class="built_in">time</span>(<span class="literal">NULL</span>));</span><br><span class="line">	n=<span class="built_in">read</span>();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%lf%lf%lf&quot;</span>,&amp;x[i],&amp;y[i],&amp;m[i]);</span><br><span class="line">		ansx+=x[i],ansy+=y[i];</span><br><span class="line">	&#125;</span><br><span class="line">	ansx=<span class="number">1.0</span>*ansx/n,ansy=<span class="number">1.0</span>*ansy/n;</span><br><span class="line">	<span class="built_in">runn</span>();</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%.3lf %.3lf&quot;</span>,ansx,ansy);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>OI</category>
-      </categories>
-      <tags>
-        <tag>模拟退火</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>古代文学常识碎记</title>
-    <url>/2022/05/24/%E5%8F%A4%E4%BB%A3%E6%96%87%E5%AD%A6%E5%B8%B8%E8%AF%86%E7%A2%8E%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="与政事有关"><a href="#与政事有关" class="headerlink" title="与政事有关"></a>与政事有关</h2><p>（1）诣：到，去。</p>
-<p>（2）劝：①鼓励，奖励；②受到鼓励、奖励。</p>
-<p>（3）课：考核、督促、征收。</p>
-<p>（4）风、化：教育感化。</p>
-<p>（5）按、案：巡视，巡行；考察，核实，查明。</p>
-<p>（6）游：①游玩，游览；②旅行，外出求学或求官；③交际，交往。</p>
-<p>（7）趣、趋：①小步走，跑；又引申为赶快，迅速。②通“促”，催促。</p>
-<p>（8）劾：检举，揭发。</p>
-<p>（9）白：告诉，报告。常用于官吏之间。</p>
-<p>（10）短：进谗言，说坏话。</p>
-<p>（11）害：嫉妒。</p>
-<p>（12）闻：</p>
-<p>   ①听说，听见；</p>
-<p>   ②使知道，报告给……知道。对于义；</p>
-<p>   ③要特别注意。其中省略的人往往是最高统治者——国君，强化了这一点，阅读时就不至于认为下文中国    君和主人公发生的事件显得突兀。怎么国君知道了并参加进来了呢？其实就是“闻”字在起作用。如“没死以    闻”，“齐桓晋文之事可得闻乎”。</p>
-<p>（13）折：指斥，指责，驳斥。</p>
-<p>（14）让：①责备，责怪；②谦让，辞让。</p>
-<p>（15）党：偏袒，伙同，包庇。</p>
-<p>（16）矫：假托，假传。</p>
-<p>（17）质：作人质；抵押。</p>
-<p>（18）次：①临时驻扎(用于军队)；②住宿，停留（用于个人）。</p>
-<p>（19）输：缴纳（贡品或赋税）——由“输送、运输”引申。</p>
-<p>（20）当：判刑，判罪。后多带表示惩罚意义的词语。</p>
-<p>（21）坐：①因……犯罪或错误，触犯；②牵连，定罪。</p>
-<p>（22）多：赞扬,欣赏。“高、贵”等字，若带宾语，就是意动，也意译为此。</p>
-<p>（23）少：批评，轻视，看不起。</p>
-<h2 id="碎记"><a href="#碎记" class="headerlink" title="碎记"></a>碎记</h2><p>（1）移疾：意同移病。释义为旧时官员上书称病，多为居官者求退的婉辞。<br>（2）名、字：名为出生不久后由父亲取。在《礼记·曲礼上》记有：男子二十冠而字。<br>（3）汤武：周武王和商汤（非商汤和孙武）<br>（4）建储：建立储君，立皇太子<br>（5）三晋：赵、魏、韩三国，在春秋时是晋国<br>（6）有司：只是“官吏的通称”，各有专司（不能用来指称朝廷中的“各级官员”）</p>
-]]></content>
-      <categories>
-        <category>高中理科</category>
-      </categories>
-      <tags>
-        <tag>语文</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>高中生物碎记</title>
     <url>/2022/05/24/%E9%AB%98%E4%B8%AD%E7%94%9F%E7%89%A9%E7%A2%8E%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="碎记"><a href="#碎记" class="headerlink" title="碎记"></a>碎记</h2><p>（1）AMP为腺嘌呤核糖核苷酸<br>（2）磷脂分子中也有N元素<br>（3）除了支原体外其他原核生物都有细胞壁<br>（4）能发生质壁分离必须要有中央大液泡，死亡和未成熟的植物细胞不可以，分生区不可以<br>（5）合成ATP可以是放能反应也可以是光能<br>（6）合成ATP的重要途径是细胞呼吸中酶的活性（不是线粒体中酶的活性）<br>（7）磷脂&#x3D;磷酸+甘油+脂肪酸<br>（8）观察质壁分离只需要低倍镜<br>（9）腌菜时间长亚硝酸盐含量低<br>（10）哪种方式都不可以直接将基因导入，必须要有载体<br>（11）第几步稀释了几倍？注意步骤的划分才知道这一步从哪开始稀释<br>（12）启动子基本组成单位：脱氧核苷酸<br>（13）“合成车间”是内质网<br>（14）参与血液中脂质的运输的是胆固醇（而非单单固醇）<br>（15）主动运输的能量来自于 ① ATP水解 ② 其他物质运输或浓度差产生的势能<br>（16）AMP腺嘌呤核糖核苷酸<br>（17）蛋白酶水解蛋白质不可以用双缩脲检验是否水解完全<br>（18）基因的合成不一定在细胞核，如原核生物在细胞质<br>（19）癌变后糖蛋白减少<br>（20）密码子的简并<br>（21）葡萄糖是协助扩散<br>（22）水既有协助扩散也有自由扩散，主要是协助扩散<br>（23）rRNA能够降低氨基酸脱水缩合的活化能，与mRNA进行碱基互补配对的是tRNA<br>（24）染色质中的组蛋白被修饰会影响染色质中DNA与组蛋白分离<br>（25）多糖在动物细胞中的作用是主要能源物质和储存能源<br>（26）还原性辅酶I为NADH，II为NADPH<br>（27）$C3$ 还原成 $C5$</p>
+    <content><![CDATA[<h2 id="碎记-3">碎记</h2>
+<p>（1）AMP为腺嘌呤核糖核苷酸<br>
+（2）磷脂分子中也有N元素<br>
+（3）除了支原体外其他原核生物都有细胞壁<br>
+（4）能发生质壁分离必须要有中央大液泡，死亡和未成熟的植物细胞不可以，分生区不可以<br>
+（5）合成ATP可以是放能反应也可以是光能<br>
+（6）合成ATP的重要途径是细胞呼吸中酶的活性（不是线粒体中酶的活性）<br>
+（7）磷脂=磷酸+甘油+脂肪酸<br>
+（8）观察质壁分离只需要低倍镜<br>
+（9）腌菜时间长亚硝酸盐含量低<br>
+（10）哪种方式都不可以直接将基因导入，必须要有载体<br>
+（11）第几步稀释了几倍？注意步骤的划分才知道这一步从哪开始稀释<br>
+（12）启动子基本组成单位：脱氧核苷酸<br>
+（13）“合成车间”是内质网<br>
+（14）参与血液中脂质的运输的是胆固醇（而非单单固醇）<br>
+（15）主动运输的能量来自于 ① ATP水解 ② 其他物质运输或浓度差产生的势能<br>
+（16）AMP腺嘌呤核糖核苷酸<br>
+（17）蛋白酶水解蛋白质不可以用双缩脲检验是否水解完全<br>
+（18）基因的合成不一定在细胞核，如原核生物在细胞质<br>
+（19）癌变后糖蛋白减少<br>
+（20）密码子的简并<br>
+（21）葡萄糖是协助扩散<br>
+（22）水既有协助扩散也有自由扩散，主要是协助扩散<br>
+（23）rRNA能够降低氨基酸脱水缩合的活化能，与mRNA进行碱基互补配对的是tRNA<br>
+（24）染色质中的组蛋白被修饰会影响染色质中DNA与组蛋白分离<br>
+（25）多糖在动物细胞中的作用是主要能源物质和储存能源<br>
+（26）还原性辅酶I为NADH，II为NADPH<br>
+（27）$C_3$ 还原成 $C_5$</p>
 ]]></content>
       <categories>
         <category>高中理科</category>
       </categories>
       <tags>
         <tag>生物</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>图论题型专解</title>
-    <url>/2022/05/22/%E5%9B%BE%E8%AE%BA%E9%A2%98%E5%9E%8B%E4%B8%93%E8%A7%A3/</url>
-    <content><![CDATA[<h1 id="Tarjan"><a href="#Tarjan" class="headerlink" title="Tarjan"></a>Tarjan</h1><h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><h3 id="缩点"><a href="#缩点" class="headerlink" title="缩点"></a>缩点</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">tarjan</span><span class="params">(<span class="keyword">int</span> u)</span></span>&#123;</span><br><span class="line">	dfn[u]=low[u]=++num;</span><br><span class="line">	stak[++top]=u;vis[u]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=head[u];i;i=edge[i].next)&#123;</span><br><span class="line">		<span class="keyword">int</span> v=edge[i].to;</span><br><span class="line">		<span class="keyword">if</span>(!dfn[v])&#123;</span><br><span class="line">			<span class="built_in">tarjan</span>(v);</span><br><span class="line">			low[u]=<span class="built_in">min</span>(low[u],low[v]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(vis[v]) low[u]=<span class="built_in">min</span>(low[u],low[v]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(dfn[u]==low[u])&#123;</span><br><span class="line">		tot++;</span><br><span class="line">		<span class="keyword">while</span>(stak[top]!=u)&#123;</span><br><span class="line">			vis[stak[top]]=<span class="number">0</span>;</span><br><span class="line">			color[stak[top]]=tot;</span><br><span class="line">			top--;</span><br><span class="line">		&#125;</span><br><span class="line">		top--;</span><br><span class="line">		vis[u]=<span class="number">0</span>;</span><br><span class="line">		color[u]=tot;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Tarjan技巧"><a href="#Tarjan技巧" class="headerlink" title="Tarjan技巧"></a>Tarjan技巧</h2><p>1.dfn可以作为mark一样的作用记录节点是否被访问<br>2.缩点更新low[u]的时候也可也写成low[u]&#x3D;min(low[u],dfn[v])  </p>
-<h2 id="题型"><a href="#题型" class="headerlink" title="题型"></a>题型</h2><h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
-      <categories>
-        <category>OI</category>
-      </categories>
-      <tags>
-        <tag>图论</tag>
       </tags>
   </entry>
 </search>

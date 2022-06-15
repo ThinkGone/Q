@@ -181,6 +181,12 @@ template {
 .fancybox__progress {
   background: #6498ff !important;
 }
+.fancybox__thumbs .carousel__slide .fancybox__thumb::after {
+  border-color: #6498ff !important;
+}
+mjx-math {
+  font-size: 80% !important;
+}
 .limit-one-line,
 #article-container .flink .flink-item-name,
 #article-container .flink .flink-item-desc,
@@ -4148,6 +4154,9 @@ h1.page-title + .tag-cloud-list {
 }
 .katex-wrap {
   overflow: auto;
+}
+.katex-wrap::-webkit-scrollbar {
+  display: none;
 }
 mjx-container[display],
 .has-jax {

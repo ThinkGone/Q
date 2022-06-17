@@ -2115,6 +2115,12 @@ figure.highlight pre .javascript .function {
   margin-left: -10px;
   width: 0;
 }
+#article-container .flink .flink-list > .flink-list-item:hover .flink-item-name {
+  color: #fff !important;
+}
+#article-container .flink .flink-list > .flink-list-item:hover .flink-item-desc {
+  color: #fff !important;
+}
 #article-container .flink .flink-list > .flink-list-item:before {
   position: absolute;
   top: 0;

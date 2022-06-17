@@ -178,6 +178,12 @@ template {
 [hidden] {
   display: none
 }
+#article-container pre {
+  font-size: 85% !important;
+}
+.copy-button:hover {
+  color: #395386 !important;
+}
 .fancybox__progress {
   background: #6498ff !important;
 }
@@ -1426,7 +1432,7 @@ a {
   overflow-wrap: break-word;
 }
 a:hover {
-  color: #49b1f5;
+  color: #395386;
 }
 .is-center {
   text-align: center;
@@ -2774,6 +2780,13 @@ h1.page-title + .tag-cloud-list {
   -ms-transition: filter 375ms ease-in 0.2s, -ms-transform 0.3s;
   transition: filter 375ms ease-in 0.2s, transform 0.3s;
   object-fit: cover;
+}
+.avatar-img img:hover {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 @media screen and (min-width: 900px) {
   html.hide-aside .layout {

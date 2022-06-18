@@ -1286,7 +1286,6 @@ hr:before,
   --btn-hover-color: transparent;
   --btn-color: #fff;
   --btn-bg: #395386;
-  --text-bg-hover: #395386;
   --light-grey: #eee;
   --dark-grey: #cacaca;
   --white: #fff;
@@ -2117,9 +2116,11 @@ figure.highlight pre .javascript .function {
 }
 #article-container .flink .flink-list > .flink-list-item:hover .flink-item-name {
   color: #fff !important;
+  background: #629ed2 !important;
 }
 #article-container .flink .flink-list > .flink-list-item:hover .flink-item-desc {
   color: #fff !important;
+  background: #395386 !important;
 }
 #article-container .flink .flink-list > .flink-list-item:before {
   position: absolute;

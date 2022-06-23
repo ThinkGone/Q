@@ -1286,6 +1286,7 @@ hr:before,
   --btn-hover-color: transparent;
   --btn-color: #fff;
   --btn-bg: #395386;
+  --text-bg-hover: #395386;
   --light-grey: #eee;
   --dark-grey: #cacaca;
   --white: #fff;
@@ -2129,7 +2130,7 @@ figure.highlight pre .javascript .function {
   bottom: 0;
   left: 0;
   z-index: -1;
-  background: var(--text-bg-hover);
+  background: none;
   content: '';
   -webkit-transition: -webkit-transform 0.3s ease-out;
   -moz-transition: -moz-transform 0.3s ease-out;

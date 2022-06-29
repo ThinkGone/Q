@@ -145,6 +145,23 @@
       </tags>
   </entry>
   <entry>
+    <title>Butterfly主题解决方案</title>
+    <url>/2022/04/30/Butterfly%E4%B8%BB%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<h2 id="解决文章顶部图和背景不切合的问题"><a href="#解决文章顶部图和背景不切合的问题" class="headerlink" title="解决文章顶部图和背景不切合的问题"></a>解决文章顶部图和背景不切合的问题</h2><p>如果使用主题配置文件中的 default_top_img 将背景图和顶部图改为一致的话<br>可能会出现顶部图和背景图不切合的如下情况：<br><img src="https://s2.loli.net/2022/04/30/XNifFjKGJ1eLdPh.png"><br>注意到这边背景图是有部分在上方的，只是被顶部图覆盖住了<br>所以我们可以 <strong>取消顶部图显示</strong><br>即 <strong>取消 default_top_img</strong><br>但是顶部图重新填充了蓝色<br><strong>注释掉在前几行的 background-color: $light-blue</strong> 即可<br>效果如下：<br><img src="https://s2.loli.net/2022/04/30/X9vH83qYyCzoFQP.png"></p>
+<h2 id="解决在主题配置文件修改滑动条颜色不成功的问题"><a href="#解决在主题配置文件修改滑动条颜色不成功的问题" class="headerlink" title="解决在主题配置文件修改滑动条颜色不成功的问题"></a>解决在主题配置文件修改滑动条颜色不成功的问题</h2><p>当我们修改主题配置文件，想要修改滑动条颜色时，可能会出现颜色没有变化的情况<br>怎么办呢？<br>我们可以 <strong>直接修改源码</strong><br>找到 <strong>&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;_global&#x2F;</strong> 下的 <strong>index.styl</strong> 文件<br>查询 –scrollbar-color: $scrollbar-color<br>修改为自己喜欢的颜色即可  </p>
+<h2 id="主页顶部图颜色较深"><a href="#主页顶部图颜色较深" class="headerlink" title="主页顶部图颜色较深"></a>主页顶部图颜色较深</h2><p>经检测，顶部图颜色较深的代码在：<br><strong>&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;_layout&#x2F;</strong> 目录下的 <strong>head.styl</strong> 文件中  </p>
+<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">&amp;:not</span>(.not-<span class="attribute">top</span>-img):before</span><br><span class="line">  <span class="attribute">position</span>: absolute</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span></span><br><span class="line">  <span class="attribute">background-color</span>: alpha(<span class="variable">$dark</span>-black, .<span class="number">3</span>) // 即rgba(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.3</span>)，使得顶部图颜色较深</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>将其中的颜色属性设为 0 即可</p>
+<h2 id="文章顶部图颜色较深"><a href="#文章顶部图颜色较深" class="headerlink" title="文章顶部图颜色较深"></a>文章顶部图颜色较深</h2><p>同样在 head.styl 文件中找到如下代码并修改： </p>
+<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="comment">// post</span></span><br><span class="line">  &amp;<span class="selector-class">.post-bg</span></span><br><span class="line">    <span class="attribute">height</span>: <span class="number">400px</span></span><br><span class="line"></span><br><span class="line">    +maxWidth768()</span><br><span class="line">      <span class="attribute">height</span>: <span class="number">360px</span></span><br><span class="line"></span><br><span class="line">    &amp;:before</span><br><span class="line">      <span class="attribute">background-color</span>: alpha(<span class="variable">$dark</span>-black, .<span class="number">5</span>)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>解决方案</category>
+      </categories>
+      <tags>
+        <tag>Butterfly</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>基于Github的Blog绑定阿里云域名</title>
     <url>/2022/02/04/GitHub%E7%BB%91%E5%AE%9A%E9%98%BF%E9%87%8C%E4%BA%91%E5%9F%9F%E5%90%8D/</url>
     <content><![CDATA[<p>这篇文章主要介绍基于Github的Blog绑定阿里云域名</p>
@@ -164,23 +181,6 @@
       </categories>
       <tags>
         <tag>Blog搭建</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Butterfly主题解决方案</title>
-    <url>/2022/04/30/Butterfly%E4%B8%BB%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<h2 id="解决文章顶部图和背景不切合的问题"><a href="#解决文章顶部图和背景不切合的问题" class="headerlink" title="解决文章顶部图和背景不切合的问题"></a>解决文章顶部图和背景不切合的问题</h2><p>如果使用主题配置文件中的 default_top_img 将背景图和顶部图改为一致的话<br>可能会出现顶部图和背景图不切合的如下情况：<br><img src="https://s2.loli.net/2022/04/30/XNifFjKGJ1eLdPh.png"><br>注意到这边背景图是有部分在上方的，只是被顶部图覆盖住了<br>所以我们可以 <strong>取消顶部图显示</strong><br>即 <strong>取消 default_top_img</strong><br>但是顶部图重新填充了蓝色<br><strong>注释掉在前几行的 background-color: $light-blue</strong> 即可<br>效果如下：<br><img src="https://s2.loli.net/2022/04/30/X9vH83qYyCzoFQP.png"></p>
-<h2 id="解决在主题配置文件修改滑动条颜色不成功的问题"><a href="#解决在主题配置文件修改滑动条颜色不成功的问题" class="headerlink" title="解决在主题配置文件修改滑动条颜色不成功的问题"></a>解决在主题配置文件修改滑动条颜色不成功的问题</h2><p>当我们修改主题配置文件，想要修改滑动条颜色时，可能会出现颜色没有变化的情况<br>怎么办呢？<br>我们可以 <strong>直接修改源码</strong><br>找到 <strong>&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;_global&#x2F;</strong> 下的 <strong>index.styl</strong> 文件<br>查询 –scrollbar-color: $scrollbar-color<br>修改为自己喜欢的颜色即可  </p>
-<h2 id="主页顶部图颜色较深"><a href="#主页顶部图颜色较深" class="headerlink" title="主页顶部图颜色较深"></a>主页顶部图颜色较深</h2><p>经检测，顶部图颜色较深的代码在：<br><strong>&#x2F;butterfly&#x2F;source&#x2F;css&#x2F;_layout&#x2F;</strong> 目录下的 <strong>head.styl</strong> 文件中  </p>
-<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">&amp;:not</span>(.not-<span class="attribute">top</span>-img):before</span><br><span class="line">  <span class="attribute">position</span>: absolute</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span></span><br><span class="line">  <span class="attribute">background-color</span>: alpha(<span class="variable">$dark</span>-black, .<span class="number">3</span>) // 即rgba(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.3</span>)，使得顶部图颜色较深</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-<p>将其中的颜色属性设为 0 即可</p>
-<h2 id="文章顶部图颜色较深"><a href="#文章顶部图颜色较深" class="headerlink" title="文章顶部图颜色较深"></a>文章顶部图颜色较深</h2><p>同样在 head.styl 文件中找到如下代码并修改： </p>
-<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="comment">// post</span></span><br><span class="line">  &amp;<span class="selector-class">.post-bg</span></span><br><span class="line">    <span class="attribute">height</span>: <span class="number">400px</span></span><br><span class="line"></span><br><span class="line">    +maxWidth768()</span><br><span class="line">      <span class="attribute">height</span>: <span class="number">360px</span></span><br><span class="line"></span><br><span class="line">    &amp;:before</span><br><span class="line">      <span class="attribute">background-color</span>: alpha(<span class="variable">$dark</span>-black, .<span class="number">5</span>)</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>解决方案</category>
-      </categories>
-      <tags>
-        <tag>Butterfly</tag>
       </tags>
   </entry>
   <entry>
@@ -287,6 +287,55 @@
       </tags>
   </entry>
   <entry>
+    <title>VsCode-C/C++编译环境配置</title>
+    <url>/2022/05/01/VsCode-C-C-%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><h3 id="下载-VsCode"><a href="#下载-VsCode" class="headerlink" title="下载 VsCode"></a>下载 VsCode</h3><p>官网地址：<a href="https://code.visualstudio.com/">Code Editing</a></p>
+<h3 id="下载-MinGW64编译器"><a href="#下载-MinGW64编译器" class="headerlink" title="下载 MinGW64编译器"></a>下载 MinGW64编译器</h3><p>官网地址：<a href="https://www.mingw-w64.org/">MinGW64</a></p>
+<h2 id="配置系统环境变量"><a href="#配置系统环境变量" class="headerlink" title="配置系统环境变量"></a>配置系统环境变量</h2><p>Win+I 打开系统设置<br>找到 <strong>编辑系统环境变量</strong><br>点击 <strong>高级</strong> &gt; <strong>环境变量</strong> &gt; <strong>选定 Path 进行编辑</strong><br>添加进你安装的 MinGW64 编译器的 <strong>路径</strong><br>例如我的就是：D:\Program\mingw-w64\mingw64\bin<br><img src="https://s2.loli.net/2022/05/01/SZj5xDITXehoyW9.png"></p>
+<h2 id="配置相关文件"><a href="#配置相关文件" class="headerlink" title="配置相关文件"></a>配置相关文件</h2><h3 id="安装-C-x2F-C-扩展"><a href="#安装-C-x2F-C-扩展" class="headerlink" title="安装 C&#x2F;C++ 扩展"></a>安装 C&#x2F;C++ 扩展</h3><p>进入 VsCode 找到左侧栏的 Extensions<br>一般安装如下扩展：</p>
+<ul>
+<li>C&#x2F;C++</li>
+<li>Chinese (Simplified)(简体中文)</li>
+<li>Code Runner</li>
+</ul>
+<h3 id="设置编译器路径"><a href="#设置编译器路径" class="headerlink" title="设置编译器路径"></a>设置编译器路径</h3><p>新建 Code 文件夹用来保存项目文件<br>在 Code 文件夹中右键点击 <strong>用Code打开</strong> 进入 VsCode<br>接下来配置编译器路径<br>按快捷键Ctrl+Shift+P调出命令面板，输入C&#x2F;C++，选 <strong>Edit Configurations(UI)</strong> 进入配置<br><img src="https://s2.loli.net/2022/05/01/RWZGvOlSV8dxzLK.png"><br>在里面找到 <strong>编译器路径</strong> 修改成 MinGW64路径，再将下方的 InteliSense模式 改为 <strong>gcc-x64</strong> 即可<br>这时我们可以发现文件夹中多了一个 <strong>.vscode</strong> 的文件夹，证明配置成功<br>接下来配置三个主要的文件</p>
+<h3 id="c-cpp-properties-json"><a href="#c-cpp-properties-json" class="headerlink" title="c_cpp_properties.json"></a>c_cpp_properties.json</h3><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Win32&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;includePath&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;$&#123;workspaceFolder&#125;/**&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;defines&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;_DEBUG&quot;</span>,</span><br><span class="line">                <span class="string">&quot;UNICODE&quot;</span>,</span><br><span class="line">                <span class="string">&quot;_UNICODE&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;compilerPath&quot;</span>: <span class="string">&quot;D:/Program/mingw-w64/mingw64/bin/g++.exe&quot;</span>,<span class="comment">//编译器的路径</span></span><br><span class="line">            <span class="attr">&quot;cStandard&quot;</span>: <span class="string">&quot;c17&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;cppStandard&quot;</span>: <span class="string">&quot;c++17&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;intelliSenseMode&quot;</span>: <span class="string">&quot;gcc-x64&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="number">4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="tasks-json"><a href="#tasks-json" class="headerlink" title="tasks.json"></a>tasks.json</h3><p>接下来，创建一个tasks.json文件来告诉VS Code如何构建（编译）程序<br>该任务将调用g++编译器基于源代码创建可执行文件<br>按快捷键 Ctrl+Shift+P 调出命令面板，输入 tasks，选择 <strong>Tasks:Configure Default Build Task</strong><br><img src="https://s2.loli.net/2022/05/01/OHUebX3C1SPmzKG.png"><br>再选择 <strong>C&#x2F;C++: g++.exe build active file</strong><br><img src="https://s2.loli.net/2022/05/01/Hv5Jqiwl6Yhu1QI.png"><br>接下来在 .vscode 文件夹中就会出现 <strong>tasks.json</strong> 的配置文件<br>可以参考我的配置：  </p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">&quot;version&quot;</span>: <span class="string">&quot;2.0.0&quot;</span>,</span><br><span class="line">	<span class="attr">&quot;tasks&quot;</span>: [</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="attr">&quot;type&quot;</span>: <span class="string">&quot;cppbuild&quot;</span>,</span><br><span class="line">			<span class="attr">&quot;label&quot;</span>: <span class="string">&quot;g++.exe build active file&quot;</span>,</span><br><span class="line">			<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;D:/Program/mingw-w64/mingw64/bin/g++.exe&quot;</span>,<span class="comment">//编译器路径</span></span><br><span class="line">			<span class="attr">&quot;args&quot;</span>: [</span><br><span class="line">				<span class="string">&quot;-fdiagnostics-color=always&quot;</span>,</span><br><span class="line">				<span class="string">&quot;-g&quot;</span>,</span><br><span class="line">				<span class="string">&quot;$&#123;file&#125;&quot;</span>,</span><br><span class="line">				<span class="string">&quot;-o&quot;</span>,</span><br><span class="line">				<span class="string">&quot;$&#123;fileDirname&#125;\\$&#123;fileBasenameNoExtension&#125;.exe&quot;</span></span><br><span class="line">			],</span><br><span class="line">			<span class="attr">&quot;options&quot;</span>: &#123;</span><br><span class="line">				<span class="attr">&quot;cwd&quot;</span>: <span class="string">&quot;D:/Program/mingw-w64/mingw64/bin&quot;</span></span><br><span class="line">			&#125;,<span class="comment">//bin为存放编译器和调试器的文件夹</span></span><br><span class="line">			<span class="attr">&quot;problemMatcher&quot;</span>: [</span><br><span class="line">				<span class="string">&quot;$gcc&quot;</span></span><br><span class="line">			],</span><br><span class="line">			<span class="attr">&quot;group&quot;</span>: &#123;</span><br><span class="line">				<span class="attr">&quot;kind&quot;</span>: <span class="string">&quot;build&quot;</span>,</span><br><span class="line">				<span class="attr">&quot;isDefault&quot;</span>: <span class="literal">true</span></span><br><span class="line">			&#125;,</span><br><span class="line">			<span class="attr">&quot;detail&quot;</span>: <span class="string">&quot;编译器: D:/Program/mingw-w64/mingw64/bin/g++.exe&quot;</span></span><br><span class="line">		&#125;</span><br><span class="line">	]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="launch-json"><a href="#launch-json" class="headerlink" title="launch.json"></a>launch.json</h3><p>点击菜单栏的 <strong>Debug–&gt;Start Debugging</strong> 或者直接按键盘 <strong>F5</strong><br>会在 .vscode 文件夹中生成一个 <strong>launch.json</strong> 的配置文件<br>我的配置如下：  </p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">// Use IntelliSense to learn about possible attributes.</span></span><br><span class="line">    <span class="comment">// Hover to view descriptions of existing attributes.</span></span><br><span class="line">    <span class="comment">// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;0.2.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span>: [</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;(gdb) Launch&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;preLaunchTask&quot;</span>: <span class="string">&quot;g++.exe build active file&quot;</span>,<span class="comment">//调试前执行的任务，就是之前配置的tasks.json中的label字段</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span>: <span class="string">&quot;cppdbg&quot;</span>,<span class="comment">//配置类型，只能为cppdbg</span></span><br><span class="line">            <span class="attr">&quot;request&quot;</span>: <span class="string">&quot;launch&quot;</span>,<span class="comment">//请求配置类型，可以为launch（启动）或attach（附加）</span></span><br><span class="line">            <span class="attr">&quot;program&quot;</span>: <span class="string">&quot;$&#123;fileDirname&#125;\\$&#123;fileBasenameNoExtension&#125;.exe&quot;</span>,<span class="comment">//调试程序的路径名称</span></span><br><span class="line">            <span class="attr">&quot;args&quot;</span>: [],<span class="comment">//调试传递参数</span></span><br><span class="line">            <span class="attr">&quot;stopAtEntry&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">&quot;cwd&quot;</span>: <span class="string">&quot;$&#123;workspaceFolder&#125;&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;environment&quot;</span>: [],</span><br><span class="line">            <span class="attr">&quot;externalConsole&quot;</span>: <span class="literal">true</span>,<span class="comment">//true显示外置的控制台窗口，false显示内置终端</span></span><br><span class="line">            <span class="attr">&quot;MIMode&quot;</span>: <span class="string">&quot;gdb&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;miDebuggerPath&quot;</span>: <span class="string">&quot;D:\\Program\\mingw-w64\\mingw64\\bin\\gdb.exe&quot;</span>,<span class="comment">//调试器路径</span></span><br><span class="line">            <span class="attr">&quot;setupCommands&quot;</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;Enable pretty-printing for gdb&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;text&quot;</span>: <span class="string">&quot;-enable-pretty-printing&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;ignoreFailures&quot;</span>: <span class="literal">true</span></span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="运行测试"><a href="#运行测试" class="headerlink" title="运行测试"></a>运行测试</h2><p>写一个 hello world! 的程序测试下环境配置是否成功<br>记得要在末尾插入 <strong>system(“pause”)</strong> 的代码，不然程序会闪一下就消失了<br>出现如图所示结果则成功：<br><img src="https://s2.loli.net/2022/05/01/rcnTyzsLo21SNRY.png"></p>
+]]></content>
+      <categories>
+        <category>开发环境配置</category>
+      </categories>
+      <tags>
+        <tag>VsCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>「Wdoi-6」走在夜晚的莲台野-题解</title>
+    <url>/2022/05/14/%E3%80%8CWdoi-6%E3%80%8D%E8%B5%B0%E5%9C%A8%E5%A4%9C%E6%99%9A%E7%9A%84%E8%8E%B2%E5%8F%B0%E9%87%8E-%E9%A2%98%E8%A7%A3/</url>
+    <content><![CDATA[<p>看难度就明白这是道签到题</p>
+<h2 id="1-思路"><a href="#1-思路" class="headerlink" title="1.思路"></a>1.思路</h2><p>题目要求我们将所有板子 <strong>放过</strong> 就行，但放入金就会清空银。<br>所以我们要在放金之前 <strong>尽可能多放银</strong>。<br>这就是标签所说的贪心。</p>
+<h2 id="2-解法"><a href="#2-解法" class="headerlink" title="2.解法"></a>2.解法</h2><p>由以上思路可得：<br>放银的数目依次为 $z-1$、$z-2$ $…$ $z-x$。<br>由等差数列公式：<br>最多可以放 $\frac{x*(z-x+z-1)}{2}$ 个银，令该式子为 $\sigma$。<br>我们得到如下几种情况：  </p>
+<ul>
+<li>$x$ 恰好满足放入所有 $y$ 后 $x$ 被清空。</li>
+<li>$x$ 恰好满足放入所有 $y$ 后 $x$ 被清空不足。</li>
+<li>$x$ 恰好满足放入所有 $y$ 后 $x$ 被清空有余。</li>
+</ul>
+<p>而这三种情况依次对应 $&#x3D;\sigma$、$&lt;\sigma$、$&gt;\sigma$ 的情况。<br>分别为 $case1\ $ $case2\ $ $case3\ $。<br>$case1$： 显然满足要求。<br>$case2$： 翻译过来就是金放完了银有剩，则只需要剩下的银数量 <strong>小于等于</strong> 可放位置的数量就行了。<br>$case3$： 银放完了金有剩，具体剩多少呢？<br>我们令此时消耗的金数量为 $x_0$ 则将 $x_0$ 带入 $\sigma$ 式。<br>整理一下得到关于 $x_0$ 的式子：<br>$x_0^2-(2z-1)x_0+2y&#x3D;0$。<br>得到：$x_0&#x3D;\lfloor\frac{2z-1+\sqrt[]{(2z-1)^2-8y}}{2}\rfloor$。<br>同 $case2$ 理即可求解。</p>
+<h2 id="3-Code"><a href="#3-Code" class="headerlink" title="3.Code"></a>3.Code</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll T,x,y,z;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;T);</span><br><span class="line">	<span class="keyword">while</span>(T--)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%lld%lld%lld&quot;</span>,&amp;x,&amp;y,&amp;z);</span><br><span class="line">		<span class="keyword">if</span>(x&gt;z)&#123;<span class="built_in">printf</span>(<span class="string">&quot;Merry\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		ll judge=x*(<span class="number">2</span>*z-x<span class="number">-1</span>)/<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span>(judge==y)&#123;<span class="built_in">printf</span>(<span class="string">&quot;Renko\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		<span class="keyword">if</span>(judge&lt;y&amp;&amp;(y-judge&lt;=z-x))&#123;<span class="built_in">printf</span>(<span class="string">&quot;Renko\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		<span class="keyword">int</span> x0=(<span class="number">2</span>*z<span class="number">-1</span>+<span class="built_in">sqrt</span>((<span class="number">2</span>*z<span class="number">-1</span>)*(<span class="number">2</span>*z<span class="number">-1</span>)<span class="number">-8</span>*y))/<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span>(judge&gt;y&amp;&amp;(x-x0)&lt;=z)&#123;<span class="built_in">printf</span>(<span class="string">&quot;Renko\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;Merry\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>洛谷题解</category>
+      </categories>
+      <tags>
+        <tag>贪心</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>中国剩余定理</title>
     <url>/2022/02/04/%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</url>
     <content><![CDATA[<p>这篇文章主要介绍<strong>中国剩余定理及其解法</strong>以及<strong>代码实现</strong></p>
@@ -350,6 +399,44 @@
       </tags>
   </entry>
   <entry>
+    <title>古代文学常识碎记</title>
+    <url>/2022/05/24/%E5%8F%A4%E4%BB%A3%E6%96%87%E5%AD%A6%E5%B8%B8%E8%AF%86%E7%A2%8E%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="与政事有关"><a href="#与政事有关" class="headerlink" title="与政事有关"></a>与政事有关</h2><p>（1）诣：到，去。</p>
+<p>（2）劝：①鼓励，奖励；②受到鼓励、奖励。</p>
+<p>（3）课：考核、督促、征收。</p>
+<p>（4）风、化：教育感化。</p>
+<p>（5）按、案：巡视，巡行；考察，核实，查明。</p>
+<p>（6）游：①游玩，游览；②旅行，外出求学或求官；③交际，交往。</p>
+<p>（7）趣、趋：①小步走，跑；又引申为赶快，迅速。②通“促”，催促。</p>
+<p>（8）劾：检举，揭发。</p>
+<p>（9）白：告诉，报告。常用于官吏之间。</p>
+<p>（10）短：进谗言，说坏话。</p>
+<p>（11）害：嫉妒。</p>
+<p>（12）闻：</p>
+<p>   ①听说，听见；</p>
+<p>   ②使知道，报告给……知道。对于义；</p>
+<p>   ③要特别注意。其中省略的人往往是最高统治者——国君，强化了这一点，阅读时就不至于认为下文中国    君和主人公发生的事件显得突兀。怎么国君知道了并参加进来了呢？其实就是“闻”字在起作用。如“没死以    闻”，“齐桓晋文之事可得闻乎”。</p>
+<p>（13）折：指斥，指责，驳斥。</p>
+<p>（14）让：①责备，责怪；②谦让，辞让。</p>
+<p>（15）党：偏袒，伙同，包庇。</p>
+<p>（16）矫：假托，假传。</p>
+<p>（17）质：作人质；抵押。</p>
+<p>（18）次：①临时驻扎(用于军队)；②住宿，停留（用于个人）。</p>
+<p>（19）输：缴纳（贡品或赋税）——由“输送、运输”引申。</p>
+<p>（20）当：判刑，判罪。后多带表示惩罚意义的词语。</p>
+<p>（21）坐：①因……犯罪或错误，触犯；②牵连，定罪。</p>
+<p>（22）多：赞扬,欣赏。“高、贵”等字，若带宾语，就是意动，也意译为此。</p>
+<p>（23）少：批评，轻视，看不起。</p>
+<h2 id="碎记"><a href="#碎记" class="headerlink" title="碎记"></a>碎记</h2><p>（1）移疾：意同移病。释义为旧时官员上书称病，多为居官者求退的婉辞。<br>（2）名、字：名为出生不久后由父亲取。在《礼记·曲礼上》记有：男子二十冠而字。<br>（3）汤武：周武王和商汤（非商汤和孙武）<br>（4）建储：建立储君，立皇太子<br>（5）三晋：赵、魏、韩三国，在春秋时是晋国<br>（6）有司：只是“官吏的通称”，各有专司（不能用来指称朝廷中的“各级官员”）</p>
+]]></content>
+      <categories>
+        <category>高中理科</category>
+      </categories>
+      <tags>
+        <tag>语文</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>同余&amp;逆元&amp;不定方程</title>
     <url>/2022/02/04/%E5%90%8C%E4%BD%99/</url>
     <content><![CDATA[<p>这篇文章主要介绍<strong>同余</strong>&amp;<strong>逆元</strong>&amp;<strong>不定方程</strong>及<strong>代码实现</strong></p>
@@ -391,33 +478,6 @@
       </tags>
   </entry>
   <entry>
-    <title>VsCode-C/C++编译环境配置</title>
-    <url>/2022/05/01/VsCode-C-C-%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><h3 id="下载-VsCode"><a href="#下载-VsCode" class="headerlink" title="下载 VsCode"></a>下载 VsCode</h3><p>官网地址：<a href="https://code.visualstudio.com/">Code Editing</a></p>
-<h3 id="下载-MinGW64编译器"><a href="#下载-MinGW64编译器" class="headerlink" title="下载 MinGW64编译器"></a>下载 MinGW64编译器</h3><p>官网地址：<a href="https://www.mingw-w64.org/">MinGW64</a></p>
-<h2 id="配置系统环境变量"><a href="#配置系统环境变量" class="headerlink" title="配置系统环境变量"></a>配置系统环境变量</h2><p>Win+I 打开系统设置<br>找到 <strong>编辑系统环境变量</strong><br>点击 <strong>高级</strong> &gt; <strong>环境变量</strong> &gt; <strong>选定 Path 进行编辑</strong><br>添加进你安装的 MinGW64 编译器的 <strong>路径</strong><br>例如我的就是：D:\Program\mingw-w64\mingw64\bin<br><img src="https://s2.loli.net/2022/05/01/SZj5xDITXehoyW9.png"></p>
-<h2 id="配置相关文件"><a href="#配置相关文件" class="headerlink" title="配置相关文件"></a>配置相关文件</h2><h3 id="安装-C-x2F-C-扩展"><a href="#安装-C-x2F-C-扩展" class="headerlink" title="安装 C&#x2F;C++ 扩展"></a>安装 C&#x2F;C++ 扩展</h3><p>进入 VsCode 找到左侧栏的 Extensions<br>一般安装如下扩展：</p>
-<ul>
-<li>C&#x2F;C++</li>
-<li>Chinese (Simplified)(简体中文)</li>
-<li>Code Runner</li>
-</ul>
-<h3 id="设置编译器路径"><a href="#设置编译器路径" class="headerlink" title="设置编译器路径"></a>设置编译器路径</h3><p>新建 Code 文件夹用来保存项目文件<br>在 Code 文件夹中右键点击 <strong>用Code打开</strong> 进入 VsCode<br>接下来配置编译器路径<br>按快捷键Ctrl+Shift+P调出命令面板，输入C&#x2F;C++，选 <strong>Edit Configurations(UI)</strong> 进入配置<br><img src="https://s2.loli.net/2022/05/01/RWZGvOlSV8dxzLK.png"><br>在里面找到 <strong>编译器路径</strong> 修改成 MinGW64路径，再将下方的 InteliSense模式 改为 <strong>gcc-x64</strong> 即可<br>这时我们可以发现文件夹中多了一个 <strong>.vscode</strong> 的文件夹，证明配置成功<br>接下来配置三个主要的文件</p>
-<h3 id="c-cpp-properties-json"><a href="#c-cpp-properties-json" class="headerlink" title="c_cpp_properties.json"></a>c_cpp_properties.json</h3><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Win32&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;includePath&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;$&#123;workspaceFolder&#125;/**&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;defines&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;_DEBUG&quot;</span>,</span><br><span class="line">                <span class="string">&quot;UNICODE&quot;</span>,</span><br><span class="line">                <span class="string">&quot;_UNICODE&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;compilerPath&quot;</span>: <span class="string">&quot;D:/Program/mingw-w64/mingw64/bin/g++.exe&quot;</span>,<span class="comment">//编译器的路径</span></span><br><span class="line">            <span class="attr">&quot;cStandard&quot;</span>: <span class="string">&quot;c17&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;cppStandard&quot;</span>: <span class="string">&quot;c++17&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;intelliSenseMode&quot;</span>: <span class="string">&quot;gcc-x64&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="number">4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="tasks-json"><a href="#tasks-json" class="headerlink" title="tasks.json"></a>tasks.json</h3><p>接下来，创建一个tasks.json文件来告诉VS Code如何构建（编译）程序<br>该任务将调用g++编译器基于源代码创建可执行文件<br>按快捷键 Ctrl+Shift+P 调出命令面板，输入 tasks，选择 <strong>Tasks:Configure Default Build Task</strong><br><img src="https://s2.loli.net/2022/05/01/OHUebX3C1SPmzKG.png"><br>再选择 <strong>C&#x2F;C++: g++.exe build active file</strong><br><img src="https://s2.loli.net/2022/05/01/Hv5Jqiwl6Yhu1QI.png"><br>接下来在 .vscode 文件夹中就会出现 <strong>tasks.json</strong> 的配置文件<br>可以参考我的配置：  </p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">&quot;version&quot;</span>: <span class="string">&quot;2.0.0&quot;</span>,</span><br><span class="line">	<span class="attr">&quot;tasks&quot;</span>: [</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="attr">&quot;type&quot;</span>: <span class="string">&quot;cppbuild&quot;</span>,</span><br><span class="line">			<span class="attr">&quot;label&quot;</span>: <span class="string">&quot;g++.exe build active file&quot;</span>,</span><br><span class="line">			<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;D:/Program/mingw-w64/mingw64/bin/g++.exe&quot;</span>,<span class="comment">//编译器路径</span></span><br><span class="line">			<span class="attr">&quot;args&quot;</span>: [</span><br><span class="line">				<span class="string">&quot;-fdiagnostics-color=always&quot;</span>,</span><br><span class="line">				<span class="string">&quot;-g&quot;</span>,</span><br><span class="line">				<span class="string">&quot;$&#123;file&#125;&quot;</span>,</span><br><span class="line">				<span class="string">&quot;-o&quot;</span>,</span><br><span class="line">				<span class="string">&quot;$&#123;fileDirname&#125;\\$&#123;fileBasenameNoExtension&#125;.exe&quot;</span></span><br><span class="line">			],</span><br><span class="line">			<span class="attr">&quot;options&quot;</span>: &#123;</span><br><span class="line">				<span class="attr">&quot;cwd&quot;</span>: <span class="string">&quot;D:/Program/mingw-w64/mingw64/bin&quot;</span></span><br><span class="line">			&#125;,<span class="comment">//bin为存放编译器和调试器的文件夹</span></span><br><span class="line">			<span class="attr">&quot;problemMatcher&quot;</span>: [</span><br><span class="line">				<span class="string">&quot;$gcc&quot;</span></span><br><span class="line">			],</span><br><span class="line">			<span class="attr">&quot;group&quot;</span>: &#123;</span><br><span class="line">				<span class="attr">&quot;kind&quot;</span>: <span class="string">&quot;build&quot;</span>,</span><br><span class="line">				<span class="attr">&quot;isDefault&quot;</span>: <span class="literal">true</span></span><br><span class="line">			&#125;,</span><br><span class="line">			<span class="attr">&quot;detail&quot;</span>: <span class="string">&quot;编译器: D:/Program/mingw-w64/mingw64/bin/g++.exe&quot;</span></span><br><span class="line">		&#125;</span><br><span class="line">	]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="launch-json"><a href="#launch-json" class="headerlink" title="launch.json"></a>launch.json</h3><p>点击菜单栏的 <strong>Debug–&gt;Start Debugging</strong> 或者直接按键盘 <strong>F5</strong><br>会在 .vscode 文件夹中生成一个 <strong>launch.json</strong> 的配置文件<br>我的配置如下：  </p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">// Use IntelliSense to learn about possible attributes.</span></span><br><span class="line">    <span class="comment">// Hover to view descriptions of existing attributes.</span></span><br><span class="line">    <span class="comment">// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;0.2.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span>: [</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;(gdb) Launch&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;preLaunchTask&quot;</span>: <span class="string">&quot;g++.exe build active file&quot;</span>,<span class="comment">//调试前执行的任务，就是之前配置的tasks.json中的label字段</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span>: <span class="string">&quot;cppdbg&quot;</span>,<span class="comment">//配置类型，只能为cppdbg</span></span><br><span class="line">            <span class="attr">&quot;request&quot;</span>: <span class="string">&quot;launch&quot;</span>,<span class="comment">//请求配置类型，可以为launch（启动）或attach（附加）</span></span><br><span class="line">            <span class="attr">&quot;program&quot;</span>: <span class="string">&quot;$&#123;fileDirname&#125;\\$&#123;fileBasenameNoExtension&#125;.exe&quot;</span>,<span class="comment">//调试程序的路径名称</span></span><br><span class="line">            <span class="attr">&quot;args&quot;</span>: [],<span class="comment">//调试传递参数</span></span><br><span class="line">            <span class="attr">&quot;stopAtEntry&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">&quot;cwd&quot;</span>: <span class="string">&quot;$&#123;workspaceFolder&#125;&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;environment&quot;</span>: [],</span><br><span class="line">            <span class="attr">&quot;externalConsole&quot;</span>: <span class="literal">true</span>,<span class="comment">//true显示外置的控制台窗口，false显示内置终端</span></span><br><span class="line">            <span class="attr">&quot;MIMode&quot;</span>: <span class="string">&quot;gdb&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;miDebuggerPath&quot;</span>: <span class="string">&quot;D:\\Program\\mingw-w64\\mingw64\\bin\\gdb.exe&quot;</span>,<span class="comment">//调试器路径</span></span><br><span class="line">            <span class="attr">&quot;setupCommands&quot;</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;Enable pretty-printing for gdb&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;text&quot;</span>: <span class="string">&quot;-enable-pretty-printing&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;ignoreFailures&quot;</span>: <span class="literal">true</span></span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="运行测试"><a href="#运行测试" class="headerlink" title="运行测试"></a>运行测试</h2><p>写一个 hello world! 的程序测试下环境配置是否成功<br>记得要在末尾插入 <strong>system(“pause”)</strong> 的代码，不然程序会闪一下就消失了<br>出现如图所示结果则成功：<br><img src="https://s2.loli.net/2022/05/01/rcnTyzsLo21SNRY.png"></p>
-]]></content>
-      <categories>
-        <category>开发环境配置</category>
-      </categories>
-      <tags>
-        <tag>VsCode</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>模拟退火</title>
     <url>/2022/03/05/%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB/</url>
     <content><![CDATA[<p>这篇文章主要介绍<strong>模拟退火算法</strong>的原理以及实现</p>
@@ -441,25 +501,51 @@
       </tags>
   </entry>
   <entry>
-    <title>「Wdoi-6」走在夜晚的莲台野-题解</title>
-    <url>/2022/05/14/%E3%80%8CWdoi-6%E3%80%8D%E8%B5%B0%E5%9C%A8%E5%A4%9C%E6%99%9A%E7%9A%84%E8%8E%B2%E5%8F%B0%E9%87%8E-%E9%A2%98%E8%A7%A3/</url>
-    <content><![CDATA[<p>看难度就明白这是道签到题</p>
-<h2 id="1-思路"><a href="#1-思路" class="headerlink" title="1.思路"></a>1.思路</h2><p>题目要求我们将所有板子 <strong>放过</strong> 就行，但放入金就会清空银。<br>所以我们要在放金之前 <strong>尽可能多放银</strong>。<br>这就是标签所说的贪心。</p>
-<h2 id="2-解法"><a href="#2-解法" class="headerlink" title="2.解法"></a>2.解法</h2><p>由以上思路可得：<br>放银的数目依次为 $z-1$、$z-2$ $…$ $z-x$。<br>由等差数列公式：<br>最多可以放 $\frac{x*(z-x+z-1)}{2}$ 个银，令该式子为 $\sigma$。<br>我们得到如下几种情况：  </p>
-<ul>
-<li>$x$ 恰好满足放入所有 $y$ 后 $x$ 被清空。</li>
-<li>$x$ 恰好满足放入所有 $y$ 后 $x$ 被清空不足。</li>
-<li>$x$ 恰好满足放入所有 $y$ 后 $x$ 被清空有余。</li>
-</ul>
-<p>而这三种情况依次对应 $&#x3D;\sigma$、$&lt;\sigma$、$&gt;\sigma$ 的情况。<br>分别为 $case1\ $ $case2\ $ $case3\ $。<br>$case1$： 显然满足要求。<br>$case2$： 翻译过来就是金放完了银有剩，则只需要剩下的银数量 <strong>小于等于</strong> 可放位置的数量就行了。<br>$case3$： 银放完了金有剩，具体剩多少呢？<br>我们令此时消耗的金数量为 $x_0$ 则将 $x_0$ 带入 $\sigma$ 式。<br>整理一下得到关于 $x_0$ 的式子：<br>$x_0^2-(2z-1)x_0+2y&#x3D;0$。<br>得到：$x_0&#x3D;\lfloor\frac{2z-1+\sqrt[]{(2z-1)^2-8y}}{2}\rfloor$。<br>同 $case2$ 理即可求解。</p>
-<h2 id="3-Code"><a href="#3-Code" class="headerlink" title="3.Code"></a>3.Code</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll T,x,y,z;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;T);</span><br><span class="line">	<span class="keyword">while</span>(T--)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%lld%lld%lld&quot;</span>,&amp;x,&amp;y,&amp;z);</span><br><span class="line">		<span class="keyword">if</span>(x&gt;z)&#123;<span class="built_in">printf</span>(<span class="string">&quot;Merry\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		ll judge=x*(<span class="number">2</span>*z-x<span class="number">-1</span>)/<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span>(judge==y)&#123;<span class="built_in">printf</span>(<span class="string">&quot;Renko\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		<span class="keyword">if</span>(judge&lt;y&amp;&amp;(y-judge&lt;=z-x))&#123;<span class="built_in">printf</span>(<span class="string">&quot;Renko\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		<span class="keyword">int</span> x0=(<span class="number">2</span>*z<span class="number">-1</span>+<span class="built_in">sqrt</span>((<span class="number">2</span>*z<span class="number">-1</span>)*(<span class="number">2</span>*z<span class="number">-1</span>)<span class="number">-8</span>*y))/<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span>(judge&gt;y&amp;&amp;(x-x0)&lt;=z)&#123;<span class="built_in">printf</span>(<span class="string">&quot;Renko\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;Merry\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-]]></content>
+    <title>图论题型专解</title>
+    <url>/2022/05/22/%E5%9B%BE%E8%AE%BA%E9%A2%98%E5%9E%8B%E4%B8%93%E8%A7%A3/</url>
+    <content><![CDATA[<h1 id="Tarjan"><a href="#Tarjan" class="headerlink" title="Tarjan"></a>Tarjan</h1><h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><h3 id="缩点"><a href="#缩点" class="headerlink" title="缩点"></a>缩点</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">tarjan</span><span class="params">(<span class="keyword">int</span> u)</span></span>&#123;</span><br><span class="line">	dfn[u]=low[u]=++num;</span><br><span class="line">	stak[++top]=u;vis[u]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=head[u];i;i=edge[i].next)&#123;</span><br><span class="line">		<span class="keyword">int</span> v=edge[i].to;</span><br><span class="line">		<span class="keyword">if</span>(!dfn[v])&#123;</span><br><span class="line">			<span class="built_in">tarjan</span>(v);</span><br><span class="line">			low[u]=<span class="built_in">min</span>(low[u],low[v]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(vis[v]) low[u]=<span class="built_in">min</span>(low[u],low[v]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(dfn[u]==low[u])&#123;</span><br><span class="line">		tot++;</span><br><span class="line">		<span class="keyword">while</span>(stak[top]!=u)&#123;</span><br><span class="line">			vis[stak[top]]=<span class="number">0</span>;</span><br><span class="line">			color[stak[top]]=tot;</span><br><span class="line">			top--;</span><br><span class="line">		&#125;</span><br><span class="line">		top--;</span><br><span class="line">		vis[u]=<span class="number">0</span>;</span><br><span class="line">		color[u]=tot;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Tarjan技巧"><a href="#Tarjan技巧" class="headerlink" title="Tarjan技巧"></a>Tarjan技巧</h2><p>1.dfn可以作为mark一样的作用记录节点是否被访问<br>2.缩点更新low[u]的时候也可也写成low[u]&#x3D;min(low[u],dfn[v])  </p>
+<h2 id="题型"><a href="#题型" class="headerlink" title="题型"></a>题型</h2><h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
       <categories>
-        <category>洛谷题解</category>
+        <category>OI</category>
       </categories>
       <tags>
-        <tag>贪心</tag>
+        <tag>图论</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>竞赛数学公式结论</title>
+    <url>/2022/05/14/%E7%AB%9E%E8%B5%9B%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E7%BB%93%E8%AE%BA/</url>
+    <content><![CDATA[<p>这篇文章主要记录竞赛中的数学公式和结论</p>
+<h2 id="数列"><a href="#数列" class="headerlink" title="数列"></a>数列</h2><h3 id="Fibonacci"><a href="#Fibonacci" class="headerlink" title="Fibonacci"></a>Fibonacci</h3><h4 id="通项公式"><a href="#通项公式" class="headerlink" title="通项公式"></a>通项公式</h4><ul>
+<li>$f(n)&#x3D;\frac{1}{\sqrt[]{5}}[\frac{(1+\sqrt[]{5})^2}{2^n}-\frac{(1-\sqrt[]{5})^2}{2^n}]$</li>
+</ul>
+<h4 id="递推式"><a href="#递推式" class="headerlink" title="递推式"></a>递推式</h4><ul>
+<li>$f(n)&#x3D;f(n-1)+f(n-2)$</li>
+</ul>
+<h4 id="数论性质"><a href="#数论性质" class="headerlink" title="数论性质"></a>数论性质</h4><ul>
+<li>$gcd(f(n),f(m))&#x3D;f(gcd(n,m))$</li>
+</ul>
+<h2 id="排列组合"><a href="#排列组合" class="headerlink" title="排列组合"></a>排列组合</h2><h3 id="排列数"><a href="#排列数" class="headerlink" title="排列数"></a>排列数</h3><h4 id="错位排列"><a href="#错位排列" class="headerlink" title="错位排列"></a>错位排列</h4><p>若序列 $a$ 使得 $a_i\neq i$ 恒成立<br>则令组成该序列的不同方案数为 $D(n)$<br>则有： </p>
+<ul>
+<li>$D(n)&#x3D;(n-1)[D(n-1)+D(n-2)]$ 其中 $D(1)&#x3D;0\ $  $D(2)&#x3D;1$</li>
+</ul>
+<h3 id="组合数"><a href="#组合数" class="headerlink" title="组合数"></a>组合数</h3><h4 id="卢卡斯定理"><a href="#卢卡斯定理" class="headerlink" title="卢卡斯定理"></a>卢卡斯定理</h4><ul>
+<li>$C_m^n\equiv C_{m\ mod\ p}^{n\ mod\ p}\cdot C_{\lfloor{\frac{m}{p}}\rfloor}^{\lfloor{\frac{n}{p}}\rfloor}(mod\ p)$</li>
+</ul>
+<h2 id="概率论"><a href="#概率论" class="headerlink" title="概率论"></a>概率论</h2><h3 id="期望"><a href="#期望" class="headerlink" title="期望"></a>期望</h3><h4 id="多个独立事件发生-件数-的期望"><a href="#多个独立事件发生-件数-的期望" class="headerlink" title="多个独立事件发生 件数 的期望"></a>多个独立事件发生 <strong>件数</strong> 的期望</h4><ul>
+<li>$p_1+p_2+p_3+…+p_n$</li>
+</ul>
+<h2 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h2><h3 id="约数"><a href="#约数" class="headerlink" title="约数"></a>约数</h3><h4 id="正约数个数"><a href="#正约数个数" class="headerlink" title="正约数个数"></a>正约数个数</h4><p>令正整数 $x$ 的正约数个数为 $D(x)$<br>$x$ 的唯一分解形式为 $x&#x3D;p_1^{x_1}\cdot p_2^{x_2}\cdot…\    \cdot p_n^{x_n}$<br>则有：  </p>
+<ul>
+<li>$D(x)&#x3D;(x_1+1)(x_2+2)…(x_n+1)$</li>
+</ul>
+]]></content>
+      <categories>
+        <category>OI</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
       </tags>
   </entry>
   <entry>
@@ -480,7 +566,7 @@
   <entry>
     <title>高中化学碎记</title>
     <url>/2022/05/18/%E9%AB%98%E4%B8%AD%E5%8C%96%E5%AD%A6%E7%A2%8E%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="碎记"><a href="#碎记" class="headerlink" title="碎记"></a>碎记</h2><p>（1）苯酚是与甲醛反应才生成酚醛树脂<br>（2）苯环上甲基的氢原子只有卤族元素蒸汽并且光照才被取代<br>（3）苯环上的氢原子可以被液态卤族元素取代，要有催化剂<br>$\ \ \ \ \ \ \ \ $如：苯 + 液溴在 $Fe$ 的催化下苯环上的氢被取代<br>（4）苯酚可以和 $NaOH$ 反应而乙醇不行<br>（5）一个苯环最多被 $ 3 mol$ 的 $ H_2 $ 取代<br>（6）苯环上的 $H$ 被卤族元素取代时，一个 $H$ 原子消耗 $1mol$ 卤族元素<br>（7）一个碳碳双键可以消耗 $1mol$ $H_2$ 卤族元素同理<br>（8）苯的密度为 $0.87$ 小于水<br>（9）乙醛和银镜反应得到黑色沉淀的原因：<br>$\ \ \ \ \ \ \ \ $① 试管不干净 ② 加热温度过高（最适$60-70℃$）③ 加热过程中搅拌或振荡<br>$\ \ \ \ \ \ \ \ $得到的为粉末状的单质银，呈黑色<br>（10）羧酸的α-H指的是与羧基相连的碳原子上的氢，羧基原本的碳不计入<br>（11）酸性由大到小：高氯酸,氢碘酸,硫酸,氢溴酸,盐酸,硝酸,碘酸（以上为强酸）,草酸（乙二酸）,亚硫酸,磷酸,丙酮酸,亚硝酸（以上五种为中强酸）,柠檬酸,氢氟酸,苹果酸,葡萄糖酸,甲酸,乳酸,苯甲酸,丙烯酸,乙酸,丙酸,硬脂酸,碳酸,氢硫酸,次氯酸,硼酸,硅酸,苯酚（其余为弱酸或极弱酸）<br>（12）乙二酸的两个羧基直接相连,其酸性比其他二元羧酸都强<br>（13）类正四面体结构的二元羧酸，如：戊二酸的类正四面体二元酸，只有一种同分异构体<br>（14）戊二酸有四种结构，其中以四个碳作为碳链的同分异构体（支链上一甲基）仅有两种（可能误以为三种）<br>（15）苯酚可以和碳酸钠反应但不可以的碳酸氢钠反应<br>（16）需要可逆的有机反应为酯化和酯在酸性条件下水解<br>（17）酯在碱性条件下水解先加水生成羧酸和羟基，羧酸再和碱反应生成盐<br>（18）丙酮与水互溶<br>（19）相同分子质量的酮溶解度小于醇大于醚<br>（20）写方程式注意加成反应需要需要电性相反，而取代为电性相同取代电性相同<br>（21）葡萄糖溶液加 $Na$ 不能得到葡萄糖中含有羟基，因为溶液中有水<br>（22）葡萄糖结构简式： $CH_2OH(CHOH)_4CHO$<br>（23）果糖结构简式：$CH_2OH(CHOH)_3COCH_2OH$<br>（24）一醛 $\rightarrow$ 二银<br>（25）纤维素可以发生酯化<br>（26）含氮碱基速记：① 嘌呤有 $5$ 个氮，鸟嘌呤含氧 ② 胸腺嘧啶和尿嘧啶都有 $2$ 个氧，胸腺嘧啶多 $1$ 甲基<br>（27）羧酸可能含碳碳双键，所以有可能使溴水褪色<br>（28）因为羧基中的两个氧有共轭作用,羧基比酮和醛的羰基稳定的多,很多醛酮能够发生的反应,羧基都不能发生，即羧基不可以表现出酮和醛的性质<br>（29）不可用石蕊溶液证明脂类物质的酸性，会分层<br>（30）芳香酸中的羧基不一定直接连在苯环上<br>（31）酚不可以用石蕊<br>（32）制备乙酸乙酯：① 加热提高反应速率，使乙酸乙酯挥发便于收集，使平衡正向移动 ② 浓硫酸的作用是催化剂和吸水剂，分别提高反应速率和乙酸、乙醇的转化率 ③ 可以增加乙醇的量，增加冷凝回流装置，提高乙酸乙酯产率 ④ 加入顺序为：无水乙醇，浓硫酸，冰醋酸 ⑤ 饱和 $Na_2CO_3$ 的作用是收集乙酸乙酯，降低乙酸乙酯溶解度，吸收乙酸，溶解乙醇 ⑥ 导气管起到导气和冷凝的作用<br>（33）$[-CH&#x3D;CH-]_n$ 为聚乙炔，非聚乙烯 $ [-CH-CH-]_n$<br>（34）$1-3$丁二烯中的所有原子不一定共面<br>（35）烃只可以碳氧，烃衍生物不限<br>（36）一定要留意甲醛有两个醛基<br>（37）苯环上同分异构：<br>$\ \ \ \ \ \ \ \ $① 一取代只有 $1$ 种 ② 二取代不同的有 $3$ 种，相同也是 $3$ 种 ③ 三取代都不同的有 $10$ 种，两个相同的有 $6$ 种，三个相同的有 $3$ 种<br>（38）说明非金属性-&gt;<strong>最高价</strong>含氧酸<br>（39）非金属性 $\uparrow$，简单离子还原性 $\downarrow$<br>（40）非金属元素气态氧化物遇水反应生成气体有 $NO_2$<br>（41）同素异形体： $C、O、P、S$<br>（42）洪特规则：电子分布到能量简并的原子轨道时，优先以自旋相同的方式分别占据不同的轨道，因为这种排布方式原子的总能量最低<br>（43）泡利不相容原理：没有两个相同的费米子（具有半整数自旋的粒子，比如电子）能占据相同的量子态<br>（44）俯视-&gt;刻度线在液面下方-&gt;加的溶剂增多-&gt;浓度减小<br>（45）$CCl_4$ 不燃，是种灭火剂<br>（46）两种物质分离，溶解度随着温度变化呈现不同趋势可以用重结晶<br>（47）${NO_3}^-(H^+)$ 也有 <strong>氧化性</strong> ，所以证明金属离子氧化性强弱不可以用该金属 <strong>酸化后</strong> 的硝酸盐溶液<br>（48）由于体积不具有加和性，所以配置一定浓度的溶液时候一定要先知道配置后溶液的密度，再根据溶液质量计算<br>（49）制备纯净的 $Fe(OH)_2$ 时，胶头滴管尖嘴应插入溶液中，防止被氧化<br>（50）实验后废液倒入指定容器（不是水槽。。。）<br>（51）液态有机物密度比水小的有烃（烷、烯、炔、芳香烃）、低级酯、一氯代烃、乙醇、乙醛等；密度比水大的有硝基苯、溴苯、四氯化碳、氯仿、溴代烃、乙二醇、丙三醇等。烷、烯、炔等烃类同系物相对密度随着分子内碳原子数的增加的而增大；一氯代烷的相对密度随着碳原子数的增加而减小。（注意一氯甲烷为气体）<br>（52）苯可以发生氧化反应，如：点燃<br>（53）$-C&#x3D;N-$ 也可以加成<br>（54）加入氨基：硝化-&gt;还原<br>（55）蛋白质的一级结构有肽键<br>（56）$CuSO_4$ 会使蛋白质变性  </p>
+    <content><![CDATA[<h2 id="碎记"><a href="#碎记" class="headerlink" title="碎记"></a>碎记</h2><p>（1）苯酚是与甲醛反应才生成酚醛树脂<br>（2）苯环上甲基的氢原子只有卤族元素蒸汽并且光照才被取代<br>（3）苯环上的氢原子可以被液态卤族元素取代，要有催化剂<br>$\ \ \ \ \ \ \ \ $如：苯 + 液溴在 $Fe$ 的催化下苯环上的氢被取代<br>（4）苯酚可以和 $NaOH$ 反应而乙醇不行<br>（5）一个苯环最多被 $ 3 mol$ 的 $ H_2 $ 取代<br>（6）苯环上的 $H$ 被卤族元素取代时，一个 $H$ 原子消耗 $1mol$ 卤族元素<br>（7）一个碳碳双键可以消耗 $1mol$ $H_2$ 卤族元素同理<br>（8）苯的密度为 $0.87$ 小于水<br>（9）乙醛和银镜反应得到黑色沉淀的原因：<br>$\ \ \ \ \ \ \ \ $① 试管不干净 ② 加热温度过高（最适$60-70℃$）③ 加热过程中搅拌或振荡<br>$\ \ \ \ \ \ \ \ $得到的为粉末状的单质银，呈黑色<br>（10）羧酸的α-H指的是与羧基相连的碳原子上的氢，羧基原本的碳不计入<br>（11）酸性由大到小：高氯酸,氢碘酸,硫酸,氢溴酸,盐酸,硝酸,碘酸（以上为强酸）,草酸（乙二酸）,亚硫酸,磷酸,丙酮酸,亚硝酸（以上五种为中强酸）,柠檬酸,氢氟酸,苹果酸,葡萄糖酸,甲酸,乳酸,苯甲酸,丙烯酸,乙酸,丙酸,硬脂酸,碳酸,氢硫酸,次氯酸,硼酸,硅酸,苯酚（其余为弱酸或极弱酸）<br>（12）乙二酸的两个羧基直接相连,其酸性比其他二元羧酸都强<br>（13）类正四面体结构的二元羧酸，如：戊二酸的类正四面体二元酸，只有一种同分异构体<br>（14）戊二酸有四种结构，其中以四个碳作为碳链的同分异构体（支链上一甲基）仅有两种（可能误以为三种）<br>（15）苯酚可以和碳酸钠反应但不可以的碳酸氢钠反应<br>（16）需要可逆的有机反应为酯化和酯在酸性条件下水解<br>（17）酯在碱性条件下水解先加水生成羧酸和羟基，羧酸再和碱反应生成盐<br>（18）丙酮与水互溶<br>（19）相同分子质量的酮溶解度小于醇大于醚<br>（20）写方程式注意加成反应需要需要电性相反，而取代为电性相同取代电性相同<br>（21）葡萄糖溶液加 $Na$ 不能得到葡萄糖中含有羟基，因为溶液中有水<br>（22）葡萄糖结构简式： $CH_2OH(CHOH)_4CHO$<br>（23）果糖结构简式：$CH_2OH(CHOH)_3COCH_2OH$<br>（24）一醛 -&gt; 二银<br>（25）纤维素可以发生酯化<br>（26）含氮碱基速记：① 嘌呤有 $5$ 个氮，鸟嘌呤含氧 ② 胸腺嘧啶和尿嘧啶都有 $2$ 个氧，胸腺嘧啶多 $1$ 甲基<br>（27）羧酸可能含碳碳双键，所以有可能使溴水褪色<br>（28）因为羧基中的两个氧有共轭作用,羧基比酮和醛的羰基稳定的多,很多醛酮能够发生的反应,羧基都不能发生，即羧基不可以表现出酮和醛的性质<br>（29）不可用石蕊溶液证明脂类物质的酸性，会分层<br>（30）芳香酸中的羧基不一定直接连在苯环上<br>（31）酚不可以用石蕊<br>（32）制备乙酸乙酯：① 加热提高反应速率，使乙酸乙酯挥发便于收集，使平衡正向移动 ② 浓硫酸的作用是催化剂和吸水剂，分别提高反应速率和乙酸、乙醇的转化率 ③ 可以增加乙醇的量，增加冷凝回流装置，提高乙酸乙酯产率 ④ 加入顺序为：无水乙醇，浓硫酸，冰醋酸 ⑤ 饱和 $Na_2CO_3$ 的作用是收集乙酸乙酯，降低乙酸乙酯溶解度，吸收乙酸，溶解乙醇 ⑥ 导气管起到导气和冷凝的作用<br>（33）$[-CH&#x3D;CH-]<em>n$ 为聚乙炔，非聚乙烯<br>（34）$1-3$ 丁二烯中的所有原子不一定共面<br>（35）烃只可以碳氧，烃衍生物不限<br>（36）一定要留意甲醛有两个醛基<br>（37）苯环上同分异构：① 一取代只有 $1$ 种 ② 二取代不同的有 $3$ 种，相同也是 $3$ 种 ③ 三取代都不同的有 $10$ 种，两个相同的有 $6$ 种，三个相同的有 $3$ 种<br>（38）说明非金属性 -&gt; <strong>最高价</strong> 含氧酸<br>（39）非金属性 $ \uparrow $，简单离子还原性 $\downarrow$<br>（40）非金属元素气态氧化物遇水反应生成气体有 $NO_2$<br>（41）同素异形体： $C$、$O$、$P$、$S$<br>（42）洪特规则：电子分布到能量简并的原子轨道时，优先以自旋相同的方式分别占据不同的轨道，因为这种排布方式原子的总能量最低<br>（43）泡利不相容原理：没有两个相同的费米子（具有半整数自旋的粒子，比如电子）能占据相同的量子态<br>（44）俯视-&gt;刻度线在液面下方-&gt;加的溶剂增多-&gt;浓度减小<br>（45）$CCl_4$ 不燃，是种灭火剂<br>（46）两种物质分离，溶解度随着温度变化呈现不同趋势可以用重结晶<br>（47）${NO_3}^-(H^+)$ 也有 <strong>氧化性</strong> ，所以证明金属离子氧化性强弱不可以用该金属 <strong>酸化后</strong> 的硝酸盐溶液<br>（48）由于体积不具有加和性，所以配置一定浓度的溶液时候一定要先知道配置后溶液的密度，再根据溶液质量计算<br>（49）制备纯净的 <strong>氢氧化亚铁</strong> 时，胶头滴管尖嘴应插入溶液中，防止被氧化<br>（50）实验后废液倒入指定容器（不是水槽。。。）<br>（51）液态有机物密度比水小的有烃（烷、烯、炔、芳香烃）、低级酯、一氯代烃、乙醇、乙醛等；密度比水大的有硝基苯、溴苯、四氯化碳、氯仿、溴代烃、乙二醇、丙三醇等。烷、烯、炔等烃类同系物相对密度随着分子内碳原子数的增加的而增大；一氯代烷的相对密度随着碳原子数的增加而减小。（注意一氯甲烷为气体）<br>（52）苯可以发生氧化反应，如：点燃<br>（53）$-C&#x3D;N-$ 也可以加成<br>（54）加入氨基：硝化-&gt;还原<br>（55）蛋白质的一级结构有肽键<br>（56）$CuSO_4$ 会使蛋白质变性<br>（57）注意醛基出现的位置：如甲酸酯等<br>（58）区分电子的 <strong>空间运动状态</strong> 和 <strong>运动状态</strong><br>（59）实验室制取乙烯：一定要控制温度，所以需要温度计<br>（60）介于单键和双键之间键长：联想大Π键<br>（61）ph -&gt; 苯环<br>（62）形成氢键：$N$、$O$、$F$ 原子上要先有 $H$<br>（63）分清 <strong>氢化物</strong> 与 <strong>简单氢化物</strong><br>（64）按原子轨道重叠方式分共价键：$\sigma$、$\pi$ 键<br>（65）无水 $MgSO_4$ 作用：吸水干燥<br>（66）熔点：石墨 &gt; 金刚石 &gt; $C</em>{60}$<br>（67）先熄灭酒精灯，再停止加冷凝水<br>（68）先移离导管，再熄灭酒精灯<br>（69）烯烃和高锰酸钾反应：酸性高锰酸钾与烯烃反应可将烯烃的双键两端的碳各加上一个氧：C＝C→C＝O＋O＝C，由于醛有较强的还原性，酸性高锰酸钾可继续将其氧化为羧酸：－CHO→－COOH，若有一个碳上有两个氢，可以看出该碳被氧化为甲醛，会进一步被氧化为碳酸，碳酸又分解为二氧化碳和水。</p>
 <h2 id="同分异构"><a href="#同分异构" class="headerlink" title="同分异构"></a>同分异构</h2><h3 id="烷烃-amp-烷基"><a href="#烷烃-amp-烷基" class="headerlink" title="烷烃&amp;烷基"></a>烷烃&amp;烷基</h3><table>
 <thead>
 <tr>
@@ -541,6 +627,7 @@
 </tr>
 </tbody></table>
 <h3 id="典例"><a href="#典例" class="headerlink" title="典例"></a>典例</h3><p>（1） $C_5H_{10}O$ 的同分异构体可以为：<br>醇：邻位间位对位苯甲醇共 $3$ 种，$1$，$2$ 位苯乙醇各一种，共 $5$ 种<br>酚：两个甲基在邻位有 $2$ 种，在间位有 $3$ 种，在对位有 $1$ 种，两个碳如果是乙基，则有 $3$ 种，共 $9$ 种<br>醚：苯乙醚 $1$ 种，甲基分别在邻位间位对位上的苯甲醚 $3$ 种，还有一种是氧的两边一边接甲基一边接苯甲基，共 $5$ 种<br>总共$5+9+5&#x3D;19$种<br>（2） $C_7H_8O$ 的同分异构体可以为：<br>醇：苯甲醇，共 $1$ 种<br>酚：$1$ 位的甲基还有邻，对，间的羟基，共 $3$ 种<br>醚：苯甲醚，共 $1$ 种<br>总共$1+3+1&#x3D;5$种</p>
+<h2 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h2><p>1、乙炔的实验室制备<br><img src="https://s3.bmp.ovh/imgs/2022/06/29/5ea433d05dba8019.webp"><br>（1）加饱和食盐水，避免电石和水反应过于剧烈<br>（2）因为电石中常常会有杂质，可能产生H₂S及PH₃具有还原性的气体，所以常用CuSO₄除去这些杂质气体<br>2、实验室制取乙烯<br><img src="https://s3.bmp.ovh/imgs/2022/06/29/9c5997be7d2029c6.webp"><br>（1）在烧瓶里注入乙醇和浓硫酸（体积比1：3）的混合液约20mL（配置此混合液应在冷却和搅拌下将15mL浓硫酸满满倒入5mL 酒精中），并放入几片碎瓷片（温度计的水银球要伸入液面以下）<br>（2）加热，使温度 <strong>迅速</strong> 升到170℃，酒精便脱水变成乙烯</p>
 <h2 id="方程式"><a href="#方程式" class="headerlink" title="方程式"></a>方程式</h2><p>（1）饱和一元醛和 $RNH_2$ 反应通式</p>
 <ul>
 <li>$CH_3CHO+RNH_2\rightarrow CH_3CH(NHR)OH$</li>
@@ -551,7 +638,7 @@
 </ul>
 <p>（3）饱和一元醛和 $Cu(OH)_2$ 反应通式：</p>
 <ul>
-<li>$R-CHO+2Cu(OH)_2\xrightarrow[]{\Delta}R-COOH+CU_2O\downarrow$</li>
+<li>$R-CHO+2Cu(OH)_2\xrightarrow[]{\Delta}R-COOH+Cu_2O\downarrow$</li>
 </ul>
 <p>（4）蔗糖水解：</p>
 <ul>
@@ -559,6 +646,14 @@
 </li>
 <li><p>$C_{12}H_{22}O_{11}(蔗糖)\xrightarrow[]{浓硫酸}12C+11H_2O$</p>
 </li>
+</ul>
+<p>（5）银氨溶液的制备：<br>在 $AgNO_3$ 溶液中加入稀氨水  </p>
+<ul>
+<li>$AgNO_3+NH_3\cdot H_2O&#x3D;AgOH \downarrow+NH_4NH_3$</li>
+</ul>
+<p>接着加稀氨水</p>
+<ul>
+<li>$AgOH+2NH_3\cdot H_2O&#x3D;Ag(NH_3)_2OH+2H_2O$</li>
 </ul>
 ]]></content>
       <categories>
@@ -581,47 +676,9 @@
       </tags>
   </entry>
   <entry>
-    <title>古代文学常识碎记</title>
-    <url>/2022/05/24/%E5%8F%A4%E4%BB%A3%E6%96%87%E5%AD%A6%E5%B8%B8%E8%AF%86%E7%A2%8E%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="与政事有关"><a href="#与政事有关" class="headerlink" title="与政事有关"></a>与政事有关</h2><p>（1）诣：到，去。</p>
-<p>（2）劝：①鼓励，奖励；②受到鼓励、奖励。</p>
-<p>（3）课：考核、督促、征收。</p>
-<p>（4）风、化：教育感化。</p>
-<p>（5）按、案：巡视，巡行；考察，核实，查明。</p>
-<p>（6）游：①游玩，游览；②旅行，外出求学或求官；③交际，交往。</p>
-<p>（7）趣、趋：①小步走，跑；又引申为赶快，迅速。②通“促”，催促。</p>
-<p>（8）劾：检举，揭发。</p>
-<p>（9）白：告诉，报告。常用于官吏之间。</p>
-<p>（10）短：进谗言，说坏话。</p>
-<p>（11）害：嫉妒。</p>
-<p>（12）闻：</p>
-<p>   ①听说，听见；</p>
-<p>   ②使知道，报告给……知道。对于义；</p>
-<p>   ③要特别注意。其中省略的人往往是最高统治者——国君，强化了这一点，阅读时就不至于认为下文中国    君和主人公发生的事件显得突兀。怎么国君知道了并参加进来了呢？其实就是“闻”字在起作用。如“没死以    闻”，“齐桓晋文之事可得闻乎”。</p>
-<p>（13）折：指斥，指责，驳斥。</p>
-<p>（14）让：①责备，责怪；②谦让，辞让。</p>
-<p>（15）党：偏袒，伙同，包庇。</p>
-<p>（16）矫：假托，假传。</p>
-<p>（17）质：作人质；抵押。</p>
-<p>（18）次：①临时驻扎(用于军队)；②住宿，停留（用于个人）。</p>
-<p>（19）输：缴纳（贡品或赋税）——由“输送、运输”引申。</p>
-<p>（20）当：判刑，判罪。后多带表示惩罚意义的词语。</p>
-<p>（21）坐：①因……犯罪或错误，触犯；②牵连，定罪。</p>
-<p>（22）多：赞扬,欣赏。“高、贵”等字，若带宾语，就是意动，也意译为此。</p>
-<p>（23）少：批评，轻视，看不起。</p>
-<h2 id="碎记"><a href="#碎记" class="headerlink" title="碎记"></a>碎记</h2><p>（1）移疾：意同移病。释义为旧时官员上书称病，多为居官者求退的婉辞。<br>（2）名、字：名为出生不久后由父亲取。在《礼记·曲礼上》记有：男子二十冠而字。<br>（3）汤武：周武王和商汤（非商汤和孙武）<br>（4）建储：建立储君，立皇太子<br>（5）三晋：赵、魏、韩三国，在春秋时是晋国<br>（6）有司：只是“官吏的通称”，各有专司（不能用来指称朝廷中的“各级官员”）</p>
-]]></content>
-      <categories>
-        <category>高中理科</category>
-      </categories>
-      <tags>
-        <tag>语文</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>高中物理碎记</title>
     <url>/2022/05/18/%E9%AB%98%E4%B8%AD%E7%89%A9%E7%90%86%E7%A2%8E%E8%AE%B0/</url>
-    <content><![CDATA[<p>（1）油膜法理想化假设中没有“不考虑油酸分子间的作用力”<br>（2）完全失重的情况下，气体对容器壁的压强不同于水，压强不为零<br>（3）计算U形管液面升高降低时要考虑左上&#x3D;右下，即左边高于右边a时左边升高a&#x2F;2<br>（4）个别分子的动能与温度无关<br>（5）分子势能不一定取正值<br>（6）布朗运动不是热运动<br>（7）平衡位置分子势能最小（标准图像中为负值，但分子势能最小值不一定为负值）<br>（8）统计规律永远伴随涨落现象<br>（9）气体压强&#x3D;平均动能+密集程度<br>（10）一定质量的气体<br>（11）一定质量的气体在体积不变的情况下，压强与开尔文温度呈正比（不是摄氏度也不是华氏度！）<br>（12）理想气体忽略分子间作用力，其中C与气体不仅和质量有关还有气体的种类<br>（13）拔火罐是等容变化。。。<br>（14）分析压强变化时要留意是否与外界相通<br>（15）$△p&#x3D;\frac{\Delta T}{T}p$<br>（16）单晶体不一定所有性质都是各向同性，也有可能各个方向的导电导热性相同<br>（17）用热力学第一定律解决问题时要留意气体的中心，这个关系到其重力势能<br>（18）某个物理的能量减少，必然有其他物体的能量增加<br>（19）内能可以全部用来做功以转化为机械能，只是不能不引起其他形式能的变化<br>（20）“自发”一词不可少<br>（21）一切与热现象有关的宏观自然过程是不可逆的<br>（22）在任何自然过程中，一个孤立系统的熵不会减小（一定是孤立系统）<br>（23）一定质量气体的变化图像一定要关注其斜率<br>（24）汤姆孙发现电子并精确计算出电子的电荷量<br>（25）汤姆孙认为原子是实心的，并且证明了不可再分<br>（26）阴极射线实验金箔越薄越好，必须在真空中进行<br>（27）原子直径数量级10的-10次方，原子核直径数量级10的-15次方（单位m）<br>（28）α粒子散射总能量不变<br>（29）α粒子散射要注意其轨迹，离核近的偏转较大，而且偏转大的占比极小（大约1&#x2F;1000）<br>（30）分子间斥力比引力变化大<br>（31）太阳光谱是吸收光谱，不是原子光谱<br>（32）只能通过光谱确定月球表面物质成分，所以不能用光谱测定月球物质组成。。。<br>（33）发射光谱&#x3D;连续+不连续<br>（34）巴耳末公式只确定了氢原子巴耳末系的波长，其他线系不可确定<br>（35）玻尔理论可以解释氢原子光谱，不能解释其他原子的光谱<br>（36）玻尔与卢瑟福不同在于：电子只能在一些不连续的轨道上运动<br>（37）同位素具有相同化学性质（想想探究酸脱羟基醇脱氢，若化学性质不同就不可用同位素标记了）<br>（38）α射线（高速氦原子核）穿不过薄纸，β射线（高速运动电子流）能穿透几mm的铝板，γ射线（电磁波），可以穿透即cm厚的铝板<br>（39）卢瑟福发现质子，查德威克用云室证实了中子，但中子是由卢瑟福猜想的<br>（40）半衰期对少数原子核没有意义<br>（41）外切电性相同，内切则不同<br>（42）$1u&#x3D;931.5Mev$<br>（43）质量亏损并非质量直接转化为能量，而是亏损的静质量转化为动质量以能量的形式释放出去<br>（44）可以先假设V或其他量不变<br>（45）电流的方向与电子运动方向相反！<br>（46）加速后最大动能：r为D形盒的半径<br>（47）电源不管是外部还是内部都是正极电势高</p>
+    <content><![CDATA[<p>（1）油膜法理想化假设中没有“不考虑油酸分子间的作用力”<br>（2）完全失重的情况下，气体对容器壁的压强不同于水，压强不为零<br>（3）计算U形管液面升高降低时要考虑左上&#x3D;右下，即左边高于右边a时左边升高a&#x2F;2<br>（4）个别分子的动能与温度无关<br>（5）分子势能不一定取正值<br>（6）布朗运动不是热运动<br>（7）平衡位置分子势能最小（标准图像中为负值，但分子势能最小值不一定为负值）<br>（8）统计规律永远伴随涨落现象<br>（9）气体压强&#x3D;平均动能+密集程度<br>（10）一定质量的气体<br>（11）一定质量的气体在体积不变的情况下，压强与开尔文温度呈正比（不是摄氏度也不是华氏度！）<br>（12）理想气体忽略分子间作用力，其中C与气体不仅和质量有关还有气体的种类<br>（13）拔火罐是等容变化。。。<br>（14）分析压强变化时要留意是否与外界相通<br>（15）$△p&#x3D;\frac{\Delta T}{T}p$<br>（16）单晶体不一定所有性质都是各向同性，也有可能各个方向的导电导热性相同<br>（17）用热力学第一定律解决问题时要留意气体的中心，这个关系到其重力势能<br>（18）某个物理的能量减少，必然有其他物体的能量增加<br>（19）内能可以全部用来做功以转化为机械能，只是不能不引起其他形式能的变化<br>（20）“自发”一词不可少<br>（21）一切与热现象有关的宏观自然过程是不可逆的<br>（22）在任何自然过程中，一个孤立系统的熵不会减小（一定是孤立系统）<br>（23）一定质量气体的变化图像一定要关注其斜率<br>（24）汤姆孙发现电子并精确计算出电子的电荷量<br>（25）汤姆孙认为原子是实心的，并且证明了不可再分<br>（26）阴极射线实验金箔越薄越好，必须在真空中进行<br>（27）原子直径数量级10的-10次方，原子核直径数量级10的-15次方（单位m）<br>（28）α粒子散射总能量不变<br>（29）α粒子散射要注意其轨迹，离核近的偏转较大，而且偏转大的占比极小（大约1&#x2F;1000）<br>（30）分子间斥力比引力变化大<br>（31）太阳光谱是吸收光谱，不是原子光谱<br>（32）只能通过光谱确定月球表面物质成分，所以不能用光谱测定月球物质组成。。。<br>（33）发射光谱&#x3D;连续+不连续<br>（34）巴耳末公式只确定了氢原子巴耳末系的波长，其他线系不可确定<br>（35）玻尔理论可以解释氢原子光谱，不能解释其他原子的光谱<br>（36）玻尔与卢瑟福不同在于：电子只能在一些不连续的轨道上运动<br>（37）同位素具有相同化学性质（想想探究酸脱羟基醇脱氢，若化学性质不同就不可用同位素标记了）<br>（38）α射线（高速氦原子核）穿不过薄纸，β射线（高速运动电子流）能穿透几mm的铝板，γ射线（电磁波），可以穿透即cm厚的铝板<br>（39）卢瑟福发现质子，查德威克用云室证实了中子，但中子是由卢瑟福猜想的<br>（40）半衰期对少数原子核没有意义<br>（41）外切电性相同，内切则不同<br>（42）$1u&#x3D;931.5Mev$<br>（43）质量亏损并非质量直接转化为能量，而是亏损的静质量转化为动质量以能量的形式释放出去<br>（44）可以先假设V或其他量不变<br>（45）电流的方向与电子运动方向相反，判断磁场中电流和电子之间要留意！<br>（46）加速后最大动能：r为D形盒的半径<br>（47）电源不管是外部还是内部都是正极电势高<br>（48）留意是否是纯电阻电路，如果不是（电路中有搅拌机，电动机等），根据题目所给条件综合判断电路变量<br>（49）看清题目要求的是电路哪一部分的焦耳热（全部？导体棒？电阻？）<br>（50）卡诺&#x2F;奥托逆循环中（P-V图），围成的面积代表对外做功的大小  </p>
 ]]></content>
       <categories>
         <category>高中理科</category>
@@ -633,7 +690,7 @@
   <entry>
     <title>高中生物碎记</title>
     <url>/2022/05/24/%E9%AB%98%E4%B8%AD%E7%94%9F%E7%89%A9%E7%A2%8E%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="碎记"><a href="#碎记" class="headerlink" title="碎记"></a>碎记</h2><p>（1）AMP为腺嘌呤核糖核苷酸<br>（2）磷脂分子中也有N元素<br>（3）除了支原体外其他原核生物都有细胞壁<br>（4）能发生质壁分离必须要有中央大液泡，死亡和未成熟的植物细胞不可以，分生区不可以<br>（5）合成ATP可以是放能反应也可以是光能<br>（6）合成ATP的重要途径是细胞呼吸中酶的活性（不是线粒体中酶的活性）<br>（7）磷脂&#x3D;磷酸+甘油+脂肪酸<br>（8）观察质壁分离只需要低倍镜<br>（9）腌菜时间长亚硝酸盐含量低<br>（10）哪种方式都不可以直接将基因导入，必须要有载体<br>（11）第几步稀释了几倍？注意步骤的划分才知道这一步从哪开始稀释<br>（12）启动子基本组成单位：脱氧核苷酸<br>（13）“合成车间”是内质网<br>（14）参与血液中脂质的运输的是胆固醇（而非单单固醇）<br>（15）主动运输的能量来自于 ① ATP水解 ② 其他物质运输或浓度差产生的势能<br>（16）AMP腺嘌呤核糖核苷酸<br>（17）蛋白酶水解蛋白质不可以用双缩脲检验是否水解完全<br>（18）基因的合成不一定在细胞核，如原核生物在细胞质<br>（19）癌变后糖蛋白减少<br>（20）密码子的简并<br>（21）葡萄糖是协助扩散<br>（22）水既有协助扩散也有自由扩散，主要是协助扩散<br>（23）rRNA能够降低氨基酸脱水缩合的活化能，与mRNA进行碱基互补配对的是tRNA<br>（24）染色质中的组蛋白被修饰会影响染色质中DNA与组蛋白分离<br>（25）多糖在动物细胞中的作用是主要能源物质和储存能源<br>（26）还原性辅酶I为NADH，II为NADPH<br>（27）$C_3$ 还原成 $C_5$<br>（28）NADPH也为暗反应阶段提供能量<br>（29）膜面积增大-&gt;提高酶（色素）附着面积-&gt;有利于（题意所需生理过程）<br>（30）光照强度 $\downarrow$，$C_5$ $\downarrow$<br>（31）核酸彻底水解不得到其单体，而是核糖，含氮碱基和磷酸<br>（32）</p>
+    <content><![CDATA[<h2 id="碎记"><a href="#碎记" class="headerlink" title="碎记"></a>碎记</h2><p>（1）AMP为腺嘌呤核糖核苷酸<br>（2）磷脂分子中也有N元素<br>（3）除了支原体外其他原核生物都有细胞壁<br>（4）能发生质壁分离必须要有中央大液泡，死亡和未成熟的植物细胞不可以，分生区不可以<br>（5）合成ATP可以是放能反应也可以是光能<br>（6）合成ATP的重要途径是细胞呼吸中酶的活性（不是线粒体中酶的活性）<br>（7）磷脂&#x3D;磷酸+甘油+脂肪酸<br>（8）观察质壁分离只需要低倍镜<br>（9）腌菜时间长亚硝酸盐含量低<br>（10）哪种方式都不可以直接将基因导入，必须要有载体<br>（11）第几步稀释了几倍？注意步骤的划分才知道这一步从哪开始稀释<br>（12）启动子基本组成单位：脱氧核苷酸<br>（13）“合成车间”是内质网<br>（14）参与血液中脂质的运输的是胆固醇（而非单单固醇）<br>（15）主动运输的能量来自于 ① ATP水解 ② 其他物质运输或浓度差产生的势能<br>（16）AMP腺嘌呤核糖核苷酸<br>（17）蛋白酶水解蛋白质不可以用双缩脲检验是否水解完全<br>（18）基因的合成不一定在细胞核，如原核生物在细胞质<br>（19）癌变后糖蛋白减少<br>（20）密码子的简并<br>（21）葡萄糖是协助扩散<br>（22）水既有协助扩散也有自由扩散，主要是协助扩散<br>（23）rRNA能够降低氨基酸脱水缩合的活化能，与mRNA进行碱基互补配对的是tRNA<br>（24）染色质中的组蛋白被修饰会影响染色质中DNA与组蛋白分离<br>（25）多糖在动物细胞中的作用是主要能源物质和储存能源<br>（26）还原性辅酶I为NADH，II为NADPH<br>（27）$C_3$ 还原成 $C_5$<br>（28）NADPH也为暗反应阶段提供能量<br>（29）膜面积增大-&gt;提高酶（色素）附着面积-&gt;有利于（题意所需生理过程）<br>（30）光照强度 $\downarrow$，$C_5$ $\downarrow$<br>（31）核酸彻底水解不得到其单体，而是核糖，含氮碱基和磷酸<br>（32）单倍体育种得到的是多倍体<br>（33）基因文库包括基因组文库和部分基因文库<br>（34）发酵产品：① 微生物本身 -&gt; 过滤沉淀 ② 代谢产物 -&gt; 萃取蒸馏离子交换<br>（36）选择题注意 “ 或 ” 与 “ 和 ”<br>（37）添加对照组或者添加实验组溶液应该 <strong>保持溶剂一致</strong><br>（38）检测有毒物质：细胞工程<br>（39）光饱和点：该植株光合作用强度等于呼吸作用强度（不是叶肉细胞！！！）<br>（40）启动子：RNA 酶识别和结合的位点<br>（41）芽孢和孢子<br>（42）引物&#x2F;表达载体不可用：① 自环化 ② 自身出现部分碱基互补配对而失效<br>（43）测细菌时候应该选用稀释倍数 $10^4、10^5、10^6$<br>（44）扩增出了不同长度的片段：目的基因反向连接<br>（45）没有线粒体的细胞也可能进行有氧呼吸，如：许多原核生物都有可以进行有氧呼吸的酶<br>（46）观察质壁分离也可以用洋葱鳞片叶做材料，因为有叶绿体，但一定要是成熟的植物细胞<br>（47）植物 <strong>组织</strong> 培养技术，动物 <strong>细胞</strong> 培养技术<br>（48）同期发情，同种生理条件<br>（49）可以切得相同末端的限制酶叫做同位酶<br>（50）呼吸熵（放出 $CO_2$ &#x2F; 吸收的 $O_2$）小于 $1$ -&gt; 存在非糖物质的转化<br>（51）<strong>离体</strong> 的植物器官、组织和细胞<br>（52）纤维素酶 <strong>和</strong> 果胶酶<br>（53）特异性强，灵敏度高，可以大量制备<br>（54）$50%$ 酒精洗去浮色<br>（55）胆固醇：参与 <strong>动物</strong> 细胞膜的组成<br>（56）细胞骨架：蛋白质 <strong>纤维</strong><br>（57）有氧呼吸消耗水，在第二阶段</p>
 <h2 id="解答题"><a href="#解答题" class="headerlink" title="解答题"></a>解答题</h2><h3 id="光合作用"><a href="#光合作用" class="headerlink" title="光合作用"></a>光合作用</h3><p>（1）不同色素在层析液中的溶解度不同，在滤纸条上的扩散速度不同   </p>
 ]]></content>
       <categories>
@@ -644,63 +701,16 @@
       </tags>
   </entry>
   <entry>
-    <title>竞赛数学公式结论</title>
-    <url>/2022/05/14/%E7%AB%9E%E8%B5%9B%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E7%BB%93%E8%AE%BA/</url>
-    <content><![CDATA[<p>这篇文章主要记录竞赛中的数学公式和结论</p>
-<h2 id="数列"><a href="#数列" class="headerlink" title="数列"></a>数列</h2><h3 id="Fibonacci"><a href="#Fibonacci" class="headerlink" title="Fibonacci"></a>Fibonacci</h3><h4 id="通项公式"><a href="#通项公式" class="headerlink" title="通项公式"></a>通项公式</h4><ul>
-<li>$f(n)&#x3D;\frac{1}{\sqrt[]{5}}[\frac{(1+\sqrt[]{5})^2}{2^n}-\frac{(1-\sqrt[]{5})^2}{2^n}]$</li>
-</ul>
-<h4 id="递推式"><a href="#递推式" class="headerlink" title="递推式"></a>递推式</h4><ul>
-<li>$f(n)&#x3D;f(n-1)+f(n-2)$</li>
-</ul>
-<h4 id="数论性质"><a href="#数论性质" class="headerlink" title="数论性质"></a>数论性质</h4><ul>
-<li>$gcd(f(n),f(m))&#x3D;f(gcd(n,m))$</li>
-</ul>
-<h2 id="排列组合"><a href="#排列组合" class="headerlink" title="排列组合"></a>排列组合</h2><h3 id="排列数"><a href="#排列数" class="headerlink" title="排列数"></a>排列数</h3><h4 id="错位排列"><a href="#错位排列" class="headerlink" title="错位排列"></a>错位排列</h4><p>若序列 $a$ 使得 $a_i\neq i$ 恒成立<br>则令组成该序列的不同方案数为 $D(n)$<br>则有： </p>
-<ul>
-<li>$D(n)&#x3D;(n-1)[D(n-1)+D(n-2)]$ 其中 $D(1)&#x3D;0\ $  $D(2)&#x3D;1$</li>
-</ul>
-<h3 id="组合数"><a href="#组合数" class="headerlink" title="组合数"></a>组合数</h3><h4 id="卢卡斯定理"><a href="#卢卡斯定理" class="headerlink" title="卢卡斯定理"></a>卢卡斯定理</h4><ul>
-<li>$C_m^n\equiv C_{m\ mod\ p}^{n\ mod\ p}\cdot C_{\lfloor{\frac{m}{p}}\rfloor}^{\lfloor{\frac{n}{p}}\rfloor}(mod\ p)$</li>
-</ul>
-<h2 id="概率论"><a href="#概率论" class="headerlink" title="概率论"></a>概率论</h2><h3 id="期望"><a href="#期望" class="headerlink" title="期望"></a>期望</h3><h4 id="多个独立事件发生-件数-的期望"><a href="#多个独立事件发生-件数-的期望" class="headerlink" title="多个独立事件发生 件数 的期望"></a>多个独立事件发生 <strong>件数</strong> 的期望</h4><ul>
-<li>$p_1+p_2+p_3+…+p_n$</li>
-</ul>
-<h2 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h2><h3 id="约数"><a href="#约数" class="headerlink" title="约数"></a>约数</h3><h4 id="正约数个数"><a href="#正约数个数" class="headerlink" title="正约数个数"></a>正约数个数</h4><p>令正整数 $x$ 的正约数个数为 $D(x)$<br>$x$ 的唯一分解形式为 $x&#x3D;p_1^{x_1}\cdot p_2^{x_2}\cdot…\    \cdot p_n^{x_n}$<br>则有：  </p>
-<ul>
-<li>$D(x)&#x3D;(x_1+1)(x_2+2)…(x_n+1)$</li>
-</ul>
-]]></content>
-      <categories>
-        <category>OI</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>高中英语碎记</title>
     <url>/2022/06/23/%E9%AB%98%E4%B8%AD%E8%8B%B1%E8%AF%AD%E7%A2%8E%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="短语"><a href="#短语" class="headerlink" title="短语"></a>短语</h2><p>（1）crocodile tears 鳄鱼的眼泪，意为假慈悲</p>
+    <content><![CDATA[<h2 id="单词"><a href="#单词" class="headerlink" title="单词"></a>单词</h2><p>resistance<br>panel<br>retain</p>
+<h2 id="短语"><a href="#短语" class="headerlink" title="短语"></a>短语</h2><p>crocodile tears  鳄鱼的眼泪，意为假慈悲</p>
 ]]></content>
       <categories>
         <category>高中理科</category>
       </categories>
       <tags>
         <tag>英语</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>图论题型专解</title>
-    <url>/2022/05/22/%E5%9B%BE%E8%AE%BA%E9%A2%98%E5%9E%8B%E4%B8%93%E8%A7%A3/</url>
-    <content><![CDATA[<h1 id="Tarjan"><a href="#Tarjan" class="headerlink" title="Tarjan"></a>Tarjan</h1><h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><h3 id="缩点"><a href="#缩点" class="headerlink" title="缩点"></a>缩点</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">tarjan</span><span class="params">(<span class="keyword">int</span> u)</span></span>&#123;</span><br><span class="line">	dfn[u]=low[u]=++num;</span><br><span class="line">	stak[++top]=u;vis[u]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=head[u];i;i=edge[i].next)&#123;</span><br><span class="line">		<span class="keyword">int</span> v=edge[i].to;</span><br><span class="line">		<span class="keyword">if</span>(!dfn[v])&#123;</span><br><span class="line">			<span class="built_in">tarjan</span>(v);</span><br><span class="line">			low[u]=<span class="built_in">min</span>(low[u],low[v]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(vis[v]) low[u]=<span class="built_in">min</span>(low[u],low[v]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(dfn[u]==low[u])&#123;</span><br><span class="line">		tot++;</span><br><span class="line">		<span class="keyword">while</span>(stak[top]!=u)&#123;</span><br><span class="line">			vis[stak[top]]=<span class="number">0</span>;</span><br><span class="line">			color[stak[top]]=tot;</span><br><span class="line">			top--;</span><br><span class="line">		&#125;</span><br><span class="line">		top--;</span><br><span class="line">		vis[u]=<span class="number">0</span>;</span><br><span class="line">		color[u]=tot;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Tarjan技巧"><a href="#Tarjan技巧" class="headerlink" title="Tarjan技巧"></a>Tarjan技巧</h2><p>1.dfn可以作为mark一样的作用记录节点是否被访问<br>2.缩点更新low[u]的时候也可也写成low[u]&#x3D;min(low[u],dfn[v])  </p>
-<h2 id="题型"><a href="#题型" class="headerlink" title="题型"></a>题型</h2><h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
-      <categories>
-        <category>OI</category>
-      </categories>
-      <tags>
-        <tag>图论</tag>
       </tags>
   </entry>
 </search>

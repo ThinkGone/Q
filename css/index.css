@@ -1332,7 +1332,7 @@ input::placeholder {
   z-index: -999;
   width: 100%;
   height: 100%;
-  background: url(https://s3.bmp.ovh/imgs/2022/06/30/8bb695324b2c25b8.jpg);
+  background: url(https://w.wallhaven.cc/full/q2/wallhaven-q28x3l.jpg);
   background-attachment: local;
   background-position: center;
   -webkit-background-size: cover;
@@ -1958,7 +1958,7 @@ figure.highlight pre .javascript .function {
   color: var(--font-color);
 }
 .category-lists .category-list a:hover {
-  color: #395386;
+  color: #4482b9;
 }
 .category-lists .category-list .category-list-count {
   margin-left: 8px;
@@ -2320,7 +2320,7 @@ figure.highlight pre .javascript .function {
   }
 }
 #recent-posts > .recent-post-item >.recent-post-info > .article-title:hover {
-  color: #395386;
+  color: #4482b9;
 }
 #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap {
   margin: 6px 0;
@@ -2565,7 +2565,7 @@ h1.page-title + .tag-cloud-list {
 }
 #aside-content .aside-list > .aside-list-item .content > .title:hover,
 #aside-content .aside-list > .aside-list-item .content > .comment:hover {
-  color: #395386;
+  color: #4482b9;
 }
 #aside-content .aside-list > .aside-list-item.no-cover {
   min-height: 4.4em;
@@ -3564,7 +3564,7 @@ h1.page-title + .tag-cloud-list {
   z-index: -1;
   width: 0;
   height: 3px;
-  background-color: #bfe8ea;
+  background-color: #67a5e6;
   content: '';
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;

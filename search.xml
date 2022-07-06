@@ -57,25 +57,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Blog搭建历程</title>
-    <url>/2022/06/10/Blog%E6%90%AD%E5%BB%BA%E5%8E%86%E7%A8%8B/</url>
-    <content><![CDATA[<h2 id="历程"><a href="#历程" class="headerlink" title="历程"></a>历程</h2><h3 id="起初"><a href="#起初" class="headerlink" title="起初"></a>起初</h3><p>最开始搭建Blog是用 Hexo + GitHub 进行静态界面构建<br>使用 Butterfly 主题完成页面美化工作<br>并借此学习了 html 和 css 的小部分知识 </p>
-<h3 id="后来"><a href="#后来" class="headerlink" title="后来"></a>后来</h3><p>后来开始觉得 GitHub 搭建的静态界面在国内的访问速度不稳定<br>开始寻找加速的方案<br>接连花了许多时间在 CDN 加速站点上<br>但是仍然一无所获<br>国外的 CDN 在国内加速效果不甚理想<br>而国内的免费 CDN 不可靠（之前使用过的一种国内 CDN 在创建不久就被封禁了）<br>大厂的 CDN （如：阿里，腾讯云等）需要实名和域名备案，而域名备案需要花钱，对于一个学生党来说实在不堪重负<br>有些大厂的 CDN 购买需要成年。。。（ $17$ 岁的遗憾）</p>
-<h3 id="接着"><a href="#接着" class="headerlink" title="接着"></a>接着</h3><p>想到 GitHub 之所以慢是因为服务器在国外<br>如果服务器在国内那访问速度不久快了？<br>又花了点时间在找各种服务器上<br>最后还是一无所获（还是因为未成年。。。）</p>
-<h3 id="再后来"><a href="#再后来" class="headerlink" title="再后来"></a>再后来</h3><p>GitHub 平台的 Blog 加载异常了一段时间，图标啥的都加载不出<br>想到查资料时候博客园的访问速度不错，就想着将静态页面的博客搬到博客园<br>但是简陋的界面让我望而却步了一段时间<br>然后看到了 BNDong 博主的 SimpleMemory 主题不错<br>花了半个高考假的时间美化了博客园的 Blog 并将文章迁移<br>期间借此还学习了一部分的 html  </p>
-<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>觉得 SimpleMemory 主题有些缺陷，而且自己的前端技术水平达不到修改成自己喜欢的样子<br>索性就放着了<br>高考假结束后看到高三班级的一体机壁纸刚刚好是自己 Blog 的背景图<br>带着试试的心理再次打开了自己在 GitHub 平台的 Blog，发现图标正常加载。。。<br>最后还是觉得 GitHub 的平台比较好</p>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>兜兜转转还是选择了 GitHub 平台搭建 Blog<br>没有强硬的前端水平，只会找轮子的话不是长久之计<br>未成年暂时就不要想着搭建云服务器上的静态页面了，也不要想 CDN 加速。。。<br>总之目前 GitHub 平台能用就行<br>提高访问速度，通过自己写代码构建多功能页面之类的等大学再整吧  </p>
-]]></content>
-      <categories>
-        <category>历程</category>
-      </categories>
-      <tags>
-        <tag>Blog搭建</tag>
-        <tag>历程</tag>
-        <tag>心得</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Butterfly主题修改颜色</title>
     <url>/2022/05/01/Butterfly%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9%E9%A2%9C%E8%89%B2/</url>
     <content><![CDATA[<p><a href="https://www.toolsou.com/app/color">在线调色板</a></p>
@@ -96,6 +77,25 @@
       </categories>
       <tags>
         <tag>Butterfly</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Blog搭建历程</title>
+    <url>/2022/06/10/Blog%E6%90%AD%E5%BB%BA%E5%8E%86%E7%A8%8B/</url>
+    <content><![CDATA[<h2 id="历程"><a href="#历程" class="headerlink" title="历程"></a>历程</h2><h3 id="起初"><a href="#起初" class="headerlink" title="起初"></a>起初</h3><p>最开始搭建Blog是用 Hexo + GitHub 进行静态界面构建<br>使用 Butterfly 主题完成页面美化工作<br>并借此学习了 html 和 css 的小部分知识 </p>
+<h3 id="后来"><a href="#后来" class="headerlink" title="后来"></a>后来</h3><p>后来开始觉得 GitHub 搭建的静态界面在国内的访问速度不稳定<br>开始寻找加速的方案<br>接连花了许多时间在 CDN 加速站点上<br>但是仍然一无所获<br>国外的 CDN 在国内加速效果不甚理想<br>而国内的免费 CDN 不可靠（之前使用过的一种国内 CDN 在创建不久就被封禁了）<br>大厂的 CDN （如：阿里，腾讯云等）需要实名和域名备案，而域名备案需要花钱，对于一个学生党来说实在不堪重负<br>有些大厂的 CDN 购买需要成年。。。（ $17$ 岁的遗憾）</p>
+<h3 id="接着"><a href="#接着" class="headerlink" title="接着"></a>接着</h3><p>想到 GitHub 之所以慢是因为服务器在国外<br>如果服务器在国内那访问速度不久快了？<br>又花了点时间在找各种服务器上<br>最后还是一无所获（还是因为未成年。。。）</p>
+<h3 id="再后来"><a href="#再后来" class="headerlink" title="再后来"></a>再后来</h3><p>GitHub 平台的 Blog 加载异常了一段时间，图标啥的都加载不出<br>想到查资料时候博客园的访问速度不错，就想着将静态页面的博客搬到博客园<br>但是简陋的界面让我望而却步了一段时间<br>然后看到了 BNDong 博主的 SimpleMemory 主题不错<br>花了半个高考假的时间美化了博客园的 Blog 并将文章迁移<br>期间借此还学习了一部分的 html  </p>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>觉得 SimpleMemory 主题有些缺陷，而且自己的前端技术水平达不到修改成自己喜欢的样子<br>索性就放着了<br>高考假结束后看到高三班级的一体机壁纸刚刚好是自己 Blog 的背景图<br>带着试试的心理再次打开了自己在 GitHub 平台的 Blog，发现图标正常加载。。。<br>最后还是觉得 GitHub 的平台比较好</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>兜兜转转还是选择了 GitHub 平台搭建 Blog<br>没有强硬的前端水平，只会找轮子的话不是长久之计<br>未成年暂时就不要想着搭建云服务器上的静态页面了，也不要想 CDN 加速。。。<br>总之目前 GitHub 平台能用就行<br>提高访问速度，通过自己写代码构建多功能页面之类的等大学再整吧  </p>
+]]></content>
+      <categories>
+        <category>历程</category>
+      </categories>
+      <tags>
+        <tag>Blog搭建</tag>
+        <tag>历程</tag>
+        <tag>心得</tag>
       </tags>
   </entry>
   <entry>
@@ -287,93 +287,6 @@
       </tags>
   </entry>
   <entry>
-    <title>VsCode-C/C++编译环境配置</title>
-    <url>/2022/05/01/VsCode-C-C-%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><h3 id="下载-VsCode"><a href="#下载-VsCode" class="headerlink" title="下载 VsCode"></a>下载 VsCode</h3><p>官网地址：<a href="https://code.visualstudio.com/">Code Editing</a></p>
-<h3 id="下载-MinGW64编译器"><a href="#下载-MinGW64编译器" class="headerlink" title="下载 MinGW64编译器"></a>下载 MinGW64编译器</h3><p>官网地址：<a href="https://www.mingw-w64.org/">MinGW64</a></p>
-<h2 id="配置系统环境变量"><a href="#配置系统环境变量" class="headerlink" title="配置系统环境变量"></a>配置系统环境变量</h2><p>Win+I 打开系统设置<br>找到 <strong>编辑系统环境变量</strong><br>点击 <strong>高级</strong> &gt; <strong>环境变量</strong> &gt; <strong>选定 Path 进行编辑</strong><br>添加进你安装的 MinGW64 编译器的 <strong>路径</strong><br>例如我的就是：D:\Program\mingw-w64\mingw64\bin<br><img src="https://s2.loli.net/2022/05/01/SZj5xDITXehoyW9.png"></p>
-<h2 id="配置相关文件"><a href="#配置相关文件" class="headerlink" title="配置相关文件"></a>配置相关文件</h2><h3 id="安装-C-x2F-C-扩展"><a href="#安装-C-x2F-C-扩展" class="headerlink" title="安装 C&#x2F;C++ 扩展"></a>安装 C&#x2F;C++ 扩展</h3><p>进入 VsCode 找到左侧栏的 Extensions<br>一般安装如下扩展：</p>
-<ul>
-<li>C&#x2F;C++</li>
-<li>Chinese (Simplified)(简体中文)</li>
-<li>Code Runner</li>
-</ul>
-<h3 id="设置编译器路径"><a href="#设置编译器路径" class="headerlink" title="设置编译器路径"></a>设置编译器路径</h3><p>新建 Code 文件夹用来保存项目文件<br>在 Code 文件夹中右键点击 <strong>用Code打开</strong> 进入 VsCode<br>接下来配置编译器路径<br>按快捷键Ctrl+Shift+P调出命令面板，输入C&#x2F;C++，选 <strong>Edit Configurations(UI)</strong> 进入配置<br><img src="https://s2.loli.net/2022/05/01/RWZGvOlSV8dxzLK.png"><br>在里面找到 <strong>编译器路径</strong> 修改成 MinGW64路径，再将下方的 InteliSense模式 改为 <strong>gcc-x64</strong> 即可<br>这时我们可以发现文件夹中多了一个 <strong>.vscode</strong> 的文件夹，证明配置成功<br>接下来配置三个主要的文件</p>
-<h3 id="c-cpp-properties-json"><a href="#c-cpp-properties-json" class="headerlink" title="c_cpp_properties.json"></a>c_cpp_properties.json</h3><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Win32&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;includePath&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;$&#123;workspaceFolder&#125;/**&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;defines&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;_DEBUG&quot;</span>,</span><br><span class="line">                <span class="string">&quot;UNICODE&quot;</span>,</span><br><span class="line">                <span class="string">&quot;_UNICODE&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;compilerPath&quot;</span>: <span class="string">&quot;D:/Program/mingw-w64/mingw64/bin/g++.exe&quot;</span>,<span class="comment">//编译器的路径</span></span><br><span class="line">            <span class="attr">&quot;cStandard&quot;</span>: <span class="string">&quot;c17&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;cppStandard&quot;</span>: <span class="string">&quot;c++17&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;intelliSenseMode&quot;</span>: <span class="string">&quot;gcc-x64&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="number">4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="tasks-json"><a href="#tasks-json" class="headerlink" title="tasks.json"></a>tasks.json</h3><p>接下来，创建一个tasks.json文件来告诉VS Code如何构建（编译）程序<br>该任务将调用g++编译器基于源代码创建可执行文件<br>按快捷键 Ctrl+Shift+P 调出命令面板，输入 tasks，选择 <strong>Tasks:Configure Default Build Task</strong><br><img src="https://s2.loli.net/2022/05/01/OHUebX3C1SPmzKG.png"><br>再选择 <strong>C&#x2F;C++: g++.exe build active file</strong><br><img src="https://s2.loli.net/2022/05/01/Hv5Jqiwl6Yhu1QI.png"><br>接下来在 .vscode 文件夹中就会出现 <strong>tasks.json</strong> 的配置文件<br>可以参考我的配置：  </p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">&quot;version&quot;</span>: <span class="string">&quot;2.0.0&quot;</span>,</span><br><span class="line">	<span class="attr">&quot;tasks&quot;</span>: [</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="attr">&quot;type&quot;</span>: <span class="string">&quot;cppbuild&quot;</span>,</span><br><span class="line">			<span class="attr">&quot;label&quot;</span>: <span class="string">&quot;g++.exe build active file&quot;</span>,</span><br><span class="line">			<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;D:/Program/mingw-w64/mingw64/bin/g++.exe&quot;</span>,<span class="comment">//编译器路径</span></span><br><span class="line">			<span class="attr">&quot;args&quot;</span>: [</span><br><span class="line">				<span class="string">&quot;-fdiagnostics-color=always&quot;</span>,</span><br><span class="line">				<span class="string">&quot;-g&quot;</span>,</span><br><span class="line">				<span class="string">&quot;$&#123;file&#125;&quot;</span>,</span><br><span class="line">				<span class="string">&quot;-o&quot;</span>,</span><br><span class="line">				<span class="string">&quot;$&#123;fileDirname&#125;\\$&#123;fileBasenameNoExtension&#125;.exe&quot;</span></span><br><span class="line">			],</span><br><span class="line">			<span class="attr">&quot;options&quot;</span>: &#123;</span><br><span class="line">				<span class="attr">&quot;cwd&quot;</span>: <span class="string">&quot;D:/Program/mingw-w64/mingw64/bin&quot;</span></span><br><span class="line">			&#125;,<span class="comment">//bin为存放编译器和调试器的文件夹</span></span><br><span class="line">			<span class="attr">&quot;problemMatcher&quot;</span>: [</span><br><span class="line">				<span class="string">&quot;$gcc&quot;</span></span><br><span class="line">			],</span><br><span class="line">			<span class="attr">&quot;group&quot;</span>: &#123;</span><br><span class="line">				<span class="attr">&quot;kind&quot;</span>: <span class="string">&quot;build&quot;</span>,</span><br><span class="line">				<span class="attr">&quot;isDefault&quot;</span>: <span class="literal">true</span></span><br><span class="line">			&#125;,</span><br><span class="line">			<span class="attr">&quot;detail&quot;</span>: <span class="string">&quot;编译器: D:/Program/mingw-w64/mingw64/bin/g++.exe&quot;</span></span><br><span class="line">		&#125;</span><br><span class="line">	]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="launch-json"><a href="#launch-json" class="headerlink" title="launch.json"></a>launch.json</h3><p>点击菜单栏的 <strong>Debug–&gt;Start Debugging</strong> 或者直接按键盘 <strong>F5</strong><br>会在 .vscode 文件夹中生成一个 <strong>launch.json</strong> 的配置文件<br>我的配置如下：  </p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">// Use IntelliSense to learn about possible attributes.</span></span><br><span class="line">    <span class="comment">// Hover to view descriptions of existing attributes.</span></span><br><span class="line">    <span class="comment">// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;0.2.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span>: [</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;(gdb) Launch&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;preLaunchTask&quot;</span>: <span class="string">&quot;g++.exe build active file&quot;</span>,<span class="comment">//调试前执行的任务，就是之前配置的tasks.json中的label字段</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span>: <span class="string">&quot;cppdbg&quot;</span>,<span class="comment">//配置类型，只能为cppdbg</span></span><br><span class="line">            <span class="attr">&quot;request&quot;</span>: <span class="string">&quot;launch&quot;</span>,<span class="comment">//请求配置类型，可以为launch（启动）或attach（附加）</span></span><br><span class="line">            <span class="attr">&quot;program&quot;</span>: <span class="string">&quot;$&#123;fileDirname&#125;\\$&#123;fileBasenameNoExtension&#125;.exe&quot;</span>,<span class="comment">//调试程序的路径名称</span></span><br><span class="line">            <span class="attr">&quot;args&quot;</span>: [],<span class="comment">//调试传递参数</span></span><br><span class="line">            <span class="attr">&quot;stopAtEntry&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">&quot;cwd&quot;</span>: <span class="string">&quot;$&#123;workspaceFolder&#125;&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;environment&quot;</span>: [],</span><br><span class="line">            <span class="attr">&quot;externalConsole&quot;</span>: <span class="literal">true</span>,<span class="comment">//true显示外置的控制台窗口，false显示内置终端</span></span><br><span class="line">            <span class="attr">&quot;MIMode&quot;</span>: <span class="string">&quot;gdb&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;miDebuggerPath&quot;</span>: <span class="string">&quot;D:\\Program\\mingw-w64\\mingw64\\bin\\gdb.exe&quot;</span>,<span class="comment">//调试器路径</span></span><br><span class="line">            <span class="attr">&quot;setupCommands&quot;</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;Enable pretty-printing for gdb&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;text&quot;</span>: <span class="string">&quot;-enable-pretty-printing&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;ignoreFailures&quot;</span>: <span class="literal">true</span></span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="运行测试"><a href="#运行测试" class="headerlink" title="运行测试"></a>运行测试</h2><p>写一个 hello world! 的程序测试下环境配置是否成功<br>记得要在末尾插入 <strong>system(“pause”)</strong> 的代码，不然程序会闪一下就消失了<br>出现如图所示结果则成功：<br><img src="https://s2.loli.net/2022/05/01/rcnTyzsLo21SNRY.png"></p>
-]]></content>
-      <categories>
-        <category>开发环境配置</category>
-      </categories>
-      <tags>
-        <tag>VsCode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>「Wdoi-6」走在夜晚的莲台野-题解</title>
-    <url>/2022/05/14/%E3%80%8CWdoi-6%E3%80%8D%E8%B5%B0%E5%9C%A8%E5%A4%9C%E6%99%9A%E7%9A%84%E8%8E%B2%E5%8F%B0%E9%87%8E-%E9%A2%98%E8%A7%A3/</url>
-    <content><![CDATA[<p>看难度就明白这是道签到题</p>
-<h2 id="1-思路"><a href="#1-思路" class="headerlink" title="1.思路"></a>1.思路</h2><p>题目要求我们将所有板子 <strong>放过</strong> 就行，但放入金就会清空银。<br>所以我们要在放金之前 <strong>尽可能多放银</strong>。<br>这就是标签所说的贪心。</p>
-<h2 id="2-解法"><a href="#2-解法" class="headerlink" title="2.解法"></a>2.解法</h2><p>由以上思路可得：<br>放银的数目依次为 $z-1$、$z-2$ $…$ $z-x$。<br>由等差数列公式：<br>最多可以放 $\frac{x*(z-x+z-1)}{2}$ 个银，令该式子为 $\sigma$。<br>我们得到如下几种情况：  </p>
-<ul>
-<li>$x$ 恰好满足放入所有 $y$ 后 $x$ 被清空。</li>
-<li>$x$ 恰好满足放入所有 $y$ 后 $x$ 被清空不足。</li>
-<li>$x$ 恰好满足放入所有 $y$ 后 $x$ 被清空有余。</li>
-</ul>
-<p>而这三种情况依次对应 $&#x3D;\sigma$、$&lt;\sigma$、$&gt;\sigma$ 的情况。<br>分别为 $case1\ $ $case2\ $ $case3\ $。<br>$case1$： 显然满足要求。<br>$case2$： 翻译过来就是金放完了银有剩，则只需要剩下的银数量 <strong>小于等于</strong> 可放位置的数量就行了。<br>$case3$： 银放完了金有剩，具体剩多少呢？<br>我们令此时消耗的金数量为 $x_0$ 则将 $x_0$ 带入 $\sigma$ 式。<br>整理一下得到关于 $x_0$ 的式子：<br>$x_0^2-(2z-1)x_0+2y&#x3D;0$。<br>得到：$x_0&#x3D;\lfloor\frac{2z-1+\sqrt[]{(2z-1)^2-8y}}{2}\rfloor$。<br>同 $case2$ 理即可求解。</p>
-<h2 id="3-Code"><a href="#3-Code" class="headerlink" title="3.Code"></a>3.Code</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll T,x,y,z;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;T);</span><br><span class="line">	<span class="keyword">while</span>(T--)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%lld%lld%lld&quot;</span>,&amp;x,&amp;y,&amp;z);</span><br><span class="line">		<span class="keyword">if</span>(x&gt;z)&#123;<span class="built_in">printf</span>(<span class="string">&quot;Merry\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		ll judge=x*(<span class="number">2</span>*z-x<span class="number">-1</span>)/<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span>(judge==y)&#123;<span class="built_in">printf</span>(<span class="string">&quot;Renko\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		<span class="keyword">if</span>(judge&lt;y&amp;&amp;(y-judge&lt;=z-x))&#123;<span class="built_in">printf</span>(<span class="string">&quot;Renko\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		<span class="keyword">int</span> x0=(<span class="number">2</span>*z<span class="number">-1</span>+<span class="built_in">sqrt</span>((<span class="number">2</span>*z<span class="number">-1</span>)*(<span class="number">2</span>*z<span class="number">-1</span>)<span class="number">-8</span>*y))/<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span>(judge&gt;y&amp;&amp;(x-x0)&lt;=z)&#123;<span class="built_in">printf</span>(<span class="string">&quot;Renko\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;Merry\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>洛谷题解</category>
-      </categories>
-      <tags>
-        <tag>贪心</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>古代文学常识碎记</title>
-    <url>/2022/05/24/%E5%8F%A4%E4%BB%A3%E6%96%87%E5%AD%A6%E5%B8%B8%E8%AF%86%E7%A2%8E%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="与政事有关"><a href="#与政事有关" class="headerlink" title="与政事有关"></a>与政事有关</h2><p>（1）诣：到，去。</p>
-<p>（2）劝：①鼓励，奖励；②受到鼓励、奖励。</p>
-<p>（3）课：考核、督促、征收。</p>
-<p>（4）风、化：教育感化。</p>
-<p>（5）按、案：巡视，巡行；考察，核实，查明。</p>
-<p>（6）游：①游玩，游览；②旅行，外出求学或求官；③交际，交往。</p>
-<p>（7）趣、趋：①小步走，跑；又引申为赶快，迅速。②通“促”，催促。</p>
-<p>（8）劾：检举，揭发。</p>
-<p>（9）白：告诉，报告。常用于官吏之间。</p>
-<p>（10）短：进谗言，说坏话。</p>
-<p>（11）害：嫉妒。</p>
-<p>（12）闻：</p>
-<p>   ①听说，听见；</p>
-<p>   ②使知道，报告给……知道。对于义；</p>
-<p>   ③要特别注意。其中省略的人往往是最高统治者——国君，强化了这一点，阅读时就不至于认为下文中国    君和主人公发生的事件显得突兀。怎么国君知道了并参加进来了呢？其实就是“闻”字在起作用。如“没死以    闻”，“齐桓晋文之事可得闻乎”。</p>
-<p>（13）折：指斥，指责，驳斥。</p>
-<p>（14）让：①责备，责怪；②谦让，辞让。</p>
-<p>（15）党：偏袒，伙同，包庇。</p>
-<p>（16）矫：假托，假传。</p>
-<p>（17）质：作人质；抵押。</p>
-<p>（18）次：①临时驻扎(用于军队)；②住宿，停留（用于个人）。</p>
-<p>（19）输：缴纳（贡品或赋税）——由“输送、运输”引申。</p>
-<p>（20）当：判刑，判罪。后多带表示惩罚意义的词语。</p>
-<p>（21）坐：①因……犯罪或错误，触犯；②牵连，定罪。</p>
-<p>（22）多：赞扬,欣赏。“高、贵”等字，若带宾语，就是意动，也意译为此。</p>
-<p>（23）少：批评，轻视，看不起。</p>
-<h2 id="碎记"><a href="#碎记" class="headerlink" title="碎记"></a>碎记</h2><p>（1）移疾：意同移病。释义为旧时官员上书称病，多为居官者求退的婉辞。<br>（2）名、字：名为出生不久后由父亲取。在《礼记·曲礼上》记有：男子二十冠而字。<br>（3）汤武：周武王和商汤（非商汤和孙武）<br>（4）建储：建立储君，立皇太子<br>（5）三晋：赵、魏、韩三国，在春秋时是晋国<br>（6）有司：只是“官吏的通称”，各有专司（不能用来指称朝廷中的“各级官员”）</p>
-]]></content>
-      <categories>
-        <category>高中理科</category>
-      </categories>
-      <tags>
-        <tag>语文</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>中国剩余定理</title>
     <url>/2022/02/04/%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</url>
     <content><![CDATA[<p>这篇文章主要介绍<strong>中国剩余定理及其解法</strong>以及<strong>代码实现</strong></p>
@@ -437,16 +350,41 @@
       </tags>
   </entry>
   <entry>
-    <title>图论题型专解</title>
-    <url>/2022/05/22/%E5%9B%BE%E8%AE%BA%E9%A2%98%E5%9E%8B%E4%B8%93%E8%A7%A3/</url>
-    <content><![CDATA[<h1 id="Tarjan"><a href="#Tarjan" class="headerlink" title="Tarjan"></a>Tarjan</h1><h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><h3 id="缩点"><a href="#缩点" class="headerlink" title="缩点"></a>缩点</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">tarjan</span><span class="params">(<span class="keyword">int</span> u)</span></span>&#123;</span><br><span class="line">	dfn[u]=low[u]=++num;</span><br><span class="line">	stak[++top]=u;vis[u]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=head[u];i;i=edge[i].next)&#123;</span><br><span class="line">		<span class="keyword">int</span> v=edge[i].to;</span><br><span class="line">		<span class="keyword">if</span>(!dfn[v])&#123;</span><br><span class="line">			<span class="built_in">tarjan</span>(v);</span><br><span class="line">			low[u]=<span class="built_in">min</span>(low[u],low[v]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(vis[v]) low[u]=<span class="built_in">min</span>(low[u],low[v]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(dfn[u]==low[u])&#123;</span><br><span class="line">		tot++;</span><br><span class="line">		<span class="keyword">while</span>(stak[top]!=u)&#123;</span><br><span class="line">			vis[stak[top]]=<span class="number">0</span>;</span><br><span class="line">			color[stak[top]]=tot;</span><br><span class="line">			top--;</span><br><span class="line">		&#125;</span><br><span class="line">		top--;</span><br><span class="line">		vis[u]=<span class="number">0</span>;</span><br><span class="line">		color[u]=tot;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Tarjan技巧"><a href="#Tarjan技巧" class="headerlink" title="Tarjan技巧"></a>Tarjan技巧</h2><p>1.dfn可以作为mark一样的作用记录节点是否被访问<br>2.缩点更新low[u]的时候也可也写成low[u]&#x3D;min(low[u],dfn[v])  </p>
-<h2 id="题型"><a href="#题型" class="headerlink" title="题型"></a>题型</h2><h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
+    <title>古代文学常识碎记</title>
+    <url>/2022/05/24/%E5%8F%A4%E4%BB%A3%E6%96%87%E5%AD%A6%E5%B8%B8%E8%AF%86%E7%A2%8E%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="与政事有关"><a href="#与政事有关" class="headerlink" title="与政事有关"></a>与政事有关</h2><p>（1）诣：到，去。</p>
+<p>（2）劝：①鼓励，奖励；②受到鼓励、奖励。</p>
+<p>（3）课：考核、督促、征收。</p>
+<p>（4）风、化：教育感化。</p>
+<p>（5）按、案：巡视，巡行；考察，核实，查明。</p>
+<p>（6）游：①游玩，游览；②旅行，外出求学或求官；③交际，交往。</p>
+<p>（7）趣、趋：①小步走，跑；又引申为赶快，迅速。②通“促”，催促。</p>
+<p>（8）劾：检举，揭发。</p>
+<p>（9）白：告诉，报告。常用于官吏之间。</p>
+<p>（10）短：进谗言，说坏话。</p>
+<p>（11）害：嫉妒。</p>
+<p>（12）闻：</p>
+<p>   ①听说，听见；</p>
+<p>   ②使知道，报告给……知道。对于义；</p>
+<p>   ③要特别注意。其中省略的人往往是最高统治者——国君，强化了这一点，阅读时就不至于认为下文中国    君和主人公发生的事件显得突兀。怎么国君知道了并参加进来了呢？其实就是“闻”字在起作用。如“没死以    闻”，“齐桓晋文之事可得闻乎”。</p>
+<p>（13）折：指斥，指责，驳斥。</p>
+<p>（14）让：①责备，责怪；②谦让，辞让。</p>
+<p>（15）党：偏袒，伙同，包庇。</p>
+<p>（16）矫：假托，假传。</p>
+<p>（17）质：作人质；抵押。</p>
+<p>（18）次：①临时驻扎(用于军队)；②住宿，停留（用于个人）。</p>
+<p>（19）输：缴纳（贡品或赋税）——由“输送、运输”引申。</p>
+<p>（20）当：判刑，判罪。后多带表示惩罚意义的词语。</p>
+<p>（21）坐：①因……犯罪或错误，触犯；②牵连，定罪。</p>
+<p>（22）多：赞扬,欣赏。“高、贵”等字，若带宾语，就是意动，也意译为此。</p>
+<p>（23）少：批评，轻视，看不起。</p>
+<h2 id="碎记"><a href="#碎记" class="headerlink" title="碎记"></a>碎记</h2><p>（1）移疾：意同移病。释义为旧时官员上书称病，多为居官者求退的婉辞。<br>（2）名、字：名为出生不久后由父亲取。在《礼记·曲礼上》记有：男子二十冠而字。<br>（3）汤武：周武王和商汤（非商汤和孙武）<br>（4）建储：建立储君，立皇太子<br>（5）三晋：赵、魏、韩三国，在春秋时是晋国<br>（6）有司：只是“官吏的通称”，各有专司（不能用来指称朝廷中的“各级官员”）</p>
+]]></content>
       <categories>
-        <category>OI</category>
+        <category>高中理科</category>
       </categories>
       <tags>
-        <tag>图论</tag>
+        <tag>语文</tag>
       </tags>
   </entry>
   <entry>
@@ -491,6 +429,19 @@
       </tags>
   </entry>
   <entry>
+    <title>图论题型专解</title>
+    <url>/2022/05/22/%E5%9B%BE%E8%AE%BA%E9%A2%98%E5%9E%8B%E4%B8%93%E8%A7%A3/</url>
+    <content><![CDATA[<h1 id="Tarjan"><a href="#Tarjan" class="headerlink" title="Tarjan"></a>Tarjan</h1><h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><h3 id="缩点"><a href="#缩点" class="headerlink" title="缩点"></a>缩点</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">tarjan</span><span class="params">(<span class="keyword">int</span> u)</span></span>&#123;</span><br><span class="line">	dfn[u]=low[u]=++num;</span><br><span class="line">	stak[++top]=u;vis[u]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=head[u];i;i=edge[i].next)&#123;</span><br><span class="line">		<span class="keyword">int</span> v=edge[i].to;</span><br><span class="line">		<span class="keyword">if</span>(!dfn[v])&#123;</span><br><span class="line">			<span class="built_in">tarjan</span>(v);</span><br><span class="line">			low[u]=<span class="built_in">min</span>(low[u],low[v]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(vis[v]) low[u]=<span class="built_in">min</span>(low[u],low[v]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(dfn[u]==low[u])&#123;</span><br><span class="line">		tot++;</span><br><span class="line">		<span class="keyword">while</span>(stak[top]!=u)&#123;</span><br><span class="line">			vis[stak[top]]=<span class="number">0</span>;</span><br><span class="line">			color[stak[top]]=tot;</span><br><span class="line">			top--;</span><br><span class="line">		&#125;</span><br><span class="line">		top--;</span><br><span class="line">		vis[u]=<span class="number">0</span>;</span><br><span class="line">		color[u]=tot;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Tarjan技巧"><a href="#Tarjan技巧" class="headerlink" title="Tarjan技巧"></a>Tarjan技巧</h2><p>1.dfn可以作为mark一样的作用记录节点是否被访问<br>2.缩点更新low[u]的时候也可也写成low[u]&#x3D;min(low[u],dfn[v])  </p>
+<h2 id="题型"><a href="#题型" class="headerlink" title="题型"></a>题型</h2><h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
+      <categories>
+        <category>OI</category>
+      </categories>
+      <tags>
+        <tag>图论</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>模拟退火</title>
     <url>/2022/03/05/%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB/</url>
     <content><![CDATA[<p>这篇文章主要介绍<strong>模拟退火算法</strong>的原理以及实现</p>
@@ -511,6 +462,33 @@
       </categories>
       <tags>
         <tag>模拟退火</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VsCode-C/C++编译环境配置</title>
+    <url>/2022/05/01/VsCode-C-C-%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><h3 id="下载-VsCode"><a href="#下载-VsCode" class="headerlink" title="下载 VsCode"></a>下载 VsCode</h3><p>官网地址：<a href="https://code.visualstudio.com/">Code Editing</a></p>
+<h3 id="下载-MinGW64编译器"><a href="#下载-MinGW64编译器" class="headerlink" title="下载 MinGW64编译器"></a>下载 MinGW64编译器</h3><p>官网地址：<a href="https://www.mingw-w64.org/">MinGW64</a></p>
+<h2 id="配置系统环境变量"><a href="#配置系统环境变量" class="headerlink" title="配置系统环境变量"></a>配置系统环境变量</h2><p>Win+I 打开系统设置<br>找到 <strong>编辑系统环境变量</strong><br>点击 <strong>高级</strong> &gt; <strong>环境变量</strong> &gt; <strong>选定 Path 进行编辑</strong><br>添加进你安装的 MinGW64 编译器的 <strong>路径</strong><br>例如我的就是：D:\Program\mingw-w64\mingw64\bin<br><img src="https://s2.loli.net/2022/05/01/SZj5xDITXehoyW9.png"></p>
+<h2 id="配置相关文件"><a href="#配置相关文件" class="headerlink" title="配置相关文件"></a>配置相关文件</h2><h3 id="安装-C-x2F-C-扩展"><a href="#安装-C-x2F-C-扩展" class="headerlink" title="安装 C&#x2F;C++ 扩展"></a>安装 C&#x2F;C++ 扩展</h3><p>进入 VsCode 找到左侧栏的 Extensions<br>一般安装如下扩展：</p>
+<ul>
+<li>C&#x2F;C++</li>
+<li>Chinese (Simplified)(简体中文)</li>
+<li>Code Runner</li>
+</ul>
+<h3 id="设置编译器路径"><a href="#设置编译器路径" class="headerlink" title="设置编译器路径"></a>设置编译器路径</h3><p>新建 Code 文件夹用来保存项目文件<br>在 Code 文件夹中右键点击 <strong>用Code打开</strong> 进入 VsCode<br>接下来配置编译器路径<br>按快捷键Ctrl+Shift+P调出命令面板，输入C&#x2F;C++，选 <strong>Edit Configurations(UI)</strong> 进入配置<br><img src="https://s2.loli.net/2022/05/01/RWZGvOlSV8dxzLK.png"><br>在里面找到 <strong>编译器路径</strong> 修改成 MinGW64路径，再将下方的 InteliSense模式 改为 <strong>gcc-x64</strong> 即可<br>这时我们可以发现文件夹中多了一个 <strong>.vscode</strong> 的文件夹，证明配置成功<br>接下来配置三个主要的文件</p>
+<h3 id="c-cpp-properties-json"><a href="#c-cpp-properties-json" class="headerlink" title="c_cpp_properties.json"></a>c_cpp_properties.json</h3><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Win32&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;includePath&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;$&#123;workspaceFolder&#125;/**&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;defines&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;_DEBUG&quot;</span>,</span><br><span class="line">                <span class="string">&quot;UNICODE&quot;</span>,</span><br><span class="line">                <span class="string">&quot;_UNICODE&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;compilerPath&quot;</span>: <span class="string">&quot;D:/Program/mingw-w64/mingw64/bin/g++.exe&quot;</span>,<span class="comment">//编译器的路径</span></span><br><span class="line">            <span class="attr">&quot;cStandard&quot;</span>: <span class="string">&quot;c17&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;cppStandard&quot;</span>: <span class="string">&quot;c++17&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;intelliSenseMode&quot;</span>: <span class="string">&quot;gcc-x64&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="number">4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="tasks-json"><a href="#tasks-json" class="headerlink" title="tasks.json"></a>tasks.json</h3><p>接下来，创建一个tasks.json文件来告诉VS Code如何构建（编译）程序<br>该任务将调用g++编译器基于源代码创建可执行文件<br>按快捷键 Ctrl+Shift+P 调出命令面板，输入 tasks，选择 <strong>Tasks:Configure Default Build Task</strong><br><img src="https://s2.loli.net/2022/05/01/OHUebX3C1SPmzKG.png"><br>再选择 <strong>C&#x2F;C++: g++.exe build active file</strong><br><img src="https://s2.loli.net/2022/05/01/Hv5Jqiwl6Yhu1QI.png"><br>接下来在 .vscode 文件夹中就会出现 <strong>tasks.json</strong> 的配置文件<br>可以参考我的配置：  </p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">&quot;version&quot;</span>: <span class="string">&quot;2.0.0&quot;</span>,</span><br><span class="line">	<span class="attr">&quot;tasks&quot;</span>: [</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="attr">&quot;type&quot;</span>: <span class="string">&quot;cppbuild&quot;</span>,</span><br><span class="line">			<span class="attr">&quot;label&quot;</span>: <span class="string">&quot;g++.exe build active file&quot;</span>,</span><br><span class="line">			<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;D:/Program/mingw-w64/mingw64/bin/g++.exe&quot;</span>,<span class="comment">//编译器路径</span></span><br><span class="line">			<span class="attr">&quot;args&quot;</span>: [</span><br><span class="line">				<span class="string">&quot;-fdiagnostics-color=always&quot;</span>,</span><br><span class="line">				<span class="string">&quot;-g&quot;</span>,</span><br><span class="line">				<span class="string">&quot;$&#123;file&#125;&quot;</span>,</span><br><span class="line">				<span class="string">&quot;-o&quot;</span>,</span><br><span class="line">				<span class="string">&quot;$&#123;fileDirname&#125;\\$&#123;fileBasenameNoExtension&#125;.exe&quot;</span></span><br><span class="line">			],</span><br><span class="line">			<span class="attr">&quot;options&quot;</span>: &#123;</span><br><span class="line">				<span class="attr">&quot;cwd&quot;</span>: <span class="string">&quot;D:/Program/mingw-w64/mingw64/bin&quot;</span></span><br><span class="line">			&#125;,<span class="comment">//bin为存放编译器和调试器的文件夹</span></span><br><span class="line">			<span class="attr">&quot;problemMatcher&quot;</span>: [</span><br><span class="line">				<span class="string">&quot;$gcc&quot;</span></span><br><span class="line">			],</span><br><span class="line">			<span class="attr">&quot;group&quot;</span>: &#123;</span><br><span class="line">				<span class="attr">&quot;kind&quot;</span>: <span class="string">&quot;build&quot;</span>,</span><br><span class="line">				<span class="attr">&quot;isDefault&quot;</span>: <span class="literal">true</span></span><br><span class="line">			&#125;,</span><br><span class="line">			<span class="attr">&quot;detail&quot;</span>: <span class="string">&quot;编译器: D:/Program/mingw-w64/mingw64/bin/g++.exe&quot;</span></span><br><span class="line">		&#125;</span><br><span class="line">	]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="launch-json"><a href="#launch-json" class="headerlink" title="launch.json"></a>launch.json</h3><p>点击菜单栏的 <strong>Debug–&gt;Start Debugging</strong> 或者直接按键盘 <strong>F5</strong><br>会在 .vscode 文件夹中生成一个 <strong>launch.json</strong> 的配置文件<br>我的配置如下：  </p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">// Use IntelliSense to learn about possible attributes.</span></span><br><span class="line">    <span class="comment">// Hover to view descriptions of existing attributes.</span></span><br><span class="line">    <span class="comment">// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;0.2.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span>: [</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;(gdb) Launch&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;preLaunchTask&quot;</span>: <span class="string">&quot;g++.exe build active file&quot;</span>,<span class="comment">//调试前执行的任务，就是之前配置的tasks.json中的label字段</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span>: <span class="string">&quot;cppdbg&quot;</span>,<span class="comment">//配置类型，只能为cppdbg</span></span><br><span class="line">            <span class="attr">&quot;request&quot;</span>: <span class="string">&quot;launch&quot;</span>,<span class="comment">//请求配置类型，可以为launch（启动）或attach（附加）</span></span><br><span class="line">            <span class="attr">&quot;program&quot;</span>: <span class="string">&quot;$&#123;fileDirname&#125;\\$&#123;fileBasenameNoExtension&#125;.exe&quot;</span>,<span class="comment">//调试程序的路径名称</span></span><br><span class="line">            <span class="attr">&quot;args&quot;</span>: [],<span class="comment">//调试传递参数</span></span><br><span class="line">            <span class="attr">&quot;stopAtEntry&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">&quot;cwd&quot;</span>: <span class="string">&quot;$&#123;workspaceFolder&#125;&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;environment&quot;</span>: [],</span><br><span class="line">            <span class="attr">&quot;externalConsole&quot;</span>: <span class="literal">true</span>,<span class="comment">//true显示外置的控制台窗口，false显示内置终端</span></span><br><span class="line">            <span class="attr">&quot;MIMode&quot;</span>: <span class="string">&quot;gdb&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;miDebuggerPath&quot;</span>: <span class="string">&quot;D:\\Program\\mingw-w64\\mingw64\\bin\\gdb.exe&quot;</span>,<span class="comment">//调试器路径</span></span><br><span class="line">            <span class="attr">&quot;setupCommands&quot;</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;Enable pretty-printing for gdb&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;text&quot;</span>: <span class="string">&quot;-enable-pretty-printing&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;ignoreFailures&quot;</span>: <span class="literal">true</span></span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="运行测试"><a href="#运行测试" class="headerlink" title="运行测试"></a>运行测试</h2><p>写一个 hello world! 的程序测试下环境配置是否成功<br>记得要在末尾插入 <strong>system(“pause”)</strong> 的代码，不然程序会闪一下就消失了<br>出现如图所示结果则成功：<br><img src="https://s2.loli.net/2022/05/01/rcnTyzsLo21SNRY.png"></p>
+]]></content>
+      <categories>
+        <category>开发环境配置</category>
+      </categories>
+      <tags>
+        <tag>VsCode</tag>
       </tags>
   </entry>
   <entry>
@@ -546,6 +524,21 @@
       </categories>
       <tags>
         <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>获取网站图标</title>
+    <url>/2022/06/17/%E8%8E%B7%E5%8F%96%E7%BD%91%E7%AB%99%E5%9B%BE%E6%A0%87/</url>
+    <content><![CDATA[<p>如何获取网站图标？<br>其实十分简单，这里介绍两种方法  </p>
+<h2 id="直接在网站首页网址加上-x2F-favicon-ico"><a href="#直接在网站首页网址加上-x2F-favicon-ico" class="headerlink" title="直接在网站首页网址加上&#x2F;favicon.ico"></a>直接在网站首页网址加上&#x2F;favicon.ico</h2><p>在网站的首页加上 &#x2F;favicon.ico 然后进入该界面<br>即可得到该网站的图标</p>
+<h2 id="打开开发者工具查看网页元素"><a href="#打开开发者工具查看网页元素" class="headerlink" title="打开开发者工具查看网页元素"></a>打开开发者工具查看网页元素</h2><p>按 F12 打开开发者工具，查看网页元素<br>在 <head> 处找到 shortcut icon 处的url<br>如果是一个网页的链接直接进入就是该网站的图标<br>若出现 href 处为这种链接的情况：<br>assets&#x2F;images&#x2F;favicon.png<br>那么可以直接在网站首页网址后加上&#x2F;assets&#x2F;images&#x2F;favicon.png<br>进入就是该网站的图标  </p>
+<p><strong>同理可得其他网站的图标</strong></p>
+]]></content>
+      <categories>
+        <category>解决方案</category>
+      </categories>
+      <tags>
+        <tag>方法杂项</tag>
       </tags>
   </entry>
   <entry>
@@ -719,6 +712,28 @@
       </tags>
   </entry>
   <entry>
+    <title>「Wdoi-6」走在夜晚的莲台野-题解</title>
+    <url>/2022/05/14/%E3%80%8CWdoi-6%E3%80%8D%E8%B5%B0%E5%9C%A8%E5%A4%9C%E6%99%9A%E7%9A%84%E8%8E%B2%E5%8F%B0%E9%87%8E-%E9%A2%98%E8%A7%A3/</url>
+    <content><![CDATA[<p>看难度就明白这是道签到题</p>
+<h2 id="1-思路"><a href="#1-思路" class="headerlink" title="1.思路"></a>1.思路</h2><p>题目要求我们将所有板子 <strong>放过</strong> 就行，但放入金就会清空银。<br>所以我们要在放金之前 <strong>尽可能多放银</strong>。<br>这就是标签所说的贪心。</p>
+<h2 id="2-解法"><a href="#2-解法" class="headerlink" title="2.解法"></a>2.解法</h2><p>由以上思路可得：<br>放银的数目依次为 $z-1$、$z-2$ $…$ $z-x$。<br>由等差数列公式：<br>最多可以放 $\frac{x*(z-x+z-1)}{2}$ 个银，令该式子为 $\sigma$。<br>我们得到如下几种情况：  </p>
+<ul>
+<li>$x$ 恰好满足放入所有 $y$ 后 $x$ 被清空。</li>
+<li>$x$ 恰好满足放入所有 $y$ 后 $x$ 被清空不足。</li>
+<li>$x$ 恰好满足放入所有 $y$ 后 $x$ 被清空有余。</li>
+</ul>
+<p>而这三种情况依次对应 $&#x3D;\sigma$、$&lt;\sigma$、$&gt;\sigma$ 的情况。<br>分别为 $case1\ $ $case2\ $ $case3\ $。<br>$case1$： 显然满足要求。<br>$case2$： 翻译过来就是金放完了银有剩，则只需要剩下的银数量 <strong>小于等于</strong> 可放位置的数量就行了。<br>$case3$： 银放完了金有剩，具体剩多少呢？<br>我们令此时消耗的金数量为 $x_0$ 则将 $x_0$ 带入 $\sigma$ 式。<br>整理一下得到关于 $x_0$ 的式子：<br>$x_0^2-(2z-1)x_0+2y&#x3D;0$。<br>得到：$x_0&#x3D;\lfloor\frac{2z-1+\sqrt[]{(2z-1)^2-8y}}{2}\rfloor$。<br>同 $case2$ 理即可求解。</p>
+<h2 id="3-Code"><a href="#3-Code" class="headerlink" title="3.Code"></a>3.Code</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll T,x,y,z;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;T);</span><br><span class="line">	<span class="keyword">while</span>(T--)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%lld%lld%lld&quot;</span>,&amp;x,&amp;y,&amp;z);</span><br><span class="line">		<span class="keyword">if</span>(x&gt;z)&#123;<span class="built_in">printf</span>(<span class="string">&quot;Merry\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		ll judge=x*(<span class="number">2</span>*z-x<span class="number">-1</span>)/<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span>(judge==y)&#123;<span class="built_in">printf</span>(<span class="string">&quot;Renko\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		<span class="keyword">if</span>(judge&lt;y&amp;&amp;(y-judge&lt;=z-x))&#123;<span class="built_in">printf</span>(<span class="string">&quot;Renko\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		<span class="keyword">int</span> x0=(<span class="number">2</span>*z<span class="number">-1</span>+<span class="built_in">sqrt</span>((<span class="number">2</span>*z<span class="number">-1</span>)*(<span class="number">2</span>*z<span class="number">-1</span>)<span class="number">-8</span>*y))/<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span>(judge&gt;y&amp;&amp;(x-x0)&lt;=z)&#123;<span class="built_in">printf</span>(<span class="string">&quot;Renko\n&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;Merry\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>洛谷题解</category>
+      </categories>
+      <tags>
+        <tag>贪心</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>高中数学碎记</title>
     <url>/2022/06/17/%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%A2%8E%E8%AE%B0/</url>
     <content><![CDATA[<h2 id="高数碎记"><a href="#高数碎记" class="headerlink" title="高数碎记"></a>高数碎记</h2><h3 id="泰勒展开"><a href="#泰勒展开" class="headerlink" title="泰勒展开"></a>泰勒展开</h3><p>常见的泰勒展开式：<br>$e^x&#x3D;1+x+\frac{x^2}{2!}+…+\frac{x^n}{n!}+o(x^n)$<br>$sinx&#x3D;x-\frac{x^3}{3!}+\frac{x^5}{5!}+…+(-1)^{n}\frac{x^{2n+1}}{(2n+1)!}+o(x^{2n+2})$<br>$cosx&#x3D;1-\frac{x^2}{2!}+\frac{x^4}{4!}+…+(-1)^n\frac{x^{2n}}{(2n!)}+o(x^{2n+1})$<br>$ln(1+x)&#x3D;x-\frac{x}{2}+\frac{x}{3}+…+(-1)^{n-1}\frac{x}{n}+o(x^n)$<br>$(1+x)^a&#x3D;1+ax+\frac{a(a-1)}{2!}x^2+…+\frac{a(a-1)…(a-n+1)}{n!}x^n+o(x^n)$<br>$\frac{1}{1-x}&#x3D;1+x+x^2+…+x^n+o(x^n)$<br>$\frac{1}{1+x}&#x3D;1-x+x^2+…+(-1)^nx^n+o(x^n)$<br>其中 $o()$ 为高阶无穷小</p>
@@ -873,21 +888,6 @@
       </categories>
       <tags>
         <tag>英语</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>获取网站图标</title>
-    <url>/2022/06/17/%E8%8E%B7%E5%8F%96%E7%BD%91%E7%AB%99%E5%9B%BE%E6%A0%87/</url>
-    <content><![CDATA[<p>如何获取网站图标？<br>其实十分简单，这里介绍两种方法  </p>
-<h2 id="直接在网站首页网址加上-x2F-favicon-ico"><a href="#直接在网站首页网址加上-x2F-favicon-ico" class="headerlink" title="直接在网站首页网址加上&#x2F;favicon.ico"></a>直接在网站首页网址加上&#x2F;favicon.ico</h2><p>在网站的首页加上 &#x2F;favicon.ico 然后进入该界面<br>即可得到该网站的图标</p>
-<h2 id="打开开发者工具查看网页元素"><a href="#打开开发者工具查看网页元素" class="headerlink" title="打开开发者工具查看网页元素"></a>打开开发者工具查看网页元素</h2><p>按 F12 打开开发者工具，查看网页元素<br>在 <head> 处找到 shortcut icon 处的url<br>如果是一个网页的链接直接进入就是该网站的图标<br>若出现 href 处为这种链接的情况：<br>assets&#x2F;images&#x2F;favicon.png<br>那么可以直接在网站首页网址后加上&#x2F;assets&#x2F;images&#x2F;favicon.png<br>进入就是该网站的图标  </p>
-<p><strong>同理可得其他网站的图标</strong></p>
-]]></content>
-      <categories>
-        <category>解决方案</category>
-      </categories>
-      <tags>
-        <tag>方法杂项</tag>
       </tags>
   </entry>
 </search>
